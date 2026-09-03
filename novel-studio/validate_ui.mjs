@@ -1,7 +1,11 @@
 import fs from 'node:fs';
 
-const appJs = fs.readFileSync('C:\\Users\\Duk\\.gemini\\antigravity-ide\\scratch\\novel-studio\\ui\\app.orig.js', 'utf8');
-const html = fs.readFileSync('C:\\Users\\Duk\\.gemini\\antigravity-ide\\scratch\\novel-studio\\ui\\index.html', 'utf8');
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const appJs = fs.readFileSync(path.join(__dirname, 'ui', 'app.orig.js'), 'utf8');
+const html = fs.readFileSync(path.join(__dirname, 'ui', 'index.html'), 'utf8');
 
 // Tìm tất cả các ID được query trong app.js: $('#xyz') hoặc document.querySelector('#xyz')
 const idRegex = /[\$]\(['"]#([\w\-]+)['"]\)/g;

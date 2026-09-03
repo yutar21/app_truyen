@@ -204,6 +204,6 @@
 | **200** | CHƯƠNG 200 — ĐỆ NHẤT THẾ LỰC | Quyển 1 | 1.901 | Đã hoàn thành | `chapters/卷01/0200-de-nhat-the-luc.md` |
 | **201** | CHƯƠNG 201 — ĐÊM XUÂN SONG TU · XÀ NHÂN DI CƯ | Quyển 1 | 2.029 | Đã hoàn thành | `chapters/卷01/0201-dem-xuan-song-tu-xa-nhan-di-cu.md` |
 | **202** | CHƯƠNG 202 — HUYẾT CHIẾN BIÊN GIỚI · NỮ VƯƠNG XUẤT THẾ | Quyển 1 | 1.929 | Đã hoàn thành | `chapters/卷01/0202-huyet-chien-bien-gioi-nu-vuong-xuat-the.md` |
-| **203** | Khúc Ca Xà Tộc, Thu Phục Dị Lực | Quyển 1 | ~3.000 | Chưa viết | `chapters/卷01/0203-khuc-ca-xa-toc.md` |
-| **204** | Phong Ba Hắc Giác Vực, Bố Cục Thủy Cung | Quyển 1 | ~3.000 | Chưa viết | `chapters/卷01/0204-phong-ba-hac-giac-vuc.md` |
+| **203** | CHƯƠNG 203 — KHÚC CA XÀ TỘC · THU PHỤC DỊ LỰC | Quyển 1 | 4.825 | Đã hoàn thành | `chapters/卷01/0203-khuc-ca-xa-toc.md` |
+| **204** | CHƯƠNG 204 — PHONG BA HẮC GIÁC VỰC · BỐ CỤC THỦY CUNG | Quyển 1 | 5.420 | Đã hoàn thành | Đã hoàn thành | `chapters/卷01/204Phong Ba Hắc Giác Vực, Bố Cục Thủy Cung.txt` |
 | **205** | Dược Lão Tái Hiện, Phong Vân Hội Tụ | Quyển 1 | ~3.000 | Chưa viết | `chapters/卷01/0205-duoc-lao-tai-hien.md` |

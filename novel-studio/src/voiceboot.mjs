@@ -27,31 +27,31 @@ import { addRef, saveCard, readRefs, CARD_PROMPT } from './voiceprint.mjs';
 // 注意这仍然不是"规则"：每条只是一句取向，作者看的是样章本身；
 // 想要长段落厚文的人照样能挑「沉浸厚重」——菜单只负责把轴张开，不负责替他决定。
 export const TONES = [
-  { id: 'swipe', name: '手机快读',  hint: '为手机屏写：一两句就换行，大量单句成段，留白多，读者拇指一路往下滑，几乎不停' },
-  { id: 'fast',  name: '爽快直给',  hint: '节奏快、信息给得痛快、情绪外放、敢用感叹与套话；段落短，别让读者在一段里待太久' },
-  { id: 'thick', name: '沉浸厚重',  hint: '实感细密、时代质感重、叙述从容，段落可以长，靠氛围和具体物件把人按进场景里' },
-  { id: 'cold',  name: '冷硬克制',  hint: '短句为主、情绪压住、不解释、靠动作和留白说话' },
-  { id: 'wry',   name: '轻快带刺',  hint: '叙述者有幽默感、会调侃、会跟读者眨眼，苦事也写得有趣' },
+  { id: 'swipe', name: 'Lướt Nhanh Di Động', hint: 'Viết cho màn hình điện thoại: 1-2 câu ngắt dòng, khoảng trắng thoáng, mạch đọc cuốn hút lướt liên tục không dừng' },
+  { id: 'fast',  name: 'Sảng Khoái Trực Diện', hint: 'Tiết tấu nhanh, tình tiết dồn dập, cảm xúc bùng nổ, hành động dứt khoát, giải quyết xung đột dứt điểm' },
+  { id: 'thick', name: 'Trầm Luân Sâu Sắc', hint: 'Mô tả chi tiết, không khí huyền bí, bối cảnh hoành tráng, câu từ chau chuốt, kéo người đọc chìm đắm vào thế giới truyện' },
+  { id: 'cold',  name: 'Lạnh Lùng Dứt Khoát', hint: 'Câu ngắn sắc bén, kìm nén cảm xúc, chú trọng động tác và tình huống thực chiến, phong thái sát thủ/cao thủ cô độc' },
+  { id: 'wry',   name: 'Hài Hước Châm Biếm', hint: 'Văn phong hóm hỉnh, nhân vật thông minh, đối thoại dí dỏm tinh quái, tình huống khó khăn cũng biến thành thú vị' },
 ];
 
 // 生成一个候选开头。
-// 【关键】提示词里【绝不写具体的写作守则】——只给题材、设定和一句调性取向，
-// 剩下的让模型自由发挥。一旦开始规定"段落多长""能不能用成语"，就又回到老路上了。
 function draftPrompt({ seed, tone, words }) {
   const bits = [
-    `为下面这本中文网络小说写一段【开头】，约 ${words} 字。`,
+    `Hãy viết một đoạn 【MỞ ĐẦU】 (khoảng ${words} từ) cho tiểu thuyết mạng sau đây:`,
     ``,
-    `书名：《${seed.title}》`,
-    seed.genre ? `题材：${seed.genre}` : '',
-    seed.synopsis ? `故事：${seed.synopsis}` : '',
+    `Tên tác phẩm: 《${seed.title}》`,
+    seed.genre ? `Thể loại: ${seed.genre}` : '',
+    seed.synopsis ? `Tóm tắt cốt truyện: ${seed.synopsis}` : '',
     ``,
-    `【本次的调性】：${tone.name}——${tone.hint}`,
+    `【Tông giọng & Phong cách chủ đạo】: ${tone.name} — ${tone.hint}`,
     ``,
-    `除此之外【没有任何格式或文风限制】：段落长短、用词、节奏、要不要抒情、`,
-    `要不要用成语、叙述者要不要跟读者说话，全部由你决定。`,
-    `目标只有一个：让读者读完这段就想往下看。`,
+    `【YÊU CẦU NGÔN NGỮ QUAN TRỌNG NHẤT】:`,
+    `1. 100% VIẾT BẰNG TIẾNG VIỆT CHUẨN MỰC, TUYỆT ĐỐI KHÔNG DÙNG TIẾNG TRUNG HOẶC CHỮ HÁN.`,
+    `2. Văn phong tiểu thuyết mạng tiếng Việt hấp dẫn, mượt mà, dùng từ Hán-Việt huyền huyễn tự nhiên, chuẩn gu bạn đọc Việt Nam.`,
+    `3. Tuyệt đối không xưng hô hiện đại kiểu "tôi, bạn, anh, chị, em". Xưng hô chuẩn phong cách tu chân/huyền huyễn: "ta, ngươi, hắn, nàng, công tử, thiếu gia...".`,
+    `4. Mục tiêu duy nhất: Khiến người đọc vừa đọc xong đoạn mở đầu này là muốn đọc tiếp ngay.`,
     ``,
-    `只输出正文，不要标题、不要说明、不要解释你的写法。`,
+    `CHỈ XUẤT NỘI DUNG CHÍNH VĂN TIẾNG VIỆT, KHÔNG KÈM TIÊU ĐỀ, KHÔNG LỜI BÌNH HOẶC GIẢI THÍCH.`,
   ];
   return bits.filter(Boolean).join('\n');
 }
@@ -63,13 +63,14 @@ export async function draftCandidates({ book, seed, model, tones = TONES, words 
   const s = seed || book || {};
   if (!s.title) throw new Error('先给个书名，AI 才知道要写什么的开头');
   const mName = getModel(model)?.name || model;
-  onLog({ level: 'act', msg: `用 ${mName} 生成 ${tones.length} 个不同调性的开头（各约 ${words} 字）…` });
+  onLog({ level: 'act', msg: `Dùng ${mName} tạo ${tones.length} mẫu văn phong mở đầu khác nhau (mỗi mẫu ~${words} từ tiếng Việt)…` });
 
   const jobs = tones.map(async (tone) => {
     try {
       const raw = await runCowrite(model, draftPrompt({ seed: s, tone, words }), cfg, 300000);
       const text = stripFence(raw);
-      onLog({ level: 'info', msg: `  ✓ ${tone.name}（${(text.match(/[一-鿿]/g) || []).length} 字）` });
+      const wordCount = (text.trim().split(/\s+/).filter(Boolean).length);
+      onLog({ level: 'info', msg: `  ✓ ${tone.name}（${wordCount} từ）` });
       return { ...tone, text, ok: !!text };
     } catch (e) {
       onLog({ level: 'warn', msg: `  ✗ ${tone.name}：${e.message || e}` });

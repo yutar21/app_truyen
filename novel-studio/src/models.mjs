@@ -2,7 +2,11 @@
 import fs from 'node:fs';
 import { spawnSync } from 'node:child_process';
 
-const AGY_BIN = 'C:\\Users\\Duk\\AppData\\Local\\agy\\bin\\agy.exe';
+import path from 'node:path';
+
+const AGY_BIN = process.env.LOCALAPPDATA
+  ? path.join(process.env.LOCALAPPDATA, 'agy', 'bin', 'agy.exe')
+  : 'agy';
 
 export const MODELS = {
   agy: {
@@ -13,6 +17,7 @@ export const MODELS = {
     seedArgs: (instruction, cfg) => {
       const args = ['--effort', cfg?.agyEffort || 'high'];
       if (cfg?.agyModel) args.push('--model', cfg.agyModel);
+      args.push('--print-timeout', '30m');
       args.push('-p', instruction, '--dangerously-skip-permissions', '--output-format', 'text');
       return args;
     },

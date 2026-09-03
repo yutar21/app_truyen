@@ -1,4 +1,5 @@
 // 路径与常量集中管理
+import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -55,6 +56,11 @@ export const UNTERM_CLI_CANDIDATES = [process.env.UNTERM_CLI, ...CLI_BY_OS].filt
 // - 打包后（引擎在 .app 包内 / resources\engine 里）：绝不写进包内（重装会清、且可能只读），
 //   落到用户主目录 ~/NovelStudio/books。用户也可在「设置」里用文件夹选择器另选。
 const PACKAGED = /\.app[\\/]Contents[\\/]/.test(APP_DIR) || /[\\/]resources[\\/]engine([\\/]|$)/i.test(APP_DIR);
+
+const defaultDevWorkspace = fs.existsSync(path.join(path.dirname(APP_DIR), 'novels'))
+  ? path.join(path.dirname(APP_DIR), 'novels')
+  : path.join(path.dirname(APP_DIR), 'books');
+
 export const DEFAULT_WORKSPACE = PACKAGED
   ? path.join(HOME, 'NovelStudio', 'books')
-  : path.join(path.dirname(APP_DIR), 'books');
+  : defaultDevWorkspace;

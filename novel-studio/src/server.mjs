@@ -20,7 +20,7 @@ import { detectAll, getModel } from './models.mjs';
 import { listInstances, instanceIds, findUntermExe, findUntermCli, untermVersion, readProxyConfig } from './unterm.mjs';
 import { getSession, removeSession } from './sessions.mjs';
 import { startWriting } from './writer.mjs';
-import { runStateless } from './statelessWriter.mjs';
+import { runStateless, runHeadless } from './statelessWriter.mjs';
 import { runWebWrite, getAdapter } from './webwriter.mjs';
 import { runApiWrite, isApiProvider } from './apiwriter.mjs';
 import { API_PROVIDERS, providerConfigured, isKeylessProvider, chatComplete } from './apichat.mjs';
@@ -856,9 +856,25 @@ async function api(p, req, res, u) {
           pushLog(book.slug, { level: 'act', msg: `已穿插复检指令（范围 ${body.range || '全书'}）` });
           return json(res, 200, { ok: true, mode: 'inserted', ...r });
         }
+        const model = body.model || book.model || cfg.defaultModel;
+        const exe = findUntermExe();
+        const cli = findUntermCli();
+        if (!exe && !cli) {
+          pushLog(book.slug, { level: 'act', msg: `▶ Bắt đầu rà soát tác phẩm (Mô hình ${model} ngầm, phạm vi: ${body.range || 'Toàn tác phẩm'})…` });
+          runHeadless(model, instruction, { cwd: book.dir, cfg, timeoutMs: 1800000 })
+            .then(r => {
+              if (r.ok) {
+                pushLog(book.slug, { level: 'act', msg: '✅ Rà soát tác phẩm hoàn tất! Báo cáo đã lưu vào thư mục reviews/' });
+              } else {
+                pushLog(book.slug, { level: 'warn', msg: 'Rà soát thất bại: ' + (r.err || r.out || 'Không có phản hồi') });
+              }
+            })
+            .catch(e => pushLog(book.slug, { level: 'error', msg: 'Rà soát lỗi: ' + e.message }));
+          return json(res, 200, { ok: true, mode: 'headless' });
+        }
         // 未在写 → 开一个会话专门做复检
         rtOf(book.slug).logs = [];
-        const session = await startWriting({ book, model: body.model || book.model || cfg.defaultModel, instruction, cfg, onLog: (e) => pushLog(book.slug, e), onFreshRestart: mkFresh(book.slug, cfg), autopilotConfirmOnly: true });
+        const session = await startWriting({ book, model, instruction, cfg, onLog: (e) => pushLog(book.slug, e), onFreshRestart: mkFresh(book.slug, cfg), autopilotConfirmOnly: true });
         rtOf(book.slug).session = session;
         return json(res, 200, { ok: true, mode: 'started', instance: session.instance.id, pane: session.paneId });
       } catch (e) { pushLog(book.slug, { level: 'error', msg: e.message }); return json(res, 500, { error: e.message }); }
@@ -981,10 +997,27 @@ async function api(p, req, res, u) {
         const instruction = buildRebuildOutlineInstruction(book);
         if (sessionLive(book.slug)) {
           await sendToBook(book.slug, instruction, cfg);
-          pushLog(book.slug, { level: 'act', msg: '已穿插指令：重建设定圣经 + 各卷大纲（不写新正文）' });
+          pushLog(book.slug, { level: 'act', msg: 'Đã gửi chỉ thị: Tái lập bối cảnh thiết lập + dàn ý các quyển (không viết chương mới)' });
           return json(res, 200, { ok: true, mode: 'inserted' });
         }
-        const session = await startWriting({ book, model: body.model || book.model || cfg.defaultModel, instruction, cfg, onLog: (e) => pushLog(book.slug, e), onFreshRestart: mkFresh(book.slug, cfg), autopilotConfirmOnly: true });
+        const model = body.model || book.model || cfg.defaultModel;
+        const exe = findUntermExe();
+        const cli = findUntermCli();
+        if (!exe && !cli) {
+          // Không có cửa sổ Unterm: Tự động chạy chế độ ngầm CLI (Stateless Headless)
+          pushLog(book.slug, { level: 'act', msg: `▶ Bắt đầu tái lập thiết lập và dàn ý (Mô hình ${model} ngầm)…` });
+          runHeadless(model, instruction, { cwd: book.dir, cfg, timeoutMs: 1800000 })
+            .then(r => {
+              if (r.ok) {
+                pushLog(book.slug, { level: 'act', msg: '✅ Tái lập thiết lập & dàn ý thành công!' });
+              } else {
+                pushLog(book.slug, { level: 'warn', msg: 'Tái lập dàn ý thất bại: ' + (r.err || r.out || 'Không có phản hồi') });
+              }
+            })
+            .catch(e => pushLog(book.slug, { level: 'error', msg: 'Tái lập dàn ý lỗi: ' + e.message }));
+          return json(res, 200, { ok: true, mode: 'headless' });
+        }
+        const session = await startWriting({ book, model, instruction, cfg, onLog: (e) => pushLog(book.slug, e), onFreshRestart: mkFresh(book.slug, cfg), autopilotConfirmOnly: true });
         return json(res, 200, { ok: true, mode: 'opened', instanceId: session.instance?.id });
       } catch (e) { return json(res, 500, { error: e.message }); }
     }
@@ -1629,11 +1662,12 @@ async function api(p, req, res, u) {
     }
     if (p === '/api/stop') {
       const slug = slugOf(body.book);
+      clearStatelessActive(slug);
       const st = rt.get(slug);
       // 无状态写作：置停止标志，循环会在【当前批次写完后】于批间安全停止（不杀进程、不丢半章）。
       if (st?.statelessRun && !st.statelessRun.stopped) {
         st.statelessRun.stopped = true;
-        pushLog(slug, { level: 'act', msg: '已请求停止无状态写作：当前批次写完即停（不会丢失半章）' });
+        pushLog(slug, { level: 'act', msg: 'Đã dừng viết tự động: Đợt hiện tại hoàn thành sẽ dừng lại' });
         return json(res, 200, { ok: true, mode: 'draining', stateless: true });
       }
       const ap = st?.session?.autopilot;

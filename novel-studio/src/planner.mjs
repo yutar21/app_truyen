@@ -240,10 +240,30 @@ const REVIEW_DIMS = {
   plausibility: '【故事合理性】人物动机是否可信、因果是否成立、反转与实力变化是否有铺垫与代价、世界/设定规则是否自洽',
   pace: '【节奏/格局/读者体验】主角处境(地点/权力层级/实力/对手量级/格局)是否随章可感升级还是原地打转；是否有连续多章以办牌/验册/对账/盘点/走流程为主线的事务流水账；隔几章有没有可感的进展或爽点(赢一场/收一人/揭真相/上台阶)还是全程压抑无回报；对照本卷阶段目标进度是否跑偏',
 };
+const REVIEW_DIMS_VN = {
+  logic: '【Tính logic & Nhất quán】 Trật tự dòng thời gian, thiết lập và thu hồi phục bút, các mâu thuẫn sự kiện/quan hệ/thương tích/pháp bảo/nợ nần, tính nhất quán trong nhận thức nhân vật, các lỗ hổng cốt truyện',
+  style: '【Văn phong & Ngữ cảm】 Đọc đối chiếu với văn mẫu trong style_refs/ để thẩm định ngữ cảm: tư thế người kể chuyện, nhịp điệu ngắt đoạn, khẩu vị dùng từ ngữ/Hán-Việt, cảm xúc, cách mở và đóng chương',
+  plausibility: '【Độ hợp lý của tình tiết】 Động cơ nhân vật có đáng tin cậy không, quan hệ nhân quả có logic không, các bước ngoặt và sự thay đổi thực lực có được chuẩn bị kỹ lưỡng không, quy tắc thế giới/tu vi có tự nhất quán không',
+  pace: '【Tiết tấu & Sảng điểm & Trải nghiệm độc giả】 Cảnh ngộ nhân vật chính (địa điểm/thực lực/quyền lực/tầm cỡ đối thủ) có được thăng cấp rõ rệt không; có bị sa lầy vào kể lể thủ tục vụn vặt không; cách vài chương có tạo được chiến thắng/tiến triển cụ thể hay toàn ức chế dồn nén',
+};
 export function buildReviewInstruction(book, range, dims, note) {
+  const isLatin = /[a-zA-Zà-ỹÀ-Ỹ]/.test(book.title);
+  const r = (range || (isLatin ? 'Toàn tác phẩm' : '全书')).trim();
+  if (isLatin) {
+    const sel = (Array.isArray(dims) && dims.length ? dims : ['logic', 'style', 'plausibility', 'pace'])
+      .filter(d => REVIEW_DIMS_VN[d]).map(d => REVIEW_DIMS_VN[d]);
+    const focus = note ? `Trọng tâm rà soát theo yêu cầu tác giả: ${String(note).replace(/[\r\n]+/g, ' ')}. ` : '';
+    const s = `Hãy thực hiện một đợt 【RÀ SOÁT & THẨM ĐỊNH TÍNH NHẤT QUÁN TOÀN DIỆN】 cho tác phẩm 《${book.title}》, phạm vi: ${r}. ${focus}` +
+      `Tập trung kiểm tra các tiêu chí sau: ${sel.join('; ')}. ` +
+      `Đọc lướt qua các chương trong phạm vi (kết hợp đối chiếu novel_bible.md, outlines/, continuity_ledger.md, chapter_index.md); ` +
+      `Ghi nhận toàn bộ phát hiện và phân loại theo 3 mức 【Lỗi nghiêm trọng / Nguy cơ tiềm ẩn / Gợi ý nâng cấp】 vào tệp reviews/ra-soat-${r.replace(/[\s\\/:*?"<>|]+/g, '_')}.md HOÀN TOÀN BẰNG TIẾNG VIỆT. ` +
+      `Cách xử lý: Lỗi logic hoặc mâu thuẫn thiết lập cần sửa trực tiếp tại chỗ (giữ nguyên khung cốt truyện); văn phong cần trau chuốt mượt mà; ` +
+      `Nếu có tình tiết cần thay đổi lớn, ghi rõ phương án đề xuất trong báo cáo, không tự ý đảo lộn cốt truyện cũ. ` +
+      `Tuyệt đối không đụng vào các chương ngoài phạm vi, không tự ý viết thêm chương mới. Hoàn thành báo cáo rõ ràng bằng TIẾNG VIỆT CHUẨN MỰC.`;
+    return s.replace(/[\r\n]+/g, ' ');
+  }
   const sel = (Array.isArray(dims) && dims.length ? dims : ['logic', 'style', 'plausibility', 'pace'])
     .filter(d => REVIEW_DIMS[d]).map(d => REVIEW_DIMS[d]);
-  const r = (range || '全书').trim();
   const focus = note ? `本次复检的【重点要求】：${String(note).replace(/[\r\n]+/g, ' ')}。` : '';
   const s = `对《${book.title}》做一次【复检】，范围：${r}。${focus}只针对以下维度检查并修正：${sel.join('；')}。` +
     `请按文件名顺序逐章通读该范围内的正文（必要时参考 novel_bible.md、outlines/、continuity_ledger.md、chapter_index.md）；` +
@@ -273,6 +293,16 @@ export function buildResumeInstruction(book) {
 
 // 只重建【设定圣经 + 大纲】，不写新正文：导入/半成品书据已写正文逆向重建规划文件。单行。
 export function buildRebuildOutlineInstruction(book) {
+  const isLatin = /[a-zA-Zà-ỹÀ-Ỹ]/.test(book.title);
+  if (isLatin) {
+    const s = `Đây là một tác phẩm tiểu thuyết đã có sẵn chính văn: 《${book.title}》, nhưng 【Thiết Lập / Novel Bible và Dàn Ý / Outlines】 chưa đầy đủ. Hãy 【CHỈ TÁI LẬP BỐ CỤC VÀ THIẾT LẬP HOÀN TOÀN BẰNG TIẾNG VIỆT, TUYỆT ĐỐI KHÔNG VIẾT CHƯƠNG MỚI】: ` +
+      `Bước 1: Đọc lướt qua các chương đã viết trong thư mục chapters/ (theo thứ tự tên tệp). ` +
+      `Bước 2: Dựa vào chính văn tiếng Việt để tái lập tệp novel_bible.md bằng TIẾNG VIỆT CHUẨN MỰC —— thế giới quan, hệ thống cảnh giới/tu vi, nhân vật chính Lục Trần và các nhân vật nữ/phụ, thế lực đối địch, phục bút chưa thu hồi; đồng bộ các sự kiện then chốt vào continuity_ledger.md. ` +
+      `Bước 3: Đặt tên quyển đậm chất huyền huyễn cho từng quyển, xây dựng hoặc bổ sung trong outlines/ các tệp dàn ý chi tiết từng chương bằng Tiếng Việt. ` +
+      `Bước 4: Đối chiếu và đồng bộ lại tệp chapter_index.md cho khớp 100% với các tệp thực tế trong chapters/. ` +
+      `【RÀNG BUỘC CỨNG】 Không tạo/sửa/xóa bất kỳ tệp chương chính văn nào, chỉ tạo/cập nhật novel_bible.md, outlines/, continuity_ledger.md, chapter_index.md. Sau khi hoàn thành xuất ra một dòng: 「【THIẾT LẬP VÀ DÀN Ý ĐÃ TÁI LẬP THÀNH CÔNG】」. Toàn bộ tài liệu phải viết bằng TIẾNG VIỆT CHUẨN MỰC.`;
+    return s.replace(/[\r\n]+/g, ' ');
+  }
   const s = `这是一本已有正文的小说《${book.title}》，但【设定圣经与大纲】缺失或不完整。请【只重建规划、绝不写任何新正文】：` +
     `第一步：通读 chapters/ 下所有已写章节（按文件名顺序）。` +
     `第二步：据正文逆向重建 novel_bible.md——世界观与力量/设定体系、主角与关键人物及其当前处境、对抗势力、主题与禁区、命名与文风基线、已埋未回收的伏笔与未决线索；关键事实同步进 continuity_ledger.md。` +

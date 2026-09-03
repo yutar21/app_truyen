@@ -22,22 +22,30 @@ import { pacingGate } from './pacing.mjs';   // 写后节奏闸：治章长超�
 import { inspect as inspectLedger, needsSeed, ensureStructure, seedInstruction, snapshotGate } from './ledgersnap.mjs';   // 台账当前态快照：治「每批喂的是开篇旧账」
 
 // 各模型"无头 + 自动批准文件读写"的参数。
-function writeArgs(model) {
+function writeArgs(model, cfg) {
   if (model === 'codex') return ['exec', '--skip-git-repo-check', '--dangerously-bypass-approvals-and-sandbox'];
   if (model === 'claude') return ['-p', '--dangerously-skip-permissions'];
-  if (model === 'agy' || model === 'gemini') return ['--effort', 'high', '-p', '--dangerously-skip-permissions', '--output-format', 'text'];
+  if (model === 'agy' || model === 'gemini') {
+    const args = ['--effort', cfg?.agyEffort || 'high'];
+    if (cfg?.agyModel) args.push('--model', cfg.agyModel);
+    const timeoutSec = Math.max(1800, Math.round((cfg?.stateless?.batchTimeoutMs || 1800000) / 1000));
+    args.push('--print-timeout', `${timeoutSec}s`);
+    args.push('--dangerously-skip-permissions', '--output-format', 'text');
+    return args;
+  }
   return ['-p', '--yolo'];   // gemini：-y/--yolo 自动批准工具调用
 }
 
 // 异步跑一次无头模型（不阻塞事件循环）。prompt 走 stdin，cwd = 书目录（模型据此读写本书文件）。
-function runHeadless(model, prompt, { cwd, cfg, timeoutMs = 900000, onChunk }) {
+export function runHeadless(model, prompt, { cwd, cfg, timeoutMs = 900000, onChunk } = {}) {
   const m = getModel(model);
   if (!m) return Promise.reject(new Error('未知模型：' + model));
   const env = { ...process.env };
   if (cfg?.enableProxy) { const px = proxyUrl(); if (px) { env.HTTP_PROXY = env.HTTPS_PROXY = env.ALL_PROXY = env.http_proxy = env.https_proxy = px; } }
   return new Promise((resolve) => {
     let out = '', err = '', killed = false;
-    const child = spawn(m.bin, writeArgs(model), { cwd, env, shell: true, windowsHide: true });
+    const isWinCmd = process.platform === 'win32' && /\.(cmd|bat)$/i.test(m.bin);
+    const child = spawn(m.bin, writeArgs(model, cfg), { cwd, env, shell: isWinCmd, windowsHide: true });
     const timer = setTimeout(() => { killed = true; try { child.kill('SIGTERM'); } catch {} }, timeoutMs);
     try { child.stdin.write(prompt); child.stdin.end(); } catch {}
     child.stdout.on('data', d => { const s = d.toString(); out += s; if (onChunk) try { onChunk(s); } catch {} });

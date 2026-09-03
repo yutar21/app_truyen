@@ -24,8 +24,7 @@ export function reviewerCandidates(authorModel, cfg) {
   const push = (id) => { if (id && avail.includes(id) && !out.includes(id)) out.push(id); };
   const want = cfg?.editorReview?.model;
   if (want && want !== 'auto') push(want);
-  // codex 的 headless(`exec`) 输出干净、真能非交互跑通 → 优先当审稿人（哪怕它=作者，"同模型独立审"也强过
-  // gemini 参数报错 / qwen 未登录 吐出来的噪音当审稿）。gemini/qwen/claude 只作兜底（本机实测多半跑不了）。
+  push('agy');
   push('codex');
   for (const id of ['gemini', 'qwen', 'claude']) if (id !== authorModel) push(id);
   push(authorModel);   // 同模型独立审兜底
@@ -42,10 +41,18 @@ function runModelOnceAsync(model, prompt, cfg, timeoutMs = 180000) {
       const px = proxyUrl();
       if (px) { env.HTTP_PROXY = env.HTTPS_PROXY = env.ALL_PROXY = env.http_proxy = env.https_proxy = px; }
     }
-    const args = model === 'codex'
-      ? ['exec', '--skip-git-repo-check', '--dangerously-bypass-approvals-and-sandbox']
-      : ['-p'];
-    const cp = spawn(m.bin, args, { env, cwd: os.tmpdir(), shell: true, windowsHide: true });
+    let args;
+    if (model === 'codex') {
+      args = ['exec', '--skip-git-repo-check', '--dangerously-bypass-approvals-and-sandbox'];
+    } else if (model === 'agy' || model === 'gemini') {
+      args = ['--effort', cfg?.agyEffort || 'high'];
+      if (cfg?.agyModel) args.push('--model', cfg.agyModel);
+      args.push('--dangerously-skip-permissions', '--output-format', 'text');
+    } else {
+      args = ['-p'];
+    }
+    const isWinCmd = process.platform === 'win32' && /\.(cmd|bat)$/i.test(m.bin);
+    const cp = spawn(m.bin, args, { env, cwd: os.tmpdir(), shell: isWinCmd, windowsHide: true });
     let out = '', err = '';
     const to = setTimeout(() => { try { cp.kill(); } catch {} reject(new Error(m.name + ' 审稿超时')); }, timeoutMs);
     cp.stdout.on('data', d => (out += d));
@@ -73,6 +80,34 @@ function outlineFilesFor(dir, scope) {
 
 // 主编审稿 prompt：网文资深主编视角，重点盯节奏/格局/爽点/逻辑/规模/反流水账，给可执行改法。
 function buildEditorPrompt(book, scope, bible, outline) {
+  const isLatin = /[a-zA-Zà-ỹÀ-Ỹ]/.test(book.title);
+  if (isLatin) {
+    return [
+      `Bạn là một đại Tổng biên tập tiểu thuyết mạng kỳ cựu và cực kỳ khó tính, đang thực hiện thẩm định dàn ý trước khi viết. Nhiệm vụ của bạn là vạch ra những vấn đề có thể làm tác phẩm bị gãy mạch, đuối sức hoặc mất độc giả, và đưa ra giải pháp sửa đổi cụ thể.`,
+      `Tác phẩm: 《${book.title}》; Phạm vi thẩm định: ${scope}.`,
+      ``,
+      `# Bối cảnh thiết lập (novel_bible.md)`,
+      bible || '(Chưa có)',
+      ``,
+      `# Dàn ý cần duyệt`,
+      outline,
+      ``,
+      `# Tiêu chuẩn thẩm định (Kiểm tra từng điều, thẳng thắn, không khách sáo)`,
+      `1. Nhịp điệu / Cục diện: Mỗi quyển cảnh ngộ của nhân vật chính (địa điểm / cấp bậc quyền lực / thực lực / tầm cỡ đối thủ) có được thăng cấp rõ rệt không? Mục tiêu từng giai đoạn có được giải quyết trong 3-8 chương không?`,
+      `2. Tránh kể lể vụn vặt: Có nguy cơ biến các thủ tục hành chính, đối chiếu sổ sách vụn vặt thành diễn biến chính không?`,
+      `3. Cao trào & Sảng điểm: Cách vài chương có mang lại chiến thắng hay tiến triển cụ thể cho nhân vật chính không?`,
+      `4. Logic & Phục bút: Các nút thắt, bí mật có logic và hợp lý không? Động cơ nhân vật có nhất quán không?`,
+      `5. Độ tương thích thể loại: Dàn ý có bám sát điểm hấp dẫn của thể loại tiên hiệp/huyền huyễn không?`,
+      ``,
+      `# ĐỊNH DẠNG XUẤT (100% TIẾNG VIỆT, ĐƯA RA KẾT LUẬN TRỰC TIẾP, KHÔNG TÓM TẮT LẠI DÀN Ý) —— MỖI Ý MỘT DÒNG`,
+      `Mỗi ý kiến PHẢI ĐẶT TRÊN MỘT DÒNG ĐỘC LẬP, đầu dòng dùng thẻ phân loại:`,
+      `- [Lỗi nghiêm trọng] Một câu nêu rõ: Vấn đề là gì → Cụ thể sửa thế nào`,
+      `- [Nguy cơ tiềm ẩn] … (Tương tự, viết gọn trên 1 dòng)`,
+      `- [Gợi ý] … (Tương tự, viết gọn trên 1 dòng)`,
+      `Chỉ dùng 3 nhãn: [Lỗi nghiêm trọng] / [Nguy cơ tiềm ẩn] / [Gợi ý]. Số lượng từ 3 - 10 điều.`,
+      `Sau toàn bộ các điều trên, xuống dòng kết luận: 【Đánh giá tổng thể】 Có thể viết ngay / Cần sửa lại rồi mới viết —— Một câu nêu rõ thay đổi mấu chốt nhất.`,
+    ].join('\n');
+  }
   return [
     `你是一名极挑剔的资深网文主编，正在【开写前】审核一本长篇网文的大纲。你的职责是抓出"会让这本书写崩、读者弃书"的结构问题，并给出可执行的修改意见。`,
     `书名：《${book.title}》；本次审核范围：${scope}。`,
@@ -166,9 +201,9 @@ export function buildReviseInstruction(book, scope, file) {
 export function parseReviewItems(critique) {
   const out = [];
   const lines = String(critique || '').split(/\r?\n/);
-  const re = /^\s*(?:[-*·•]|\d+[.)、])?\s*[\[【]\s*(硬伤|隐患|建议)\s*[\]】]\s*(.+?)\s*$/;
+  const re = /^\s*(?:[-*·•]|\d+[.)、])?\s*[\[【]\s*(硬伤|隐患|建议|Lỗi nghiêm trọng|Nguy cơ tiềm ẩn|Gợi ý|Lỗi|Nguy cơ)\s*[\]】]\s*(.+?)\s*$/i;
   for (const ln of lines) {
-    if (/^\s*[\[【]?\s*总评/.test(ln)) continue;
+    if (/^\s*[\[【]?\s*(总评|Đánh giá tổng thể)/i.test(ln)) continue;
     const m = ln.match(re);
     if (m && m[2] && m[2].trim().length >= 4) out.push({ id: 'r' + out.length, severity: m[1], text: m[2].trim() });
   }

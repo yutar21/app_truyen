@@ -1397,8 +1397,8 @@ $('#btnRebuildOutline').addEventListener('click', async () => {
   const btn = $('#btnRebuildOutline'); const old = btn.textContent; btn.disabled = true; btn.textContent = 'Đang gửi chỉ lệnh…';
   try {
     const r = await api('/api/book/rebuild-outline', 'POST', { book: CUR.slug });
-    if (r.mode === 'opened') { setWriting(true); openStream(CUR.slug); }
-    toast(r.mode === 'inserted' ? 'Đã gửi lệnh: Tái lập Story Bible & Dàn ý (Không viết chương mới)' : 'Đã mở tiến trình: Tái lập Story Bible & Dàn ý');
+    if (r.mode === 'opened' || r.mode === 'headless') { setWriting(true); openStream(CUR.slug); }
+    toast(r.mode === 'inserted' ? 'Đã gửi lệnh: Tái lập Story Bible & Dàn ý (Không viết chương mới)' : 'Đã bắt đầu tiến trình: Tái lập Story Bible & Dàn ý (Chạy ngầm)');
   } catch (e) { toast('Tái lập thất bại: ' + e.message); }
   finally { btn.disabled = false; btn.textContent = old; }
 });

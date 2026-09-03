@@ -7,6 +7,7 @@ import { ensureProfile, cli, closeWindow } from './unterm.mjs';
 import { getSession, removeSession } from './sessions.mjs';
 import { getStyle } from './styles.mjs';
 import { resolveRomance, DEFAULT_ROMANCE } from './romance.mjs';
+import { loadConfig } from './config.mjs';
 
 // 删除一本书：停会话、删 profile、移出书架；可选连磁盘文件夹一起删（危险）
 export function deleteBook(slugOrId, { deleteFiles = false } = {}) {
@@ -565,7 +566,39 @@ export function bookStats(book) {
   return { chapters, kb: Math.round(bytes / 1024), volumes, maxChapter, cover, coverMtime, coverBg, coverBgMtime };
 }
 
+// Tự động quét và phát hiện các thư mục truyện có sẵn trong workspace
+export function autoDiscoverWorkspaceBooks() {
+  try {
+    const cfg = loadConfig();
+    const wsDirs = new Set();
+    if (cfg.workspace) wsDirs.add(path.resolve(cfg.workspace));
+    const parentNovels = path.resolve(path.dirname(cfg.workspace || ''), 'novels');
+    if (fs.existsSync(parentNovels)) wsDirs.add(parentNovels);
+
+    for (const ws of wsDirs) {
+      if (!fs.existsSync(ws)) continue;
+      const entries = fs.readdirSync(ws, { withFileTypes: true });
+      const currentBooks = loadBooks();
+      for (const ent of entries) {
+        if (!ent.isDirectory()) continue;
+        const fullDir = path.join(ws, ent.name);
+        const normDir = path.resolve(fullDir).toLowerCase();
+        if (currentBooks.some(b => b.dir && path.resolve(b.dir).toLowerCase() === normDir)) continue;
+        const hasBible = fs.existsSync(path.join(fullDir, 'novel_bible.md'));
+        const hasChapters = fs.existsSync(path.join(fullDir, 'chapters'));
+        const hasStudio = fs.existsSync(path.join(fullDir, '.studio'));
+        if (hasBible || hasChapters || hasStudio) {
+          try {
+            importBook({ dir: fullDir, title: detectTitleFromDir(fullDir), model: cfg.defaultModel || 'agy' }, cfg);
+          } catch {}
+        }
+      }
+    }
+  } catch {}
+}
+
 export function listBooksWithStats() {
+  autoDiscoverWorkspaceBooks();
   return loadBooks().map(b => ({ ...b, stats: bookStats(b) }));
 }
 

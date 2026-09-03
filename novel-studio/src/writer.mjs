@@ -132,7 +132,7 @@ export function writeLaunchScript(book, model, instruction, cfg) {
     lines.push(
       `Write-Host "[agent] 启动 ${m.bin} ，初始指令已注入…" -ForegroundColor DarkGray`,
       `$seed = ${psArr}`,
-      `& ${m.bin} @seed`,
+      `& '${m.bin.replace(/'/g, "''")}' @seed`,
     );
     const p = path.join(dir, 'launch.ps1');
     fs.writeFileSync(p, '﻿' + lines.join('\r\n') + '\r\n', 'utf8'); // BOM 保证中文

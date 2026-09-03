@@ -17,7 +17,12 @@ function mtimeOf(p) { try { return Math.floor(fs.statSync(p).mtimeMs); } catch {
 export function listBookFiles(book) {
   const dir = book.dir;
   const meta = [];
-  for (const [label, rel] of [['设定圣经', 'novel_bible.md'], ['连贯性台账', 'continuity_ledger.md'], ['章节索引', 'chapter_index.md'], ['简介', '简介.txt']]) {
+  for (const [label, rel] of [
+    ['Thiết Lập (Story Bible)', 'novel_bible.md'],
+    ['Sổ Cái Bối Cảnh (Ledger)', 'continuity_ledger.md'],
+    ['Mục Lục Chương (Index)', 'chapter_index.md'],
+    ['Giới Thiệu Truyện', '简介.txt']
+  ]) {
     const p = path.join(dir, rel);
     if (fs.existsSync(p)) meta.push({ label, rel, kb: kbOf(p) });
   }
@@ -38,8 +43,8 @@ export function listBookFiles(book) {
       // 不剥就会显示成「第1章 001雨巷里的死人箱」，章号出现两遍。（本文件第 105 行的查重早就这么剥了。）
       // 兜底：万一文件名纯粹是章号（剥完为空），退回不剥，免得列表出现无名条目。
       try {
-        for (const f of fs.readdirSync(path.join(cdir, v)).filter(f => /\.txt$/i.test(f))) {
-          const full = f.replace(/\.txt$/i, '');
+        for (const f of fs.readdirSync(path.join(cdir, v)).filter(f => /\.(txt|md)$/i.test(f))) {
+          const full = f.replace(/\.(txt|md)$/i, '');
           const stripped = full.replace(/^\d+[_\-\s]?/, '').trim();
           chs.push({
             name: stripped || full,
@@ -79,7 +84,7 @@ export function renumberGlobalChapters(book) {
     const vp = path.join(cdir, v);
     let all = []; try { all = fs.readdirSync(vp); } catch {}
     for (const f of all) {
-      if (!/\.txt$/i.test(f)) continue;
+      if (!/\.(txt|md)$/i.test(f)) continue;
       if (/^_/.test(f)) {   // _卷简介.txt 等 → 移到 outlines
         try { fs.renameSync(path.join(vp, f), path.join(odir, v + (f === '_卷简介.txt' ? '简介.txt' : f))); intros++; } catch {}
         continue;
@@ -88,12 +93,13 @@ export function renumberGlobalChapters(book) {
         try { fs.renameSync(path.join(vp, f), path.join(dir, '杂项_' + f)); strays++; } catch {}
       }
     }
-    const files = fs.readdirSync(vp).filter(f => /^\d+/.test(f) && /\.txt$/i.test(f)).sort((a, b) => parseInt(a, 10) - parseInt(b, 10));
+    const files = fs.readdirSync(vp).filter(f => /^\d+/.test(f) && /\.(txt|md)$/i.test(f)).sort((a, b) => parseInt(a, 10) - parseInt(b, 10));
     for (const f of files) {
       g++;
-      const m = f.match(/^(\d+)([_\-]?)(.*)\.txt$/i);
-      const sep = m ? m[2] : '_', name = m ? m[3] : f.replace(/\.txt$/i, '');
-      const ng = String(g).padStart(3, '0'), nf = ng + sep + name + '.txt';
+      const m = f.match(/^(\d+)([_\-]?)(.*)\.(txt|md)$/i);
+      const ext = m ? ('.' + m[4]) : path.extname(f);
+      const sep = m ? m[2] : '_', name = m ? m[3] : f.replace(/\.(txt|md)$/i, '');
+      const ng = String(g).padStart(3, '0'), nf = ng + sep + name + ext;
       if (nf !== f) moves.push([path.join(vp, f), path.join(vp, nf)]);
       rows.push([ng, name, v, 'chapters/' + v + '/' + nf]);
     }
@@ -115,8 +121,8 @@ export function findDuplicateChapterNames(book) {
       if (!v.isDirectory()) continue;
       let files = []; try { files = fs.readdirSync(path.join(cdir, v.name)); } catch {}
       for (const f of files) {
-        if (!/\.txt$/i.test(f)) continue;
-        const name = f.replace(/^\d+[_\-]?/, '').replace(/\.txt$/i, '').trim();
+        if (!/\.(txt|md)$/i.test(f)) continue;
+        const name = f.replace(/^\d+[_\-]?/, '').replace(/\.(txt|md)$/i, '').trim();
         if (!name) continue;
         if (!byName.has(name)) byName.set(name, []);
         byName.get(name).push(v.name + '/' + f);

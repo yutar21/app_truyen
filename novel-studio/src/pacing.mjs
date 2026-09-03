@@ -398,23 +398,22 @@ export function buildPacingFixInstruction(scan, { warnAlso = false } = {}) {
 export function writePacingReport(bookDir, scan, tag = '') {
   const dir = path.join(bookDir, 'reviews');
   try { fs.mkdirSync(dir, { recursive: true }); } catch {}
-  const lines = ['# 节奏体检' + (tag ? `（${tag}）` : ''), '',
-    '| 章 | 字数 | 流程主线 | 最大钱数 | 钩子 | 短句占比 | 几字一个数 | 均句长 | 字/段 |',
+  const lines = ['# Báo Cáo Thẩm Định Nhịp Độ' + (tag ? ` (${tag})` : ''), '',
+    '| Chương | Số từ | Sổ sách | Tiền tệ | Móc câu | Tỷ lệ câu ngắn | Tần suất số | Độ dài TB câu | Từ/Đoạn |',
     '|---|---|---|---|---|---|---|---|---|'];
   for (const c of scan.chapters) {
     const m = c.style || {};
-    lines.push(`| ${c.num}${c.title} | ${c.chars} | ${c.paperwork ? '是' : ''} | ${c.money || ''} | ${c.hookOk ? 'ok' : '假钩子'} | ${Math.round((m.shortRatio || 0) * 100)}% | ${m.numPer || ''} | ${m.avgLen || ''} | ${m.avgPara || ''} |`);
+    lines.push(`| ${c.num}${c.title} | ${c.chars} | ${c.paperwork ? 'Có' : ''} | ${c.money || ''} | ${c.hookOk ? 'ok' : 'Móc câu giả'} | ${Math.round((m.shortRatio || 0) * 100)}% | ${m.numPer || ''} | ${m.avgLen || ''} | ${m.avgPara || ''} |`);
   }
   if (scan.targets) {
-    lines.push('', `> 阈值锚在本书范本上：短句 ${Math.round(scan.targets.shortRatio * 100)}%、长句 ${Math.round(scan.targets.longRatio * 100)}%、${scan.targets.avgPara} 字/段。`
-      + '判的是「有没有明显跑偏」，不是「像不像范本」。');
+    lines.push('', `> Tiêu chuẩn dựa theo văn mẫu của tác phẩm: Câu ngắn ${Math.round(scan.targets.shortRatio * 100)}%, câu dài ${Math.round(scan.targets.longRatio * 100)}%, ${scan.targets.avgPara} từ/đoạn.`);
   } else {
-    lines.push('', '> 本书没挂范本，阈值用的是写死的默认值。挂一段范本会更准——闸会改成按范本判。');
+    lines.push('', '> Tác phẩm chưa cài văn mẫu, ngưỡng đo dùng giá trị mặc định.');
   }
-  lines.push('', '## 结论', '');
-  if (!scan.issues.length) lines.push('全部通过。');
-  for (const i of scan.issues) lines.push(`- **${i.level === 'error' ? '事故' : '偏差'}｜${i.kind}**：${i.msg}\n  - ${i.fix}`);
-  const fp = path.join(dir, `节奏体检${tag ? '-' + tag : ''}.md`);
+  lines.push('', '## Kết Luận', '');
+  if (!scan.issues.length) lines.push('Toàn bộ đạt chuẩn.');
+  for (const i of scan.issues) lines.push(`- **${i.level === 'error' ? 'Lỗi nghiêm trọng' : 'Sai lệch'} | ${i.kind}**: ${i.msg}\n  - ${i.fix}`);
+  const fp = path.join(dir, `Kiem_Tra_Nhip_Do${tag ? '-' + tag : ''}.md`);
   try { fs.writeFileSync(fp, lines.join('\n') + '\n', 'utf8'); } catch {}
   return fp;
 }

@@ -42,12 +42,12 @@ export const MECHANICS = [
 ].join('\n');
 
 // —— 无范本时的极简默认 ——
-// 只说"网文的基本盘"，不规定怎么写。十来行，不是一千五百字符。
 export const MINIMAL_DEFAULT = [
-  '文风基线（作者尚未提供范本，以下只是最低要求，不必拘泥）：',
-  '· 这是面向手机读者的网络小说：读起来要顺、要有推力，别写成散文或报告。',
-  '· 每章要有推进：局面、关系或认知，至少有一样跟章首不同。',
-  '· 章末留一个具体的悬念，别停在总结或抒情上。',
+  'Tiêu chuẩn văn phong tối thiểu (Khi chưa có văn mẫu riêng):',
+  '· 100% viết bằng Tiếng Việt mượt mà, hấp dẫn, chuẩn tiểu thuyết mạng phương Đông.',
+  '· Nhịp điệu dồn dập, cuốn hút, ngắt đoạn tự nhiên phù hợp đọc trên điện thoại.',
+  '· Mỗi chương phải có sự tiến triển rõ rệt về cục diện, quan hệ hoặc nhận thức nhân vật.',
+  '· Cuối chương phải để lại móc câu (cliffhanger) cụ thể, không kết thúc bằng lời tổng kết hay triết lý suông.',
 ].join('\n');
 
 // 【实测教训】范本给到 7000 字符时，模型不是"学语感"而是【当模板填空】：
@@ -91,23 +91,14 @@ export function saveCard(book, text) {
 }
 
 // 让模型从范本里【自己总结】手法的提示词。
-// 关键是逼它给【具体到可执行】的观察，而不是"多用短句、注重细节"这类放之四海皆准的废话——
-// 后者恰恰是之前那套规则的形态，也正是它没用的原因。
 export const CARD_PROMPT = [
-  '下面是作者认可的样章。请你把它的【写法】总结成一份可执行的手法卡，供后续章节照着写。',
+  'Dưới đây là các đoạn văn phong mẫu đã được tác giả duyệt. Hãy đúc kết 【PHONG CÁCH & KỸ THUẬT VIẾT】 thành một Thẻ Kỹ Thuật (Style Card) bằng TIẾNG VIỆT, để các chương sau noi theo.',
   '',
-  '要求：',
-  '1. 只写【这些样章特有的、可观察到的】做法，附上原文里的例子。',
-  '   ——不要写"多用短句""注重细节""对话要自然"这类任何小说都适用的废话，那等于没说。',
-  '2. 至少覆盖这几面，每面 1–3 条，每条都要能直接照着做：',
-  '   · 叙述者的姿态：他在不在场？跟读者的距离多近？会不会直接对读者说话？',
-  '   · 信息给法：推理/知识是讲给读者听，还是让读者自己看出来？给得早还是晚？',
-  '   · 句子与段落的形态：长短、换行密度、什么时候单句成段。',
-  '   · 用词的口味：敢不敢用成语套话？有没有现代语汇乱入？夸张到什么程度？',
-  '   · 情绪的外放程度：抒情、感叹、喊口号，用不用？用在哪儿？',
-  '   · 一章怎么起、怎么推、怎么收。',
-  '3. 【不要评价好坏】，只描述"它是怎么做的"。',
-  '4. 控制在 500 字以内，条目式，别写成论文。',
+  'Yêu cầu:',
+  '1. 100% viết bằng Tiếng Việt chuẩn mực.',
+  '2. Chỉ ghi nhận các thủ pháp quan sát được từ văn mẫu (kèm ví dụ ngắn trích từ mẫu). Không viết những câu sáo rỗng chung chung.',
+  '3. Đúc kết các khía cạnh: Tư thế người kể chuyện, nhịp điệu ngắt đoạn, khẩu vị dùng từ ngữ/Hán-Việt, cao trào cảm xúc, cách mở và đóng chương.',
+  '4. Độ dài dưới 500 từ, định dạng gạch đầu dòng rõ ràng, dễ áp dụng.',
 ].join('\n');
 
 // 组装注入提示词的文风段。
@@ -121,25 +112,22 @@ export function voicePrint(book) {
 
   const lines = [];
   if (card) {
-    lines.push('【本书手法卡（从作者认可的样章里总结出来的）】');
+    lines.push('【THẺ KỸ THUẬT VĂN PHONG TÁC PHẨM (Đúc kết từ văn mẫu)】');
     lines.push(card);
     lines.push('');
   }
   if (refs.length) {
-    lines.push('【文风范本 —— 这是判断文风的最高依据】');
-    lines.push('下面是作者认可的文字。你要写成【这个样子】。');
-    lines.push('学的是：叙述者的姿态、句子的呼吸、信息给法、用词口味、情绪的外放程度、一章的起收方式。');
-    lines.push('⚠️ 【严禁照抄】范本里的情节、人物、地名、专有名词或成句。');
-    lines.push('⚠️ 【也严禁复制范本的句子结构与开场方式】——不要套用它的开头句式、不要沿用它的');
-    lines.push('   段落排布顺序、不要把它的比喻和梗换个词再用一遍。范本是让你感受"这个人怎么说话"，');
-    lines.push('   不是让你填空。写出来的东西如果能和范本逐句对上，就是抄，重写。');
-    if (card) lines.push('⚠️ 手法卡与范本冲突时，【以范本为准】——描述总是有损的，原文才是真的。');
+    lines.push('【VĂN PHONG MẪU CHUẨN —— CĂN CỨ CAO NHẤT ĐỂ ĐỊNH HÌNH GIỌNG VĂN】');
+    lines.push('Dưới đây là các đoạn văn mẫu bằng tiếng Việt được tác giả phê duyệt. Bạn phải viết các chương mới theo đúng tinh thần, nhịp điệu và văn phong này:');
+    lines.push('Học hỏi: Tư thế người kể chuyện, nhịp thở của câu văn, mật độ thông tin, khẩu vị dùng từ ngữ, cách tạo cao trào và móc câu mở/đóng chương.');
+    lines.push('⚠️ TUYỆT ĐỐI KHÔNG sao chép y nguyên tình tiết, nhân vật hay câu chữ của văn mẫu. Hãy dùng phong cách này để sáng tác tiếp.');
+    if (card) lines.push('⚠️ Khi thẻ kỹ thuật và văn mẫu có xung đột, lấy VĂN MẪU làm chuẩn.');
     for (const r of refs) {
       lines.push('');
-      lines.push(`—— 范本《${r.name}》 ——`);
+      lines.push(`—— Văn mẫu 《${r.name}》 ——`);
       lines.push(r.text);
     }
-    lines.push('—— 范本结束 ——');
+    lines.push('—— Hết phần văn mẫu ——');
   }
   return '\n' + lines.join('\n') + '\n';
 }

@@ -75,7 +75,7 @@ export function lastChapterTail(book, maxChars = 1800) {
     let ents = []; try { ents = fs.readdirSync(d, { withFileTypes: true }); } catch { return; }
     for (const e of ents) {
       if (e.isDirectory()) walk(path.join(d, e.name), e.name);
-      else if (/\.txt$/i.test(e.name)) {
+      else if (/\.(txt|md)$/i.test(e.name)) {
         const m = e.name.match(/^(\d{1,4})/);
         const num = m ? parseInt(m[1], 10) : 0;
         if (num >= best.num) best = { num, file: path.join(d, e.name), vol, name: e.name };
@@ -86,8 +86,9 @@ export function lastChapterTail(book, maxChars = 1800) {
   if (!best.file) return { num: 0, name: '', tail: '' };
   const body = readOr(best.file);
   const tail = body.length > maxChars ? '…' + body.slice(-maxChars) : body;
-  const hanzi = (body.match(/[一-鿿]/g) || []).length;   // 实际篇幅（汉字数）→ 用于字数自校准
-  return { num: best.num, name: (best.name || '').replace(/\.txt$/i, ''), tail, hanzi };
+  const isLatin = !/[\u4e00-\u9fa5]/.test(body.slice(0, 500));
+  const hanzi = isLatin ? body.trim().split(/\s+/).length : (body.match(/[一-鿿]/g) || []).length;
+  return { num: best.num, name: (best.name || '').replace(/\.(txt|md)$/i, ''), tail, hanzi, isLatin };
 }
 
 // 近期章名表（去重防撞名用）：优先从 chapter_index.md 取，退回扫文件名。取最后 N 个 + 总数。（导出供 cowrite 复用）
@@ -106,7 +107,7 @@ export function recentChapterNames(book, n = 80) {
     const cdir = path.join(book.dir, 'chapters');
     const walk = (d) => { let es = []; try { es = fs.readdirSync(d, { withFileTypes: true }); } catch { return; }
       for (const e of es) { if (e.isDirectory()) walk(path.join(d, e.name));
-        else if (/\.txt$/i.test(e.name)) names.push(e.name.replace(/^\d+[_\-]?/, '').replace(/\.txt$/i, '').trim()); } };
+        else if (/\.(txt|md)$/i.test(e.name)) names.push(e.name.replace(/^\d+[_\-]?/, '').replace(/\.(txt|md)$/i, '').trim()); } };
     walk(cdir);
   }
   return { total: names.length, recent: names.slice(-n) };
@@ -216,25 +217,42 @@ export function buildBatchPack(book, { count = 3, mode = 'continue' } = {}) {
   const voice = voicePrint(book);
   if (voice && voice.trim()) sections.push(voice.trim());
 
-  sections.push(
-    `## 这一批要做的事\n` +
-    `1. 写第 ${numList.join('、')} 章。【字数是硬指标】：每章正文目标 ${tgtLo}–${tgtHi} 字，硬下限 ${minChars} 字，任何一章都不得低于下限。` +
-    `${last.hanzi && last.hanzi >= tgtLo ? `（上一章约 ${last.hanzi} 字达标，保持这个体量、别忽长忽短，也不要超过 ${tgtHi} 字太多。）` : last.hanzi ? `⚠️（注意：最近几章只有约 ${last.hanzi} 字、明显偏短——从本批起每章都要写足到 ${tgtLo}–${tgtHi} 字，绝不能跟着上一章的短篇幅继续写短。）` : ''}` +
-    ` 别靠概述凑字数——用【更完整的场景、更多对话、更多具体细节、人物内心与动作】把篇幅撑到位，宁可多写一个有信息量的小节。\n` +
-    `   ⚠️ 收尾前【逐章数汉字】：把每章正文的汉字数过一遍，凡不足 ${minChars} 字的章，回去【就地扩写】到 ${tgtLo}–${tgtHi} 字（补场景细节/对话/心理，不改剧情框架与结局），改够了再交——绝不允许提交任何低于 ${minChars} 字的章。\n` +
-    `2. 每章严格对齐本卷大纲对应章号的 beat 与章末钩子；推进"人与冲突"，不要写成办手续/对账/盘点的事务流水账。\n` +
-    `3. 落盘到 chapters/${volDir}/。【若本卷大纲章号区间已写满、本批进入下一卷】：先给下一卷起一个【有意境的卷名】（4–6字副标题，贴合本卷主线），把它同时写进 ①该卷大纲文件名 outlines/卷${String(volNum + 1).padStart(2, '0')}<卷名>分章大纲.md（如 卷${String(volNum + 1).padStart(2, '0')}静海旧火分章大纲.md）②novel_bible.md 的“全书规模/卷名”处；再建 chapters/卷${String(volNum + 1).padStart(2, '0')}/ 续写。发布番茄按卷名建卷，卷【必须有名】、绝不能只叫“卷${String(volNum + 1).padStart(2, '0')}”。\n` +
-    `   文件名 = 3 位全局章号 + 唯一章名，例如 ${numList[0]}章名.txt；内容【仅正文】，不含标题行/卷名/注释/markdown。\n` +
-    `4. 取章名前在 chapter_index.md 全表查重，确保全书唯一；写完把新章登记进 chapter_index.md。\n` +
-    `5. 写完更新 continuity_ledger.md：\n` +
-    `   ★ 文件顶部的「📌 当前态快照」段（LEDGER_HISTORY_BELOW 标记以上）必须【就地改写】——把本批带来的人物现状/未回收伏笔/待查/伤势/关键物件的变化【更新进快照本段】（新增线加进去、已回收的移出/标了结），保持它精简且始终代表【最新状态】。\n` +
-    `     ⚠️ 这是【下一批写作唯一会被读进上下文的一段】，历史区不会喂给你的下一批。快照过期 = 后面每一章都在照着旧状态写。\n` +
-    `     ⚠️ 其中「- 进度：已写到第 NNN 章」这一行【格式不能改】（程序要读它做校验），本批写完请改成「- 进度：已写到第 ${String(lastNum).padStart(3, '0')} 章」。\n` +
-    `   ★ 详细增量（本批新增时间线/伏笔布点等）另【追加到 LEDGER_HISTORY_BELOW 标记以下】的历史区，不要动历史区已有内容。\n` +
-    `   ★ 万一本文件还没有「📌 当前态快照」段与 LEDGER_HISTORY_BELOW 标记行（正常情况下程序已铺好），请【先把这个结构建出来】：顶部建快照段（含上述进度行），标记行以下放原有内容。不要跳过、不要退回旧写法。\n` +
-    `6. 做一次本批自检（字数/命名/唯一/仅正文/与台账连贯/文风是否贴着范本）。\n` +
-    `完成后简要回报：写了哪几章、各多少字、更新了哪些文件。除非我要求，不要在回复里粘贴整章正文。`
-  );
+  const isLatin = /[a-zA-Zà-ỹÀ-Ỹ]/.test(book.title);
+
+  if (isLatin) {
+    sections.push(
+      `## YÊU CẦU CHO ĐỢT VIẾT NÀY\n` +
+      `1. Viết chương ${numList.join('、')} HOÀN TOÀN BẰNG TIẾNG VIỆT.\n` +
+      `   ★ 【DUNG LƯỢNG LÀ CHỈ TIÊU CỨNG NHẤT】: Mỗi chương mục tiêu đạt 3.000 – 4.500 TỪ TIẾNG VIỆT (tương đương khoảng 15.000 – 22.000 ký tự có dấu cách). TUYỆT ĐỐI KHÔNG ĐƯỢC VIẾT NGẮN DƯỚI 2.800 TỪ TIẾNG VIỆT!\n` +
+      `   ★ Không được viết lướt như tóm tắt kịch bản. Phải viết thật chi tiết: không gian môi trường, tâm lý nhân vật, cử chỉ ánh mắt, từng đòn thế võ học và luồng đấu khí va chạm, hội thoại sống động mang đậm phong vị tiên hiệp huyền huyễn phương Đông.\n` +
+      `   ${last.hanzi && last.hanzi >= 2500 ? `(Chương trước đạt ~${last.hanzi} từ rất đầy đặn, hãy tiếp tục duy trì dung lượng phong phú này, không được viết ngắn cụt lủn.)` : `⚠️(LƯU Ý ĐẶC BIỆT: Nếu chương trước bị ngắn, tuyệt đối không được bắt chước viết ngắn theo. Chương này phải viết đầy đặn, dài đủ 3.000 – 4.500 từ.)`}\n` +
+      `2. Bám sát dàn ý chi tiết phân chương, đẩy mạnh xung đột kịch tính, kết chương có móc câu (hook) mở ra tình huống mới kích thích sự tò mò của độc giả.\n` +
+      `3. Lưu tệp vào thư mục chapters/${volDir}/. Tên tệp định dạng: ${numList[0]}<Tên_Chương>.txt (hoặc .md). Nội dung CHỈ CHỨA CHÍNH VĂN THUẦN TÚY, không chứa dòng tiêu đề, số chương, chú thích tác giả hay markdown.\n` +
+      `4. Kiểm tra tên chương không trùng lặp trong chapter_index.md, viết xong cập nhật dòng mới vào chapter_index.md.\n` +
+      `5. Cập nhật continuity_ledger.md ở phần trạng thái mới nhất.\n` +
+      `6. Tự kiểm tra lại số từ trước khi kết thúc (đảm bảo đủ trên 3.000 từ tiếng Việt).`
+    );
+  } else {
+    sections.push(
+      `## 这一批要做的事\n` +
+      `1. 写第 ${numList.join('、')} 章。【字数是硬指标】：每章正文目标 ${tgtLo}–${tgtHi} 字，硬下限 ${minChars} 字，任何一章都不得低于下限。` +
+      `${last.hanzi && last.hanzi >= tgtLo ? `（上一章约 ${last.hanzi} 字达标，保持这个体量、别忽长忽短，也不要超过 ${tgtHi} 字太多。）` : last.hanzi ? `⚠️（注意：最近几章只有约 ${last.hanzi} 字、明显偏短——从本批起每章都要写足到 ${tgtLo}–${tgtHi} 字，绝不能跟着上一章的短篇幅继续写短。）` : ''}` +
+      ` 别靠概述凑字数——用【更完整的场景、更多对话、更多具体细节、人物内心与动作】把篇幅撑到位，宁可多写一个有信息量的小节。\n` +
+      `   ⚠️ 收尾前【逐章数汉字】：把每章正文的汉字数过一遍，凡不足 ${minChars} 字的章，回去【就地扩写】到 ${tgtLo}–${tgtHi} 字（补场景细节/对话/心理，不改剧情框架与结局），改够了再交——绝不允许提交任何低于 ${minChars} 字的章。\n` +
+      `2. 每章严格对齐本卷大纲对应章号的 beat 与章末钩子；推进"人与冲突"，不要写成办手续/对账/盘点的事务流水账。\n` +
+      `3. 落盘到 chapters/${volDir}/。【若本卷大纲章号区间已写满、本批进入下一卷】：先给下一卷起一个【有意境的卷名】（4–6字副标题，贴合本卷主线），把它同时写进 ①该卷大纲文件名 outlines/卷${String(volNum + 1).padStart(2, '0')}<卷名>分章大纲.md（如 卷${String(volNum + 1).padStart(2, '0')}静海旧火分章大纲.md）②novel_bible.md 的“全书规模/卷名”处；再建 chapters/卷${String(volNum + 1).padStart(2, '0')}/ 续写。发布番茄按卷名建卷，卷【必须有名】、绝不能只叫“卷${String(volNum + 1).padStart(2, '0')}”。\n` +
+      `   文件名 = 3 位全局章号 + 唯一章名，例如 ${numList[0]}章名.txt；内容【仅正文】，不含标题行/卷名/注释/markdown。\n` +
+      `4. 取章名前在 chapter_index.md 全表查重，确保全书唯一；写完把新章登记进 chapter_index.md。\n` +
+      `5. 写完更新 continuity_ledger.md：\n` +
+      `   ★ 文件顶部的「📌 当前态快照」段（LEDGER_HISTORY_BELOW 标记以上）必须【就地改写】——把本批带来的人物现状/未回收伏笔/待查/伤势/关键物件的变化【更新进快照本段】（新增线加进去、已回收的移出/标了结），保持它精简且始终代表【最新状态】。\n` +
+      `     ⚠️ 这是【下一批写作唯一会被读进上下文的一段】，历史区不会喂给你的下一批。快照过期 = 后面每一章都在照着旧状态写。\n` +
+      `     ⚠️ 其中「- 进度：已写到第 NNN 章」这一行【格式不能改】（程序要读它做校验），本批写完请改成「- 进度：已写到第 ${String(lastNum).padStart(3, '0')} 章」。\n` +
+      `   ★ 详细增量（本批新增时间线/伏笔布点等）另【追加到 LEDGER_HISTORY_BELOW 标记以下】的历史区，不要动历史区已有内容。\n` +
+      `   ★ 万一本文件还没有「📌 当前态快照」段与 LEDGER_HISTORY_BELOW 标记行（正常情况下程序已铺好），请【先把这个结构建出来】：顶部建快照段（含上述进度行），标记行以下放原有内容。不要跳过、不要退回旧写法。\n` +
+      `6. 做一次本批自检（字数/命名/唯一/仅正文/与台账连贯/文风是否贴着范本）。\n` +
+      `完成后简要回报：写了哪几章、各多少字、更新了哪些文件。除非我要求，不要在回复里粘贴整章正文。`
+    );
+  }
 
   const prompt = sections.join('\n\n');
 

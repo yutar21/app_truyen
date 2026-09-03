@@ -1,6 +1,6 @@
-$ErrorActionPreference = "Continue"
-Set-Location -LiteralPath 'C:\Users\Duk\.gemini\antigravity-ide\scratch\novels\dau-pha-thuong-khung-luc-tran'
-Write-Host "== Novel Studio :: 《dau-pha-thuong-khung-luc-tran》 / Antigravity CLI (agy) ==" -ForegroundColor Cyan
-Write-Host "[agent] 启动 C:\Users\Duk\AppData\Local\agy\bin\agy.exe ，初始指令已注入…" -ForegroundColor DarkGray
-$seed = @('--effort','high','-p','请阅读本项目的 AGENTS.md/CLAUDE.md 写作规范与 novel_bible.md，然后续写下一批 3 章并在结束后自检。','--dangerously-skip-permissions','--output-format','text')
-& C:\Users\Duk\AppData\Local\agy\bin\agy.exe @seed
+﻿$ErrorActionPreference = "Continue"
+Set-Location -LiteralPath 'c:\New folder\nice\app_truyen\novels\dau-pha-thuong-khung-luc-tran'
+Write-Host "== Novel Studio :: 《Đấu Phá Thương Khung — Lục Trần》 / Antigravity CLI (agy) ==" -ForegroundColor Cyan
+Write-Host "[agent] 启动 C:\Users\Admin\AppData\Local\agy\bin\agy.exe ，初始指令已注入…" -ForegroundColor DarkGray
+$seed = @('--effort','high','--model','gemini-3.8-flash-high','--print-timeout','30m','-p','这是一本已有正文的小说《Đấu Phá Thương Khung — Lục Trần》，但【设定圣经与大纲】缺失或不完整。请【只重建规划、绝不写任何新正文】：第一步：通读 chapters/ 下所有已写章节（按文件名顺序）。第二步：据正文逆向重建 novel_bible.md——世界观与力量/设定体系、主角与关键人物及其当前处境、对抗势力、主题与禁区、命名与文风基线、已埋未回收的伏笔与未决线索；关键事实同步进 continuity_ledger.md。第三步：为【每一卷】起一个有意境的卷名（4–6字副标题；已写到的卷据其正文主线取名），在 outlines/ 下建或补【带卷名的】「卷xx<卷名>分章大纲.md」（如 卷03静海旧火分章大纲.md）——逐章一行写清"该章核心事件/冲突、推进了什么、章末钩子"，并列【本卷伏笔布点表】(埋设→回收章号)；已写到的卷据正文回填，未写到的卷据 bible 主线给章级骨架，覆盖到全书结局；把各卷卷名列进 novel_bible.md 的“全书规模/卷名”处（发布番茄按卷名建卷，卷必须有名、不能只叫“卷xx”）。第四步：校对 chapter_index.md，使每章一行(章号/章名/卷/路径/状态)与 chapters/ 实际一致。【硬性约束】本次绝不新增/改写/删除任何正文章节(.txt)，只产出或更新 novel_bible.md、outlines/、continuity_ledger.md、chapter_index.md。完成后输出一行「【设定与大纲已重建】」并停下。全程遵守本目录 AGENTS.md 的 longform-webnovel-writer 规范。','--dangerously-skip-permissions','--output-format','text')
+& 'C:\Users\Admin\AppData\Local\agy\bin\agy.exe' @seed

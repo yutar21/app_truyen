@@ -103,14 +103,21 @@ export function runCowrite(model, prompt, cfg, timeoutMs = 300000) {
   }
   let args;
   if (model === 'codex') args = ['exec', '--skip-git-repo-check', '--dangerously-bypass-approvals-and-sandbox'];
-  else if (model === 'agy' || model === 'gemini') args = ['--effort', 'high', '-p', '--dangerously-skip-permissions', '--output-format', 'text'];
+  else if (model === 'agy' || model === 'gemini') {
+    args = ['--effort', cfg?.agyEffort || 'high'];
+    if (cfg?.agyModel) args.push('--model', cfg.agyModel);
+    const timeoutSec = Math.max(1800, Math.round(timeoutMs / 1000));
+    args.push('--print-timeout', `${timeoutSec}s`);
+    args.push('--dangerously-skip-permissions', '--output-format', 'text');
+  }
   else args = ['-p'];   // claude / qwen 都是 -p + stdin
   const stripAnsi = (s) => s.replace(/\x1b\[[0-9;?]*[ -\/]*[@-~]/g, '').replace(/\x1b[@-Z\\-_]/g, '').replace(/[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]/g, '');
   return new Promise((resolve, reject) => {
     let out = '', err = '', done = false;
     let child;
+    const isWinCmd = process.platform === 'win32' && /\.(cmd|bat)$/i.test(m.bin);
     try {
-      child = spawn(m.bin, args, { cwd: os.tmpdir(), env, shell: true, windowsHide: true });
+      child = spawn(m.bin, args, { cwd: os.tmpdir(), env, shell: isWinCmd, windowsHide: true });
     } catch (e) { return reject(new Error(m.name + ' 调用失败：' + (e.message || e))); }
     const timer = setTimeout(() => {
       if (done) return; done = true;
@@ -271,11 +278,13 @@ export async function writeChapterFromIntent({ book, model, intent, useLastEndin
   const names = recentChapterNames(book, 60).recent;
 
   const prompt = [
-    `你是资深网文作者。请【严格按作者对本章的要求】写第 ${num} 章正文。这是“作者主导”的共创：作者掌控人物关系与全局逻辑，你要忠实执行，【绝不自作主张改变作者定的情节方向、人物设定或走向】。`,
-    `书：${bookGist(book)}。`,
+    `Bạn là một đại tác giả tiểu thuyết mạng Tiếng Việt xuất sắc. Hãy 【VIẾT CHÍNH VĂN CHƯƠNG ${num} HOÀN TOÀN BẰNG TIẾNG VIỆT】 nghiêm ngặt theo đúng yêu cầu của tác giả. Tác giả là người nắm giữ cốt truyện và nhân vật, bạn tuyệt đối không tự ý làm lệch hướng hay thay đổi thiết lập.`,
+    `Tác phẩm: ${bookGist(book)}.`,
     ``,
-    `【作者对第 ${num} 章的要求（最高优先，务必照做）】：`,
+    `【YÊU CẦU CỦA TÁC GIẢ CHO CHƯƠNG ${num} (Ưu tiên cao nhất, bắt buộc tuân thủ)】:`,
     it,
+    ``,
+    `【YÊU CẦU NGÔN NGỮ】: 100% viết bằng Tiếng Việt mượt mà, hấp dẫn, chuẩn phong cách huyền huyễn/tiên hiệp phương Đông, tuyệt đối không dùng tiếng Trung hay chữ Hán.`,
     ``,
     useLastEnding && last.tail ? `【上一章结尾（衔接用，保持文笔与语气连续）】：\n${last.tail}\n` : '',
     names.length ? `【近期已用章名（新章名别与这些重复）】：${names.slice(-30).join('、')}\n` : '',
@@ -361,16 +370,18 @@ export async function rewriteChapter({
     : [];
 
   const prompt = [
-    `你是资深中文网络小说作者。请【重写第 ${num} 章】。这一章已经写过一版，但作者不满意。`,
-    `书：${bookGist(book)}。`,
+    `Bạn là một đại tác giả tiểu thuyết mạng Tiếng Việt xuất sắc. Hãy 【VIẾT LẠI CHƯƠNG ${num} HOÀN TOÀN BẰNG TIẾNG VIỆT CHUẨN MỰC】. Chương này đã được viết một bản trước đó nhưng tác giả chưa ưng ý.`,
+    `Tác phẩm: ${bookGist(book)}.`,
     ``,
-    `【这一章原来的内容（供你了解上下文；${newPlot ? '情节已被作者重新指定，下面这版只作参考，不必沿用' : '不要照抄它的文笔'}）】：`,
+    `【Bản thảo cũ của chương này (để tham khảo bối cảnh; ${newPlot ? 'tình tiết đã được chỉ định lại bên dưới, bản cũ này chỉ mang tính tham khảo' : 'không sao chép văn phong bản cũ'}】:`,
     original.slice(0, 4000),
     ``,
     newPlot
-      ? `【作者重新指定的本章情节（最高优先，必须照做——与上面原内容冲突时，一律以这里为准）】：\n${newPlot}`
-      : `【情节约束】：这一章在全书里的位置和作用不变——同样的情节节点、同样的人物、同样的结果，不要改剧情走向。要改的是【怎么写】：更具体的细节、更自然的对话、更好的节奏。`,
-    note ? `\n【作者对这次重写的补充要求】：${note}` : '',
+      ? `【Tình tiết mới tác giả chỉ định cho chương này (Ưu tiên cao nhất, bắt buộc tuân thủ)】:\n${newPlot}`
+      : `【Ràng buộc tình tiết】: Vị trí và vai trò của chương này trong truyện không đổi. Điều cần thay đổi là 【CÁCH VIẾT TIẾNG VIỆT】: chi tiết sống động hơn, đối thoại tự nhiên, nhịp điệu cuốn hút hơn.`,
+    note ? `\n【Yêu cầu bổ sung của tác giả】: ${note}` : '',
+    ``,
+    `【YÊU CẦU NGÔN NGỮ】: 100% viết bằng Tiếng Việt mượt mà, không dùng tiếng Trung hay chữ Hán.`,
     autoTitle
       ? `\n【章名】：请你【根据自己重写出来的内容】另起一个章名——要具体、有钩子、能让人想点进来，`
         + `别用“风波”“变故”“重逢”这类万能词。原名《${oldTitle}》仅供参考，不必沿用。`

@@ -5,7 +5,9 @@ import { CONFIG_DIR, CONFIG_FILE, LOG_DIR, DEFAULT_WORKSPACE } from './paths.mjs
 
 const DEFAULTS = {
   workspace: DEFAULT_WORKSPACE,      // 书库根目录
-  defaultModel: 'codex',             // codex | claude | gemini | trae
+  defaultModel: 'agy',               // agy | codex | claude | gemini | trae
+  agyModel: 'gemini-3.8-flash-high', // Model Antigravity mặc định
+  agyEffort: 'high',                 // Effort Antigravity mặc định
   proxyNode: 'auto',                 // unterm 代理节点名；'auto' = 用 proxy.json 里的 current_node
   enableProxy: true,                 // 启动实例时是否开代理
   untermAgentName: 'claude-code',    // 连 MCP 时自报的受信 agent 名（解锁 session.input 写操作）
