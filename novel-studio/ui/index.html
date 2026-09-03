@@ -1,0 +1,845 @@
+<!doctype html>
+<html lang="vi-VN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Novel Studio · Xưởng Tiểu Thuyết AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Lora:ital,wght@0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Thanh bên -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo" aria-label="Novel Studio">
+          <svg viewBox="0 0 44 44" width="40" height="40" role="img">
+            <defs>
+              <linearGradient id="nsG" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#34D6A6"/>
+                <stop offset="1" stop-color="#8B7CFF"/>
+              </linearGradient>
+            </defs>
+            <rect x="3" y="3" width="38" height="38" rx="11" fill="url(#nsG)"/>
+            <g fill="none" stroke="#141019" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 15 C18.5 12.8 13.5 12.8 10 14.6 L10 30 C13.5 28.2 18.5 28.2 22 30"/>
+              <path d="M22 15 C25.5 12.8 30.5 12.8 34 14.6 L34 30 C30.5 28.2 25.5 28.2 22 30"/>
+              <line x1="22" y1="15" x2="22" y2="30"/>
+            </g>
+          </svg>
+        </div>
+        <div>
+          <div class="brand-title">Novel Studio</div>
+          <div class="brand-sub">XƯỞNG TIỂU THUYẾT AI</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <button class="nav-item active" data-view="shelf"><span>📖</span> Tủ Sách</button>
+        <button class="nav-item" data-view="usage"><span>📊</span> Thống Kê Token</button>
+        <button class="nav-item" data-view="settings"><span>⚙️</span> Cài Đặt</button>
+        <button class="nav-item" data-view="env"><span>🩺</span> Môi Trường</button>
+      </nav>
+      <div class="engine-status">
+        <span class="dot" id="engineDot"></span><span id="engineText">Đang kết nối Engine…</span>
+      </div>
+    </aside>
+
+    <!-- Vùng chính -->
+    <main class="main">
+      <!-- Tủ sách -->
+      <section class="view" id="view-shelf">
+        <header class="view-head">
+          <h1>Tủ Sách</h1>
+          <button class="btn" id="btnImport">📂 Nhập Thư Mục</button>
+          <button class="btn" id="btnImportFanqie" style="display:none">📥 Nhập Tác Phẩm</button>
+          <button class="btn primary" id="btnNewBook">＋ Tạo Truyện Mới</button>
+        </header>
+        <div class="shelf" id="shelf"></div>
+      </section>
+
+      <!-- Bàn viết truyện -->
+      <section class="view hidden" id="view-write">
+        <header class="view-head">
+          <button class="btn ghost" id="btnBack">← Tủ Sách</button>
+          <h1 id="writeTitle">Bàn Viết Truyện</h1>
+          <button class="btn ghost icon" id="btnRename" title="Đổi tên truyện (Toàn bộ tác phẩm)">✏️</button>
+          <button class="btn ghost icon" id="btnReadFromWrite" title="Đọc nội dung đã viết">📖</button>
+          <button class="btn ghost icon" id="btnOpenDir" title="Mở thư mục tác phẩm">📂</button>
+          <div class="grow"></div>
+          <span class="badge" id="writeTokens">tokens 0</span>
+          <span class="badge" id="writeStatus">Chưa bắt đầu</span>
+        </header>
+        <div class="workbench">
+          <div class="wb-left">
+            <div class="board" id="wbBoard"></div>
+            <label class="field">
+              <span>Mô Hình AI</span>
+              <select id="writeModel"></select>
+            </label>
+            <label class="field">
+              <span>Yêu Cầu / Chỉ Dẫn Viết</span>
+              <textarea id="writeTask" rows="5" placeholder="Ví dụ: Đọc novel_bible.md, continuity_ledger.md, viết tiếp 3 chương tiếp theo..."></textarea>
+            </label>
+            <label class="field">
+              <span>Mức Độ Tham Gia</span>
+              <select id="writeMode">
+                <option value="auto">🤖 Tự Động Hoàn Toàn · AI tự viết liên tục</option>
+                <option value="volume">🧭 Kiểm Soát Đầu Quyển · Dừng duyệt khi sang quyển mới (Khuyên dùng)</option>
+                <option value="chapter">✍️ Giám Sát Từng Đợt · Viết xong mỗi đợt dừng chờ tôi duyệt</option>
+              </select>
+            </label>
+            <label class="field stateless-toggle" title="【Mặc định · Khuyên dùng】Mỗi chương dùng tiến trình mới tinh để sáng tác, nạp lại bối cảnh chính xác. Tiết kiệm token vượt trội cho truyện dài, tốc độ cao, không bị trôi văn phong.">
+              <span>♻️ Chế Độ Tiết Kiệm Token <span style="color:#58c1a6;font-size:11px">（Khuyên dùng cho truyện dài）</span></span>
+              <span class="sl-controls">
+                <input type="checkbox" id="statelessMode" checked />
+                <span class="sl-batch" id="slBatchWrap">Số đợt <input id="statelessBatches" type="number" min="1" value="3" style="width:54px" /></span>
+              </span>
+            </label>
+            <label class="field hidden" id="webProfileWrap" title="Chế độ web cần điều khiển tài khoản Unzoo đã đăng nhập trang chat tương ứng. Chọn tài khoản và hệ thống sẽ tự động gửi bối cảnh và nhận văn bản.">
+              <span>🌐 Tài khoản Web (Unzoo)</span>
+              <select id="webProfile"><option value="">(Đang tải danh sách tài khoản...)</option></select>
+            </label>
+            <div class="write-modes">
+              <button class="btn primary big" id="btnCowrite" title="Bạn ra ý tưởng → AI viết từng chương → Bạn duyệt">🤝 Đồng Sáng Tác (Co-Write)<span class="tag-rec">Khuyên Dùng</span><small>Bạn chỉ đạo tình tiết · AI chấp bút · Bạn kiểm soát từng chương</small></button>
+              <div class="write-alt">
+                <button class="btn" id="btnStart" title="Tự động viết theo batch">🤖 Viết Tự Động (Autopilot)</button>
+                <button class="btn danger" id="btnStop" disabled>■ Dừng Lại</button>
+                <button class="btn" id="btnVolPlan" title="Lập dàn ý chi tiết cho từng chương của quyển">🧭 Dàn Ý Quyển Này</button>
+                <button class="btn" id="btnStudio" title="Yêu cầu AI sửa đổi thiết lập nhân vật hoặc dàn ý">✍️ Sửa Thiết Lập/Dàn Ý</button>
+              </div>
+              <div class="write-tip">⚠️ Để AI tự do hoàn toàn có thể bị trôi ý. Nếu muốn chất lượng cao nhất hãy dùng <b>【Đồng Sáng Tác】</b>: Bạn chỉ đạo đường hướng, AI chấp bút, bạn duyệt từng chương.</div>
+            </div>
+            <div class="btn-row">
+              <button class="btn" id="btnRead" title="Đọc toàn bộ các chương đã viết">📖 Đọc Truyện</button>
+              <button class="btn" id="btnReview" title="Rà soát tính nhất quán">🔍 Rà Soát</button>
+              <button class="btn" id="btnRebuildOutline" title="Tái lập Story Bible và Dàn ý">🧭 Tái Lập Dàn Ý</button>
+              <button class="btn" id="btnOutline">📋 Duyệt Dàn Ý</button>
+              <button class="btn" id="btnFinale">🏁 Kết Truyện</button>
+              <button class="btn" id="btnVoice" title="Mẫu văn phong chuẩn">🖋️ Mẫu Văn Phong</button>
+              <button class="btn" id="btnRewrite">♻️ Viết Lại</button>
+              <button class="btn" id="btnStyle">🎨 Văn Phong</button>
+              <button class="btn" id="btnRefStyle">📚 Học Phong Cách</button>
+              <button class="btn" id="btnCover">🖼️ Ảnh Bìa</button>
+              <button class="btn" id="btnPublish" style="display:none">📤 Xuất Bản</button>
+            </div>
+            <div class="synopsis-box">
+              <div class="syn-head">
+                <span>📄 Giới Thiệu / Tóm Tắt Truyện</span>
+                <span class="syn-actions">
+                  <button class="btn tiny" id="btnGenSyn">✍️ AI Tạo Tóm Tắt</button>
+                  <button class="btn tiny" id="btnCopySyn">📋 Sao Chép</button>
+                </span>
+              </div>
+              <textarea id="synText" rows="4" placeholder="Bấm Tạo Tóm Tắt để AI tạo giới thiệu truyện tự động..."></textarea>
+            </div>
+            <label class="field"><span>Số Chương Mục Tiêu (0 = Không giới hạn)</span>
+              <input id="wbTarget" type="number" min="0" placeholder="0" /></label>
+            <div class="send-box">
+              <input id="sendInput" placeholder="Gửi chỉ dẫn khẩn cấp vào phiên viết đang chạy…" />
+              <button class="btn" id="btnSend">Gửi Lệnh</button>
+            </div>
+            <div class="review-bar hidden" id="reviewBar">
+              <div class="rb-head">⏸ <b id="rbTitle">Ý Kiến Biên Tập Chờ Xác Nhận</b><span class="rb-file" id="rbFile"></span></div>
+              <div class="rb-items hidden" id="rbItems"></div>
+              <pre class="rb-critique" id="rbCritique"></pre>
+              <textarea id="rbReq" class="rb-req hidden" rows="3" placeholder="（Tùy chọn）Yêu cầu cho đợt tiếp theo: cốt truyện, ai xuất hiện, nhịp độ nhanh/chậm, cần tránh gì... Để trống = Trực tiếp tiếp tục"></textarea>
+              <div class="rb-actions" id="rbActionsOutline">
+                <button class="btn primary" id="rbApply">✅ Sửa theo mục đã chọn</button>
+                <button class="btn ghost" id="rbSkip">⏭ Bỏ qua tất cả (Không sửa)</button>
+              </div>
+              <div class="rb-actions hidden" id="rbActionsBatch">
+                <button class="btn primary" id="rbContinue">✅ Duyệt & Tiếp tục</button>
+                <button class="btn" id="rbContinueReq">📝 Viết tiếp theo yêu cầu của tôi</button>
+                <button class="btn ghost danger" id="rbStop">■ Dừng lại</button>
+              </div>
+            </div>
+            <div class="log-feed" id="logFeed"></div>
+          </div>
+          <div class="wb-right">
+            <div class="mirror-head"><span class="dot live" id="mirrorDot"></span> Màn Hình Tương Tác AI Trực Tiếp</div>
+            <pre class="mirror" id="mirror">（Khi bắt đầu viết, tiến trình sáng tác sẽ hiển thị trực tiếp tại đây）</pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Đọc truyện -->
+      <section class="view hidden" id="view-read">
+        <header class="view-head">
+          <button class="btn ghost" id="rdBack">← Tủ Sách</button>
+          <h1 id="rdTitle">Trình Đọc Truyện</h1>
+          <button class="btn ghost icon" id="rdToWrite" title="Quay lại bàn viết">✍️</button>
+          <button class="btn ghost" id="rdRenumber" title="Đánh lại số chương liên tục">🔢 Đánh Lại Số Chương</button>
+          <div class="grow"></div>
+          <span class="badge" id="rdProgress"></span>
+        </header>
+        <div class="reader" id="reader">
+          <aside class="rd-nav" id="rdNav"></aside>
+          <div class="rd-main">
+            <div class="rd-toolbar">
+              <button class="btn ghost tiny" id="rdNavToggle">📑 Mục Lục</button>
+              <span class="rd-fname" id="rdFileName">Chọn một file bên trái để đọc</span>
+              <div class="grow"></div>
+              <button class="btn ghost tiny hidden" id="rdDelete">🗑️ Xóa Chương</button>
+              <button class="btn ghost tiny hidden" id="rdDelReview">🗑️ Xóa Báo Cáo</button>
+              <button class="btn ghost tiny hidden" id="rdDelReviewAll">🧹 Xóa Hết Báo Cáo</button>
+              <button class="btn ghost tiny hidden" id="rdAdopt">🖋️ Đặt Làm Mẫu</button>
+              <button class="btn ghost tiny hidden" id="rdRewrite">♻️ Viết Lại Chương</button>
+              <button class="btn ghost tiny hidden" id="rdEdit">✏️ Sửa Trực Tiếp</button>
+              <button class="btn primary tiny hidden" id="rdSave">💾 Lưu</button>
+              <button class="btn ghost tiny hidden" id="rdCancel">Hủy</button>
+            </div>
+            <div class="rd-content" id="rdContent"><div class="rd-empty">📖 Chọn Story Bible / Dàn Ý / Chương Truyện từ danh sách bên trái để đọc</div></div>
+            <textarea class="rd-editor hidden" id="rdEditor" spellcheck="false"></textarea>
+          </div>
+        </div>
+      </section>
+
+      <!-- Thống kê token -->
+      <section class="view hidden" id="view-usage">
+        <header class="view-head"><h1>Thống Kê Token</h1></header>
+        <div class="usage-list" id="usageList"></div>
+      </section>
+
+      <!-- Cài đặt -->
+      <section class="view hidden" id="view-settings">
+        <header class="view-head"><h1>Cài Đặt Hệ Thống</h1></header>
+        <div class="settings" id="settings"></div>
+      </section>
+
+      <!-- Môi trường -->
+      <section class="view hidden" id="view-env">
+        <header class="view-head"><h1>Kiểm Tra Môi Trường</h1></header>
+        <div class="env" id="env"></div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Modal tạo sách mới -->
+  <div class="modal hidden" id="modal">
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose" title="Đóng (Esc)">✕</button>
+      <!-- Bước 1: Khởi tạo tác phẩm -->
+      <div id="nbStep1">
+        <h2>Tạo Tác Phẩm Mới · Khởi Tạo Bằng AI</h2>
+        <p class="modal-hint">Nhập thể loại, ý tưởng và (tùy chọn) các nhân vật bạn muốn. AI sẽ gợi ý tên, thiết lập thế giới và lập la bàn toàn thư.</p>
+        <label class="field"><span>Thể loại / Ý tưởng cốt truyện *</span><textarea id="nbTheme" rows="3" placeholder="Ví dụ: Huyền huyễn dị giới, nhân vật chính xuyên không mang theo hệ thống luyện đan..."></textarea></label>
+        <label class="field"><span>Nhân vật chính & cốt lõi (Tùy chọn, mỗi dòng 1 người: Tên — Thân phận / Tính cách)</span><textarea id="nbChars" rows="2" placeholder="Ví dụ: Lục Trần — Đệ tử ngoại môn, bề ngoài điềm tĩnh nhưng tính toán sâu sắc&#10;Dược Lão — Sư phụ bí ẩn trong giới chỉ"></textarea></label>
+        <div class="grid2">
+          <label class="field"><span>Mục tiêu tổng số từ</span>
+            <div class="with-unit"><input id="nbWords" type="number" min="1" placeholder="Ví dụ 100" /><span class="unit">Vạn chữ</span></div>
+          </label>
+          <label class="field"><span>Mô Hình AI</span><select id="nbModel"></select></label>
+        </div>
+        <div class="grid2">
+          <label class="field"><span>Văn phong (Mặc định; bước sau có thể chọn theo mẫu)</span><select id="nbStyle"></select></label>
+          <label class="field"><span>Số quyển dự kiến (La bàn định hướng)</span><input id="nbVolCount" type="number" min="3" max="200" value="30" title="Khởi tạo sẽ vạch ra định hướng một câu cho mỗi quyển. Sau này khi vào quyển mới sẽ cùng bạn lập dàn ý chi tiết." /></label>
+        </div>
+        <label class="field"><span>Cấu trúc mở đầu · Phương thức định hình cốt truyện</span>
+          <div class="seg" id="nbPlanMode">
+            <button type="button" class="seg-btn on" data-plan="compass">🧭 La bàn toàn thư (AI vạch hướng đi tóm tắt cho từng quyển)</button>
+            <button type="button" class="seg-btn" data-plan="freehand">🌱 Tự do khám phá (Không lập trước dàn ý, cốt truyện bạn đưa từng đoạn)</button>
+          </div>
+        </label>
+        <div class="modal-hint" id="nbPlanHint">Khuyên dùng「La bàn định hướng」: AI phác thảo 1 câu chủ đề cho mỗi quyển như kim chỉ nam, chi tiết sẽ xây dựng dần. Chọn「Tự do khám phá」thì chỉ tạo thiết lập cơ bản, cốt truyện bạn cung cấp theo từng giai đoạn.</div>
+        <label class="field"><span>Tuyến tình cảm · Mức độ miêu tả tình cảm / rung động</span>
+          <div class="seg" id="nbRomance">
+            <button type="button" class="seg-btn" data-rom="none">🚫 Không viết (Thuần tu luyện / Sự nghiệp)</button>
+            <button type="button" class="seg-btn" data-rom="light">🌤 Nhạt (Điểm xuyết nhẹ)</button>
+            <button type="button" class="seg-btn on" data-rom="warm">💗 Mập mờ lôi cuốn (Khuyên dùng)</button>
+            <button type="button" class="seg-btn" data-rom="bold">🔥 Nồng thắm (Nhân vật trưởng thành)</button>
+          </div>
+        </label>
+        <div class="modal-hint" id="nbRomanceHint">Khuyên dùng「Mập mờ lôi cuốn」: Tình cảm thể hiện qua khoảng cách, ánh mắt, cử chỉ ngập ngừng và vật định tình. <b>Tuyệt đối giữ văn phong trang nhã, không miêu tả dung tục.</b></div>
+        <div class="adv-toggle" id="nbRefToggle">📚 Học phong cách tác phẩm mẫu (Phân tích văn phong trước khi viết)</div>
+        <div class="adv hidden" id="nbRefPanel">
+          <div class="modal-hint">Cung cấp tác phẩm mẫu để AI học nhịp văn → <b>Đặt làm văn phong chuẩn</b> cho toàn bộ cuốn truyện. Chỉ học phong cách, không sao chép nội dung.</div>
+          <div class="field"><span>Tài khoản Unzoo + Đường link tác phẩm mẫu</span>
+            <div class="pick-row"><select id="nbrsProfile" style="flex:0 0 170px"><option value="">Tài khoản</option></select><textarea id="nbrsUrl" rows="2" placeholder="Link tác phẩm tham khảo (Mỗi link một dòng)..."></textarea></div>
+            <label class="mini-check" style="display:flex;align-items:center;gap:6px;margin-top:6px;font-size:12px;color:var(--muted)"><input type="checkbox" id="nbrsMulti" /> Đọc trực tiếp các trang truyện đang mở trong Unzoo</label>
+          </div>
+          <label class="field"><span>Hoặc dán một đoạn trích văn mẫu (Khoảng vài trăm chữ)</span><textarea id="nbrsSample" class="ai-prompt" rows="3" placeholder="Dán đoạn văn mẫu vào đây..."></textarea></label>
+          <div class="btn-row end"><button class="btn" id="nbrsAnalyze">🔍 Phân Tích & Áp Dụng Văn Phong</button></div>
+          <div id="nbrsStatus" class="modal-hint"></div>
+        </div>
+        <div class="btn-row end">
+          <button class="btn ghost" id="nbCancel">Hủy</button>
+          <button class="btn primary" id="nbPropose">AI Khởi Tạo Dự Án →</button>
+        </div>
+        <div class="modal-err" id="nbErr"></div>
+        <div class="adv-toggle" id="nbSelfNameLink">✍️ Tự đặt tên truyện (Bỏ qua gợi ý của AI)</div>
+        <div class="adv-toggle" id="nbImportToggle">📂 Nhập thư mục có sẵn (Viết tiếp truyện dang dở)</div>
+        <div class="adv hidden" id="nbImport">
+          <label class="field"><span>Thư mục tác phẩm</span>
+            <div class="pick-row"><input id="nbImpDir" placeholder="Bấm nút bên phải hoặc dán đường dẫn đầy đủ..." /><button type="button" class="btn" id="nbImpBrowse">📁 Chọn Thư Mục…</button></div>
+          </label>
+          <label class="field"><span>Tên truyện (Để trống = Dùng tên thư mục)</span><input id="nbImpTitle" placeholder="Có thể để trống" /></label>
+          <label class="field"><span>Mô Hình AI</span><select id="nbImpModel"></select></label>
+          <div class="btn-row end"><button class="btn primary" id="nbImpBtn">Nhập & Viết Tiếp ▶</button></div>
+          <div class="modal-hint">Hệ thống sẽ đọc các chương có sẵn, đồng bộ bối cảnh và tiếp tục sáng tác từ chương mới nhất mà không làm thay đổi các chương cũ.</div>
+          <div class="modal-err" id="nbImpErr"></div>
+        </div>
+        <div class="adv-toggle" id="nbAdvToggle">▸ Nâng cao: Điền thông số thủ công</div>
+        <div class="adv hidden" id="nbAdv">
+          <label class="field"><span>Tên tác phẩm</span><input id="nbTitle" placeholder="Nhập tên tác phẩm" /></label>
+          <label class="field"><span>Thể loại / Điểm nhấn</span><input id="nbGenre" placeholder="Tiên hiệp · Kiếm đạo · Nhiệt huyết" /></label>
+          <div class="grid2">
+            <label class="field"><span>Số quyển dự kiến</span><input id="nbVolumes" placeholder="6" /></label>
+            <label class="field"><span>Số chương mỗi quyển</span><input id="nbCpv" placeholder="180" /></label>
+            <label class="field"><span>Số chương viết mỗi đợt</span><input id="nbBatch" placeholder="3" /></label>
+          </div>
+          <div class="btn-row end"><button class="btn" id="nbManualCreate">Chỉ Tạo Khung (Chưa viết)</button></div>
+        </div>
+      </div>
+      <!-- Bước 2: Đặt tên tác phẩm -->
+      <div id="nbStep2" class="hidden">
+        <h2>Đặt Tên Tác Phẩm</h2>
+        <label class="field"><span>Tên tác phẩm chính thức *</span><input id="nbFinalTitle" placeholder="Chọn gợi ý bên dưới hoặc tự nhập tên bạn muốn..." /></label>
+        <label class="field"><span>Mức độ tham gia (Có thể đổi bất cứ lúc nào)</span>
+          <select id="nbWriteMode">
+            <option value="auto">🤖 Tự Động Hoàn Toàn · AI tự viết liên tục</option>
+            <option value="volume" selected>🧭 Kiểm soát đầu quyển · Dừng duyệt khi sang quyển mới (Khuyên dùng)</option>
+            <option value="chapter">✍️ Giám Sát Từng Đợt · Viết xong mỗi đợt dừng chờ tôi duyệt</option>
+          </select>
+        </label>
+        <div class="modal-hint">Dưới đây là các tên truyện do AI đề xuất dựa trên ý tưởng, bấm vào để chọn hoặc tự sửa theo ý bạn.</div>
+        <div id="nbLoading" class="nb-loading hidden">AI đang lên ý tưởng...</div>
+        <div id="nbTitles" class="nb-titles"></div>
+        <div class="nb-voice" id="nbVoiceBox">
+          <div class="nb-voice-head">
+            <b>🖋️ Xác định mẫu văn phong cho tác phẩm</b>
+            <span class="chip-tip">Để AI viết 4 đoạn mở đầu với giọng văn khác nhau để bạn chọn mẫu chuẩn cho toàn bộ cuốn truyện.</span>
+          </div>
+          <div class="modal-hint">Chọn một đoạn văn mẫu giúp AI nắm bắt nhịp điệu, câu từ cuốn hút và đúng phong vị tiểu thuyết mạng.</div>
+          <div class="btn-row" style="margin:6px 0">
+            <button class="btn" id="nbVoiceGen">Tạo 4 đoạn mở đầu để chọn</button>
+            <span id="nbVoicePick" class="chip-tip"></span>
+          </div>
+          <div id="nbVoiceCands"></div>
+        </div>
+        <div class="btn-row end">
+          <button class="btn ghost" id="nbBack2">← Quay Lại</button>
+          <button class="btn" id="nbRegen">Đổi Gợi Ý Khác</button>
+          <button class="btn primary" id="nbLaunch" disabled>Xác Nhận & Bắt Đầu Viết ▶</button>
+        </div>
+        <div class="modal-err" id="nbErr2"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal đồng sáng tác & rà soát -->
+  <div class="modal hidden" id="cowriteModal">
+    <div class="modal-card" style="max-width:820px">
+      <button class="modal-close" id="cwClose" title="Đóng (Esc)">✕</button>
+      <h2>🤝 Chế Độ Đồng Sáng Tác (Co-Write)</h2>
+      <p class="modal-hint">Lấy <b>ý tưởng của bạn làm trung tâm</b>: Bạn đưa ra tình tiết cốt truyện, AI chấp bút viết chi tiết. Bạn duyệt ưng ý rồi mới viết tiếp đoạn sau. Tránh tối đa hiện tượng trôi dạt cốt truyện.</p>
+      <div class="cw-head" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:8px">
+        <label class="field" style="margin:0"><span>Mô Hình AI</span><select id="cwModel"></select></label>
+        <div id="cwModelTip" class="modal-hint hidden" style="margin:4px 0 0;grid-column:1/-1"></div>
+        <span class="badge" id="cwChapInfo">Chương tiếp theo: Chương ?</span>
+      </div>
+
+      <div class="field">
+        <span>💡 Bạn muốn AI gợi ý điều gì? (Tùy chọn: diễn biến chương, cảnh chiến đấu, phản ứng của nhân vật...)</span>
+        <textarea id="cwAsk" rows="2" placeholder="Ví dụ: Chương tiếp theo nhân vật chính vào đấu trường, gợi ý 3 cách xử lý xung đột bất ngờ..."></textarea>
+      </div>
+      <div class="btn-row" style="margin:-4px 0 8px">
+        <button class="btn" id="cwIdeaBtn">💡 Cho Ý Tưởng</button>
+        <span class="dim-note" id="cwIdeaHint" style="align-self:center"></span>
+      </div>
+      <div id="cwIdeaBox" class="cw-box hidden" style="max-height:180px;overflow:auto;white-space:pre-wrap;background:rgba(127,127,127,.08);border-radius:8px;padding:10px;font-size:13px;line-height:1.6;margin-bottom:10px"></div>
+
+      <div class="field">
+        <span id="cwIntentLabel">✍️ Yêu cầu chi tiết cho chương này (Nhân vật, tình tiết, cao trào, kết chương — Càng chi tiết AI viết càng chuẩn)</span>
+        <textarea id="cwIntent" rows="5" placeholder="Ví dụ: Nhân vật chính tiến vào sơn động, phát hiện cấm chế cổ xưa; gặp gỡ Tiêu Y Tiên đang hái thuốc; cuối chương có dị biến từ bầy ma thú..."></textarea>
+      </div>
+      <label class="cw-check" style="display:flex;gap:6px;align-items:center;font-size:13px;margin:-2px 0 8px">
+        <input type="checkbox" id="cwUseLast" checked /> Nối tiếp đoạn kết chương trước (Giữ mạch văn liền mạch)
+      </label>
+      <div class="btn-row">
+        <button class="btn primary" id="cwBatchBtn" title="Viết liền một mạch 3-5 chương dựa trên tình tiết bạn cung cấp">📚 Viết Chuỗi 3–5 Chương Theo Tình Tiết Này</button>
+        <button class="btn primary" id="cwWriteBtn">✍️ Yêu Cầu AI Viết Chương Này</button>
+        <button class="btn" id="cwRedoBtn" disabled title="Viết lại chương này theo yêu cầu mới">🔄 Viết Lại Chương Này</button>
+        <button class="btn" id="cwReadBtn" disabled title="Mở trình đọc để thưởng thức chương vừa viết">📖 Đọc Thử Chương Này</button>
+        <span class="dim-note" id="cwErr" style="align-self:center;color:#e57"></span>
+      </div>
+      <div id="cwOut" class="cw-box hidden" style="max-height:340px;overflow:auto;white-space:pre-wrap;background:rgba(127,127,127,.06);border-radius:8px;padding:12px;font-size:14px;line-height:1.75;margin-top:10px"></div>
+      <div class="dim-note" id="cwSaved" style="margin-top:6px"></div>
+    </div>
+  </div>
+
+  <div class="modal hidden" id="reviewModal">
+    <div class="modal-card">
+      <button class="modal-close" id="rvClose" title="Đóng (Esc)">✕</button>
+      <h2>🔍 Rà Soát Tính Nhất Quán</h2>
+      <p class="modal-hint">Để AI rà soát và chỉnh sửa nội dung đã viết: sửa mâu thuẫn logic/thiết lập, trau chuốt câu từ, đảm bảo tính hợp lý và nhịp độ lôi cuốn.</p>
+      <label class="field"><span>Phạm vi rà soát <span id="rvBookInfo" class="dim-note"></span></span>
+        <select id="rvRangeType">
+          <option value="all">Toàn bộ tác phẩm</option>
+          <option value="vol">Theo quyển chỉ định</option>
+          <option value="chap">Khoảng số chương</option>
+          <option value="recent">N chương gần nhất</option>
+        </select>
+      </label>
+      <label class="field hidden" id="rvVolWrap"><span>Chọn quyển</span><select id="rvVol"></select></label>
+      <div class="field hidden" id="rvChapWrap"><span>Khoảng chương</span>
+        <div class="range-inputs"><input id="rvFrom" type="number" min="1" placeholder="Từ" /><span>—</span><input id="rvTo" type="number" min="1" placeholder="Đến" /></div>
+      </div>
+      <label class="field hidden" id="rvRecentWrap"><span>Gần nhất</span>
+        <div class="with-unit"><input id="rvRecent" type="number" min="1" value="10" /><span class="unit">Chương</span></div>
+      </label>
+      <div class="field"><span>Tiêu chí rà soát (Mặc định chọn hết)</span>
+        <div class="check-row">
+          <label class="chk"><input type="checkbox" id="rvLogic" checked> Tính Logic</label>
+          <label class="chk"><input type="checkbox" id="rvStyle" checked> Văn Phong</label>
+          <label class="chk"><input type="checkbox" id="rvPlaus" checked> Tính Hợp Lý Cốt Truyện</label>
+          <label class="chk"><input type="checkbox" id="rvPace" checked> Nhịp Độ & Thế Cục</label>
+        </div>
+      </div>
+      <div class="btn-row end">
+        <button class="btn ghost" id="rvCancel">Hủy</button>
+        <button class="btn primary" id="rvStart">Bắt Đầu Rà Soát ▶</button>
+      </div>
+      <div class="modal-err" id="rvErr"></div>
+    </div>
+  </div>
+
+  <!-- Modal mẫu văn phong & viết lại -->
+  <div class="modal hidden" id="voiceModal">
+    <div class="modal-card" style="max-width:760px">
+      <button class="modal-close" id="vcClose" title="Đóng (Esc)">✕</button>
+      <h2>🖋️ Mẫu Văn Phong Chuẩn</h2>
+      <p class="modal-hint">Văn phong của tác phẩm <b>được dẫn dắt bởi đoạn văn mẫu tại đây</b>. Đoạn văn mẫu giúp AI học cách ngắt câu, nhịp văn và cách miêu tả sống động.</p>
+
+      <div class="field"><span>Văn phong mẫu hiện tại</span><div id="vcList" class="rd-empty">Đang tải…</div></div>
+
+      <details class="field" style="border:1px solid var(--border,#333);border-radius:8px;padding:8px 10px">
+        <summary style="cursor:pointer;font-size:13px">➕ Dán đoạn văn mẫu của bạn</summary>
+        <label class="field"><span>Đặt tên cho mẫu văn</span><input id="vcName" placeholder="Ví dụ: Văn mẫu chương 1 Tiên Hiệp"></label>
+        <label class="field"><span>Nội dung văn mẫu (Càng hoàn chỉnh càng giúp AI học nhịp văn tốt)</span>
+          <textarea id="vcText" rows="8" placeholder="Dán toàn bộ đoạn văn mẫu bạn tâm đắc vào đây..."></textarea></label>
+        <div class="btn-row end"><button class="btn primary" id="vcAdd">Lưu Làm Văn Mẫu</button></div>
+      </details>
+
+      <details class="field" style="border:1px solid var(--border,#333);border-radius:8px;padding:8px 10px">
+        <summary style="cursor:pointer;font-size:13px">🎲 Chưa có mẫu? Để AI tạo vài đoạn mở đầu với phong cách khác nhau để bạn chọn</summary>
+        <p class="modal-hint" style="margin:6px 0">Chọn đoạn văn mà bạn thấy ưng ý nhất để định hình phong cách cho cuốn truyện.</p>
+        <div class="btn-row" style="margin:0"><button class="btn" id="vcBoot">Tạo 4 Đoạn Mẫu Thử Nghiệm (~1 phút)</button></div>
+        <div id="vcCands"></div>
+      </details>
+
+      <div class="field"><span>Thẻ kỹ thuật viết (AI phân tích từ văn mẫu để áp dụng khi sáng tác)</span>
+        <div class="btn-row" style="margin:2px 0 6px"><button class="btn ghost" id="vcCard">Đúc Kết Lại Thẻ Kỹ Thuật Viết</button></div>
+        <pre id="vcCardText" class="rd-empty" style="white-space:pre-wrap;max-height:240px;overflow:auto"></pre>
+      </div>
+      <div class="modal-err" id="vcErr"></div>
+    </div>
+  </div>
+  <div class="modal hidden" id="chRewriteModal">
+    <div class="modal-card">
+      <button class="modal-close" id="crClose" title="Đóng (Esc)">✕</button>
+      <h2>♻️ Viết Lại Chương Này</h2>
+      <p class="modal-hint" id="crWhich"></p>
+      <p class="modal-hint">Chỉ viết lại chương này, các chương khác giữ nguyên. <b>Bản gốc sẽ được tự động sao lưu dự phòng .bak</b>.</p>
+      <label class="field"><span>Chọn mô hình AI viết lại</span><select id="crModel"></select></label>
+      <div class="modal-hint" id="crModelTip" style="margin:-4px 0 8px"></div>
+      <div class="field"><span>Trọng tâm của chương này (<b>Có thể chọn nhiều mục</b> để AI cân đối)</span>
+        <div id="crSlants" class="chip-grid"></div>
+      </div>
+      <label class="field"><span>Mức độ tình cảm chương này (Để trống = Theo mặc định của truyện)</span>
+        <select id="crRomance"></select>
+      </label>
+      <label class="field"><span>Tên chương</span>
+        <select id="crTitleMode">
+          <option value="keep">Giữ nguyên tên chương cũ</option>
+          <option value="auto">Để AI tự đặt tên mới theo nội dung</option>
+          <option value="manual">Tự nhập tên chương mới</option>
+        </select>
+      </label>
+      <label class="field hidden" id="crTitleWrap"><span>Tên chương mới</span><input id="crTitle" type="text" placeholder="Nhập tên chương bạn muốn"></label>
+      <label class="field"><span>Tình tiết chương này (<b>Để trống = Giữ nguyên cốt truyện, chỉ trau chuốt câu từ</b>; nếu nhập sẽ viết theo diễn biến mới)</span>
+        <textarea id="crPlot" rows="4" placeholder="Ví dụ: Đổi thành nhân vật chính ra tay quyết đoán hạ gục đối thủ, thu được linh thảo quý..."></textarea></label>
+      <label class="field"><span>Yêu cầu bổ sung (Tùy chọn)</span>
+        <textarea id="crNote" rows="2" placeholder="Ví dụ: Bớt thoại lại, tập trung tả hành động; kết chương để lại điểm kịch tính thu hút..."></textarea></label>
+      <label class="chip" style="margin:2px 0 6px"><input type="checkbox" id="crPolish">
+        <span>Kiểm tra tính liên tục</span><span class="chip-tip">Đối chiếu lại hồ sơ tính nhất quán để không lệch logic</span></label>
+      <label class="field hidden" id="crCriticWrap"><span>Mô hình AI đóng vai trò phản biện / biên tập</span>
+        <select id="crCritic"></select></label>
+      <div class="btn-row end"><button class="btn ghost" id="crCancel">Hủy</button><button class="btn primary" id="crGo">♻️ Bắt Đầu Viết Lại ▶</button></div>
+      <div class="modal-hint" id="crStatus" style="margin-top:8px"></div>
+      <div class="modal-err" id="crErr"></div>
+    </div>
+  </div>
+  <div class="modal hidden" id="rewriteModal">
+    <div class="modal-card">
+      <button class="modal-close" id="rwClose" title="Đóng (Esc)">✕</button>
+      <h2>♻️ Viết Lại Nhiều Chương</h2>
+      <p class="modal-hint">Viết lại hoàn toàn các chương được chọn. Hệ thống tự động sao lưu trước khi thực hiện.</p>
+      <label class="field"><span>Phương thức</span>
+        <select id="rwMode">
+          <option value="range">Viết lại theo khoảng (Chỉ định các chương hoặc quyển)</option>
+          <option value="reproject">Khởi tạo lại toàn bộ (Viết lại bible + dàn ý + toàn bộ)</option>
+        </select>
+      </label>
+      <label class="field" id="rwRangeWrap"><span>Phạm vi viết lại</span><input id="rwRange" type="text" placeholder="Ví dụ: 001-008 hoặc Quyển 1"></label>
+      <label class="field"><span>Yêu cầu trọng tâm (Định hướng cải thiện)</span><textarea id="rwNote" rows="3" placeholder="Ví dụ: Tăng tốc độ mở đầu, làm nổi bật tính cách quyết đoán của nhân vật chính..."></textarea></label>
+      <div class="btn-row end"><button class="btn ghost" id="rwCancel">Hủy</button><button class="btn danger" id="rwGo">♻️ Bắt Đầu Viết Lại ▶</button></div>
+      <div class="modal-err" id="rwErr"></div>
+    </div>
+  </div>
+
+  <!-- Modal xuất bản -->
+  <div class="modal hidden" id="publishModal">
+    <div class="modal-card" style="width: 600px;">
+      <button class="modal-close" id="pbClose" title="Đóng (Esc)">✕</button>
+      <h2>📤 Xuất Bản Tác Phẩm</h2>
+      <p class="modal-hint">Đẩy các chương mới lên nền tảng xuất bản. Tự động kiểm tra trùng lặp để chỉ đăng các chương chưa có.</p>
+      <div class="pb-grid">
+        <label class="field"><span>Tài khoản Unzoo</span><select id="pbProfile"><option value="">(Đang tải...)</option></select></label>
+        <label class="field"><span>Tác phẩm trên nền tảng (Tự động tải)</span>
+          <div class="pb-book-row"><select id="pbBook"><option value="">(Chọn tài khoản để tải danh sách...)</option></select><button class="btn pb-reload" id="pbBookReload" type="button" title="Tải lại danh sách truyện">🔄</button></div>
+          <input id="pbBookId" type="hidden">
+        </label>
+        <label class="field"><span>Số chương đăng mỗi ngày</span><input id="pbPerDay" type="text" placeholder="max = Toàn bộ / hoặc số chương ví dụ: 5"></label>
+        <label class="field"><span>Giãn cách mỗi chương (giây)</span><input id="pbInterval" type="number" min="1" placeholder="3"></label>
+        <label class="field"><span>Ngày bắt đầu hẹn giờ</span><select id="pbDate"><option value="">Đăng ngay (Không hẹn giờ)</option></select></label>
+        <label class="field"><span>Giờ hẹn (Để trống = Mặc định)</span><select id="pbTime"><option value="">(Mặc định nền tảng)</option></select></label>
+      </div>
+      <label class="check pb-danger"><input type="checkbox" id="pbMatchVol"> <span class="dz-tag">Không thể hoàn tác</span> Phân chia theo quyển (Mặc định tắt: Đăng nối tiếp liên tục, an toàn nhất)</label>
+      <label class="check"><input type="checkbox" id="pbSyncRw"> Đồng bộ chương viết lại (Cập nhật đè lên chương cũ đã sửa)</label>
+      <label class="field" style="margin:2px 0 6px"><span>Ngưỡng xác nhận đè chương (Mặc định 3)</span><input id="pbRwLimit" type="number" min="0" placeholder="3" style="max-width:120px"></label>
+      <label class="check"><input type="checkbox" id="pbAuto"> 🤖 Tự động xuất bản (Khi đạt đủ mục tiêu chương và vượt qua tự kiểm tra logic)</label>
+      <label class="check"><input type="checkbox" id="pbUseAI"> 🧠 Tuyên bố nội dung do AI hỗ trợ sáng tác</label>
+      <div class="btn-row" style="margin-top:8px">
+        <button class="btn" id="pbSaveCfg">💾 Lưu Cấu Hình</button>
+        <button class="btn" id="pbPreview">🔍 Xem Trước Danh Sách Đăng</button>
+      </div>
+      <details class="pb-volmgr" style="margin-top:10px">
+        <summary style="cursor:pointer;font-weight:500">📕 Đăng ký tác phẩm mới trên nền tảng</summary>
+        <p class="modal-hint">Tự động khởi tạo tác phẩm mới với tên và phần tóm tắt giới thiệu sẵn có.</p>
+        <div class="pb-grid" style="margin-top:6px">
+          <label class="field"><span>Kênh</span><select id="cbChannel"><option value="男频">Nam Tần (Độc giả nam)</option><option value="女频">Nữ Tần (Độc giả nữ)</option></select></label>
+          <label class="field"><span>Phân loại chính</span><select id="cbCategory">
+            <option value="Lịch sử não động">Lịch sử não động (Có bàn tay vàng)</option>
+            <option value="Lịch sử cổ đại">Lịch sử cổ đại (Tranh bá / Mưu lược)</option>
+            <option value="Đô thị cao võ">Đô thị cao võ</option>
+            <option value="Đô thị não động">Đô thị não động</option>
+            <option value="Đô thị điền viên">Đô thị điền viên</option>
+            <option value="Đô thị thường nhật">Đô thị thường nhật</option>
+            <option value="Huyền nghi não động">Huyền nghi não động</option>
+            <option value="Huyền nghi linh dị">Huyền nghi linh dị</option>
+            <option value="Điệp chiến">Điệp chiến</option>
+            <option value="Huyền huyễn não động">Huyền huyễn não động</option>
+            <option value="Đông phương tiên hiệp">Đông phương tiên hiệp</option>
+            <option value="Tây phương kỳ huyễn">Tây phương kỳ huyễn</option>
+            <option value="Khoa huyễn mạt thế">Khoa huyễn mạt thế</option>
+            <option value="Đồng nhân / Phái sinh">Đồng nhân / Phái sinh</option>
+          </select></label>
+          <label class="field"><span>Tên nhân vật chính 1 (≤5 từ, có thể để trống)</span><input id="cbHero" type="text" maxlength="5" placeholder="Ví dụ: Lục Trần"></label>
+          <label class="field"><span>Tên nhân vật chính 2 (≤5 từ, có thể để trống)</span><input id="cbHero2" type="text" maxlength="5" placeholder="Có thể để trống"></label>
+        </div>
+        <div class="btn-row" style="margin-top:8px"><button class="btn primary" id="cbCreate">📕 Tạo Tác Phẩm Mới ▶</button></div>
+        <div id="cbHint" class="modal-hint" style="margin-top:6px"></div>
+      </details>
+      <details class="pb-volmgr" style="margin-top:10px">
+        <summary style="cursor:pointer;font-weight:500">📚 Quản lý quyển & tiêu đề</summary>
+        <p class="modal-hint">Quản lý và cập nhật tên phụ đề của từng quyển.</p>
+        <div class="btn-row"><button class="btn" id="pbVolLoad">🔄 Tải Danh Sách Quyển</button></div>
+        <div id="pbVolList" class="pb-vol-list" style="margin-top:8px"></div>
+      </details>
+      <pre class="rb-critique" id="pbPreviewOut" style="display:none"></pre>
+      <div class="btn-row end" style="margin-top:8px">
+        <button class="btn ghost" id="pbCancel">Đóng</button>
+        <button class="btn ghost" id="pbTest" title="Thử nghiệm đăng 1 chương">🧪 Đăng Thử 1 Chương</button>
+        <button class="btn danger" id="pbStop" style="display:none">⏹ Dừng Đăng</button>
+        <button class="btn primary" id="pbGo" disabled>📤 Đăng Toàn Bộ Chương Mới ▶</button>
+      </div>
+      <div class="modal-err" id="pbErr"></div>
+    </div>
+  </div>
+
+  <!-- Modal nhập sách -->
+  <div class="modal hidden" id="importFanqieModal">
+    <div class="modal-card" style="width: 600px;">
+      <button class="modal-close" id="ifClose" title="Đóng (Esc)">✕</button>
+      <h2>📥 Nhập Tác Phẩm Từ Nền Tảng Về Máy</h2>
+      <p class="modal-hint">Tải toàn bộ cấu trúc quyển và các chương truyện về máy cục bộ để tiếp tục sáng tác và quản lý.</p>
+      <div class="pb-grid">
+        <label class="field"><span>Tài khoản Unzoo</span><select id="ifProfile"><option value="">(Đang tải...)</option></select></label>
+        <label class="field"><span>Tác phẩm trên nền tảng (Tự động tải)</span><select id="ifBook"><option value="">(Chọn tài khoản để tải danh sách...)</option></select><input id="ifBookId" type="hidden"></label>
+      </div>
+      <label class="field"><span>Tên truyện cục bộ (Để trống = Giữ nguyên tên gốc)</span><input id="ifTitle" type="text" placeholder="Có thể để trống"></label>
+      <div class="btn-row" style="margin-top:8px">
+        <button class="btn" id="ifPreview">🔍 Xem Trước Cấu Trúc</button>
+      </div>
+      <pre class="rb-critique" id="ifOut" style="display:none"></pre>
+      <div class="btn-row end" style="margin-top:8px">
+        <button class="btn ghost" id="ifCancel">Đóng</button>
+        <button class="btn ghost" id="ifTest">🧪 Thử Nhập 3 Chương</button>
+        <button class="btn primary" id="ifGo" disabled>📥 Nhập Toàn Bộ ▶</button>
+      </div>
+      <div class="modal-err" id="ifErr"></div>
+    </div>
+  </div>
+
+  <!-- Modal đổi tên -->
+  <div class="modal hidden" id="renameModal">
+    <div class="modal-card">
+      <button class="modal-close" id="rnClose" title="Đóng (Esc)">✕</button>
+      <h2>✏️ Đổi Tên Tác Phẩm</h2>
+      <p class="modal-hint">Đổi tên sẽ có hiệu lực toàn bộ: Cập nhật Story Bible, mục lục chương, hồ sơ tính nhất quán, dàn ý và giới thiệu truyện.</p>
+      <label class="field"><span>Tên tác phẩm mới</span><input id="rnInput" type="text" maxlength="40" placeholder="Nhập tên mới của truyện..."></label>
+      <div class="btn-row end">
+        <button class="btn ghost" id="rnCancel">Hủy</button>
+        <button class="btn primary" id="rnSave">Lưu & Áp Dụng Toàn Tác Phẩm ▶</button>
+      </div>
+      <div class="modal-err" id="rnErr"></div>
+    </div>
+  </div>
+
+  <!-- Modal kết truyện -->
+  <div class="modal hidden" id="finaleModal">
+    <div class="modal-card">
+      <button class="modal-close" id="flClose" title="Đóng (Esc)">✕</button>
+      <h2>🏁 Đại Kết Cục / Kết Truyện</h2>
+      <p class="modal-hint">Giai đoạn nước rút về đích: AI tập trung đẩy cao trào tới đại kết cục, thu hồi các phục bút, hoàn tất tuyến nhân vật và đóng lại các mạch truyện.</p>
+      <div class="dim-note" id="flStatus"></div>
+      <div class="btn-row" style="flex-wrap:wrap;gap:8px;margin-top:8px">
+        <button class="btn primary" id="flEnter">🏁 Bắt Đầu Nước Rút Về Đích</button>
+        <button class="btn" id="flReview">📋 Duyệt Đại Kết Cục</button>
+        <button class="btn" id="flAfterword" title="Viết chương lời bạt / cảm nghĩ hoàn thành tác phẩm">✍️ Viết Lời Bạt Hoàn Truyện</button>
+        <button class="btn ghost" id="flUndo">↩ Trở Lại Trạng Thái Đang Ra</button>
+        <button class="btn ghost" id="flMark">✅ Đánh Dấu Đã Hoàn Thành</button>
+      </div>
+      <p class="modal-hint" style="margin-top:10px;border-top:1px solid rgba(255,255,255,.08);padding-top:8px"><b>Kết thúc tác phẩm</b>: Đồng bộ toàn bộ các chương cuối và lời bạt lên nền tảng.</p>
+      <div class="btn-row" style="flex-wrap:wrap;gap:8px">
+        <button class="btn" id="flReport">📊 Báo Cáo Sẵn Sàng Kết Truyện</button>
+        <button class="btn primary" id="flClosure">🏁 Hoàn Tất & Đóng Tác Phẩm</button>
+        <button class="btn ghost" id="flLocate" style="display:none">🔎 Mở Trang Đăng Ký Kết Truyện</button>
+      </div>
+      <pre class="rb-critique" id="flClosureOut" style="display:none"></pre>
+      <div class="modal-err" id="flErr"></div>
+      <div class="ol-result hidden" id="flResult">
+        <div class="dim-note" id="flMeta"></div><pre id="flCritique"></pre>
+        <div class="btn-row end"><button class="btn primary" id="flApply">✅ Yêu Cầu AI Hoàn Thiện Kết Thúc ▶</button></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal duyệt dàn ý -->
+  <div class="modal hidden" id="outlineModal">
+    <div class="modal-card">
+      <button class="modal-close" id="olClose" title="Đóng (Esc)">✕</button>
+      <h2>📋 Duyệt Dàn Ý</h2>
+      <p class="modal-hint">Sử dụng mô hình AI đóng vai trò Tổng Biên Tập để thẩm định dàn ý theo các tiêu chí: nhịp điệu, logic, phục bút và độ kịch tính.</p>
+      <label class="field"><span>Phạm vi thẩm định <span id="olBookInfo" class="dim-note"></span></span>
+        <select id="olScope"><option value="立项">Khởi tạo / Dàn ý toàn thư</option></select>
+      </label>
+      <label class="chk" style="margin:6px 0"><input type="checkbox" id="olInject"> Nếu đang trong phiên viết, gửi ý kiến góp ý cho AI</label>
+      <div class="btn-row end">
+        <button class="btn ghost" id="olCancel">Hủy</button>
+        <button class="btn primary" id="olStart">Bắt Đầu Thẩm Định ▶</button>
+      </div>
+      <div class="modal-err" id="olErr"></div>
+      <div class="ol-result hidden" id="olResult">
+        <div class="dim-note" id="olMeta"></div>
+        <pre id="olCritique"></pre>
+        <div class="btn-row end"><button class="btn primary" id="olApply">✅ Yêu Cầu AI Sửa Dàn Ý Theo Góp Ý ▶</button></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal văn phong -->
+  <div class="modal hidden" id="styleModal">
+    <div class="modal-card">
+      <button class="modal-close" id="stClose" title="Đóng (Esc)">✕</button>
+      <h2>🎨 Văn Phong</h2>
+      <p class="modal-hint">Chọn một văn phong hoặc để AI tự gợi ý theo đề tài. Thiết lập này sẽ áp dụng cho các chương viết tiếp theo.</p>
+      <label class="field"><span>Văn phong</span><select id="stSelect"></select></label>
+      <div id="stRec" class="modal-hint"></div>
+      <div class="btn-row end">
+        <button class="btn" id="stAiRec">🤖 AI Gợi Ý</button>
+        <button class="btn ghost" id="stCancel">Hủy</button>
+        <button class="btn primary" id="stApply">Áp Dụng</button>
+      </div>
+      <div class="modal-err" id="stErr"></div>
+    </div>
+  </div>
+
+  <!-- Modal học phong cách -->
+  <div class="modal hidden" id="refStyleModal">
+    <div class="modal-card" style="width: 720px;">
+      <button class="modal-close" id="rsClose" title="Đóng (Esc)">✕</button>
+      <h2>📚 Học Phong Cách Tác Phẩm Mẫu</h2>
+      <p class="modal-hint">Học hỏi văn phong từ tác phẩm mẫu: Chọn tải file .txt hoặc dán trực tiếp đoạn văn mẫu. AI sẽ đúc kết thành hướng dẫn phong cách riêng.</p>
+      <div class="field">
+        <span>① Liên kết tác phẩm mẫu (Mỗi liên kết một dòng)</span>
+        <div class="pick-row">
+          <select id="rsProfile" style="flex:0 0 190px"><option value="">Tài khoản Unzoo (Đang tải...)</option></select>
+          <textarea id="rsUrl" rows="2" placeholder="Liên kết tác phẩm mẫu..."></textarea>
+        </div>
+        <label class="mini-check" style="display:flex;align-items:center;gap:6px;margin-top:6px;font-size:12px;color:var(--muted)">
+          <input type="checkbox" id="rsMulti" /> Đọc các trang truyện đang mở sẵn trong trình duyệt
+        </label>
+      </div>
+      <label class="field"><span>② Tải file .txt / ③ Dán đoạn văn mẫu</span>
+        <input type="file" id="rsFile" accept=".txt,.md" style="margin-bottom:6px" />
+        <textarea id="rsSample" class="ai-prompt" rows="5" placeholder="Dán một đoạn văn mẫu vào đây..."></textarea>
+      </label>
+      <label class="field"><span>Mô hình phân tích</span><select id="rsModel"></select></label>
+      <div class="btn-row end">
+        <button class="btn primary" id="rsAnalyze">🔍 Phân Tích Văn Phong</button>
+      </div>
+      <div class="field hidden" id="rsResultWrap">
+        <span>Cẩm nang văn phong (AI tạo, có thể chỉnh sửa trước khi lưu)</span>
+        <input id="rsName" placeholder="Tên phong cách" style="margin:6px 0" />
+        <textarea id="rsRules" class="ai-prompt" rows="10"></textarea>
+      </div>
+      <div class="btn-row end">
+        <button class="btn ghost" id="rsCancel">Hủy</button>
+        <button class="btn primary hidden" id="rsSave">💾 Lưu Làm Văn Phong Của Truyện</button>
+      </div>
+      <div class="modal-err" id="rsErr"></div>
+    </div>
+  </div>
+
+  <!-- Sửa thiết lập & dàn ý -->
+  <div class="modal hidden" id="studioModal">
+    <div class="modal-card" style="width: 600px;">
+      <button class="modal-close" id="sdClose" title="Đóng (Esc)">✕</button>
+      <h2>✍️ Sửa Thiết Lập / Dàn Ý</h2>
+      <div class="st-rename">
+        <div class="st-rename-h">🔤 Đổi tên? <b>Tên nhân vật dùng「AI Đổi Tên Thông Minh」</b> — AI rà soát toàn bộ tác phẩm để thay thế nhất quán các biệt danh/danh xưng mà <b>không làm ảnh hưởng</b> các danh từ khác. Với địa danh có thể dùng「Thay thế trực tiếp」.</div>
+        <div class="pick-row">
+          <input id="stFrom" placeholder="Tên cũ, ví dụ: Tiêu Viêm hoặc Ô Thản Thành" />
+          <span class="st-arrow">→</span>
+          <input id="stTo" placeholder="Tên mới, ví dụ: Lục Trần hoặc Hắc Ấn Thành" />
+        </div>
+        <div class="btn-row" style="margin-top:8px">
+          <button class="btn primary" id="stAiRename" type="button">🤖 AI Đổi Tên Thông Minh (Khuyên dùng)</button>
+          <button class="btn" id="stRenameGo" type="button">⚡ Thay Thế Trực Tiếp Cụm Từ</button>
+        </div>
+        <div class="dim-note" id="stRenameHint"></div>
+      </div>
+      <p class="modal-hint" style="margin-top:8px">Yêu cầu AI sửa thiết lập, tính cách nhân vật hoặc dàn ý quyển (Sửa <b>Thiết lập & Dàn ý</b>, <b>có hiệu lực cho các chương tiếp theo</b>):</p>
+      <div class="seg" id="stTarget">
+        <button type="button" class="seg-btn active" data-t="bible">👤 Thiết Lập / Nhân Vật</button>
+        <button type="button" class="seg-btn" data-t="outline">🗺️ Dàn Ý Quyển</button>
+      </div>
+      <label class="field hidden" id="stVolWrap"><span>Sửa quyển nào</span><select id="stVol"></select></label>
+      <label class="field"><span>Bạn muốn sửa đổi như thế nào?</span>
+        <textarea id="stAsk" class="ai-prompt" rows="4" placeholder="Ví dụ: Điều chỉnh nhân vật chính hành xử quyết đoán hơn; hoặc thêm đối thủ cạnh tranh mới ở quyển 2..."></textarea>
+      </label>
+      <div class="btn-row end">
+        <button class="btn ghost" id="sdCancel">Hủy</button>
+        <button class="btn primary" id="stGo">✍️ Yêu Cầu AI Sửa</button>
+      </div>
+      <div class="modal-err" id="sdErr"></div>
+    </div>
+  </div>
+
+  <!-- Dàn ý quyển hiện tại -->
+  <div class="modal hidden" id="volPlanModal">
+    <div class="modal-card" style="width: 780px;">
+      <button class="modal-close" id="vpClose" title="Đóng (Esc)">✕</button>
+      <h2>🧭 Lập Dàn Ý Quyển Này</h2>
+      <p class="modal-hint">Trước khi viết một quyển, hãy cùng AI định hình dàn ý chi tiết từng chương cho quyển đó — AI lập bản thảo theo la bàn, bạn thoải mái chỉnh sửa trước khi bắt đầu viết.</p>
+      <div class="cw-head" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:6px">
+        <label class="field" style="margin:0"><span>Quyển hiện tại</span><select id="vpVol"></select></label>
+        <label class="field" style="margin:0"><span>Mô Hình AI</span><select id="vpModel"></select></label>
+        <button class="btn" id="vpDraft">🤖 Để AI Lập Dàn Ý Thảo</button>
+        <span class="dim-note" id="vpHint" style="align-self:center"></span>
+      </div>
+      <label class="field"><span id="vpDirLabel">Định hướng quyển này (Bạn quyết định; có thể để trống để AI lập theo la bàn)</span>
+        <textarea id="vpDir" rows="2" placeholder="Mô tả tóm tắt hướng đi của quyển: Nhân vật chính từ hoàn cảnh nào chuyển sang hoàn cảnh nào, mâu thuẫn lớn cần giải quyết là gì, cao trào cuối quyển..."></textarea>
+      </label>
+      <label class="field"><span>Dàn ý chi tiết từng chương của quyển (Bản thảo AI, bạn có thể chỉnh sửa tự do)</span>
+        <textarea id="vpText" class="ai-prompt" rows="15" placeholder="Bấm nút ở trên để AI lập dàn ý thảo, hoặc tự viết dàn ý phân chương (Mỗi chương 1 dòng: Sự kiện chính | Diễn biến | Điểm nhấn cuối chương)..."></textarea>
+      </label>
+      <div class="btn-row end">
+        <button class="btn ghost" id="vpCancel">Hủy</button>
+        <button class="btn primary" id="vpSave">💾 Lưu Dàn Ý Quyển Này</button>
+      </div>
+      <div class="modal-err" id="vpErr"></div>
+    </div>
+  </div>
+
+  <!-- Modal ảnh bìa -->
+  <div class="modal hidden" id="coverModal">
+    <div class="modal-card" style="width: 640px;">
+      <button class="modal-close" id="cvClose" title="Đóng (Esc)">✕</button>
+      <h2>🖼️ Tạo Ảnh Bìa</h2>
+      <div class="cover-wrap">
+        <div class="cover-left">
+          <label class="field"><span>Tên tác phẩm</span><input id="cvTitle" /></label>
+          <label class="field"><span>Tên tác giả</span><input id="cvAuthor" placeholder="Ví dụ: Vô Danh" /></label>
+          <label class="field"><span>Chủ đề / Phong cách ảnh</span><select id="cvTheme"></select></label>
+          <div class="ai-cover-box">
+            <button class="btn" id="cvGenAI" style="width:100%">🎨 AI Tạo Tranh Minh Họa Bìa</button>
+            <textarea id="cvPrompt" class="ai-prompt" rows="2" placeholder="Có thể để trống (AI tự tạo prompt theo thể loại), hoặc tự nhập mô tả cảnh bạn muốn..."></textarea>
+            <div class="modal-hint">Google Imagen tạo ảnh dọc chuẩn khổ bìa tiểu thuyết (~10-20 giây).</div>
+          </div>
+          <div class="ai-cover-box" style="margin-top:8px">
+            <select id="cvChatProfile"><option value="">(Chọn tài khoản ChatGPT đã đăng nhập)</option></select>
+            <button class="btn" id="cvGenChatGPT" style="width:100%">🖼️ Tạo bằng ChatGPT (Miễn phí qua Web)</button>
+            <button class="btn" id="cvGrabChatGPT" style="width:100%;margin-top:6px">📥 Lấy Ảnh Từ Trình Duyệt</button>
+            <div class="modal-hint" id="cvChatHint">Tận dụng tài khoản ChatGPT đã đăng nhập để vẽ ảnh bìa. Bấm "Lấy ảnh từ trình duyệt" nếu ảnh đã tạo xong trên trang web.</div>
+          </div>
+          <div class="modal-hint">Kích thước ảnh bìa: 600×800 px → lưu tại cover.png.</div>
+          <div class="ai-cover-box" style="margin-top:8px">
+            <div class="btn-row" style="gap:10px;align-items:center">
+              <button class="btn" id="cvPushFanqie" style="flex:1;display:none">⬆️ Cập Nhật Bìa</button>
+              <label class="check" style="margin:0;white-space:nowrap"><input type="checkbox" id="cvFqAuto"> Tự động gửi duyệt</label>
+            </div>
+            <div class="modal-hint" id="cvFqHint">Cập nhật ảnh bìa cover.png vào thông tin tác phẩm.</div>
+          </div>
+          <div class="btn-row">
+            <button class="btn" id="cvDownload">⬇️ Tải Ảnh Về</button>
+            <button class="btn primary" id="cvSave">Lưu Vào Tác Phẩm</button>
+          </div>
+          <div class="modal-err" id="cvErr"></div>
+        </div>
+        <div class="cover-preview"><canvas id="cvCanvas" width="600" height="800"></canvas></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal xác nhận xóa -->
+  <div class="modal hidden" id="delModal">
+    <div class="modal-card">
+      <button class="modal-close" id="dlClose" title="Đóng (Esc)">✕</button>
+      <h2>Xác Nhận Xóa Tác Phẩm?</h2>
+      <p class="modal-hint" id="dlName"></p>
+      <label class="chk"><input type="checkbox" id="dlFiles"> Đồng thời xóa vĩnh viễn toàn bộ thư mục trên ổ đĩa (Gồm tất cả chương truyện, <b style="color:var(--red)">không thể khôi phục</b>)</label>
+      <p class="modal-hint">Nếu không tích chọn, hệ thống chỉ gỡ khỏi tủ sách và giữ nguyên file trên máy tính.</p>
+      <div class="btn-row end">
+        <button class="btn ghost" id="dlCancel">Hủy</button>
+        <button class="btn danger" id="dlConfirm">Xác Nhận Xóa</button>
+      </div>
+      <div class="modal-err" id="dlErr"></div>
+    </div>
+  </div>
+
+  <!-- Modal thử nghiệm tên sách -->
+  <div class="modal hidden" id="nameExpModal">
+    <div class="modal-card" style="width: 860px; max-width: 92vw;">
+      <button class="modal-close" id="neClose" title="Đóng (Esc)">✕</button>
+      <h2>🧪 Công Cụ Thử Nghiệm Tên Truyện & Bìa</h2>
+      <p class="modal-hint">Tạo hàng loạt tên truyện gợi ý độc đáo kèm hình ảnh bìa thử nghiệm để lựa chọn tiêu đề hấp dẫn nhất cho tác phẩm <b id="neBookTitle"></b>.</p>
+      <div class="btn-row" style="align-items:center;gap:10px">
+        <label class="field" style="max-width:150px"><span>Số lượng gợi ý</span><input id="neCount" type="number" min="2" max="10" value="6"></label>
+        <button class="btn primary" id="neGen">✨ Tạo Tên Gợi Ý & Bìa Thử Nghiệm</button>
+        <button class="btn" id="nePush" style="display:none">🚀 Đẩy Lên Nền Tảng</button>
+        
+        <span id="neHint" class="modal-hint" style="margin:0"></span>
+      </div>
+      <div id="neGrid" class="ne-grid" style="margin-top:12px"></div>
+      <div class="modal-err" id="neErr"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+  <script src="app.js"></script>
+</body>
+</html>
