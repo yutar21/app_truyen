@@ -124,12 +124,23 @@ export function runModelOnce(model, prompt, cfg, timeoutMs = 120000) {
   // prompt 走 stdin（避免参数里 JSON 双引号/中文在 Windows cmd 下的引号地狱）；
   // shell:true 让 Windows 能解析 npm 的 .cmd shim（codex/claude/gemini/qwen 都是 shim）。
   let args;
-  if (useId === 'codex') args = ['exec', '--skip-git-repo-check', '--dangerously-bypass-approvals-and-sandbox'];
-  else if (useId === 'claude') args = ['-p'];
-  else args = ['-p']; // gemini / qwen（gemini-cli 分支，同样 -p + stdin）
+  if (useId === 'codex') {
+    args = ['exec', '--skip-git-repo-check', '--dangerously-bypass-approvals-and-sandbox'];
+  } else if (useId === 'agy' || useId === 'gemini') {
+    args = ['--effort', cfg?.agyEffort || 'high'];
+    if (cfg?.agyModel) args.push('--model', cfg.agyModel);
+    const timeoutSec = Math.max(600, Math.round(timeoutMs / 1000));
+    args.push('--print-timeout', `${timeoutSec}s`);
+    args.push('--dangerously-skip-permissions', '--output-format', 'text');
+  } else if (useId === 'claude') {
+    args = ['-p'];
+  } else {
+    args = ['-p']; // qwen / others
+  }
+  const isWinCmd = process.platform === 'win32' && /\.(cmd|bat)$/i.test(m.bin);
   const r = spawnSync(m.bin, args, {
     encoding: 'utf8', timeout: timeoutMs, input: prompt, cwd: os.tmpdir(),
-    env, maxBuffer: 8 * 1024 * 1024, shell: true, windowsHide: true,
+    env, maxBuffer: 8 * 1024 * 1024, shell: isWinCmd, windowsHide: true,
   });
   if (r.error) throw new Error(m.name + ' 调用失败：' + r.error.message);
   const out = (r.stdout || '') + '\n' + (r.stderr || '');
@@ -376,11 +387,41 @@ export function buildFreehandKickoffInstruction(book, theme, words, characters) 
 }
 
 // 本卷共创·让 AI 拟【某一卷】的章级 beat 草案(喂上下文、返回文本供作者改，不落盘)。给 runModelOnce 用的 prompt。
+// 本卷共创·让 AI 拟【某一卷】的章级 beat 草案(喂上下文、返回文本供作者改，不落盘)。给 runModelOnce 用的 prompt。
 // authorDirection：作者给的本卷走向（探索式必给；罗盘式可留空→依罗盘那一行）。给了就以它为准、AI 不得自行改主线方向。
-export function buildVolumePlanPrompt(book, volNum, { bibleBrief = '', compass = '', prevEnding = '', cpv = 0, authorDirection = '' } = {}) {
+export function buildVolumePlanPrompt(book, volNum, { bibleBrief = '', compass = '', prevEnding = '', cpv = 0, authorDirection = '', startNum = 1 } = {}) {
   const n = parseInt(volNum, 10) || 1;
-  const approx = cpv > 0 ? `约 ${cpv} 章` : '20–40 章（据本卷体量自定）';
+  const isLatin = /[a-zA-Zà-ỹÀ-Ỹ]/.test(book.title);
   const dir = String(authorDirection || '').trim();
+
+  if (isLatin) {
+    const approx = cpv > 0 ? `khoảng ${cpv} chương` : '25–35 chương (tùy dung lượng cốt truyện)';
+    const basis = dir
+      ? `Căn cứ: 【Định hướng tác giả chỉ định cho quyển này (bắt buộc tuân thủ, chia nhỏ thành các beat từng chương)】 + Thiết lập (novel_bible.md) + Cục diện cuối quyển trước. Chỉ lập dàn ý cho quyển này, ${approx}.`
+      : (compass
+          ? `Căn cứ: Dòng định hướng Quyển ${n} trong La bàn toàn thư + Thiết lập + Cục diện cuối quyển trước. ${approx}.`
+          : `Căn cứ: Thiết lập tác phẩm + Cục diện hồi kết của các chương trước. Hãy đề xuất 【2–3 phương án hướng đi cốt truyện cho quyển này】(mỗi phương án 1-2 câu để tác giả chọn), sau đó chọn phương án tối ưu nhất để lập dàn ý chi tiết từng chương (${approx}).`);
+
+    return [
+      `Bạn là Tổng biên tập tiểu thuyết tiên hiệp/huyền huyễn phương Đông giàu kinh nghiệm. Hãy lập bản thảo dàn ý chi tiết từng chương (Chapter Beats) cho 【Quyển ${n}】 của tác phẩm 《${book.title}》 để tác giả duyệt và chỉnh sửa.`,
+      basis,
+      ``,
+      dir ? `# ĐỊNH HƯỚNG TÁC GIẢ GIAO CHO QUYỂN NÀY (Ưu tiên cao nhất, bắt buộc bám sát):\n${dir}\n` : '',
+      `# THIẾT LẬP TÁC PHẨM (novel_bible.md trích lược):`, bibleBrief || '（Lược bớt）', ``,
+      compass ? `# LA BÀN TOÀN THƯ (Bám sát định hướng Quyển ${n}):\n${compass}\n` : '',
+      prevEnding ? `# HỒI KẾT CHƯƠNG GẦN NHẤT TRƯỚC ĐÓ (Để nối mạch trực tiếp, không bị đứt đoạn):\n${prevEnding}\n` : '',
+      `# YÊU CẦU ĐẦU RA (BẮT BUỘC 100% BẰNG TIẾNG VIỆT, KHÔNG DÙNG TIẾNG TRUNG):`,
+      `1. Đặt 【Tên Quyển】 (4–8 từ tiếng Việt hào hùng, gợi hình) và 【Mục tiêu giai đoạn của quyển: Nhân vật chính chuyển biến từ gì ➔ gì】 trong 1–2 câu;`,
+      `2. Số thứ tự chương phải đánh số TOÀN CỤC CHUẨN XÁC: Bắt đầu từ Chương ${startNum} (ví dụ: Chương ${startNum}, Chương ${startNum + 1}, ..., Chương ${startNum + 29}), TUYỆT ĐỐI KHÔNG ĐƯỢC đánh số từ Chương 1;`,
+      `3. Dàn ý 【MỖI CHƯƠNG 1 DÒNG】 theo đúng định dạng:`,
+      `   Chương N: Tên Chương | Sự kiện / Xung đột cốt lõi | Bước tiến triển cốt truyện | Móc câu (hook) cuối chương`,
+      `4. Nhịp điệu: Mỗi 3–8 chương đạt được 1 mục tiêu nhỏ, cứ 2–4 chương có 1 điểm nổ sảng khoái (sảng điểm), tránh bôi dài tình tiết vô nghĩa; cuối quyển có móc câu lớn mở ra quyển tiếp theo;`,
+      `5. Bảng bố trí phục bút trong quyển: Chương gài gắm ➔ Dự kiến chương thu hồi.`,
+      `Xuất thẳng nội dung dàn ý bằng tiếng Việt, không chào hỏi rườm rà, không bọc trong khối mã.`
+    ].filter(Boolean).join('\n');
+  }
+
+  const approx = cpv > 0 ? `约 ${cpv} 章` : '20–40 章（据本卷体量自定）';
   const basis = dir
     ? `依据：【作者给定的本卷走向（以此为准，不得擅自改主线方向，只把它拆成可执行的章级 beat）】 + 设定圣经 + 上一卷卷末局面。只拟这一卷，${approx}。`
     : (compass

@@ -138,31 +138,45 @@ export function refTargets(bookDir) {
 // 单章体检
 export function inspectChapter(fp, num, std = {}) {
   const raw = fs.readFileSync(fp, 'utf8');
-  const title = path.basename(fp).replace(/\.txt$/, '').replace(/^\d+/, '');
-  const chars = clean(raw).length;
+  const title = path.basename(fp).replace(/\.(txt|md)$/i, '').replace(/^\d+/, '');
+  const isLatin = /[a-zA-Zà-ỹÀ-Ỹ]/.test(raw);
+
+  // Với văn bản tiếng Việt/Latin: 1 từ (word) là 1 đơn vị tương đương 1 chữ Hán, không đếm số ký tự thô!
+  const words = isLatin ? raw.trim().split(/\s+/).length : clean(raw).length;
+  const chars = words;
   const paras = raw.split(/\n\s*\n/).map(s => s.trim()).filter(Boolean);
   const last = paras[paras.length - 1] || '';
+  const lastFew = paras.slice(-4).join('\n');
 
   // 事务流程密度：章名命中是强信号（整章就叫这个名字），正文按每千字命中数算
-  const inTitle = PAPERWORK_TITLE.filter(w => title.includes(w));
+  const inTitle = isLatin ? [] : PAPERWORK_TITLE.filter(w => title.includes(w));
   let hits = 0;
-  for (const w of PAPERWORK) hits += (raw.split(w).length - 1);
+  if (!isLatin) {
+    for (const w of PAPERWORK) hits += (raw.split(w).length - 1);
+  }
   const per1k = chars ? (hits / chars) * 1000 : 0;
   const paperwork = inTitle.length > 0 || per1k >= 3;
 
   // 章末钩子：有对话/具体事件才算真钩子；纯叙述又命中假钩子词表 = 判废
-  const hasDialogue = /[「」『』“”]/.test(last);
-  const fake = FAKE_HOOK.filter(w => last.includes(w));
-  const hookOk = hasDialogue || (fake.length === 0 && last.length <= 120);
+  const hasDialogue = /[「」『』“”"'«»—\-]/.test(lastFew);
+  const fake = isLatin ? [] : FAKE_HOOK.filter(w => last.includes(w));
+  const maxHookLen = isLatin ? 350 : 120;
+  const hookOk = hasDialogue || (fake.length === 0 && last.length <= maxHookLen);
+
+  const hardMax = isLatin ? 8000 : (std.hardMax || 6000);
+  const targetHi = isLatin ? 5500 : (std.targetCharsHi || 3600);
+  const targetLo = isLatin ? 2500 : (std.targetCharsLo || 3000);
+  const minLimit = isLatin ? 2000 : (std.minChars || targetLo);
 
   return {
     num, title, chars, paperwork, paperworkWords: inTitle, paperworkPer1k: +per1k.toFixed(1),
     style: styleMetrics(raw),
-    money: maxMoney(raw), hookOk, fakeHookWords: fake,
-    payoff: PAYOFF.some(w => raw.includes(w)),
-    overlong: chars > (std.hardMax || 6000),
-    over: chars > Math.round((std.targetCharsHi || 3600) * 1.2),
-    under: chars < (std.minChars || std.targetCharsLo || 3000),
+    money: isLatin ? 0 : maxMoney(raw), hookOk, fakeHookWords: fake,
+    payoff: isLatin ? true : PAYOFF.some(w => raw.includes(w)),
+    overlong: chars > hardMax,
+    over: chars > Math.round(targetHi * 1.25),
+    under: chars < minLimit,
+    isLatin,
   };
 }
 

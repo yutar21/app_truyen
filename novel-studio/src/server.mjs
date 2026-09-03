@@ -13,7 +13,7 @@ import { spawn } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { loadConfig, updateConfig } from './config.mjs';
 import { CONFIG_DIR } from './paths.mjs';
-import { listBooksWithStats, createBook, getBook, importBook, setBookStyle, deleteBook, detectTitleFromDir, setBookTarget, setBookModel, setBookSynopsis, setBookStatus, renameBook, renameEntity, suggestRenamePairs, applyRenamePairs, setBookPublish, setBookFanqieStatus, setBookWriteMode, setParticipation, participationOf, setBookPlanMode, bookStats, plannedTotalChapters, plannedVolumes, currentVolume, chaptersPerVol, setBookRomance} from './books.mjs';
+import { listBooksWithStats, createBook, getBook, importBook, setBookStyle, deleteBook, detectTitleFromDir, setBookTarget, setBookModel, setBookSynopsis, setBookStatus, renameBook, renameEntity, suggestRenamePairs, applyRenamePairs, setBookPublish, setBookFanqieStatus, setBookWriteMode, setParticipation, participationOf, setBookPlanMode, bookStats, plannedTotalChapters, plannedVolumes, currentVolume, chaptersPerVol, setBookRomance } from './books.mjs';
 import { STYLES } from './styles.mjs';
 import { recommendStyle } from './planner.mjs';
 import { detectAll, getModel } from './models.mjs';
@@ -74,7 +74,7 @@ function pushLog(slug, e) {
 function broadcast(slug, event, data) {
   const r = rt.get(slug); if (!r) return;
   const payload = `event: ${event}\ndata: ${JSON.stringify(data)}\n\n`;
-  for (const res of r.clients) { try { res.write(payload); } catch {} }
+  for (const res of r.clients) { try { res.write(payload); } catch { } }
 }
 
 const MIME = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.svg': 'image/svg+xml', '.png': 'image/png', '.json': 'application/json' };
@@ -88,7 +88,7 @@ function readStatelessActive() {
   try { return JSON.parse(fs.readFileSync(STATELESS_ACTIVE_FILE, 'utf8')) || {}; } catch { return {}; }
 }
 function writeStatelessActive(map) {
-  try { fs.mkdirSync(CONFIG_DIR, { recursive: true }); fs.writeFileSync(STATELESS_ACTIVE_FILE, JSON.stringify(map, null, 2)); } catch {}
+  try { fs.mkdirSync(CONFIG_DIR, { recursive: true }); fs.writeFileSync(STATELESS_ACTIVE_FILE, JSON.stringify(map, null, 2)); } catch { }
 }
 function markStatelessActive(slug, info) {
   const map = readStatelessActive(); map[slug] = { ...info, t: Date.now() }; writeStatelessActive(map);
@@ -102,8 +102,8 @@ export function runServer(port = 8787) {
   // 或未捕获 promise 拒绝整个拖崩（一崩全崩：图书预览/阅读/发布/写作都没了）。这里兜底记录、保持存活。
   if (!globalThis.__nsEngineGuarded) {
     globalThis.__nsEngineGuarded = true;
-    process.on('uncaughtException', (e) => { try { console.error('[engine] uncaughtException(已忽略保活):', e?.stack || e?.message || e); } catch {} });
-    process.on('unhandledRejection', (e) => { try { console.error('[engine] unhandledRejection(已忽略保活):', e?.message || e); } catch {} });
+    process.on('uncaughtException', (e) => { try { console.error('[engine] uncaughtException(已忽略保活):', e?.stack || e?.message || e); } catch { } });
+    process.on('unhandledRejection', (e) => { try { console.error('[engine] unhandledRejection(已忽略保活):', e?.message || e); } catch { } });
   }
   const server = http.createServer(async (req, res) => {
     // CORS（Tauri webview 跨源调用）
@@ -159,7 +159,7 @@ function startOrphanWatchdog() {
       // 之前 bug：autopilot 在会话慢启动/启动报错时 stop() 掉了(running=false)，但对象还挂在 rt.session 上，
       // 看门狗以为"有人盯着"就不补挂 → 窗口其实无人应答、卡在 Yes/No 门里没人点(圣女 csld 卡死的根因)。
       if (!ap || !ap.running) {
-        try { st?.session?.mcp?.close?.(); } catch {}                 // 清掉停掉的旧连接，避免泄漏
+        try { st?.session?.mcp?.close?.(); } catch { }                 // 清掉停掉的旧连接，避免泄漏
         try {
           const h = await attachAutopilot(s.slug, cfg, (e) => pushLog(s.slug, e), mkFresh(s.slug, cfg));
           rtOf(s.slug).session = { ...(st?.session || {}), autopilot: h.autopilot, mcp: h.mcp, reattached: true };
@@ -168,7 +168,7 @@ function startOrphanWatchdog() {
         } catch { continue; /* 窗口已死或连不上 → 跳过，下一轮再看 */ }
       }
       // 状态驱动审稿门：不阻塞主循环（fire-and-forget，内部 dedup 防重入）
-      checkOutlineGate(s.slug, cfg).catch(() => {});
+      checkOutlineGate(s.slug, cfg).catch(() => { });
     }
   }, 60000);
   globalThis.__nsOrphanWatchdog.unref?.();
@@ -186,7 +186,7 @@ function startStatelessRun(book, { model, batches = 1, untilTarget = false, cfg 
   runStateless({
     book, model, cfg, batches, untilTarget, control,
     onLog: (e) => pushLog(slug, { ...e, source: e.source || 'stateless' }),
-    onReachedTarget: () => { try { maybeAutoPublish(getBook(slug) || book, { cfg, onLog: (e) => pushLog(slug, { ...e }) }); } catch {} },
+    onReachedTarget: () => { try { maybeAutoPublish(getBook(slug) || book, { cfg, onLog: (e) => pushLog(slug, { ...e }) }); } catch { } },
   })
     .catch(e => pushLog(slug, { level: 'error', source: 'stateless', msg: '无状态写作异常：' + e.message }))
     .finally(() => {
@@ -213,7 +213,7 @@ async function resumeStatelessRuns() {
     if (rtOf(slug).statelessRun && !rtOf(slug).statelessRun.stopped) continue;  // 已经在跑
     // 已达目标章数就别再拉起来了
     const target = book.targetChapters || 0;
-    if (target > 0) { try { if (bookStats(book).chapters >= target) { clearStatelessActive(slug); continue; } } catch {} }
+    if (target > 0) { try { if (bookStats(book).chapters >= target) { clearStatelessActive(slug); continue; } } catch { } }
     const model = info.model || book.model || cfg.defaultModel;
     const untilTarget = info.untilTarget === true || (target > 0 && info.batches == null);
     const batches = Math.max(1, parseInt(info.batches, 10) || 1);
@@ -256,7 +256,7 @@ async function checkOutlineGate(slug, cfg) {
     // 审稿已在 → 门其实已过、作者卡着没回头 → 催一次让它据审稿修订并继续（每 scope 只催一次）
     if (handled.has(scope + ':nudge')) return;
     handled.add(scope + ':nudge');
-    try { await sendToBook(slug, buildReviseInstruction(book, scope, reviewFile), cfg); pushLog(slug, { level: 'act', msg: `🐕 看门狗：${scope}审稿已在 → 已催作者据此修订并继续写作` }); } catch {}
+    try { await sendToBook(slug, buildReviseInstruction(book, scope, reviewFile), cfg); pushLog(slug, { level: 'act', msg: `🐕 看门狗：${scope}审稿已在 → 已催作者据此修订并继续写作` }); } catch { }
     return;
   }
   if (handled.has(scope + ':gen')) return;   // 正在生成，勿重入
@@ -320,17 +320,17 @@ async function api(p, req, res, u) {
         const planned = plannedTotalChapters(book);
         const words = Math.round((st.kb || 0) * 1024 / 3);   // 中文 UTF-8 约 3 字节/字
         const progress = planned > 0 ? Math.min(100, Math.round(st.chapters / planned * 100)) : 0;
-        let tokens = 0; try { tokens = bookUsage(slug) || 0; } catch {}
+        let tokens = 0; try { tokens = bookUsage(slug) || 0; } catch { }
         // 健康：连贯性台账 + 最近一份自检/审稿(数 硬伤/隐患)
         let ledger = false, lastReview = '', crit = 0, warn = 0;
-        try { ledger = fs.existsSync(path.join(book.dir, 'continuity_ledger.md')); } catch {}
+        try { ledger = fs.existsSync(path.join(book.dir, 'continuity_ledger.md')); } catch { }
         try {
           const rdir = path.join(book.dir, 'reviews');
           const files = fs.readdirSync(rdir).filter(f => f.endsWith('.md'));
           let latest = null, lt = 0;
           for (const f of files) { const mt = fs.statSync(path.join(rdir, f)).mtimeMs; if (mt > lt) { lt = mt; latest = f; } }
           if (latest) { lastReview = latest; const txt = fs.readFileSync(path.join(rdir, latest), 'utf8'); crit = (txt.match(/硬伤/g) || []).length; warn = (txt.match(/隐患/g) || []).length; }
-        } catch {}
+        } catch { }
         // 状态 + 下一步建议
         const live = sessionLive(slug) || !!(rtOf(slug).statelessRun && !rtOf(slug).statelessRun.stopped);
         const pend = getPending(slug);
@@ -406,7 +406,7 @@ async function api(p, req, res, u) {
     }
     if (p === '/api/book/delete') {
       const slug = slugOf(body.book);
-      const st = rt.get(slug); if (st?.session?.autopilot) { try { st.session.autopilot.stop('删除'); } catch {} } if (st?.streamer) { try { st.streamer.stop(); } catch {} } rt.delete(slug);
+      const st = rt.get(slug); if (st?.session?.autopilot) { try { st.session.autopilot.stop('删除'); } catch { } } if (st?.streamer) { try { st.streamer.stop(); } catch { } } rt.delete(slug);
       try { const r = deleteBook(slug, { deleteFiles: !!body.deleteFiles }); return json(res, 200, r); }
       catch (e) { return json(res, 400, { error: e.message }); }
     }
@@ -464,7 +464,7 @@ async function api(p, req, res, u) {
         const book = getBook(body.book); if (!book) return json(res, 400, { error: '找不到书：' + body.book });
         if (!fs.existsSync(book.dir)) return json(res, 400, { error: '目录不存在：' + book.dir });
         const cmd = process.platform === 'win32' ? 'explorer' : process.platform === 'darwin' ? 'open' : 'xdg-open';
-        try { spawn(cmd, [book.dir], { detached: true, stdio: 'ignore' }).unref(); } catch {}
+        try { spawn(cmd, [book.dir], { detached: true, stdio: 'ignore' }).unref(); } catch { }
         return json(res, 200, { ok: true, dir: book.dir });
       } catch (e) { return json(res, 500, { error: e.message }); }
     }
@@ -473,10 +473,10 @@ async function api(p, req, res, u) {
       try {
         let dir = String(body.path || cfg.workspace || '').trim();
         if (!dir) return json(res, 400, { error: '未指定目录' });
-        try { if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true }); } catch {}
+        try { if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true }); } catch { }
         if (!fs.existsSync(dir)) return json(res, 400, { error: '目录不存在且无法创建：' + dir });
         const cmd = process.platform === 'win32' ? 'explorer' : process.platform === 'darwin' ? 'open' : 'xdg-open';
-        try { spawn(cmd, [dir], { detached: true, stdio: 'ignore' }).unref(); } catch {}
+        try { spawn(cmd, [dir], { detached: true, stdio: 'ignore' }).unref(); } catch { }
         return json(res, 200, { ok: true, dir });
       } catch (e) { return json(res, 500, { error: e.message }); }
     }
@@ -516,7 +516,7 @@ async function api(p, req, res, u) {
         const m = String(body.dataUrl || '').match(/^data:image\/png;base64,(.+)$/);
         if (!m) return json(res, 400, { error: '图片数据无效' });
         const dl = path.join(os.homedir(), 'Downloads');
-        try { fs.mkdirSync(dl, { recursive: true }); } catch {}
+        try { fs.mkdirSync(dl, { recursive: true }); } catch { }
         const safe = String(book.title || 'cover').replace(/[\\/:*?"<>|\r\n]+/g, '_').slice(0, 60);
         const out = path.join(dl, safe + '_封面.png');
         fs.writeFileSync(out, Buffer.from(m[1], 'base64'));
@@ -647,7 +647,7 @@ async function api(p, req, res, u) {
         createFanqieBook({ profilePath, title, channel, mainCategory, hero, hero2, synopsis, coverPath, autoSubmit, onLog })
           .then((r) => {
             if (r.ok && r.bookId) {
-              try { setBookPublish(slug, { profilePath, bookId: r.bookId, bookName: title }); } catch {}
+              try { setBookPublish(slug, { profilePath, bookId: r.bookId, bookName: title }); } catch { }
               const cvNote = coverPath ? (r.cover?.ok ? '，封面已上传' : '，封面待补传') : '';
               fanqieCreateJobs.set(slug, { status: 'done', bookId: r.bookId, cover: r.cover || null, msg: `✅ 已创建，bookId=${r.bookId}，已写入发布配置${cvNote}` });
               pushLog(slug, { level: 'act', source: 'fanqie', msg: `✅ 番茄已创建《${title}》 bookId=${r.bookId}（已回填发布配置${cvNote}）` });
@@ -775,7 +775,7 @@ async function api(p, req, res, u) {
         const urls = Array.isArray(body.bookUrls) ? body.bookUrls.map(u => String(u || '').trim()).filter(Boolean) : [];
         if (body.multi || urls.length || body.bookUrl) {
           const slug = slugOf(body.book || '');
-          prof = await styleFromFanqieUrl({ profilePath: body.profilePath, bookUrl: body.bookUrl, bookUrls: urls, multi: !!body.multi, model: body.model, onLog: (e) => { try { pushLog(slug, { source: 'refstyle', ...e }); } catch {} } }, cfg);
+          prof = await styleFromFanqieUrl({ profilePath: body.profilePath, bookUrl: body.bookUrl, bookUrls: urls, multi: !!body.multi, model: body.model, onLog: (e) => { try { pushLog(slug, { source: 'refstyle', ...e }); } catch { } } }, cfg);
         } else {
           prof = await analyzeStyleSample({ sample: body.sample, model: body.model }, cfg);
         }
@@ -806,18 +806,20 @@ async function api(p, req, res, u) {
       // 等作者写完几章再回头挂范本就晚了：前面几章已经定了调，后面还得向它们看齐。
       if (body.voiceRef && body.voiceRef.text) {
         try {
-          await adoptCandidate(book, body.voiceRef, { model: body.model || book.model || cfg.defaultModel, cfg,
-            onLog: (e) => pushLog(book.slug, { ...e, source: 'voice' }) });
+          await adoptCandidate(book, body.voiceRef, {
+            model: body.model || book.model || cfg.defaultModel, cfg,
+            onLog: (e) => pushLog(book.slug, { ...e, source: 'voice' })
+          });
           pushLog(book.slug, { level: 'act', source: 'voice', msg: `🖋️ 文风已锚定：《${body.voiceRef.name || '样章'}》已成为本书范本，全书向它看齐` });
         } catch (e) { pushLog(book.slug, { level: 'warn', source: 'voice', msg: '文风范本落盘失败：' + e.message }); }
       }
       // 立项时选择参与度；startWriting 会据 book.writeMode/reviewEvery 播种运行时审核开关
       if (body.participation != null) {
-        try { setParticipation(book.slug, body.participation); } catch {}
+        try { setParticipation(book.slug, body.participation); } catch { }
       } else if (body.writeMode != null) {
         const mode = body.writeMode === 'review' ? 'review' : 'auto';
         const every = mode === 'review' ? Math.max(1, Math.floor(Number(body.reviewEvery) || 1)) : 0;
-        try { setBookWriteMode(book.slug, mode, every || 1); } catch {}
+        try { setBookWriteMode(book.slug, mode, every || 1); } catch { }
       }
       // 网页版模型不能跑 CLI 立项（建 bible+大纲需要 agentic 本地 CLI）→ 用一个可用的本地 CLI 跑【只规划】的立项，
       // 正文之后由网页版引擎续写（book.model 仍是网页版模型，写作台点▶即走 web-write）。
@@ -832,7 +834,7 @@ async function api(p, req, res, u) {
         pushLog(book.slug, { level: 'act', msg: `网页版模型立项：用本地 ${launchModel} 只搭 设定+大纲（不写正文），正文随后用网页版续写` });
       }
       // 探索式：立项只定"怎么写"（写作手法+主角名+故事概述），不出罗盘、不出任何大纲。否则走共创版粗罗盘立项。
-      try { setBookPlanMode(book.slug, freehand ? 'freehand' : 'compass'); } catch {}
+      try { setBookPlanMode(book.slug, freehand ? 'freehand' : 'compass'); } catch { }
       const instruction = freehand
         ? buildFreehandKickoffInstruction(book, body.theme || body.genre, body.words, body.characters)
         : buildCompassKickoffInstruction(book, body.theme || body.genre, body.words, body.volumes, body.characters);
@@ -885,11 +887,11 @@ async function api(p, req, res, u) {
         const book = getBook(body.book); if (!book) return json(res, 400, { error: '找不到书：' + body.book });
         const scope = body.scope || '立项';
         const r = await reviewOutline({ book, scope, cfg, authorModel: body.model || book.model || cfg.defaultModel, onLog: (e) => pushLog(book.slug, e) });
-        try { snapshotOutline(book, scope); } catch {}   // 拍快照，供作者修订后核对
+        try { snapshotOutline(book, scope); } catch { }   // 拍快照，供作者修订后核对
         // 若该书正在写作 → 顺手把修订指令穿插给作者
         if (body.inject && sessionLive(book.slug)) {
           const { buildReviseInstruction } = await import('./editor.mjs');
-          try { await sendToBook(book.slug, buildReviseInstruction(book, scope, r.file), cfg); } catch {}
+          try { await sendToBook(book.slug, buildReviseInstruction(book, scope, r.file), cfg); } catch { }
         }
         return json(res, 200, { ok: true, scope, editorModel: r.editorModel, file: path.basename(r.file), critique: r.critique });
       } catch (e) { pushLog(slugOf(body.book), { level: 'error', msg: e.message }); return json(res, 500, { error: e.message }); }
@@ -901,7 +903,7 @@ async function api(p, req, res, u) {
         const on = body.on !== false;
         const b = setBookStatus(book.slug, on ? '收尾中' : '连载中');
         if (on && sessionLive(book.slug)) {
-          try { await sendToBook(book.slug, buildFinaleInstruction(book, { first: true }), cfg); pushLog(book.slug, { level: 'act', msg: '已进入收尾 → 穿插收束令' }); } catch {}
+          try { await sendToBook(book.slug, buildFinaleInstruction(book, { first: true }), cfg); pushLog(book.slug, { level: 'act', msg: '已进入收尾 → 穿插收束令' }); } catch { }
         }
         return json(res, 200, { ok: true, status: b.status, live: sessionLive(book.slug) });
       } catch (e) { return json(res, 500, { error: e.message }); }
@@ -912,7 +914,7 @@ async function api(p, req, res, u) {
         const book = getBook(body.book); if (!book) return json(res, 400, { error: '找不到书：' + body.book });
         const from = String(body.from || '').trim(), to = String(body.to || '').trim();
         if (!from || !to) return json(res, 400, { error: '原名和新名都要填' });
-        try { gitSnapshot(book.dir, `AI改名前存档：${from}→${to}`); } catch {}
+        try { gitSnapshot(book.dir, `AI改名前存档：${from}→${to}`); } catch { }
         const instruction = buildRenameInstruction(book, from, to);
         if (sessionLive(book.slug)) {
           await sendToBook(book.slug, instruction, cfg);
@@ -935,7 +937,7 @@ async function api(p, req, res, u) {
         }
         const to = String(body.to || '').trim();
         if (!to) return json(res, 400, { error: '先填新名' });
-        try { gitSnapshot(book.dir, `改名前存档：${from}→${to}`); } catch {}
+        try { gitSnapshot(book.dir, `改名前存档：${from}→${to}`); } catch { }
         const r = renameEntity(book.slug, from, to, false);
         pushLog(book.slug, { level: 'act', msg: `已把「${from}」全书替换成「${to}」：${r.files} 个文件、${r.count} 处（含已写章节+大纲+设定；不满意可 git 回退）` });
         return json(res, 200, { ok: true, files: r.files, count: r.count });
@@ -948,28 +950,37 @@ async function api(p, req, res, u) {
         if (book.planMode === 'freehand') return json(res, 400, { error: '本书是【探索式】：全书不建任何大纲。请在「🤝 我来主笔」里一段一段给情节，AI 会据每段自拆 3–5 章。' });
         const volNum = Math.max(1, parseInt(body.volume, 10) || 1);
         let bibleBrief = '', compass = '', prevEnding = '';
-        try { bibleBrief = fs.readFileSync(path.join(book.dir, 'novel_bible.md'), 'utf8').slice(0, 4000); } catch {}
+        try { bibleBrief = fs.readFileSync(path.join(book.dir, 'novel_bible.md'), 'utf8').slice(0, 4000); } catch { }
         try {
           const od = path.join(book.dir, 'outlines');
           const cf = fs.readdirSync(od).find(f => /罗盘/.test(f));
           if (cf) compass = fs.readFileSync(path.join(od, cf), 'utf8').slice(0, 6000);
-        } catch {}
+        } catch { }
+        let startNum = 1;
         try {
           const cdir = path.join(book.dir, 'chapters'); const files = [];
-          (function walk(d) { for (const e of fs.readdirSync(d, { withFileTypes: true })) { const p2 = path.join(d, e.name); if (e.isDirectory()) walk(p2); else if (/\.txt$/i.test(e.name)) files.push(p2); } })(cdir);
+          (function walk(d) { for (const e of fs.readdirSync(d, { withFileTypes: true })) { const p2 = path.join(d, e.name); if (e.isDirectory()) walk(p2); else if (/\.(txt|md)$/i.test(e.name)) files.push(p2); } })(cdir);
           files.sort((a, b) => (parseInt(path.basename(a)) || 0) - (parseInt(path.basename(b)) || 0));
-          const last = files[files.length - 1]; if (last) prevEnding = fs.readFileSync(last, 'utf8').slice(-1200);
-        } catch {}
-        let cpv = 0; try { cpv = chaptersPerVol(book); } catch {}
+          const last = files[files.length - 1];
+          if (last) {
+            prevEnding = fs.readFileSync(last, 'utf8').slice(-1200);
+            const m = path.basename(last).match(/^(\d{1,4})/);
+            if (m) startNum = parseInt(m[1], 10) + 1;
+          }
+        } catch { }
+        let cpv = 0; try { cpv = chaptersPerVol(book); } catch { }
         const authorDirection = String(body.direction || '').trim();   // 作者给的本卷走向（探索式主导架构；罗盘式可留空）
-        const prompt = buildVolumePlanPrompt(book, volNum, { bibleBrief, compass, prevEnding, cpv, authorDirection });
+        const prompt = buildVolumePlanPrompt(book, volNum, { bibleBrief, compass, prevEnding, cpv, authorDirection, startNum });
         const model = resolveGenModel(body.model || book.model || cfg.defaultModel) || body.model || book.model || cfg.defaultModel;
-        pushLog(book.slug, { level: 'act', msg: `本卷共创：AI 正在据罗盘拟【第 ${volNum} 卷】章级大纲草案…`, source: 'cowrite' });
+        pushLog(book.slug, { level: 'act', msg: `Lập dàn ý: AI đang phác thảo chi tiết beat từng chương cho 【Quyển ${volNum}】…`, source: 'cowrite' });
         // 慢环境实测：一卷章级大纲约 231s，卡在旧的 240s 上限边缘→动辄超时"拟稿失败"。给到 600s 留足余量。
         const raw = runModelOnce(model, prompt, cfg, 600000) || '';
         const clean = raw.replace(/\x1b\[[0-9;?]*[ -\/]*[@-~]/g, '').replace(/[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]/g, '').trim();
-        if (clean.length < 40) return json(res, 500, { error: 'AI 拟稿太短，请重试或换模型' });
-        const rel = `outlines/卷${String(volNum).padStart(2, '0')}分章大纲.md`;
+        if (clean.length < 40) return json(res, 500, { error: 'Dàn ý tạo ra quá ngắn, vui lòng thử lại' });
+        const isLatin = /[a-zA-Zà-ỹÀ-Ỹ]/.test(book.title);
+        const rel = isLatin
+          ? `outlines/Quyen_${String(volNum).padStart(2, '0')}_Dan_Y_Chi_Tiet.md`
+          : `outlines/卷${String(volNum).padStart(2, '0')}分章大纲.md`;
         return json(res, 200, { ok: true, volume: volNum, draft: clean, rel });
       } catch (e) { return json(res, 500, { error: e.message }); }
     }
@@ -983,10 +994,27 @@ async function api(p, req, res, u) {
         const instruction = buildReviseSettingInstruction(book, { target, scope: body.scope, instruction: ask });
         if (sessionLive(book.slug)) {
           await sendToBook(book.slug, instruction, cfg);
-          pushLog(book.slug, { level: 'act', msg: `已让 AI 按你的话改${target === 'outline' ? '大纲' : '设定/角色'}（不写新正文）` });
+          pushLog(book.slug, { level: 'act', msg: `Đã gửi yêu cầu AI chỉnh sửa ${target === 'outline' ? 'dàn ý' : 'thiết lập/nhân vật'} (không viết chương mới)` });
           return json(res, 200, { ok: true, mode: 'inserted' });
         }
-        const session = await startWriting({ book, model: body.model || book.model || cfg.defaultModel, instruction, cfg, onLog: (e) => pushLog(book.slug, e), onFreshRestart: mkFresh(book.slug, cfg), autopilotConfirmOnly: true });
+        const model = body.model || book.model || cfg.defaultModel;
+        const exe = findUntermExe();
+        const cli = findUntermCli();
+        if (!exe && !cli) {
+          // Không có cửa sổ Unterm: Tự động chạy chế độ ngầm CLI (Stateless Headless)
+          pushLog(book.slug, { level: 'act', msg: `▶ Bắt đầu sửa ${target === 'outline' ? 'dàn ý' : 'thiết lập'} (Mô hình ${model} ngầm)…` });
+          runHeadless(model, instruction, { cwd: book.dir, cfg, timeoutMs: 1800000 })
+            .then(r => {
+              if (r.ok) {
+                pushLog(book.slug, { level: 'act', msg: `✅ Sửa ${target === 'outline' ? 'dàn ý' : 'thiết lập'} thành công!` });
+              } else {
+                pushLog(book.slug, { level: 'warn', msg: `Sửa thất bại: ` + (r.err || r.out || 'Không có phản hồi') });
+              }
+            })
+            .catch(e => pushLog(book.slug, { level: 'err', msg: 'Lỗi: ' + (e.message || e) }));
+          return json(res, 200, { ok: true, mode: 'headless' });
+        }
+        const session = await startWriting({ book, model, instruction, cfg, onLog: (e) => pushLog(book.slug, e), onFreshRestart: mkFresh(book.slug, cfg), autopilotConfirmOnly: true });
         return json(res, 200, { ok: true, mode: 'opened', instanceId: session.instance?.id });
       } catch (e) { return json(res, 500, { error: e.message }); }
     }
@@ -1063,7 +1091,7 @@ async function api(p, req, res, u) {
           // 逐条挑：只按用户选中的（可能手改过的）意见修订
           const picked = body.items.map(i => ({ text: String((i && (i.text ?? i)) || '').trim() })).filter(i => i.text);
           if (picked.length) {
-            try { snapshotOutline(book, pend.scope); } catch {}
+            try { snapshotOutline(book, pend.scope); } catch { }
             instr = buildReviseFromItems(book, pend.scope, picked);
             pushLog(book.slug, { level: 'act', msg: `已挑定 ${picked.length} 条审稿意见（${pend.scope}）→ 作者只按这几条修订大纲` });
           } else {
@@ -1071,7 +1099,7 @@ async function api(p, req, res, u) {
             pushLog(book.slug, { level: 'act', msg: `未选任何意见（${pend.scope}）→ 不改大纲，继续` });
           }
         } else if (body.apply) {
-          try { snapshotOutline(book, pend.scope); } catch {}
+          try { snapshotOutline(book, pend.scope); } catch { }
           instr = buildReviseInstruction(book, pend.scope, pend.file);
           pushLog(book.slug, { level: 'act', msg: `已采纳全部审稿意见（${pend.scope}）→ 作者据此修订大纲` });
         } else {
@@ -1080,7 +1108,7 @@ async function api(p, req, res, u) {
         }
         clearPending(book.slug);
         if (sessionLive(book.slug)) {
-          try { await sendToBook(book.slug, instr, cfg); } catch {}
+          try { await sendToBook(book.slug, instr, cfg); } catch { }
         } else {
           // 无状态模式没有长驻会话：把修订指令存为 resume，重启无状态循环 → 到卷口自动应用并接着写
           setResume(book.slug, instr);
@@ -1125,8 +1153,8 @@ async function api(p, req, res, u) {
           setResume(book.slug, getReviewDefault(book.slug) || cfg.autopilot?.continueText || '继续');
           clearPending(book.slug);
         } else if (pend && pend.kind === 'outline' && level === 'auto') {
-          try { snapshotOutline(book, pend.scope); } catch {}
-          if (sessionLive(book.slug)) { try { await sendToBook(book.slug, buildReviseInstruction(book, pend.scope, pend.file), cfg); } catch {} }
+          try { snapshotOutline(book, pend.scope); } catch { }
+          if (sessionLive(book.slug)) { try { await sendToBook(book.slug, buildReviseInstruction(book, pend.scope, pend.file), cfg); } catch { } }
           clearPending(book.slug);
         }
         pushLog(book.slug, { level: 'act', msg: `已切到【${label}】` });
@@ -1144,8 +1172,8 @@ async function api(p, req, res, u) {
           clearPending(book.slug);
           const st = rt.get(book.slug); const ap = st?.session?.autopilot;
           if (ap && ap.running && !ap.draining) {
-            ap.drain(() => { try { stopBook(book.slug); } catch {} const s = rt.get(book.slug); if (s?.streamer) s.streamer.stop(); if (s?.session?.autopilot) s.session.autopilot.stop('用户停止'); rt.delete(book.slug); broadcast(book.slug, 'stopped', { graceful: true }); });
-          } else { try { stopBook(book.slug); } catch {} if (ap) ap.stop('用户停止'); rt.delete(book.slug); }
+            ap.drain(() => { try { stopBook(book.slug); } catch { } const s = rt.get(book.slug); if (s?.streamer) s.streamer.stop(); if (s?.session?.autopilot) s.session.autopilot.stop('用户停止'); rt.delete(book.slug); broadcast(book.slug, 'stopped', { graceful: true }); });
+          } else { try { stopBook(book.slug); } catch { } if (ap) ap.stop('用户停止'); rt.delete(book.slug); }
           pushLog(book.slug, { level: 'act', msg: '审核中选择【停止】→ 不再续写，关闭窗口' });
           return json(res, 200, { ok: true, stopped: true });
         }
@@ -1383,8 +1411,10 @@ async function api(p, req, res, u) {
       try {
         const book = getBook(body.book); if (!book) return json(res, 400, { error: '找不到书' });
         const model = body.model || book.model || cfg.defaultModel;
-        const f = await adoptCandidate(book, body.candidate, { model, cfg,
-          onLog: (e) => pushLog(book.slug, { ...e, source: 'voice' }) });
+        const f = await adoptCandidate(book, body.candidate, {
+          model, cfg,
+          onLog: (e) => pushLog(book.slug, { ...e, source: 'voice' })
+        });
         return json(res, 200, { ok: true, file: f, refs: listRefs(book), card: readCard(book) });
       } catch (e) { return json(res, 500, { error: e.message }); }
     }
@@ -1413,7 +1443,7 @@ async function api(p, req, res, u) {
         if (!rels.length) return json(res, 400, { error: '没有指定要删的章节' });
         // 两道保险：git 存档 + 各章单独备份到书目录的 .deleted/
         let snapshot = '';
-        try { snapshot = gitSnapshot(book.dir, '删除章节前存档') || ''; } catch {}
+        try { snapshot = gitSnapshot(book.dir, '删除章节前存档') || ''; } catch { }
         const r = deleteChapters(book, rels, { onLog: (e) => pushLog(book.slug, { ...e, source: 'delete' }) });
         pushLog(book.slug, { level: 'act', source: 'delete', msg: `已删 ${r.count} 章（可从 .deleted/ 取回${snapshot ? '，或 git reset 到 ' + snapshot : ''}）` });
         return json(res, 200, { ok: true, ...r, snapshot });
@@ -1425,8 +1455,10 @@ async function api(p, req, res, u) {
         const model = body.model || book.model || cfg.defaultModel;
         if (!isCowriteModel(model)) return json(res, 400, { error: `「${model}」不能用于重排` });
         if (!body.rel) return json(res, 400, { error: '缺少章节路径' });
-        const r = await reflowChapter({ book, rel: body.rel, model, cfg,
-          onLog: (e) => pushLog(book.slug, { ...e, source: 'reflow' }) });
+        const r = await reflowChapter({
+          book, rel: body.rel, model, cfg,
+          onLog: (e) => pushLog(book.slug, { ...e, source: 'reflow' })
+        });
         return json(res, 200, { ok: true, ...r });
       } catch (e) { return json(res, 500, { error: e.message }); }
     }
@@ -1532,7 +1564,7 @@ async function api(p, req, res, u) {
         const includeFanqie = body.includeFanqie !== false;
         const r = await getCompletionReport(book, { cfg, includeFanqie, onLog: (e) => pushLog(book.slug, { ...e, source: e.source || 'fanqie' }) });
         if (r.fanqie && r.fanqie.ok) {
-          try { setBookFanqieStatus(book.slug, { status: r.fanqie.status, totalWords: r.fanqie.totalWords, lastChapterNum: r.fanqie.lastChapterNum, at: new Date().toISOString() }); } catch {}
+          try { setBookFanqieStatus(book.slug, { status: r.fanqie.status, totalWords: r.fanqie.totalWords, lastChapterNum: r.fanqie.lastChapterNum, at: new Date().toISOString() }); } catch { }
         }
         const note = buildCompletionNote(book, r);
         return json(res, 200, { ...r, internalStatus: book.status || '连载中', note });
@@ -1591,17 +1623,34 @@ async function api(p, req, res, u) {
         } else {
           const scope = body.scope || '立项';
           const safe = String(scope).replace(/[\\/:*?"<>|\r\n]+/g, '_').slice(0, 40);
-          try { snapshotOutline(book, scope); } catch {}
+          try { snapshotOutline(book, scope); } catch { }
           instruction = buildReviseInstruction(book, scope, path.join(book.dir, 'reviews', '大纲审稿-' + safe + '.md'));
         }
         if (sessionLive(book.slug)) {
           const r = await sendToBook(book.slug, instruction, cfg);
-          pushLog(book.slug, { level: 'act', msg: '已让作者按审稿意见修订（穿插进当前窗口）' });
+          pushLog(book.slug, { level: 'act', msg: 'Đã gửi yêu cầu AI sửa dàn ý theo thẩm định (không viết chương mới)' });
           await ensureAutopilot(book.slug, cfg);
           return json(res, 200, { ...r, mode: 'inserted' });
         }
+        const model = book.model || cfg.defaultModel;
+        const exe = findUntermExe();
+        const cli = findUntermCli();
+        if (!exe && !cli) {
+          // Không có cửa sổ Unterm: Tự động chạy chế độ ngầm CLI (Stateless Headless)
+          pushLog(book.slug, { level: 'act', msg: `▶ Bắt đầu sửa dàn ý theo thẩm định (Mô hình ${model} ngầm)…` });
+          runHeadless(model, instruction, { cwd: book.dir, cfg, timeoutMs: 1800000 })
+            .then(r => {
+              if (r.ok) {
+                pushLog(book.slug, { level: 'act', msg: `✅ Sửa dàn ý theo thẩm định thành công!` });
+              } else {
+                pushLog(book.slug, { level: 'warn', msg: `Sửa thất bại: ` + (r.err || r.out || 'Không có phản hồi') });
+              }
+            })
+            .catch(e => pushLog(book.slug, { level: 'err', msg: 'Lỗi: ' + (e.message || e) }));
+          return json(res, 200, { ok: true, mode: 'headless' });
+        }
         rtOf(book.slug).logs = [];
-        const session = await startWriting({ book, model: book.model || cfg.defaultModel, instruction, cfg, onLog: (e) => pushLog(book.slug, e), onFreshRestart: mkFresh(book.slug, cfg) });
+        const session = await startWriting({ book, model, instruction, cfg, onLog: (e) => pushLog(book.slug, e), onFreshRestart: mkFresh(book.slug, cfg) });
         rtOf(book.slug).session = session;
         return json(res, 200, { ok: true, mode: 'started', instance: session.instance.id, pane: session.paneId });
       } catch (e) { pushLog(slugOf(body.book), { level: 'error', msg: e.message }); return json(res, 500, { error: e.message }); }
@@ -1615,8 +1664,8 @@ async function api(p, req, res, u) {
         const busyNow = writingBusy(slug);
         if (busyNow) return json(res, 409, { error: busyNow + '，不能同时开始写作' });
         const model = body.model || book.model || cfg.defaultModel;
-        if (body.model) { try { setBookModel(slug, body.model); } catch {} }
-        if (body.participation != null) { try { setParticipation(slug, body.participation); } catch {} }
+        if (body.model) { try { setBookModel(slug, body.model); } catch { } }
+        if (body.participation != null) { try { setParticipation(slug, body.participation); } catch { } }
         const untilTarget = body.untilTarget === true || (book.targetChapters > 0 && body.batches == null);
         const batches = Math.max(1, parseInt(body.batches, 10) || 1);
         const out = startStatelessRun(book, { model, batches, untilTarget, cfg });
@@ -1629,7 +1678,7 @@ async function api(p, req, res, u) {
       const task = body.task || '';
       const wantModel = body.model || null;
       // 带了模型就先持久化到 book.model（卡片/下次默认值/resume 全跟上）
-      if (wantModel) { try { setBookModel(slug, wantModel); } catch {} }
+      if (wantModel) { try { setBookModel(slug, wantModel); } catch { } }
       try {
         if (sessionLive(slug)) {
           const liveModel = getSession(slug)?.model || null;
@@ -1637,7 +1686,7 @@ async function api(p, req, res, u) {
           // 选了与正在跑的窗口【不同】的模型 → 运行中的 agent 换不了模型，停旧窗口、用新模型重开
           if (targetModel && liveModel && targetModel !== liveModel) {
             pushLog(slug, { level: 'act', msg: `模型已切换（${liveModel} → ${targetModel}）→ 停止旧窗口并用新模型重开` });
-            try { stopBook(slug); } catch {}
+            try { stopBook(slug); } catch { }
             const st = rt.get(slug); if (st?.session?.autopilot) st.session.autopilot.stop('切换模型'); if (st?.streamer) st.streamer.stop();
             rt.delete(slug);
             const session = await resumeWriting(slug, cfg, task, targetModel);
@@ -1674,7 +1723,7 @@ async function api(p, req, res, u) {
       // 第一次停止(且在写、未在 draining、非 force) → 优雅停止：写完当前批次再关窗。
       if (ap && ap.running && !ap.draining && body.force !== true) {
         ap.drain(() => {
-          try { stopBook(slug); } catch {}
+          try { stopBook(slug); } catch { }
           const s = rt.get(slug); if (s?.streamer) s.streamer.stop();
           rt.delete(slug);
           pushLog(slug, { level: 'act', msg: '当前批次已完成 → 已关闭窗口' });
@@ -1768,9 +1817,9 @@ const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 async function freshRestart(slug, cfg, reason = '') {
   try {
     const st = rt.get(slug);
-    try { st?.session?.autopilot?.stop?.('fresh-restart'); } catch {}
-    try { st?.streamer?.stop?.(); } catch {}
-    try { stopBook(slug); } catch {}            // 杀旧窗口 + 注销会话
+    try { st?.session?.autopilot?.stop?.('fresh-restart'); } catch { }
+    try { st?.streamer?.stop?.(); } catch { }
+    try { stopBook(slug); } catch { }            // 杀旧窗口 + 注销会话
     await sleep(1500);
     pushLog(slug, { level: 'act', msg: `♻️ ${reason || '上下文较大'} → 重开新会话续写（省 token，靠 continuity_ledger 重建上下文）` });
     await resumeWriting(slug, cfg, '', getBook(slug)?.model || null);
@@ -1783,7 +1832,7 @@ const mkFresh = (slug, cfg) => (reason) => freshRestart(slug, cfg, reason);
 async function resumeWriting(slug, cfg, extraTask = '', model = null) {
   const book = getBook(slug);
   if (!book) throw new Error('找不到书：' + slug);
-  if (getSession(slug)) { try { removeSession(slug); } catch {} }
+  if (getSession(slug)) { try { removeSession(slug); } catch { } }
   rt.delete(slug);
   let instruction = buildResumeInstruction(book);
   if (extraTask) instruction += '；另外，本次还需：' + String(extraTask).replace(/[\r\n]+/g, ' ');
@@ -1802,15 +1851,15 @@ async function doWrite(body, cfg, res) {
   if (busyDo) return json(res, 409, { error: busyDo + '，不能同时开始写作' });
   const model = body.model || book.model || cfg.defaultModel;
   // 带了模型就持久化（卡片/下次默认值/resume 全跟上）
-  if (body.model) { try { setBookModel(book.slug, body.model); } catch {} }
+  if (body.model) { try { setBookModel(book.slug, body.model); } catch { } }
   // 开写前选择参与度（放手写/卷口把关/盯着写）：持久化 + 立即热生效（含已在跑的窗口）
   if (body.participation != null) {
-    try { setParticipation(book.slug, body.participation); } catch {}
+    try { setParticipation(book.slug, body.participation); } catch { }
     setReviewEvery(book.slug, body.participation === 'chapter' ? 1 : 0);
   } else if (body.writeMode != null) {
     const mode = body.writeMode === 'review' ? 'review' : 'auto';
     const every = mode === 'review' ? Math.max(1, Math.floor(Number(body.reviewEvery) || 1)) : 0;
-    try { setBookWriteMode(book.slug, mode, every || 1); } catch {}
+    try { setBookWriteMode(book.slug, mode, every || 1); } catch { }
     setReviewEvery(book.slug, every);
   }
   const instruction = body.task || (book.imported
@@ -1823,7 +1872,7 @@ async function doWrite(body, cfg, res) {
     // 选了与正在跑的窗口不同的模型 → 停旧窗口，落到下面用新模型重开（运行中的 agent 换不了模型）
     if (model && liveModel && model !== liveModel) {
       pushLog(slug, { level: 'act', msg: `模型已切换（${liveModel} → ${model}）→ 停止旧窗口并用新模型重开` });
-      try { stopBook(slug); } catch {}
+      try { stopBook(slug); } catch { }
       const st = rt.get(slug); if (st?.session?.autopilot) st.session.autopilot.stop('切换模型'); if (st?.streamer) st.streamer.stop();
       rt.delete(slug);
     } else {
@@ -1832,7 +1881,7 @@ async function doWrite(body, cfg, res) {
         pushLog(slug, { level: 'act', msg: '窗口已在运行 → 直接续写指令已送达' });
         await ensureAutopilot(slug, cfg);
         return json(res, 200, { ...r, mode: 'inserted' });
-      } catch { /* 窗口其实已死 → 落到下面重开 */ if (getSession(slug)) { try { removeSession(slug); } catch {} } rt.delete(slug); }
+      } catch { /* 窗口其实已死 → 落到下面重开 */ if (getSession(slug)) { try { removeSession(slug); } catch { } } rt.delete(slug); }
     }
   }
   rtOf(slug).logs = [];
@@ -1870,7 +1919,7 @@ function sseStream(u, res) {
       .then(h => { r.streamer = h; })
       .catch(e => pushLog(slug, { level: 'warn', msg: '镜像启动失败：' + e.message }));
   }
-  const ka = setInterval(() => { try { res.write(': ka\n\n'); } catch {} }, 15000);
+  const ka = setInterval(() => { try { res.write(': ka\n\n'); } catch { } }, 15000);
   res.on('close', () => {
     clearInterval(ka); r.clients.delete(res);
     if (r.clients.size === 0 && r.streamer) { r.streamer.stop(); r.streamer = null; }

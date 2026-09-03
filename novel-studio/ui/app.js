@@ -68,7 +68,7 @@ async function boot() {
     setTimeout(boot, 1500);
   }
 }
-async function refresh() { try { const b = await api('/api/bootstrap'); STATE = { ...STATE, ...b }; renderShelf(); } catch {} }
+async function refresh() { try { const b = await api('/api/bootstrap'); STATE = { ...STATE, ...b }; renderShelf(); } catch { } }
 
 function fillModels() {
   const opts = STATE.models.map(m => `<option value="${m.id}" ${m.available ? '' : 'disabled'}>${esc(m.name)}${m.available ? '' : ' (Chưa cài đặt)'}</option>`).join('');
@@ -175,10 +175,10 @@ async function renderBoard(slug) {
     box.innerHTML =
       `<div class="bd-head"><span class="bd-status">${esc(d.status || 'Đang Ra')}</span>${d.participation ? '<span class="bd-part">' + ({ auto: '🤖 Tự Động Hoàn Toàn', volume: '🧭 Kiểm Soát Đầu Quyển', chapter: '✍️ Giám Sát Từng Đợt' }[d.participation] || '') + '</span>' : ''}</div>` +
       `<div class="bd-kpis">` +
-        `<div class="bd-kpi"><b>${esc(volTxt)}</b><span>Tiến độ</span></div>` +
-        `<div class="bd-kpi"><b>${d.chapters}</b><span>Số chương</span></div>` +
-        `<div class="bd-kpi"><b>${esc(wanTxt)}</b><span>Số từ</span></div>` +
-        `<div class="bd-kpi"><b>${fmtTok(d.tokens || 0)}</b><span>tokens</span></div>` +
+      `<div class="bd-kpi"><b>${esc(volTxt)}</b><span>Tiến độ</span></div>` +
+      `<div class="bd-kpi"><b>${d.chapters}</b><span>Số chương</span></div>` +
+      `<div class="bd-kpi"><b>${esc(wanTxt)}</b><span>Số từ</span></div>` +
+      `<div class="bd-kpi"><b>${fmtTok(d.tokens || 0)}</b><span>tokens</span></div>` +
       `</div>` +
       (pct != null ? `<div class="bd-bar"><i style="width:${pct}%"></i></div><div class="bd-pct">${pct}% · Mục tiêu ~${d.plannedChapters} chương</div>` : '') +
       `<div class="bd-health">${healthRows.join('')}</div>`;
@@ -444,7 +444,7 @@ $('#cwIdeaBtn').addEventListener('click', async () => {
     box.value = cur ? (cur + '\n\n—— Gợi ý của AI (Chọn ý bạn thích, xóa phần không cần) ——\n' + ideas) : ideas;
     box.focus();
     // 光标移到末尾，方便接着改
-    try { box.selectionStart = box.selectionEnd = box.value.length; box.scrollTop = box.scrollHeight; } catch {}
+    try { box.selectionStart = box.selectionEnd = box.value.length; box.scrollTop = box.scrollHeight; } catch { }
     // 旧的只读建议框不再用（内容已进可编辑框，不再"藏"起来）
     $('#cwIdeaBox').classList.add('hidden'); $('#cwIdeaBox').textContent = '';
     $('#cwIdeaHint').textContent = '✅ Đã điền vào ô yêu cầu bên dưới — Bạn hãy chỉnh sửa theo ý mình rồi bấm "Yêu cầu AI viết chương này"';
@@ -465,10 +465,10 @@ async function cwDoWrite(redoLast) {
   const slowModel = /claude|gemini/i.test(mid);
   $('#cwSaved').textContent = (redoLast ? '🔄 Đang viết lại chương này' : '⏳ AI đang sáng tác chương này')
     + (isApi
-        ? '—— Mô hình Local/API chạy ngầm, viết xong sẽ tự động lưu file.'
-          + (/^api-local$/.test(mid) ? ' (Local 14B ~3–6 phút/chương)' : ' (~1–3 phút)')
-        : '—— Cửa sổ terminal sẽ hiển thị trực tiếp tiến trình viết.'
-          + (slowModel ? ' (Gemini High Effort cần thời gian suy nghĩ kỹ để văn phong hay hơn)' : ' (~1–5 phút)'))
+      ? '—— Mô hình Local/API chạy ngầm, viết xong sẽ tự động lưu file.'
+      + (/^api-local$/.test(mid) ? ' (Local 14B ~3–6 phút/chương)' : ' (~1–3 phút)')
+      : '—— Cửa sổ terminal sẽ hiển thị trực tiếp tiến trình viết.'
+      + (slowModel ? ' (Gemini High Effort cần thời gian suy nghĩ kỹ để văn phong hay hơn)' : ' (~1–5 phút)'))
     + ' Viết xong sẽ hiển thị toàn văn để bạn đọc duyệt.';
   try {
     const r = await api('/api/book/cowrite-chapter', 'POST', {
@@ -747,7 +747,7 @@ async function openPublish(book) {
       const hero = cn(heroM && heroM[1]); const hero2 = cn(roleM && roleM[1]);
       if (hero && $('#cbHero') && !$('#cbHero').value.trim()) $('#cbHero').value = hero.slice(0, 5);
       if (hero2 && $('#cbHero2') && !$('#cbHero2').value.trim()) $('#cbHero2').value = hero2.slice(0, 5);
-    } catch {}
+    } catch { }
   })();
   $('#pbProfile').innerHTML = '<option value="">(Đang tải tài khoản...)</option>';
   $('#pbBook').innerHTML = '<option value="">(Chọn tài khoản để tải danh sách...)</option>';
@@ -767,7 +767,7 @@ async function openPublish(book) {
     if (pc.profilePath && pc.bookId && $('#pbPreview') && !$('#pbPreview').disabled) {
       $('#pbPreview').click();
     }
-  } catch {}
+  } catch { }
 }
 
 // 取书架里最新的那份 book 记录（publish 配置可能刚被保存过）
@@ -889,7 +889,7 @@ $('#cbCreate')?.addEventListener('click', async () => {
             $('#pbProfile').value = profilePath;
             hint.style.color = '#3a7'; hint.innerHTML = `✅ Tạo thành công, ID=<b>${esc(s.bookId)}</b>, đã cập nhật cấu hình. Bạn có thể bấm Xem trước.`;
             toast('✅ Đã tạo tác phẩm 《' + CUR.title + '》#' + s.bookId);
-            try { await pbLoadBooks(profilePath, true); $('#pbBook').value = s.bookId; $('#pbBookId').value = s.bookId; } catch {}
+            try { await pbLoadBooks(profilePath, true); $('#pbBook').value = s.bookId; $('#pbBookId').value = s.bookId; } catch { }
           } else if (s.semiManual) {
             hint.style.color = '#c90'; hint.innerHTML = '⚠️ ' + esc(s.msg || '').replace(/\n/g, '<br>');
             toast('Đã điền thông tin tác phẩm, vui lòng sang trình duyệt xác nhận tạo sách');
@@ -898,7 +898,7 @@ $('#cbCreate')?.addEventListener('click', async () => {
           clearInterval(cbPoll); cbPoll = null; btn.disabled = false; btn.textContent = old;
           hint.style.color = '#e57'; hint.textContent = '❌ Tạo tác phẩm thất bại: ' + (s.error || 'Không rõ');
         }
-      } catch {}
+      } catch { }
     }, 3500);
   } catch (e) { hint.style.color = '#e57'; hint.textContent = '❌ ' + e.message; btn.disabled = false; btn.textContent = old; }
 });
@@ -1035,7 +1035,7 @@ $('#pbPreview').addEventListener('click', async () => {
 let PB_PREVIEW = null;     // 最近一次「预览将发」的结果 {slug,data}：发布时据此决定要不要覆盖确认
 let PB_STREAM = null;      // 发布进度的 SSE（弹窗内实时滚日志）
 let PB_STREAM_SLUG = null; // 当前 SSE 属于哪本书（用于弹窗重开时判断是否已挂着）
-function pbCloseStream() { if (PB_STREAM) { try { PB_STREAM.close(); } catch {} PB_STREAM = null; PB_STREAM_SLUG = null; } }
+function pbCloseStream() { if (PB_STREAM) { try { PB_STREAM.close(); } catch { } PB_STREAM = null; PB_STREAM_SLUG = null; } }
 // 发布进入/结束时切换「停止发布」「发布中」等按钮态；发布中禁用发布类按钮，露出停止按钮。
 function pbSetPublishingUI(on) {
   const stop = $('#pbStop');
@@ -1083,7 +1083,7 @@ function pbAttachStream(slug, header) {
       pbMarkDone(slug);
     }
   });
-  PB_STREAM.onerror = () => {};
+  PB_STREAM.onerror = () => { };
 }
 // 覆盖阈值以【预览回传的那个数】为准——服务端拿它拦，UI 就得拿同一个数判断要不要先问一句。
 function pbRwLimitOf(pv) {
@@ -1149,7 +1149,7 @@ $('#pbCancel').addEventListener('click', pbCloseModal);
 // ---------- 从番茄导入图书到本地 ----------
 let IF_PROFILES = [], IF_BOOKS = [], IF_STREAM = null;
 const IF_BOOKS_CACHE = {};
-function ifCloseStream() { if (IF_STREAM) { try { IF_STREAM.close(); } catch {} IF_STREAM = null; } }
+function ifCloseStream() { if (IF_STREAM) { try { IF_STREAM.close(); } catch { } IF_STREAM = null; } }
 function ifRenderProfiles() {
   const sel = $('#ifProfile');
   if (!IF_PROFILES.length) { sel.innerHTML = '<option value="">(Chưa phát hiện tài khoản Unzoo, vui lòng đăng nhập trên trình duyệt)</option>'; return; }
@@ -1227,7 +1227,7 @@ async function ifImport(limit) {
         if (/导入结束/.test(e.msg)) toast('Nhập tác phẩm hoàn tất, đã thêm vào tủ sách');
       }
     });
-    IF_STREAM.onerror = () => {};
+    IF_STREAM.onerror = () => { };
     toast(limit ? 'Bắt đầu nhập thử 3 chương' : 'Bắt đầu nhập, xem tiến độ ở nhật ký bên dưới');
   } catch (e) { $('#ifErr').textContent = 'Nhập tác phẩm thất bại: ' + e.message; $('#ifGo').disabled = false; $('#ifTest').disabled = false; $('#ifPreview').disabled = false; }
 }
@@ -1314,7 +1314,7 @@ $('#flMark').addEventListener('click', async () => {
 
 // ---------- 完结收口（内部完本 → 番茄Hệ Điều Hành完结）----------
 let FL_STREAM = null;
-function flCloseStream() { if (FL_STREAM) { try { FL_STREAM.close(); } catch {} FL_STREAM = null; } }
+function flCloseStream() { if (FL_STREAM) { try { FL_STREAM.close(); } catch { } FL_STREAM = null; } }
 // 把番茄 SSE 日志滚进 flClosureOut，命中 endRe 时复位按钮。
 function flStreamFanqie(endRe, onEnd) {
   const out = $('#flClosureOut'); out.style.display = ''; out.scrollTop = out.scrollHeight;
@@ -1327,7 +1327,7 @@ function flStreamFanqie(endRe, onEnd) {
     out.textContent += `${tag} ${e.msg}\n`; out.scrollTop = out.scrollHeight;
     if (endRe.test(e.msg)) { flCloseStream(); out.textContent += '\n—— (Hoàn thành) ——\n'; out.scrollTop = out.scrollHeight; if (onEnd) onEnd(); }
   });
-  FL_STREAM.onerror = () => {};
+  FL_STREAM.onerror = () => { };
 }
 function flRenderReport(r) {
   const out = $('#flClosureOut'); out.style.display = '';
@@ -1377,13 +1377,26 @@ $('#flLocate').addEventListener('click', async () => {
 });
 
 // ---------- 大纲审稿 ----------
-function openOutline() {
+async function openOutline() {
   if (!CUR) return;
   $('#olErr').textContent = ''; $('#olResult').classList.add('hidden');
   $('#olCritique').textContent = ''; $('#olMeta').textContent = '';
   const b = STATE.books.find(x => x.slug === CUR.slug) || CUR;
   const st = b.stats || {};
-  const vols = st.volumes || [];
+  let vols = [...(st.volumes || [])];
+  try {
+    const t = await api('/api/book/files?book=' + encodeURIComponent(CUR.slug));
+    if (t && t.outlines && t.outlines.length) {
+      for (const o of t.outlines) {
+        const m = (o.name || o.rel || '').match(/^(?:卷|Quyen_|Quyển_)?\s*0*(\d+)/i);
+        if (m) {
+          const vTag = '卷' + m[1].padStart(2, '0');
+          if (!vols.includes(vTag)) vols.push(vTag);
+        }
+      }
+      vols.sort();
+    }
+  } catch { }
   $('#olBookInfo').textContent = `(Tổng cộng ${st.chapters || 0} chương` + (vols.length ? ` · ${vols.length} quyển` : '') + ')';
   $('#olScope').innerHTML = ['<option value="立项">Khởi tạo / Dàn ý toàn thư</option>']
     .concat(vols.map(v => `<option value="${esc(v)}">Dàn ý ${esc(v)}</option>`)).join('');
@@ -1409,7 +1422,7 @@ $('#olApply').addEventListener('click', async () => {
   try {
     const r = await api('/api/book/apply-review', 'POST', { book: CUR.slug, scope, kind: 'outline' });
     $('#outlineModal').classList.add('hidden');
-    if (r.mode === 'started') { setWriting(true); openStream(CUR.slug); }
+    if (r.mode === 'started' || r.mode === 'headless') { setWriting(true); openStream(CUR.slug); }
     toast(r.mode === 'inserted' ? `Đã yêu cầu AI sửa lại dàn ý 【${scope}】` : `Đã mở tiến trình: AI sửa dàn ý 【${scope}】`);
   } catch (e) { $('#olErr').textContent = e.message; }
   finally { btn.disabled = false; }
@@ -1574,7 +1587,7 @@ $('#stGo') && $('#stGo').addEventListener('click', async () => {
   try {
     const r = await api('/api/book/revise-setting', 'POST', { book: CUR.slug, target: ST_TARGET, scope, instruction: ask, model: $('#writeModel').value });
     $('#studioModal').classList.add('hidden');
-    if (r.mode === 'opened') { setWriting(true); openStream(CUR.slug); }
+    if (r.mode === 'opened' || r.mode === 'headless') { setWriting(true); openStream(CUR.slug); }
     toast(ST_TARGET === 'outline' ? `AI đang sửa dàn ý 【${scope}】 theo yêu cầu (Xem nhật ký)` : 'AI đang sửa thiết lập/nhân vật theo yêu cầu của bạn (Xem nhật ký)');
   } catch (e) { $('#sdErr').textContent = 'Thất bại: ' + e.message; }
   finally { $('#stGo').disabled = false; }
@@ -1595,7 +1608,7 @@ async function openVolPlan() {
   $('#vpModel').value = CUR.model || STATE.config.defaultModel;
   // 卷号：1..规划卷数；默认下一卷（当前卷+1，没写过则第1卷）
   let planned = 30, cur = 0;
-  try { const d = await api('/api/book/dashboard?book=' + encodeURIComponent(CUR.slug)); planned = d.plannedVolumes || 30; cur = d.curVol || 0; } catch {}
+  try { const d = await api('/api/book/dashboard?book=' + encodeURIComponent(CUR.slug)); planned = d.plannedVolumes || 30; cur = d.curVol || 0; } catch { }
   const n = Math.max(planned, cur + 3, 8);
   const nextVol = Math.min(cur + 1, n) || 1;
   $('#vpVol').innerHTML = Array.from({ length: n }, (_, i) => i + 1).map(v => `<option value="${v}" ${v === nextVol ? 'selected' : ''}>Quyển ${v}${v === cur + 1 ? ' (Quyển tiếp theo)' : v <= cur ? ' (Đã bắt đầu viết)' : ''}</option>`).join('');
@@ -1766,7 +1779,7 @@ async function openCover() {
   cvLoadChatProfiles();   // 填充 ChatGPT 账号下拉
   // 若书里已有 AI 底图，预加载并默认用它
   if (CUR.stats?.coverBg) {
-    try { await loadCoverBg(`${API}/api/book/cover-bg?book=${encodeURIComponent(CUR.slug)}&t=${CUR.stats.coverBgMtime || 0}`); $('#cvTheme').value = 'ai'; } catch {}
+    try { await loadCoverBg(`${API}/api/book/cover-bg?book=${encodeURIComponent(CUR.slug)}&t=${CUR.stats.coverBgMtime || 0}`); $('#cvTheme').value = 'ai'; } catch { }
   }
   drawCover();
 }
@@ -1786,7 +1799,7 @@ $('#cvGenAI').addEventListener('click', async () => {
     const local = STATE.config?.image?.backend === 'local';
     $('#cvErr').textContent = 'Tạo thất bại: ' + e.message
       + (local ? '(Tạo ảnh cục bộ: Hãy đảm bảo ComfyUI hoặc SD WebUI đang chạy)'
-               : '(Imagen: Cần điền Gemini Key trong Cài đặt và bật proxy)');
+        : '(Imagen: Cần điền Gemini Key trong Cài đặt và bật proxy)');
   }
   finally { btn.disabled = false; btn.textContent = old; }
 });
@@ -1833,7 +1846,7 @@ $('#cvGenChatGPT').addEventListener('click', async () => {
           $('#cvErr').textContent = 'Tạo ảnh bìa qua ChatGPT thất bại: ' + (s.error || 'Không rõ');
           hint.textContent = hintOld; btn.disabled = false; btn.textContent = old;
         }
-      } catch {}
+      } catch { }
     }, 6000);
   } catch (e) {
     $('#cvErr').textContent = 'Khởi động thất bại: ' + e.message;
@@ -1868,7 +1881,7 @@ $('#cvGrabChatGPT')?.addEventListener('click', async () => {
           $('#cvErr').textContent = 'Lấy ảnh thất bại: ' + (s.error || 'Không rõ');
           hint.textContent = hintOld; btn.disabled = false; btn.textContent = old;
         }
-      } catch {}
+      } catch { }
     }, 2500);
   } catch (e) {
     $('#cvErr').textContent = 'Khởi động thất bại: ' + e.message;
@@ -1905,7 +1918,7 @@ $('#cvPushFanqie')?.addEventListener('click', async () => {
           clearInterval(cvFqPoll); cvFqPoll = null; btn.disabled = false; btn.textContent = old; hint.innerHTML = hintOld;
           $('#cvErr').textContent = 'Đổi ảnh bìa thất bại: ' + (s.error || 'Không rõ');
         }
-      } catch {}
+      } catch { }
     }, 4000);
   } catch (e) { $('#cvErr').textContent = e.message; toast('Đổi ảnh bìa: ' + e.message); btn.disabled = false; btn.textContent = old; }
 });
@@ -1932,7 +1945,7 @@ function openNameExp(book) {
   api('/api/book/name-experiment-status', 'POST', { book: book.slug }).then(s => {
     if (s.manifest && s.manifest.items) neRender(s.manifest);
     if (s.status === 'running') { $('#neHint').textContent = '⏳ Đang tạo…'; $('#neGen').disabled = true; neStartPoll(); }
-  }).catch(() => {});
+  }).catch(() => { });
 }
 function neRender(manifest) {
   neManifest = manifest;
@@ -1948,9 +1961,9 @@ function neRender(manifest) {
   $('#neGrid').querySelectorAll('canvas.ne-cover').forEach(cv => {
     const it = items[+cv.getAttribute('data-i')];
     const url = `${API}/api/book/exp-image?book=${encodeURIComponent(neCurBook.slug)}&file=${encodeURIComponent(it.bg)}&t=${manifest.generatedAt || ''}`;
-    neDrawCover(cv, url, it.title).catch(() => {});
+    neDrawCover(cv, url, it.title).catch(() => { });
   });
-  $('#neGrid').querySelectorAll('.ne-title').forEach((el, i) => el.addEventListener('click', () => { try { navigator.clipboard.writeText(items[i].title); toast('Đã sao chép tên truyện: ' + items[i].title); } catch {} }));
+  $('#neGrid').querySelectorAll('.ne-title').forEach((el, i) => el.addEventListener('click', () => { try { navigator.clipboard.writeText(items[i].title); toast('Đã sao chép tên truyện: ' + items[i].title); } catch { } }));
 }
 // Không có字底图 + 书名 → 画布（同主封面 drawAiBg+drawCoverText：cover 填满 600×800 + 上下压暗 + 描边 + 居中标题）
 function neDrawCover(canvas, bgUrl, title) {
@@ -1988,7 +2001,7 @@ function neStartPoll() {
       if (s.msg && s.status === 'running') $('#neHint').textContent = '⏳ ' + s.msg;
       if (s.status === 'done') { clearInterval(nePoll); nePoll = null; $('#neHint').textContent = '✅ Đã tạo xong, bấm vào tên truyện để sao chép'; $('#neGen').disabled = false; if (s.manifest) neRender(s.manifest); }
       else if (s.status === 'error') { clearInterval(nePoll); nePoll = null; $('#neHint').textContent = ''; $('#neErr').textContent = 'Tạo thất bại: ' + (s.error || ''); $('#neGen').disabled = false; }
-    } catch {}
+    } catch { }
   }, 3000);
 }
 $('#neGen')?.addEventListener('click', async () => {
@@ -2025,7 +2038,7 @@ async function neBakeTitledCovers() {
     const it = items[+cv.getAttribute('data-i')]; if (!it || !it.bg) continue;
     let dataUrl; try { dataUrl = cv.toDataURL('image/png'); } catch { continue; }   // 画布被污染就跳过(退回Không có字底图)
     const file = it.bg.replace(/\.png$/i, '') + '.titled.png';
-    try { await api('/api/book/exp-cover-save', 'POST', { book: neCurBook.slug, file, dataUrl }); } catch {}
+    try { await api('/api/book/exp-cover-save', 'POST', { book: neCurBook.slug, file, dataUrl }); } catch { }
   }
 }
 function nePushStartPoll() {
@@ -2036,7 +2049,7 @@ function nePushStartPoll() {
       if (s.msg && s.status === 'running') $('#neHint').textContent = '⏳ ' + s.msg;
       if (s.status === 'done') { clearInterval(nePushPoll); nePushPoll = null; $('#nePush').disabled = false; $('#neHint').textContent = (s.submitted ? '✅ ' : '📝 ') + (s.msg || 'Hoàn thành'); if (s.msg) toast(s.msg.split('\n')[0]); }
       else if (s.status === 'error') { clearInterval(nePushPoll); nePushPoll = null; $('#nePush').disabled = false; $('#neHint').textContent = ''; $('#neErr').textContent = 'Đẩy lên nền tảng thất bại: ' + (s.error || ''); }
-    } catch {}
+    } catch { }
   }, 2500);
 }
 $('#cvSave').addEventListener('click', async () => {
@@ -2071,7 +2084,7 @@ function openStream(slug) {
   });
   STREAM.addEventListener('log', e => appendLog(JSON.parse(e.data)));
   STREAM.addEventListener('stopped', () => { STOP_DRAINING = false; $('#btnStop').textContent = '■ Dừng Lại'; setWriting(false); closeStream(); toast('Đợt hiện tại đã hoàn thành → Đã đóng phiên làm việc'); });
-  STREAM.onerror = () => {};
+  STREAM.onerror = () => { };
 }
 function closeStream() { if (STREAM) { STREAM.close(); STREAM = null; } }
 // ---------- Thanh tác vụ duyệt dàn ý / biên tập ----------
@@ -2104,7 +2117,7 @@ async function showReviewBar() {
       $('#rbActionsOutline').classList.remove('hidden');
     }
     $('#reviewBar').classList.remove('hidden');
-  } catch {}
+  } catch { }
 }
 // 渲染可勾选的审稿意见（硬伤/隐患默认勾、建议默认不勾；文本可手改）
 function renderReviewItems(items) {
@@ -2187,11 +2200,11 @@ function appendLog(e) {
   const tag = e.level === 'act' ? '●' : e.level === 'warn' ? '▲' : e.level === 'error' ? '✖' : '○';
   const line = el('div', cls, `<span class="tag">${tag}</span><span class="msg">${esc(e.msg)}</span>`);
   feed.appendChild(line);
-  if (e.msg && /token/i.test(e.msg)) {}
+  if (e.msg && /token/i.test(e.msg)) { }
   feed.scrollTop = feed.scrollHeight;
   while (feed.childNodes.length > 400) feed.removeChild(feed.firstChild);
   // 顺带刷新 token 徽章
-  if (CUR) api('/api/usage').then(u => { const t = u.books?.[CUR.slug]?.total; if (t) $('#writeTokens').textContent = 'tokens ' + fmtTok(t); }).catch(() => {});
+  if (CUR) api('/api/usage').then(u => { const t = u.books?.[CUR.slug]?.total; if (t) $('#writeTokens').textContent = 'tokens ' + fmtTok(t); }).catch(() => { });
 }
 
 // ---------- 阅读 / 工作台 ----------
@@ -2474,7 +2487,7 @@ function crSyncTip() {
   tip.textContent = id === 'api-local'
     ? 'Mô hình Local miễn phí (~3–6 phút/chương). Nếu muốn chất lượng cao nhất hãy chọn Gemini High / Claude.'
     : (m && m.kind === 'api') ? 'Kết nối API trực tiếp, chạy ngầm ~1–3 phút.'
-    : 'Chạy qua CLI ngầm, ~1–8 phút.';
+      : 'Chạy qua CLI ngầm, ~1–8 phút.';
 }
 
 function openChapterRewrite() {
@@ -2507,7 +2520,7 @@ function openChapterRewrite() {
       $('#crStatus').textContent = '⏳ ' + (s.msg || 'Lượt viết lại trước vẫn đang chạy…');
       crStartPoll(RD_BOOK);
     }
-  }).catch(() => {});
+  }).catch(() => { });
 }
 // 删除本章。逐章把关的工作流里，不满意就删掉重来比在旧文上重写干净——
 // 重写会被原文的结构锚住，删掉重生成才是真的从头再来。
@@ -2575,8 +2588,8 @@ function crStartPoll(book) {
       $('#chRewriteModal').classList.add('hidden');
       $('#crStatus').textContent = '';
       toast(`Chương ${s.num} đã viết lại (${s.before} → ${s.words} chữ)`); //
-        
-      try { await openReaderAt(book, s.rel); } catch {}   // 章名可能变了→刷新目录并停在新文件上
+
+      try { await openReaderAt(book, s.rel); } catch { }   // 章名可能变了→刷新目录并停在新文件上
     } else if (s.status === 'error') {
       $('#crStatus').textContent = '';
       $('#crErr').textContent = s.error || 'Viết lại thất bại';
@@ -2611,7 +2624,7 @@ $('#crGo') && $('#crGo').addEventListener('click', async () => {
 
 async function openReaderAt(book, rel) {
   await openReader(book);
-  if (rel) { try { await loadReaderFile(rel); } catch {} }
+  if (rel) { try { await loadReaderFile(rel); } catch { } }
 }
 
 // ---------- 删除书 ----------
@@ -2757,7 +2770,7 @@ $('#nbImpBrowse').addEventListener('click', async () => {
     const dir = await inv('pick_folder');
     if (dir) {
       $('#nbImpDir').value = dir;
-      try { const r = await api('/api/detect-title', 'POST', { dir }); if (r.title && !$('#nbImpTitle').value.trim()) $('#nbImpTitle').value = r.title; } catch {}
+      try { const r = await api('/api/detect-title', 'POST', { dir }); if (r.title && !$('#nbImpTitle').value.trim()) $('#nbImpTitle').value = r.title; } catch { }
     }
   }
   catch (e) { toast('Mở bảng chọn thư mục thất bại: ' + e.message); }
@@ -2844,8 +2857,8 @@ $('#nbLaunch').addEventListener('click', async () => {
     const st = r.book && r.book.style;
     const free = NB_PLAN_MODE === 'freehand';
     toast('Đã khởi tạo tác phẩm 《' + title + '》' + (NB_VOICE ? ' · Mẫu: ' + NB_VOICE.name : '') + ', AI đang chuẩn bị...'); //
-      ''
-            ''
+    ''
+    ''
   } catch (e) { $('#nbErr2').textContent = 'Thất bại: ' + e.message; $('#nbLaunch').disabled = false; }
 });
 
@@ -3037,11 +3050,11 @@ async function renderSettings() {
       const h = await api('/api/local/health', 'POST', {});
       const L = [];
       L.push(h.gpu?.ok ? `✅ GPU: ${h.gpu.name} ${(h.gpu.totalMb / 1024).toFixed(0)}G VRAM (Trống:  ${(h.gpu.freeMb / 1024).toFixed(1)}G）`
-                       : `❌ GPU: ${h.gpu?.reason || 'Không tìm thấy'}`);
+        : `❌ GPU: ${h.gpu?.reason || 'Không tìm thấy'}`);
       if (h.text?.ok) {
         L.push(`✅ Dịch vụ văn bản: ${h.text.kind === 'ollama' ? 'Ollama' : 'Tương thích OpenAI'} @ ${h.text.baseUrl}`);
         L.push(h.text.models?.length ? `   Đã cài: ${h.text.models.map(m => m.name + (m.sizeText ? '(' + m.sizeText + ')' : '')).slice(0, 8).join('、')}`
-                                     : '   (Chưa cài đặt mô hình nào)');
+          : '   (Chưa cài đặt mô hình nào)');
       } else L.push(`❌ Dịch vụ văn bản: ${h.text?.error || 'Không khả dụng'}`);
       L.push(h.image?.ok ? `✅ Dịch vụ tạo ảnh: ${h.image.info}` : `❌ Dịch vụ tạo ảnh: ${h.image?.error || 'Không khả dụng'}`);
       const rt = h.recommend?.text?.pick, ri = h.recommend?.image;
@@ -3056,7 +3069,7 @@ async function renderSettings() {
     try {
       const r = await api('/api/local/probe-image', 'POST', { backend, baseUrl: backend === 'comfy' ? $('#setComfyUrl').value.trim() : undefined });
       out.textContent = r.ok ? `✅ Đã kết nối ${backend === 'a1111' ? 'SD WebUI' : 'ComfyUI'} @ ${r.baseUrl}｜${r.info}${r.models?.length ? '｜ Mô hình: ' + r.models.slice(0, 5).join('、') : ''}`
-                             : `❌ ${r.error}`;
+        : `❌ ${r.error}`;
     } catch (e) { out.textContent = '❌ ' + e.message; }
   });
   // Thư mục tác phẩm：原生文件夹选择器（桌面应用用 Tauri 对话框；浏览器回退到手填路径）
@@ -3108,7 +3121,7 @@ async function renderEnv() {
     const r = el('div', 'env-row'); r.innerHTML = `<span class="k">${esc(k)}</span><span class="v">${esc(v)}</span>`; box.appendChild(r);
   }
   $('#envReload').addEventListener('click', async () => {
-    try { const b = await api('/api/bootstrap'); STATE = { ...STATE, ...b }; } catch {}
+    try { const b = await api('/api/bootstrap'); STATE = { ...STATE, ...b }; } catch { }
     renderEnv(); toast('Đã kiểm tra lại hệ thống!');
   });
   $('#envOpenWs').addEventListener('click', async () => {

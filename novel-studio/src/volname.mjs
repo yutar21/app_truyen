@@ -63,7 +63,7 @@ function volContentSample(book, volNum) {
 function volOutline(book, volNum) {
   const odir = path.join(book.dir, 'outlines');
   let files = []; try { files = fs.readdirSync(odir).filter(f => /\.md$/i.test(f)); } catch { return ''; }
-  const hit = files.find(f => new RegExp(`^卷\\s*0*${volNum}(?!\\d)`).test(f));
+  const hit = files.find(f => new RegExp(`^(?:卷|Quyen_|Quyển_|Quyển\\s*)\\s*0*${volNum}(?!\\d)`, 'i').test(f));
   if (!hit) return '';
   return readSafe(path.join(odir, hit)).replace(/\s+/g, ' ').slice(0, 600);
 }

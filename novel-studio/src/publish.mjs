@@ -54,12 +54,12 @@ export function outlineVolSubtitle(book, volNum) {
   let files = [];
   try { files = fs.readdirSync(odir).filter(f => /\.md$/i.test(f)); } catch { return ''; }
   const pad = String(volNum).padStart(2, '0');
-  // 找文件名以 卷NN / 卷N 开头的那个大纲
-  const hit = files.find(f => new RegExp(`^卷\\s*0*${volNum}(?!\\d)`).test(f));
+  // 找文件名以 卷NN / Quyen_NN 开头的那个大纲
+  const hit = files.find(f => new RegExp(`^(?:卷|Quyen_|Quyển_|Quyển\\s*)\\s*0*${volNum}(?!\\d)`, 'i').test(f));
   if (!hit) return '';
-  // ① 从文件名抽：卷03静海旧火分章大纲.md → 去掉"卷03"前缀与"(分章)?大纲"后缀 → "静海旧火"
+  // ① 从文件名抽：卷03静海旧火分章大纲.md → 去掉前缀与后缀
   let sub = hit.replace(/\.md$/i, '')
-    .replace(new RegExp(`^卷\\s*0*${volNum}\\s*`), '')
+    .replace(new RegExp(`^(?:卷|Quyen_|Quyển_|Quyển\\s*)\\s*0*${volNum}\\s*`, 'i'), '')
     .replace(/[_\-．.、:：]\s*/, '')
     .replace(/(分章)?大纲$/, '')
     .trim();

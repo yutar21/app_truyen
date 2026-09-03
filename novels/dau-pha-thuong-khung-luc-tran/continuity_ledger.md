@@ -1,113 +1,147 @@
-# 《Đấu Phá Thương Khung — Lục Trần》 · SỔ TAY TÍNH NHẤT QUÁN & TRẠNG THÁI HIỆN TẠI (CONTINUITY LEDGER)
+# SỔ TAY TÍNH NHẤT QUÁN & TRẠNG THÁI HIỆN TẠI (CONTINUITY LEDGER)
 
 ## 📌 当前态快照
 
-> 这一段是【写作时唯一会被读进上下文的部分】，必须永远代表最新状态。
-> 每批写完【就地改写本段】（改写，不是往下追加）：变了的改掉、了结的移走、新增的加进来，保持精简。
-> 详细增量另追加到下方历史区。快照过期 = 后面每一章都在照着旧状态写。
+> 这一段写作时唯一会被读进上下文，必须永远代表最新状态。
+> 每批写完就地改写：变了的改掉、了结的移走、新增的加进来（硬上限 3000 字符）。
 
-- 进度：已写到第 204 章
+- 进度：已写到第 208 章
+- 大纲修订说明：【卷02大纲已修订】已按主编审稿意见完成全面修订（卷02范围精简为 Ch.208–230，7章移至卷03；修正八扇门时间线为黑盟残余/天涯城；萧炎重构为深沉枭雄退回迦南闭关远控，删除跳梁丑态；事务流水升级为铁血谈判；补强雾护法燃魂脱逃与萧门远距离博弈；补足斗王出关斩斗皇云撼爽点；深化雅妃与美杜莎情感归心）。
 
 ### 人物现状（含全部已出场姓名，绝不改名、绝不串名）
-- **Lục Trần (陆尘)**：19岁，二星斗灵（Đấu Linh 2★）。寒水宫主。率队护送一万两千蛇人进驻水鳄平原；于断魂谷御十八叶剑阵瞬杀邪鹰门主鹰戾（五星斗皇）；抵达水鳄平原划定护山防御大阵阵眼；入夜察觉魂殿鹜护法黑雾侵蚀分舵哨卡，正面迎敌。
-- **Mỹ Đỗ Toa Nữ Vương / Thải Lân (美杜莎女王/彩鳞)**：一星斗宗（Đấu Tông sơ kỳ），蛇人女王。出任寒水宫太上长老；断魂谷以七彩蛇雷震碎鹰戾护体斗气；得见水鳄平原三千里沃土水系，对陆尘履行诺言大为触动，心生依恋；与陆尘并肩直面魂殿鹜护法黑雾。
-- **Tử Linh (紫灵)**：一星斗宗（Đấu Tông sơ kỳ），黑精灵大公主/寒水宫太上长老兼宫主夫人。断魂谷指封鹰戾神识；全场压阵威慑宵小，见证蛇人定居水鳄平原；暗中戒备魂殿黑雾。
-- **Tinh Á (星雅)**：三星斗灵（Đấu Linh 3★），黑精灵小公主/寒水宫副宫主。骑乘白鹰担任空中先锋斥候，侦破西北邪道截击动向。
-- **Hải Âm (海音)**：八星大斗师（Đại Đấu Sư 8★），水人族美人鱼公主/音律情报长老。安抚蛇人妇孺，引动水系安顿一万两千族人。
-- **Nguyệt Mị (月媚) / Mặc Ba Tư (墨巴斯)**：蛇人族大统领（斗王）。率蛇人军团进驻水鳄平原，领受定居防区，叩谢再造之恩。
-- **寒水宫30名精锐弟子**：驻防断魂谷要隘与水鳄平原外围，哨卡3人受魂殿黑雾偷袭昏厥。
-- **【已出局/死亡角色（绝不可复活）】**：
-  * Ưng Lệ (鹰戾)：五星斗皇/邪鹰门主。【已死】（Ch.204被美杜莎七彩蛇雷破体、紫灵封识、陆尘十八叶剑阵斩杀，缴纳戒）。
-  * Thiết Cương (铁钢)：三星斗皇/狂狮帮主。【已死】（Ch.203被美杜莎破田、陆尘剑阵碎尸，缴纳戒）。
-  * 狂狮帮副帮主（五星斗灵）：【已死】（Ch.202星雅射穿石壁、陆尘斩杀）。
-  * Phạm Lao (范痨)：血宗宗主/斗皇。【已死】（Ch.200被紫灵碎胸、陆尘斩杀，缴300万金币）。
-  * Phạm Lăng (范凌)：血宗少主/五星斗灵。【已死】（Ch.197被陆尘斩杀，缴妖火残图）。
-  * Nạp Nhĩ Tác (纳尔索)：九星斗宗。【已死】（Ch.160海狱被阵盘击杀）。
-  * Hàn Phong (韩枫)：药皇/斗皇巅峰。【身死/残魂被掳】（Ch.200被萧炎击溃，残魂被鹜护法掠走；药库被陆尘搬空）。
-- **【场外重要角色】**：
-  * Tiêu Viêm (萧炎)：斗王巅峰（青莲火+陨落心炎），正式于枫城创立萧门，名动黑角域，筹谋回加玛复仇。
-  * Vụ Hộ Pháp (鹜护法)：魂殿斗宗，黑雾投影现身水鳄平原北泽，觊觎萧炎/药老异火与美杜莎/紫灵斗宗之魂，发出正面恐吓。
-  * Hải Lan (海兰)：水人族部属，留守西南海洋代管事务。
-  * Băng Linh Nhi (冰灵儿)：冰晶水族，北冰海有一年和平协定。
-  * 远方红颜：小医仙（天毒女/斗宗）；青鳞（天蛇府）；雅妃（米特尔）；云韵（云岚宗）。
+- **Lục Trần (19t, Đấu Linh 2★ đỉnh):** Cung chủ Hàn Thủy Cung. Ngự Thập Bát Diệp Kiếm Trận trảm Vân Sát, Vân Đốc (Ch.208); phế 8 Đấu Vương; bắt 3.000 tù binh; che chở Nhã Phi; cứu Mễ Đặc Nhĩ và Tiêu gia; chạm mặt Tiêu Viêm (Ch.208).
+- **Mỹ Đỗ Toa & Tử Linh (Đấu Tông 1★):** Phóng xà lôi phá kiếm trận, phong tỏa không gian; cùng Lục Trần áp chế toàn trường (Ch.208).
+- **Nhã Phi & Hải Ba Đông:** Nhã Phi (Đấu Sư) được che chở; Hải Ba Đông hồi phục nhờ lục phẩm đan; cùng tiếp quản 3.000 tù binh.
+- **Tiêu Đỉnh (liệt chân):** Ngồi xe lăn bảo vệ Tiêu gia; dập đầu cảm tạ Lục Trần cứu mạng toàn tộc (Ch.208).
+- **Tinh Á (Đấu Linh 3★), Hải Âm (Đại Đấu Sư 8★), 30 Hộ vệ:** Tinh Á bắn đinh 2 Đấu Vương; Hải Âm phát sóng âm; 30 hộ vệ áp giải tù binh.
+- **8 Đấu Vương & 3.000 đệ tử Vân Lam Tông:** Bị phế/đầu hàng, giam mật lao (Ch.208).
+- **Gia Hình Thiên, Pháp Mã, Yêu Dạ:** Choáng váng trước sức mạnh Lục Trần; nhận ra trật tự Gia Mã đổi chủ.
+- **Tiêu Viêm (Đấu Vương):** Dẫn hơn 30 cường giả Tiêu Môn vừa hạ xuống cổng nam; chính thức đối mặt Lục Trần (Ch.208).
+- **Vân Sơn & Vụ Hộ Pháp (Hồn Điện):** Ở Vân Lam Sơn gióng 9 hồi cảnh chung khi 2 Đấu Hoàng đền mạng (Ch.208).
+- **Mặc Ba Tư & Nguyệt Mị:** Giữ Thủy Ngạc bảo vệ 12.000 xà nhân và trận pháp.
+- **Tiểu Y Tiên, Tô Thiên, Tử Nghiên, Lục Thiết:** An toàn ở hậu phương.
+- **Đã chết:** Vân Đốc, Vân Sát (Ch.208), Vân Lăng (Ch.122), Ưng Lệ (Ch.204), Phân thân Vụ Hộ Pháp (Ch.205), Phạm Lăng, Mục Xà.
 
 ### 未回收伏笔 / 待查
-- **魂殿鹜护法逼近（紧迫·危机爆发）**：鹜护法黑雾索魂降临水鳄平原北沼，直指双斗宗与药老/异火因果，大战一触即发。
-- **水鳄平原护山大阵布置（推进中）**：一万两千蛇人已迁入平原，急需布设三级连环水脉防御大阵阻击外敌。
-- **萧门对峙与黑角域双雄并立（长线）**：萧炎立萧门于枫城，寒水宫坐镇水鳄平原，二者隔空牵制。
-- **净莲妖火残图（第3号）**：范凌处所得，贴身保管，余图待寻。
-- **六阶水蛟魔核与药皇阁药库**：存于寒水宫宝库，备炼高阶丹药。
-- **丹田黄泉幽水与古道寒水**：封于心幽狱，待后续奇水玄冰补全。
-- **小医仙厄难毒体之约**：魔兽山脉立约，必寻控毒之法。
-- **加玛帝国故人因果**：欠雅妃、青鳞、云韵旧情，誓必重返加玛了结。
+- **Ách Nạn Độc Thể Tiểu Y Tiên:** Hẹn tìm thuốc giải; chờ sang Xuất Vân (Quyển 6).
+- **Tàn đồ Dị Hỏa:** Giữ mảnh #3; còn 3 mảnh chưa rõ.
+- **Vụ Hộ Pháp (Vân Lam Sơn):** Bản thể rình cướp hồn Dược Lão khi công tông môn.
+- **Cổ Trận Thiên Cung:** Mới mở tầng 1; tầng cao chờ Đấu Tông/Tôn.
+- **Thân thế xuyên không:** Tuyệt mật, chuyển thành trực giác khoa học.
+- **Linh hồn Thôn Thiên Mãng:** Ngủ say trong Mỹ Đỗ Toa, chờ đan dược dung hợp.
 
 ### 欠债与承诺
-- **蛇人族水鳄平原守护承诺（执行中）**：提供三千里沃土水系并建立防御屏障，蛇人全族誓死效忠同盟。
-- **紫灵相守之誓**：寒水宫太上长老兼宫主夫人，生死相托（已双修）。
-- **小医仙解毒承诺**：魔兽山脉立约，必寻控制厄难毒体之法。
-- **加玛帝国故人因果**：重返加玛了结旧因果。
+- **Với Nhã Phi:** Báo ân Ô Thản Thành, diệt địch cứu Mễ Đặc Nhĩ (đã xong Ch.208).
+- **Với Mỹ Đỗ Toa:** Đã định cư 12.000 xà nhân; cùng diệt Vân Lam Tông (đang làm).
+- **Với Tiểu Y Tiên:** Tìm thuốc giải Ách Nạn Độc Thể (chưa làm).
 
 ### 伤势 / 状态 / 关键物件去向
-- **身体伤势**：主力全员全盛无损；水鳄平原北哨3名守卫被魂雾侵蚀昏厥。
-- **法宝随身**：十八叶剑阵（9柄玉海琉璃剑+9柄凝冰水晶剑）；八卦阵枢；海音持碧海归灵坛。
-- **关键物件去向**：
-  * 鹰戾纳戒：缴获待清点。
-  * 铁钢纳戒：已入内库。
-  * 海心灵晶：已赠美杜莎1瓶（成功压制吞天蟒凶性）。
-  * 净莲妖火残图、药材、金币：寒水宫内库妥善封存。
+- **Thương thế:** Phe ta toàn thịnh/hồi phục; địch bị diệt/bắt sạch.
+- **Vật phẩm:** Thập Bát Diệp Kiếm Trận; Thủy Vân Thuyền; nạp giới Vân Đốc, Vân Sát; Quy Linh Đàn (#13); Cổ Đạo Thủy Tinh Châu; Tàn đồ Dị hỏa #3.
 
 ### 时间线锚点
-- **时空**：陆尘19岁0个月，入夜。水鳄平原前线营地。
-- **战局定格**：邪鹰门伏诛，蛇人万众安顿水鳄平原，大迁徙圆满落地；魂殿鹜护法锁魂现身北沼，黑角域真正大风暴降临。
-- **天下大势**：寒水宫兼并蛇人族坐拥双斗宗崛起于西南，萧门称雄枫城，西北暗流与魂殿阴影全面交汇。
+- **Thời điểm & Địa điểm:** Sáng sớm ngày 4 từ Thủy Ngạc (Lục Trần 19t); Mễ Đặc Nhĩ trang viên, Đế Đô.
+- **Tình thế:** Diệt 2 Đấu Hoàng, bắt gọn 3.000 địch; chuông Vân Lam Sơn vang 9 hồi; Tiêu Viêm chạm mặt Lục Trần.
 
 <!-- LEDGER_HISTORY_BELOW ——以下是历史增量原文，只追加、不修改；写作时不会读这里 -->
 
 ## 历史增量（写作不读，供自检/追溯用）
 
-# RECENT CONTEXT (WARM BUFFER — CÁC CHƯƠNG GẦN NHẤT: CH.198 – 204)
+## TÁC PHẨM: 《ĐẤU PHÁ THƯƠNG KHUNG — LỤC TRẦN》
+
+> **HƯỚNG DẪN BẮT BUỘC KHI SÁNG TÁC:**
+> Phần Ảnh Chụp Hiện Trạng dưới đây là dữ liệu duy nhất được đọc vào ngữ cảnh khi chấp bút viết chương mới. Phải luôn phản ánh chính xác 100% tình trạng sau chương mới nhất đã hoàn thành.
+> Sau mỗi đợt viết xong, tiến hành cập nhật trực tiếp tại chỗ phần Ảnh Chụp: Cái gì thay đổi thì sửa, cái gì kết thúc thì chuyển đi, cái gì mới thì thêm vào.
+> Tiến độ thực tế hiện tại: **Đã hoàn thành đến Chương 207**.
+
+---
+
+## 📌 ẢNH CHỤP HIỆN TRẠNG TOÀN CỤC (TÍNH ĐẾN CHƯƠNG 207)
+
+### 1. Hiện trạng nhân vật (Đã xuất hiện tại chiến trường Mễ Đặc Nhĩ trang viên, Gia Mã Đế Đô):
+- **Lục Trần (19 tuổi, Đấu Linh 2★ đỉnh phong):** Cung chủ Hàn Thủy Cung. Ngự Thủy Vân Thuyền cùng song Đấu Tông vượt vạn dặm thần binh giáng lâm Mễ Đặc Nhĩ trang viên; thi triển Thập Bát Diệp Kiếm Trận mượn đà rơi vạn trượng của Thủy Vân Thuyền kết hợp Thất Thải xà lôi của Mỹ Đỗ Toa đánh nát kiếm mang và bẻ gãy xương ngực Đại trưởng lão Vân Lam Tông Vân Đốc (Đấu Hoàng 2★); ban tặng lục phẩm đan dược cứu sống Nhã Phi và Hải Ba Đông; kích hoạt Tru Diệt Kiếm Võng bao trùm 3.000 đệ tử và 8 Đấu Vương Vân Lam Tông.
+- **Mỹ Đỗ Toa Nữ Vương / Thải Lân (Đấu Tông 1★ sơ kỳ):** Nữ Vương Xà Nhân Tộc / Thái Thượng Trưởng Lão Hàn Thủy Cung. Tọa trấn đầu mũi hạm Thủy Vân Thuyền, phát xuất Thất Thải xà lôi trấn áp phong áp của Vân Đốc; tỏa ra Đấu Tông uy áp kinh hoàng chấn nhiếp toàn bộ liên quân Vân Lam Tông; kề vai tác chiến cùng Lục Trần thanh toán nợ máu cũ.
+- **Tử Linh (Đấu Tông 1★):** Đại công chúa Hắc Tinh Linh / Thái Thượng Trưởng Lão kiêm Cung Chủ Phu Nhân Hàn Thủy Cung. Đứng mạn thuyền Thủy Vân Thuyền phong tỏa không gian, phòng thủ toàn diện cho chiến hạm, ánh mắt tràn đầy tin cậy dành cho phu quân.
+- **Nhã Phi (Đấu Sư trung kỳ):** Tộc trưởng tạm quyền Mễ Đặc Nhĩ gia tộc. Kiệt sức đấu khí, vừa định vung kiếm tuẫn tiết giữ tròn khí tiết thì được Lục Trần thần binh thiên giáng cứu mạng; phục dụng lục phẩm đan dược điều dưỡng khôi phục thương thế.
+- **Hải Ba Đông (Đấu Hoàng đỉnh phong — Băng Hoàng):** Trọng thương nứt ngực thổ huyết sau khi tử chiến với Vân Đốc và Vân Sát; được Lục Trần giải nguy và cho uống lục phẩm đan dược.
+- **Tiêu Đỉnh (Đại ca Tiêu Viêm, cựu Đoàn trưởng Mạc Thiết):** Ngồi xe lăn bảo bọc phụ nữ và trẻ nhỏ Tiêu gia tại quảng trường trang viên, chứng kiến Lục Trần giáng lâm giải nguy trong niềm xúc động tột cùng.
+- **Tinh Á (Đấu Linh 3★):** Tiểu công chúa Tinh Linh / Phó Cung Chủ Hàn Thủy Cung. Trên đài quan sát Thủy Vân Thuyền giương Phong Lôi Cung sẵn sàng xạ sát địch quân.
+- **Hải Âm (Đại Đấu Sư 8★):** Công chúa Thủy Nhân Tộc / Âm Luật Trưởng Lão Hàn Thủy Cung. Ôm Bích Hải Quy Linh Đàn tỏa sóng âm an thần hỗ trợ trị thương trên phi hạm.
+- **Mặc Ba Tư / Nguyệt Mị (Đại thống lĩnh Xà Nhân Tộc — Đấu Vương):** Tọa trấn Bình nguyên Thủy Ngạc bảo hộ 12.000 xà nhân cùng Tam Cấp Cửu Khúc Thủy Long Trận.
+- **Gia Hình Thiên & Pháp Mã:** Cường giả đỉnh tiêm Gia Mã Hoàng Thất, rụng rời kinh ngạc trước sự xuất hiện của chiến hạm 50 trượng và song Đấu Tông dưới trướng Lục Trần.
+- **Vân Đốc & Vân Sát (Đấu Hoàng Vân Lam Tông):** Vân Đốc bị Lục Trần đánh bay trăm bước gãy xương ngực; Vân Sát đang kinh hoàng lùi bước trước Tru Diệt Kiếm Võng.
+- **Tiêu Viêm (Minh chủ Tiêu Môn):** Đang thống lĩnh cường giả Tiêu Môn cấp tốc nam hạ từ Phong Thành hướng về Gia Mã Đế Quốc.
+- **Vụ Hộ Pháp (Đấu Tông Hồn Điện):** Phân thân bị đánh tan ở Ch.205; bản thể Đấu Tông đang ẩn nấp tại Vân Lam Sơn chực chờ cơ hội đoạt linh hồn.
+
+---
+
+## 📋 BẢNG TUYẾN NỘI DUNG ĐANG HOẠT ĐỘNG (ACTIVE THREADS)
+
+| Mã ID | Phân loại | Tên tuyến truyện | Mức độ ưu tiên | Trạng thái Ch.207 |
+| :--- | :--- | :--- | :---: | :--- |
+| **R-001** | Rivalry | Lục Trần ↔ Tiêu Viêm (Cạnh tranh song hùng) | CAO | Cùng nam hạ Gia Mã; Lục Trần dẹp yên Đế Đô, Tiêu Viêm hướng về Vân Lam Sơn. |
+| **R-003** | Romance/Tragedy | Lục Trần ↔ Tiểu Y Tiên (Ách Nạn Độc Thể) | CAO | Đang chờ kích hoạt ở Quyển 6 (Xuất Vân Đế Quốc). |
+| **R-004** | Romance/Alliance | Lục Trần ↔ Mỹ Đỗ Toa (Minh ước & Đồng sinh cộng tử) | CỰC CAO | Cảm kích vì cứu 12.000 xà nhân, cùng kề vai diệt địch tại Đế Đô. |
+| **R-007** | Romance/Commitment | Lục Trần ↔ Tử Linh (Đã song tu, Cung Chủ Phu Nhân) | CỰC CAO | Đồng hành sát cánh, phong tỏa không gian che chở chiến hạm. |
+| **R-009** | Romance/Devotion | Lục Trần ↔ Nhã Phi (Ân tình hàn vi) | CỰC CAO | Thần binh thiên giáng cứu thoát cảnh tuẫn tiết; tình cảm sâu nặng thăng hoa. |
+| **FAC-001** | Faction | Khẳng định thế lực Hàn Thủy Cung bá chủ Tây Bắc | CỰC CAO | Tọa trấn Thủy Ngạc, sở hữu Thủy Vân Thuyền, song Đấu Tông uy chấn thiên hạ. |
+| **FAC-002** | Faction | Định cư hòa bình 12.000 Xà Nhân Tộc tại Thủy Ngạc | HOÀN THÀNH | Đã tiến vào bình nguyên ba ngàn dặm, dựng đại trận Thủy Long. |
+| **FOE-001** | Faction | Xóa sổ Vân Lam Tông & Đánh tan mưu đồ Hồn Điện | CỰC CAO | Đã đánh gãy ngực Vân Đốc; chuẩn bị tổng tiến công Vân Lam Sơn. |
+| **ITEM-001** | Quest | Thu thập 4 mảnh tàn đồ Tịnh Liên Yêu Hỏa | TRUNG BÌNH | Đang nắm giữ mảnh số 3 đoạt từ Phạm Lăng. |
+| **SECRET-001** | Secret | Thân phận người xuyên không của Lục Trần | BẢO MẬT | Tuyệt đối không ai biết, chuyển hóa thành trực giác và ngộ tính khoa học. |
+
+---
+
+## 📖 KÝ ỨC CỐT TRUYỆN TOÀN THƯ THEO 5 QUYỂN (CHƯƠNG 0001 – 0207)
+
+* **Quyển 1: Hàn Vi Sơ Khởi · Ô Thản Phong Lôi (Ch.001 – 051):** Lục Trần hàn vi quật khởi, đoạt liên hoa ở Đầm Sương Mù, tụ khí hóa xoáy thành Đấu Giả; gặp Nhã Phi tại Mễ Đặc Nhĩ đấu giá tràng mua Thủy Triều Quyết; vào Ma Thú Sơn Mạch rèn luyện, kết bạn Tiểu Y Tiên, đoạt cuộn trục Thủy hệ trong động ngầm, tiêu diệt Lang Đầu Dong Binh Đoàn (Mục Xà); Tiểu Y Tiên độc thể bộc phát rồi biệt ly; bứt phá Đấu Sư 1★, trúng tuyển Già Nam Học Viện.
+* **Quyển 2: Hoàng Đô Đoạt Khôi · Sa Mạc Kỳ Duyên (Ch.052 – 088):** Đến Gia Mã Hoàng Đô, đoạt Quán Quân Đại Hội Luyện Dược Sư trước Cổ Hà và Pháp Mã nhờ thuật Thủy Hỏa tương tể; tiến vào Tháp Qua Nhĩ Sa Mạc, gặp Mạc Thiết Dong Binh Đoàn và Thanh Lân; cùng Tiêu Viêm thâm nhập địa tâm nham tương thu phục Cực Âm Cực Dương Tinh Dịch; chứng kiến Mỹ Đỗ Toa tiến hóa Thất Thải Thôn Thiên Mãng, lập minh ước bảo vệ Xà Nhân Tộc.
+* **Quyển 3: Già Nam Phong Lôi · Tâm Hỏa Thôn Thiên (Ch.089 – 137):** Nhập học Già Nam qua Tử Linh Thọ, đại phá Hắc Bạch Quan Sát trong Hỏa Năng Liệp Bổ Tái; tu luyện Thiên Phần Luyện Khí Tháp sáng chế Điệp Khổng Thủy Áp, bẻ gãy chèn ép của Dược Bang, đánh bại Bạch Trình; làm nhiệm vụ Hắc Giác Vực trảm Phạm Lăng đoạt tàn đồ Dị Hỏa số 3; tấn thăng Đại Đấu Sư, tu thành Bích Ngọc Giáp, kết bạn Tử Nghiên, lọt Top 10 Cường Bảng; thảm họa Vẫn Lạc Tâm Viêm bùng phát, Hàn Phong tập kích, Tiêu Viêm rơi đáy tháp, Lục Trần kích hoạt trận kỳ rồi bị phong bạo cuốn bay khỏi Hắc Giác Vực.
+* **Quyển 4: U Uyên Nam Hải · Cổ Trận Thiên Cung (Ch.138 – 194):** Lưu lạc Nam Đại Lục hoang dã, cứu chữa và khế ước cùng Hắc Tinh Linh vương nữ Tử Linh (Đấu Tông 1★); kịch chiến rồi thuần phục Tinh Linh vương nữ Tinh Á dưới đáy vực; đột nhập Hải Ngục giải cứu mỹ nhân ngư Hải Âm; thám hiểm di tích Cổ Trận Thiên Cung dưới đáy biển sâu nghịch nhiệt: Kế thừa Cổ Đạo Hàn Thủy, kiếm quyết Vạn Kiếm Quy Tông, kỹ nghệ Luyện Khí phi kim loại; đúc Bích Hải Quy Linh Đàn (chứa Quy Linh Địa Hỏa #13) tặng Hải Âm định hải; rèn Thập Bát Diệp Kiếm Trận; bế quan 2 năm đột phá Đấu Linh 1★ – 2★; chuyển hóa toàn diện thành Kiếm Tiên Thủy Hệ kiêm Trận Khí Sư Độc Tôn; dẫn theo Tử Linh, Tinh Á, Hải Âm bắc tiến trở lại Hắc Giác Vực.
+* **Quyển 5: Hàn Thủy Bá Nghiệp · Kiếm Chỉ Gia Mã (Ch.195 – 207+):** Trở lại Hắc Giác Vực đại náo Hắc Ấn Thành, khai sáng Hàn Thủy Cung tại Phong Thành; cùng Tử Linh viên mãn song tu; tái ngộ Mỹ Đỗ Toa, giữ đúng lời hứa mở Cổ Trận cứu xà tộc và tổ chức đại thiên di đưa 12.000 Xà Nhân Tộc về Bình nguyên Thủy Ngạc trù phú; đại chiến Đoạn Hồn Cốc dùng Thập Bát Diệp Kiếm Trận trảm Đấu Hoàng Ưng Lệ; liên thủ song Đấu Tông đánh tan phân thân Vụ Hộ Pháp (Hồn Điện), khởi dựng Tam Cấp Cửu Khúc Thủy Long Trận; nhận tin cấp báo Mễ Đặc Nhĩ lâm nguy, Lục Trần chỉ huy cự hạm Thủy Vân Thuyền cùng song Đấu Tông thần binh thiên giáng Mễ Đặc Nhĩ trang viên Gia Mã Đế Đô, đánh gãy xương ngực Vân Đốc, mở Tru Diệt Kiếm Võng cứu sống Nhã Phi và Hải Ba Đông.
+
+---
+
+## 📜 LỊCH SỬ TĂNG LƯỢNG GẦN NHẤT (CHƯƠNG 195 – 207)
+
+### [Chương 195] — Thiết Lập Hàn Thủy Cung
+- Lục Trần cùng Tử Linh, Tinh Á, Hải Âm trở lại Hắc Giác Vực; chọn Phong Thành làm căn cơ, chính thức thành lập Hàn Thủy Cung; bố trí trận đồ phòng ngự sơ bộ.
+
+### [Chương 196] — Đấu Giá Hắc Ấn
+- Lục Trần tham gia Đấu Giá Hội Hắc Ấn Thành; thu mua nhiều ngọc thạch và tài nguyên trận pháp phi kim loại; phát hiện các thế lực tà đạo đang rình rập cướp bóc.
+
+### [Chương 197] — Huyết Chiến Hẻm Tối
+- Nhóm cướp bóc Hắc Giác Vực phục kích Lục Trần trên đường rời Hắc Ấn Thành; Lục Trần thi triển kiếm trận mới tôi luyện quét sạch toàn bộ kẻ địch trong chớp mắt.
 
 ### [Chương 198] — Thập Bát Diệp Kiếm Trận
-- Lục Trần rèn đúc 9 thanh Ngưng Băng Kiếm kết hợp 9 thanh Ngọc Hải Kiếm thành Thập Bát Diệp Kiếm Trận hoàn chỉnh, củng cố Đấu Linh 1★ đỉnh phong.
+- Lục Trần hoàn thiện việc dung hợp 18 thanh phi kiếm (9 Ngọc Hải Lưu Ly Kiếm + 9 Ngưng Băng Kiếm); kiếm trận đạt tới trạng thái xuất thần nhập hóa, tâm niệm vừa động kiếm khí đã xé rách hư không.
 
 ### [Chương 199] — Đại Chiến Phong Thành
-- Tiêu Viêm phá tan Hàn Phong. Lục Trần càn quét Dược Hoàng Các, đoạt ma hạch bậc 6 Băng Hải Cự Giao và kho dược liệu. Tử Linh phá kén Đấu Tông xuất quan.
+- Tàn dư thế lực Phong Thành mưu toan tạo phản; Lục Trần chỉ huy Hàn Thủy Cung dẹp yên phản loạn; thiết lập trật tự nghiêm minh, uy danh chấn động vùng biên cảnh.
 
 ### [Chương 200] — Đệ Nhất Thế Lực
-- Lục Trần ngự kiếm trận trảm sát Phạm Lao (Đấu Hoàng), thu 300 vạn kim tệ. Hồn Điện Vụ Hộ Pháp cướp tàn hồn Hàn Phong. Hàn Thủy Cung định vị bá chủ Hắc Giác Vực.
+- Hàn Thủy Cung chính thức xác lập vị thế đệ nhất thế lực tại Phong Thành và các vùng lân cận; thu hút đông đảo tán tu hệ Thủy quy phục.
 
 ### [Chương 201] — Đêm Xuân Song Tu · Xà Nhân Di Cư
-- Lục Trần song tu cùng Tử Linh đột phá Đấu Linh 2★. Mỹ Đỗ Toa dẫn 12.000 xà nhân vượt sơn mạch bị Cuồng Sư Bang vây hãm. Lục Trần xuất quân cứu viện.
+- Lục Trần và Tử Linh viên mãn song tu điều hòa khí tức, củng cố kinh mạch; nhận được tin báo về tình cảnh nguy khốn ngặt nghèo của Xà Nhân Tộc tại biên giới sa mạc Tháp Qua Nhĩ; Lục Trần quyết định lên đường thực hiện lời hẹn ước.
 
 ### [Chương 202] — Huyết Chiến Biên Giới · Nữ Vương Xuất Thế
-- Trảm phó bang chủ Cuồng Sư Bang, kích hoạt Thủy Mạch Cổ Trận thông nguồn nước ngầm. Mỹ Đỗ Toa giáng lâm đánh nát cự phủ của Thiết Cương.
+- Các bang phái Hắc Giác Vực vây hãm biên giới ngăn cản xà tộc; Mỹ Đỗ Toa bộc phát uy áp Đấu Tông huyết chiến bảo vệ tộc nhân; Lục Trần kịp thời xuất hiện trợ chiến, giải tỏa vòng vây.
 
 ### [Chương 203] — Khúc Ca Xà Tộc · Thu Phục Dị Lực
-- Lục Trần cùng Mỹ Đỗ Toa hợp lực trảm sát Thiết Cương (Đấu Hoàng 3★), dọn sạch Hắc Thạch Hẻm Cốc. Mỹ Đỗ Toa đồng ý kết minh, dời 12.000 xà nhân về bình nguyên Thủy Ngạc, nhận Hải Tâm Linh Tinh trấn an Thôn Thiên Mãng. Mật báo Phong Thành: Tiêu Viêm lập Tiêu Môn; tà phái Tây Bắc rục rịch; Hồn Điện lộ diện.
+- Lục Trần kích hoạt Cổ Trận dẫn thủy tuyền giải khát cho toàn bộ bộ tộc xà nhân; Mỹ Đỗ Toa xúc động chấp nhận kết minh, đồng ý dẫn 12.000 tộc nhân di cư về Bình nguyên Thủy Ngạc trù phú; mật báo cho biết Tiêu Viêm đã lập Tiêu Môn tại Phong Thành.
 
-### [Chương 204] — Phong Ba Hắc Giác Vực, Bố Cục Thủy Cung
-- Lục Trần, Mỹ Đỗ Toa, Tử Linh hộ tống 12.000 xà nhân tới Đoạn Hồn Cốc; môn chủ Tà Ưng Môn Ưng Lệ (Đấu Hoàng 5★) chặn đường tống tiền đòi phụ nữ. Song Đấu Tông giáng áp, Lục Trần xuất Thập Bát Diệp Kiếm Trận trảm Ưng Lệ tại chỗ, đám tàn binh tự phế tay đào tẩu. Đoàn người tiến vào bình nguyên Thủy Ngạc ba trăm dặm trù phú; Mỹ Đỗ Toa cảm động chạm nhẹ tay áo Lục Trần, hứa bảo vệ sơn môn. Đêm xuống, Vụ Hộ Pháp (Hồn Điện) tỏa hắc vụ uy hiếp đầm lầy phía bắc.
+### [Chương 204] — Phong Ba Hắc Giác Vực · Bố Cục Thủy Cung
+- Đoàn người hộ tống 12.000 xà nhân tiến qua Đoạn Hồn Cốc; Môn chủ Tà Ưng Môn Ưng Lệ (Đấu Hoàng 5★) chặn đường đòi cướp đoạt; Lục Trần ngự Thập Bát Diệp Kiếm Trận trảm sát Ưng Lệ tại chỗ đóng đinh lên vách đá; đoàn người tiến vào Bình nguyên Thủy Ngạc màu mỡ; Mỹ Đỗ Toa khẽ chạm tay áo Lục Trần bày tỏ sự cảm kích sâu sắc.
 
----
+### [Chương 205] — Hắc Vụ Tác Hồn · Song Tông Trấn Sát
+- Phân thân Vụ Hộ Pháp (Hồn Điện) tập kích đầm lầy phía bắc; Lục Trần dùng Bát Quái Trấn Hồn Trận kết hợp Bích Hải Quy Linh Đàn của Hải Âm và song Đấu Tông (Tử Linh, Mỹ Đỗ Toa) đánh tan phân thân; Lục Trần cắm 36 trụ ngọc khởi động Tam Cấp Cửu Khúc Thủy Long Trận; nhận khẩn báo Vân Lam Tông vây diệt Mễ Đặc Nhĩ gia tộc.
 
-# ACTIVE THREADS — Tuyến Truyện Đang Mở
+### [Chương 206] — Binh Xuất Hắc Giác · Kiếm Chỉ Gia Mã
+- Lục Trần hạ lệnh toàn diện xuất chinh cứu viện Nhã Phi và Mễ Đặc Nhĩ; Mỹ Đỗ Toa đồng hành thanh toán ân oán cũ với Vân Lam Tông; Lục Trần cùng Tử Linh kích hoạt Cổ Đạo Thủy Tinh Châu cố thủ căn cứ; điều động cự hạm Thủy Vân Thuyền 50 trượng chở theo song Đấu Tông cùng 30 hộ vệ tinh nhuệ xé mây nam hạ hướng thẳng Gia Mã Đế Đô.
 
-| ID | Loại | Tên thread | Mức độ | Trạng thái |
-|---|---|---|---|---|
-| R-001 | Rivalry | MC ↔ Tiêu Viêm (đối thủ xuyên suốt) | HIGH | ĐANG PHÁT TRIỂN |
-| R-003 | Romance/Tragedy | MC ↔ Tiểu Y Tiên (Ách Nạn Độc Thể) | HIGH | CHỜ KÍCH HOẠT |
-| R-004 | Romance | MC ↔ Thải Lân / Mỹ Đỗ Toa (Minh ước & Dị lực) | HIGH | TIẾN TRIỂN MẠNH |
-| R-007 | Romance | MC ↔ Tử Linh (Hắc Tinh Linh hoàng tộc, đã song tu) | CRITICAL | ĐANG HOẠT ĐỘNG |
-| FAC-001 | Faction | Xây dựng Hàn Thủy Cung thành bá chủ Hắc Giác Vực | CRITICAL | ĐANG PHÁT TRIỂN |
-| FAC-002 | Faction | Liên minh Hàn Thủy Cung & Xà Nhân Tộc (Bình nguyên Thủy Ngạc) | CRITICAL | ĐÃ ĐỊNH CƯ |
-| FOE-001 | Faction | Hồn Điện (Vụ Hộ Pháp) rình rập Hắc Giác Vực | CRITICAL | TRỰC DIỆN XUẤT HIỆN |
-| SECRET-001 | Secret | Thân phận xuyên không của Lục Trần | LOW | CHƯA AI BIẾT |
+### [Chương 207] — Đế Đô Lâm Nguy · Thần Binh Thiên Giáng
+- Mễ Đặc Nhĩ trang viên vỡ trận trước 3.000 đệ tử, 8 Đấu Vương và 2 Đấu Hoàng (Vân Đốc, Vân Sát); Hải Ba Đông gãy ngực kiệt lực; Nhã Phi định vung kiếm tuẫn tiết; đúng lúc ngàn cân treo sợi tóc, Lục Trần ngự Thập Bát Diệp Kiếm Trận từ chín tầng mây kết hợp đà rơi của Thủy Vân Thuyền và uy áp xà lôi của Mỹ Đỗ Toa đập nát kiếm mang, đánh gãy xương ngực Vân Đốc bay xa trăm bước; cự hạm Thủy Vân Thuyền giáng lâm chở theo song Đấu Tông uy chấn Đế Đô; Lục Trần ban lục phẩm đan dược cứu sống Nhã Phi và Hải Ba Đông, mở Tru Diệt Kiếm Võng quyết chiến Vân Lam Tông!
 
----
-
-# STORY MEMORY — TỔNG KẾT THEO ARC (CH.001 – 194)
-
-- **ARC 1 (Ch.001–051):** Ô Thản Thành, Ma Thú Sơn Mạch, Tiểu Y Tiên, Đấu Giả → Đấu Sư 1★, thi vào Già Nam Học Viện.
-- **ARC 2 (Ch.052–137):** Gia Mã Đế Đô, Sa Mạc Tháp Qua Nhĩ hẹn ước Mỹ Đỗ Toa, Nội Viện Già Nam, Đại Đấu Sư 5★, dị hỏa bạo động cuốn trôi viễn xứ.
-- **ARC 3-5 (Ch.138–160):** Nam đại lục, cứu Hải Âm và Tinh Á, gặp Tử Linh trong cấm địa, diệt Đấu Tông Nạp Nhĩ Tác ở Hải Ngục.
-- **ARC 6 (Ch.161–194):** Di tích Thủy Thánh Giáo, Cổ Đạo Hàn Thủy, Cổ Trận Thiên Cung, truyền thừa Trận Đạo, đột phá Đấu Linh 1★, bắc tiến Hắc Giác Vực lập Hàn Thủy Cung.
+### [Chương 208] — Kiếm Trận Sơ Đề · Trảm Sát Nhị Hoàng
+- Lục Trần ngự Thập Bát Diệp Kiếm Trận giáng lâm Mễ Đặc Nhĩ trang viên; kết hợp cùng Thất Thải xà lôi của Mỹ Đỗ Toa và không gian phong tỏa của Tử Linh đánh tan cự kiếm 30 trượng Vân Lam Kiếm Trận; phế sạch 8 Đấu Vương; dùng Cổ Đạo Hàn Thủy và Tru Hồn Toàn trảm sát cả hai Đấu Hoàng Vân Sát và Vân Đốc; 3.000 đệ tử Vân Lam Tông buông kiếm đầu hàng, bị tước vũ khí giam giữ; Lục Trần cứu Nhã Phi, khoác áo lam che chở; Tiêu Đỉnh dập đầu cảm tạ; chuông Vân Lam Sơn vang 9 hồi; Tiêu Viêm cùng 30 cường giả Tiêu Môn rẽ mây hạ xuống cổng nam, chạm trán Lục Trần giữa quảng trường ngập xác địch: "Tiêu Viêm, ngươi về muộn một bước rồi."

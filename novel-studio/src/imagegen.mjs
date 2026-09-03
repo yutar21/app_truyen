@@ -49,8 +49,10 @@ export function runCliPrompt(model, prompt, cfg, timeoutMs = 120000) {
   if (!m) return '';
   const env = { ...process.env };
   if (cfg?.enableProxy) { const px = proxyUrl(); if (px) { env.HTTP_PROXY = env.HTTPS_PROXY = env.ALL_PROXY = env.http_proxy = env.https_proxy = px; } }
-  const args = model === 'codex' ? ['exec', '--skip-git-repo-check', '--dangerously-bypass-approvals-and-sandbox'] : ['-p'];
-  const r = spawnSync(m.bin, args, { encoding: 'utf8', timeout: timeoutMs, input: prompt, cwd: os.tmpdir(), env, maxBuffer: 8 * 1024 * 1024, shell: true, windowsHide: true });
+  const args = model === 'codex' ? ['exec', '--skip-git-repo-check', '--dangerously-bypass-approvals-and-sandbox'] :
+    (model === 'agy' || model === 'gemini') ? ['--effort', cfg?.agyEffort || 'high', '--dangerously-skip-permissions', '--output-format', 'text'] : ['-p'];
+  const isWinCmd = process.platform === 'win32' && /\.(cmd|bat)$/i.test(m.bin);
+  const r = spawnSync(m.bin, args, { encoding: 'utf8', timeout: timeoutMs, input: prompt, cwd: os.tmpdir(), env, maxBuffer: 8 * 1024 * 1024, shell: isWinCmd, windowsHide: true });
   return (r.stdout || '') + '\n' + (r.stderr || '');
 }
 

@@ -44,16 +44,21 @@ function ledgerForPack(raw, maxChars = 8000) {
   return { text: s, stale: false };
 }
 
-// 找当前卷的分章大纲文件：outlines/卷NN*.md（NN = 当前卷号）。找不到则退回任意一份/空。
+// 找当前卷的分章大纲文件：outlines/卷NN*.md 或 Quyen_NN*.md（NN = 当前卷号）。找不到则退回任意一份/空。
 function currentOutline(book, volNum) {
   const odir = path.join(book.dir, 'outlines');
   let files = [];
   try { files = fs.readdirSync(odir).filter(f => /\.md$/i.test(f)); } catch { return { name: '', text: '' }; }
-  const tag = '卷' + String(volNum || 1).padStart(2, '0');
-  const tagLoose = '卷' + (volNum || 1);
-  let hit = files.find(f => f.includes(tag)) || files.find(f => f.includes(tagLoose));
+  const v = volNum || 1;
+  const pad = String(v).padStart(2, '0');
+  const patterns = [
+    `卷${pad}`, `卷${v}`, `卷0${v}`,
+    `Quyen_${pad}`, `Quyen_${v}`, `Quyen_0${v}`,
+    `Quyển_${pad}`, `Quyển_${v}`, `Quyển ${pad}`, `Quyển ${v}`,
+  ];
+  let hit = files.find(f => patterns.some(p => f.toLowerCase().includes(p.toLowerCase())));
   // 主线伏笔表也带上（若单独成文）
-  if (!hit && files.length) hit = files.sort()[files.length - 1];
+  if (!hit && files.length) hit = files.find(f => !f.includes('罗盘') && !f.includes('伏笔') && !f.includes('STORY_ARCS')) || files[files.length - 1];
   const text = hit ? readOr(path.join(odir, hit)) : '';
   return { name: hit || '', text };
 }

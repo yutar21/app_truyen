@@ -54,7 +54,7 @@ function runModelOnceAsync(model, prompt, cfg, timeoutMs = 180000) {
     const isWinCmd = process.platform === 'win32' && /\.(cmd|bat)$/i.test(m.bin);
     const cp = spawn(m.bin, args, { env, cwd: os.tmpdir(), shell: isWinCmd, windowsHide: true });
     let out = '', err = '';
-    const to = setTimeout(() => { try { cp.kill(); } catch {} reject(new Error(m.name + ' 审稿超时')); }, timeoutMs);
+    const to = setTimeout(() => { try { cp.kill(); } catch { } reject(new Error(m.name + ' 审稿超时')); }, timeoutMs);
     cp.stdout.on('data', d => (out += d));
     cp.stderr.on('data', d => (err += d));
     cp.on('error', e => { clearTimeout(to); reject(e); });
@@ -67,7 +67,7 @@ function runModelOnceAsync(model, prompt, cfg, timeoutMs = 180000) {
 function outlineFilesFor(dir, scope) {
   const odir = path.join(dir, 'outlines');
   let files = [];
-  try { files = fs.readdirSync(odir).filter(f => /\.md$/i.test(f)); } catch {}
+  try { files = fs.readdirSync(odir).filter(f => /\.md$/i.test(f)); } catch { }
   if (/立项|全书|all/i.test(scope)) return files.map(f => path.join(odir, f));
   const m = String(scope).match(/卷?\s*0*(\d+)/);
   if (m) {
@@ -137,7 +137,7 @@ function buildEditorPrompt(book, scope, bible, outline) {
 }
 
 // 主流程：审一个 scope 的大纲，写审稿文件，返回 { file, editorModel, critique }。
-export async function reviewOutline({ book, scope = '立项', cfg, authorModel, onLog = () => {} }) {
+export async function reviewOutline({ book, scope = '立项', cfg, authorModel, onLog = () => { } }) {
   const dir = book.dir;
   const bible = readSafe(path.join(dir, 'novel_bible.md'));
   const ofiles = outlineFilesFor(dir, scope);
@@ -172,7 +172,7 @@ export async function reviewOutline({ book, scope = '立项', cfg, authorModel, 
     } catch (e) { lastErr = e; onLog({ level: 'warn', msg: `主编 ${cand} 审稿失败（${e.message}）→ 换下一个审稿人` }); }
   }
   const reviewsDir = path.join(dir, 'reviews');
-  try { fs.mkdirSync(reviewsDir, { recursive: true }); } catch {}
+  try { fs.mkdirSync(reviewsDir, { recursive: true }); } catch { }
   const file = path.join(reviewsDir, `大纲审稿-${safeName(scope)}.md`);
   if (!raw) {
     // 所有审稿人都失败/无效 → 【自动放行】：写一份占位审稿让"审稿门"文件存在，作者据已有本卷大纲继续，绝不无限期卡死。
@@ -193,7 +193,13 @@ export async function reviewOutline({ book, scope = '立项', cfg, authorModel, 
 // 给作者 agent 的「按审稿修订」单行指令（autopilot 注入用）。改完要先输出哨兵停下待核，不直接写正文。
 export function buildReviseInstruction(book, scope, file) {
   const rel = path.relative(book.dir, file).replace(/[\r\n]+/g, ' ');
-  return (`主编已对【${scope}】大纲完成审稿，意见写在 ${rel}。请先通读这份审稿，按其中【硬伤】逐条修订对应的 novel_bible.md 与 outlines/ 大纲（重点：节奏/格局升级、压缩事务流水、补爽点、伏笔回收、规模匹配），【隐患/建议】酌情采纳；改完在大纲或 continuity_ledger.md 里留一句修订说明。若某条意见你不认同，可在大纲里简注理由后保留。修订完成后【先不要写正文】，在窗口单独输出一行「【大纲已修订：${scope}】」然后停下——系统会核对你是否确实改了大纲文件，核对通过后再开始写正文。`).replace(/[\r\n]+/g, ' ');
+  const isVn = /[a-zA-Zà-ỹÀ-Ỹ]/.test(book.title || '');
+  if (isVn) {
+    return (`Tổng biên tập đã hoàn thành thẩm định dàn ý 【${scope}】, nội dung góp ý được ghi tại ${rel}. ` +
+      `Hãy đọc kỹ toàn bộ góp ý này, sửa trực tiếp vào file dàn ý tương ứng trong outlines/ (đặc biệt bám sát và khắc phục triệt để các mục [Lỗi nghiêm trọng] và [Nguy cơ tiềm ẩn / Gợi ý]). ` +
+      `LƯU Ý QUAN TRỌNG: Chỉ sửa trực tiếp vào file dàn ý của phạm vi này (outlines/${scope}...), tuyệt đối không tự ý tạo thêm file quyển mới. `).replace(/[\r\n]+/g, ' ');
+  }
+  return (`主编已对【${scope}】大纲完成审稿，意见写在 ${rel}。请先通读这份审稿，按其中【硬伤】/ [Lỗi nghiêm trọng] 逐条修订对应的 novel_bible.md 与 outlines/ 大纲（重点：节奏/格局升级、压缩事务流水、补爽点、伏笔回收、规模匹配），【隐患/建议】酌情采纳；改完在大纲或 continuity_ledger.md 里留一句修订说明。若某条意见你不认同，可在大纲里简注理由后保留。修订完成后【先不要写正文】，在窗口单独输出一行「【大纲已修订：${scope}】」然后停下——系统会核对你是否确实改了大纲文件，核对通过后再开始写正文。`).replace(/[\r\n]+/g, ' ');
 }
 
 // 把主编审稿正文拆成【可逐条勾选】的意见项：[{id, severity, text}]。
@@ -234,7 +240,7 @@ export function buildRenudgeInstruction(book, scope) {
 function readLastChapters(dir, n, cap) {
   const cdir = path.join(dir, 'chapters');
   const files = [];
-  (function walk(d) { try { for (const e of fs.readdirSync(d, { withFileTypes: true })) { const p = path.join(d, e.name); if (e.isDirectory()) walk(p); else if (/\.txt$/i.test(e.name)) files.push(p); } } catch {} })(cdir);
+  (function walk(d) { try { for (const e of fs.readdirSync(d, { withFileTypes: true })) { const p = path.join(d, e.name); if (e.isDirectory()) walk(p); else if (/\.txt$/i.test(e.name)) files.push(p); } } catch { } })(cdir);
   files.sort((a, b) => (parseInt(path.basename(a)) || 0) - (parseInt(path.basename(b)) || 0));
   let out = '';
   for (const f of files.slice(-n)) out += `\n### ${path.basename(f)}\n` + readSafe(f);
@@ -268,7 +274,7 @@ function buildEndingPrompt(book, bible, ledger, ending) {
 }
 
 // 完本审稿：核对这本书是否真的可以完结。返回 { pass, body, file, editorModel }。
-export async function reviewEnding({ book, cfg, authorModel, onLog = () => {} }) {
+export async function reviewEnding({ book, cfg, authorModel, onLog = () => { } }) {
   const dir = book.dir;
   const bible = readSafe(path.join(dir, 'novel_bible.md'));
   const ledger = readSafe(path.join(dir, 'continuity_ledger.md'));
@@ -282,7 +288,7 @@ export async function reviewEnding({ book, cfg, authorModel, onLog = () => {} })
   try {
     fs.mkdirSync(path.join(dir, 'reviews'), { recursive: true });
     fs.writeFileSync(file, `# 完本审稿\n\n> 审稿模型 ${editorModel}｜${new Date().toISOString()}｜判定：${pass ? '可完本' : '未完本'}\n\n` + out + '\n', 'utf8');
-  } catch {}
+  } catch { }
   onLog({ level: pass ? 'info' : 'warn', msg: `完本审稿${pass ? '通过（可完本）' : '未通过（需补写结局）'} → ${path.relative(dir, file)}` });
   return { pass, body: out, file, editorModel };
 }
@@ -316,7 +322,7 @@ function buildRecheckPrompt(book, scope, priorCritique, bible, outline) {
 }
 
 // 主编二次复审改后大纲：对照原审稿的硬伤逐条核对。返回 { pass, body, file, editorModel }。
-export async function recheckRevision({ book, scope = '立项', cfg, authorModel, onLog = () => {} }) {
+export async function recheckRevision({ book, scope = '立项', cfg, authorModel, onLog = () => { } }) {
   const dir = book.dir;
   const priorFile = path.join(dir, 'reviews', `大纲审稿-${safeName(scope)}.md`);
   const prior = readSafe(priorFile);
@@ -334,7 +340,7 @@ export async function recheckRevision({ book, scope = '立项', cfg, authorModel
   const file = path.join(dir, 'reviews', `大纲复审-${safeName(scope)}.md`);
   try {
     fs.writeFileSync(file, `# 大纲复审（${scope}）\n\n> 复审模型 ${editorModel}｜${new Date().toISOString()}｜判定：${pass ? '通过' : '未通过'}\n\n` + out + '\n', 'utf8');
-  } catch {}
+  } catch { }
   onLog({ level: pass ? 'info' : 'warn', msg: `复审${pass ? '通过' : '未通过'} → ${path.relative(dir, file)}` });
   return { pass, body: out, file, editorModel };
 }
@@ -349,13 +355,13 @@ export function snapshotOutline(book, scope) {
   const dir = book.dir;
   const sig = {};
   for (const f of relevantFiles(dir, scope)) sig[path.basename(f)] = hashFile(f);
-  try { fs.mkdirSync(path.join(dir, '.studio'), { recursive: true }); fs.writeFileSync(snapPath(dir, scope), JSON.stringify(sig), 'utf8'); } catch {}
+  try { fs.mkdirSync(path.join(dir, '.studio'), { recursive: true }); fs.writeFileSync(snapPath(dir, scope), JSON.stringify(sig), 'utf8'); } catch { }
   return sig;
 }
 export function verifyRevision(book, scope) {
   const dir = book.dir;
   let prev = null;
-  try { prev = JSON.parse(readSafe(snapPath(dir, scope)) || 'null'); } catch {}
+  try { prev = JSON.parse(readSafe(snapPath(dir, scope)) || 'null'); } catch { }
   if (!prev) return { hadSnapshot: false, changed: false, changedFiles: [] };
   const changedFiles = [];
   for (const f of relevantFiles(dir, scope)) { const name = path.basename(f); if (prev[name] !== hashFile(f)) changedFiles.push(name); }

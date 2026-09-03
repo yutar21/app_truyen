@@ -554,11 +554,21 @@ export function bookStats(book) {
     }
   };
   walk(chaptersDir);
-  // 卷列表 = chapters/ 下的子目录名（按名称排序）
+  // 卷列表 = chapters/ 下的子目录名 + outlines/ 中的大纲卷（去重并按名称排序）
   let volumes = [];
   try {
-    volumes = fs.readdirSync(chaptersDir, { withFileTypes: true })
-      .filter(e => e.isDirectory()).map(e => e.name).sort();
+    const vSet = new Set(
+      fs.readdirSync(chaptersDir, { withFileTypes: true })
+        .filter(e => e.isDirectory()).map(e => e.name)
+    );
+    try {
+      const odir = path.join(book.dir, 'outlines');
+      for (const f of fs.readdirSync(odir)) {
+        const m = f.match(/^(?:卷|Quyen_|Quyển_)?\s*0*(\d+)/i);
+        if (m) vSet.add('卷' + m[1].padStart(2, '0'));
+      }
+    } catch {}
+    volumes = Array.from(vSet).sort();
   } catch {}
   let cover = false, coverMtime = 0, coverBg = false, coverBgMtime = 0;
   try { const cs = fs.statSync(path.join(book.dir, 'cover.png')); cover = true; coverMtime = Math.floor(cs.mtimeMs); } catch {}

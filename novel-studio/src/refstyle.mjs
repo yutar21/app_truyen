@@ -105,8 +105,8 @@ export function analyzeStyleFromShots({ shotPaths, model, multi }, cfg) {
   const env = { ...process.env };
   if (cfg?.enableProxy) { const px = proxyUrl(); if (px) { env.HTTP_PROXY = env.HTTPS_PROXY = env.ALL_PROXY = env.http_proxy = env.https_proxy = px; } }
   // -p 打印模式；claude 只放开 Read（读本地截图），不给 Bash/Write —— 截图内容属不可信输入，
-  // 即便被 prompt 注入，最多污染分析文本，绝不能动系统。绝不用 --dangerously-skip-permissions。
-  const args = visId === 'claude' ? ['-p', '--allowedTools', 'Read'] : ['-p'];
+  const args = visId === 'claude' ? ['-p', '--allowedTools', 'Read'] :
+    (visId === 'agy' || visId === 'gemini') ? ['--effort', cfg?.agyEffort || 'high', '--dangerously-skip-permissions', '--output-format', 'text'] : ['-p'];
   const many = multi || shotPaths.length > 2;
   const head = many
     ? `这是【多本】对标网文的阅读页截图（就在当前目录：${rels}，可能来自不同的书）。请读图，提炼它们【共通的写作文风】，产出一份能让另一个 AI「照着这个腔写」的融合【文风指南】。`

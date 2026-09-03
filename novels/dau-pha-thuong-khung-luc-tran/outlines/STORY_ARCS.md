@@ -1,265 +1,110 @@
-# STORY ARCS
+# STORY ARCS — ĐẠI CƯƠNG TOÀN THƯ TỔNG QUY HOẠCH
+## TÁC PHẨM: 《ĐẤU PHÁ THƯƠNG KHUNG — LỤC TRẦN》
 
-> Quy hoạch tổng thể các Arc của truyện.
->
-> File này trả lời:
-> "Truyện sẽ đi qua những giai đoạn lớn nào?"
->
-> Không phải lịch sử truyện.
-> Không ghi những sự kiện chưa được xác nhận là kế hoạch.
->
-> Các Arc có thể thay đổi trong quá trình viết nếu diễn biến thực tế
-> tạo ra hướng phát triển tốt hơn.
->
-> Tuy nhiên, không được tự ý thay đổi những sự kiện đã xảy ra trong
-> story-memory.md hoặc character-state.md.
+> **Tôn chỉ tổng thể:**  
+> Hệ thống đại cương này quy hoạch lộ trình trường thiên (dự kiến 550 – 600 chương) của tác phẩm 《Đấu Phá Thương Khung — Lục Trần》.  
+> Tác phẩm xây dựng theo phong cách **Huyền Huyễn Cổ Điển / Tiên Hiệp Kiếm Tu / Trí Tuệ Thực Tế (Hardboiled)**: Không hệ thống, không bàn tay vàng vô lý, không cướp đoạt cơ duyên một cách mù quáng, khai mở con đường **Trận Khí Sư Độc Tôn** kiêm **Kiếm Tiên Thủy Hệ** độc nhất vô nhị trên Đấu Khí Đại Lục.
 
 ---
 
-# I. ĐỊNH HƯỚNG TỔNG THỂ
+## I. HỆ THỐNG PHÂN QUYỂN HUYỀN HUYỄN TOÀN THƯ
 
-## Premise
-
-Một linh hồn từ thế giới hiện đại xuyên sinh vào Đấu Phá Thương Khung.
-
-Không có hệ thống.
-
-Không có năng lực đặc biệt được ban sẵn.
-
-Không có thiên phú vô lý.
-
-Nhân vật chính sinh ra cùng thời với Tiêu Viêm và lớn lên trong cùng một thời đại.
-
-MC nhớ mang máng thế giới và một số tình tiết của nguyên tác, nhưng ký ức không đầy đủ và không đáng tin tuyệt đối.
-
-MC đi một con đường khác Tiêu Viêm.
-
-MC sử dụng thuộc tính **Thủy**, không phải Hỏa và không phải Lôi.
+### 🔹 QUYỂN 1: HÀN VI SƠ KHỞI · Ô THẢN PHONG LÔI (CHƯƠNG 0001 – 0051) — [ĐÃ HOÀN THÀNH]
+* **Bối cảnh:** Ô Thản Thành ➔ Trấn Thanh Sơn ➔ Ma Thú Sơn Mạch ➔ Tuyển bạt Già Nam.
+* **Cảnh giới Lục Trần:** Đấu Chi Khí Cửu Đoạn ➔ Đấu Giả 1★ ➔ Đấu Giả 9★ ➔ Đột phá Đấu Sư 1★.
+* **Cốt lõi:**
+  - Khởi điểm hàn vi con thương nhân quặng Lục Thiết, tư chất Thủy hệ sinh tồn giữa các thế gia Tiêu, Gia Lực, Áo Ba.
+  - Đầm Sương Mù đoạt liên hoa, tụ khí hóa xoáy thành công bước vào Đấu Giả.
+  - Đấu giá tràng Mễ Đặc Nhĩ gặp gỡ Nhã Phi, mua được Thủy Triều Quyết.
+  - Bước vào Ma Thú Sơn Mạch, kết giao cùng Tiểu Y Tiên, tranh đoạt cổ điện ngầm lấy bí kịch Thủy hệ, diệt trừ Lang Đầu Dong Binh Đoàn (Mục Xà, Hách Mông).
+  - Tiểu Y Tiên Ách Nạn Độc Thể sơ hiển và chia tay trong đêm mưa.
+  - Lục Trần bứt phá Đấu Sư 1★, trúng tuyển Già Nam Học Viện qua đợt tuyển sinh của Nhược Lâm đạo sư.
 
 ---
 
-# II. NGUYÊN TẮC XÂY DỰNG ARC
-
-## 1. MC bắt đầu từ số 0
-
-Mỗi bước tiến phải có nguyên nhân:
-
-- tu luyện;
-- tài nguyên;
-- kinh nghiệm;
-- chiến đấu;
-- ngộ tính;
-- cơ duyên;
-- lựa chọn;
-- đánh đổi.
-
-Không được tăng sức mạnh chỉ vì MC là nhân vật chính.
+### 🔹 QUYỂN 2: HOÀNG ĐÔ ĐOẠT KHÔI · SA MẠC KỲ DUYÊN (CHƯƠNG 0052 – 0088) — [ĐÃ HOÀN THÀNH]
+* **Bối cảnh:** Gia Mã Hoàng Đô ➔ Hắc Nham Thành ➔ Tháp Qua Nhĩ Sa Mạc (Thạch Mạc Thành, Địa Hỏa Nham Tương).
+* **Cảnh giới Lục Trần:** Đấu Sư 1★ ➔ Đấu Sư 2★ ➔ Đấu Sư 4★.
+* **Cốt lõi:**
+  - Gia Mã Hoàng Đô tham gia Đại Hội Luyện Dược Sư; dùng bí thuật Thủy Hỏa tương tể hóa giải bẫy đề thi của Đan Vương Cổ Hà, đoạt ngôi Quán Quân trước sự chứng kiến của Pháp Mã.
+  - Tiến sâu vào Tháp Qua Nhĩ Sa Mạc, gặp Mạc Thiết Dong Binh Đoàn (Tiêu Đỉnh, Tiêu Lệ), bảo hộ Thanh Lân.
+  - Cùng Tiêu Viêm thâm nhập lòng đất nham tương: Tiêu Viêm đoạt Thanh Liên Địa Tâm Hỏa, Lục Trần thu phục kỳ bảo Cực Âm Cực Dương Tinh Dịch.
+  - Chứng kiến Mỹ Đỗ Toa Nữ Vương tiến hóa Thất Thải Thôn Thiên Mãng, thiết lập giao ước ngầm bảo vệ lợi ích và đất sống cho Xà Nhân Tộc.
 
 ---
 
-## 2. MC và Tiêu Viêm là đối thủ cạnh tranh
-
-Quan hệ mặc định:
-
-> **Đối thủ cạnh tranh.**
-
-Không mặc định:
-
-- bạn thân;
-- huynh đệ;
-- bằng hữu thân thiết.
-
-Hai người có thể:
-
-- cạnh tranh;
-- vượt qua nhau;
-- thua nhau;
-- tôn trọng nhau;
-- bất đồng;
-- hợp tác tạm thời khi lợi ích trùng nhau;
-- đối đầu khi mục tiêu khác nhau.
-
-Quan hệ chỉ thay đổi nếu có sự kiện đủ mạnh.
+### 🔹 QUYỂN 3: GIÀ NAM PHONG LÔI · TÂM HỎA THÔN THIÊN (CHƯƠNG 0089 – 0137) — [ĐÃ HOÀN THÀNH]
+* **Bối cảnh:** Hòa Bình Trấn ➔ Ngoại Viện Già Nam ➔ Thiên Phần Luyện Khí Tháp ➔ Cường Bảng ➔ Đại loạn Vẫn Lạc Tâm Viêm.
+* **Cảnh giới Lục Trần:** Đấu Sư 5★ ➔ Đột phá Đại Đấu Sư 1★ ➔ Đại Đấu Sư 2★ đỉnh phong.
+* **Cốt lõi:**
+  - Nhập học Già Nam qua Tử Linh Thọ; Tàng Kinh Các đoạt bí kỹ; Hỏa Năng Liệp Bổ Tái liên thủ tân sinh đại phá Hắc Bạch Quan Sát, chấn động Nội Viện, lọt vào mắt Huân Nhi.
+  - Rèn thể trong Thiên Phần Luyện Khí Tháp, chế ngự tâm hỏa, sáng tạo Điệp Khổng Thủy Áp, ngưng kết Cửu Mạch Thủy Kỳ, bẻ gãy chèn ép của Dược Bang và đánh bại Bạch Trình.
+  - Làm nhiệm vụ Hắc Giác Vực, trảm sát Phạm Lăng (Huyết Tông) đoạt Tàn đồ Tịnh Liên Yêu Hỏa số 3.
+  - Ngưng tụ Khái Hạch bước vào Đại Đấu Sư, tu thành Bích Ngọc Giáp, kết giao tiểu bá vương Tử Nghiên, lọt Top 10 Cường Bảng.
+  - Thảm họa Vẫn Lạc Tâm Viêm bùng phát: Dược Hoàng Hàn Phong dẫn cường giả Hắc Giác Vực công phá học viện, Tô Thiên đại chiến quần ma, Tiêu Viêm bị kéo xuống đáy tháp, Lục Trần toàn lực kích hoạt trận kỳ thủ viện rồi bị luồng phong bạo cuốn bay khỏi chiến trường.
 
 ---
 
-## 3. MC không được thay thế Tiêu Viêm
-
-MC có tuyến riêng.
-
-Không biến toàn bộ nguyên tác thành:
-
-> "Tiêu Viêm làm gì → MC làm tốt hơn."
-
-MC phải có:
-
-- thế mạnh riêng;
-- điểm yếu riêng;
-- lựa chọn riêng;
-- thất bại riêng;
-- cơ duyên riêng;
-- kẻ thù riêng;
-- quan hệ riêng;
-- tuyến trưởng thành riêng.
+### 🔹 QUYỂN 4: U UYÊN NAM HẢI · CỔ TRẬN THIÊN CUNG (CHƯƠNG 0138 – 0194) — [ĐÃ HOÀN THÀNH]
+* **Bối cảnh:** Nam Đại Lục Hoang Dã ➔ Vạn Dặm Đại Ngàn (Hắc Tinh Linh) ➔ Cấm địa Lôi Phong (Tinh Linh) ➔ Vạn Đảo Hải Dương Ma Trận (Hải Ngục Thủy Nhân, Di tích Thủy Thánh Giáo, Vực sâu Nghịch Nhiệt Cổ Trận Thiên Cung).
+* **Cảnh giới Lục Trần:** Đại Đấu Sư 3★ ➔ Bế quan 2 năm ➔ Đột phá Đấu Linh 1★ – 2★.
+* **Cốt lõi (BƯỚC NGOẶT TRẬN KHÍ SƯ & KIẾM TIÊN THỦY HỆ):**
+  - Trôi dạt Nam Đại Lục trong tình trạng trọng thương, gặp nữ chúa Tử Linh (Đại công chúa Hắc Tinh Linh, Đấu Tông 1★), dùng y thuật chữa độc phá giải phong ấn cho nàng, ký khế ước ma quỷ, nhận Ám Chi Ấn.
+  - Chạm trán vương nữ Tinh Á (Tiểu công chúa Tinh Linh tộc, nắm giữ Dị Hỏa Phong Lôi Nộ Liễm #18), sinh tử đối đầu rồi cùng rơi xuống đáy vực, thuần phục nàng bằng Thủy Mộc Trọng Áp Trận, nảy sinh tình cảm sâu sắc.
+  - Đột nhập Hải Ngục giải cứu mỹ nhân ngư Hải Âm (Công chúa Thủy Nhân tộc, biến dị Đấu Khí Âm Thanh).
+  - Khám phá di tích Cổ Trận Thiên Cung dưới đáy biển sâu: Kế thừa công pháp chí tôn Cổ Đạo Hàn Thủy, kiếm quyết Vạn Kiếm Quy Tông, kỹ nghệ Luyện Khí phi kim loại (ngọc, đá, xương thú, thủy tinh).
+  - Đúc Bích Hải Quy Linh Đàn (chứa Quy Linh Địa Hỏa #13) tặng Hải Âm định hải, rèn Ngọc Hải Lưu Ly Kiếm và hoàn thiện Thập Bát Diệp Kiếm Trận.
+  - Chuyển hóa toàn diện thành Trận Khí Sư Độc Tôn kiêm Kiếm Tiên Thủy Hệ, cùng Tử Linh, Tinh Á, Hải Âm rời Nam Đại Lục trở lại Hắc Giác Vực.
 
 ---
 
-## 4. Canon là nền tảng, không phải đường ray
-
-Các sự kiện nguyên tác có thể:
-
-- diễn ra gần như nguyên bản;
-- diễn ra sớm hơn;
-- diễn ra muộn hơn;
-- thay đổi một phần;
-- thay đổi hoàn toàn;
-- không xảy ra.
-
-Nhưng mọi thay đổi lớn phải có nguyên nhân.
+### 🔹 QUYỂN 2: KIẾM PHÚC VÂN LAM (CHƯƠNG 0208 – 0230) — [ĐANG THỰC HIỆN]
+* **Bối cảnh:** Gia Mã Đế Đô (Mễ Đặc Nhĩ trang viên) ➔ Vân Lam Sơn ➔ Trấn Ma Quan biên giới.
+* **Cảnh giới Lục Trần:** Đấu Linh 2★ đỉnh phong ➔ Đột phá Nhất Tinh Đấu Vương (1★).
+* **Cốt lõi:**
+  - [Ch.208 đã xong]: Trảm Vân Đốc, Vân Sát; cứu Nhã Phi, phong tỏa 3.000 đệ tử; chạm trán Tiêu Viêm.
+  - Hội quân công phạt Vân Lam Sơn, trảm sát Tông chủ Vân Sơn, phá hủy Hóa Hồn Huyết Ấn; song Đấu Tông (Mỹ Đỗ Toa, Tử Linh) kết hợp kiếm trận ép Vụ Hộ Pháp thiêu đốt 3 phần bản nguyên linh hồn và kích hoạt huyết tế cấm trận mới trốn thoát chật vật cùng linh hồn Dược Lão; Lục Trần đoạt Hồn Điện Huyết Ngọc Lệnh.
+  - Tiêu Viêm nuốt hận thấu xương, nhận rõ khoảng cách quyền lực, rút lui triệt để vào bóng tối bế quan tại Già Nam tu luyện, chuyển sang thế cờ mưu lược kiêu hùng từ xa.
+  - Thiết huyết đàm phán trấn áp Hoàng Thất và Tam đại gia tộc, độc chiếm toàn bộ thủy mạch đế quốc; sáng lập Thiên Thương Kiếm Các giao Nhã Phi chấp chưởng; hoàn thành thủy lộ ngàn năm cho Xà tộc, Mỹ Đỗ Toa giao phó trọn vẹn vận mệnh dân tộc.
+  - Đột phá Nhất Tinh Đấu Vương (1★), ngưng tụ Thiên Thủy Kiếm Dực; ngự kiếm trảm sát Đấu Hoàng Vân Hám (tàn dư Vân Lam Tông) tại Trấn Ma Quan uy chấn biên giới; phóng Thủy Vân Thuyền rời cõi.
 
 ---
 
-## 5. Nhân vật canon phải có ý chí riêng
-
-Không được biến nhân vật thành NPC.
-
-Mỗi nhân vật quan trọng phải có:
-
-- mục tiêu;
-- tính cách;
-- lợi ích;
-- giới hạn;
-- bí mật;
-- quan điểm riêng;
-- phản ứng hợp lý.
+### 🔹 QUYỂN 3: PHONG KHỞI HẮC GIÁC & CỔ TRẬN TRANH HÙNG (CHƯƠNG 0231 – 0270) — [KẾ HOẠCH]
+* **Bối cảnh:** Hắc Giác Vực (Phong Thành, Thiên Nhai Thành, Bình nguyên Thủy Ngạc) ➔ Cửu U sào huyệt Hồn Điện.
+* **Cảnh giới Lục Trần:** Đấu Vương 1★ ➔ Đấu Vương 5★.
+* **Cốt lõi:**
+  - Cung chủ Đấu Vương quy vị Hàn Thủy Cung tại Phong Thành, củng cố bình nguyên Thủy Ngạc; tiếp nhận tình báo đại hội đấu giá ngầm.
+  - Đại hội đấu giá ngầm Thiên Nhai Thành do Tàn dư Liên minh Hắc Minh tổ chức; đối đầu mưu lược và tài chính với Tiêu Môn từ xa; đè bẹp đối thủ đoạt trọn Thiên Cung Trận Xu và tàn đồ Cổ Trận.
+  - Bẻ gãy mưu toan đánh cướp của tàn dư Hắc Minh; dung hợp Trận Xu định vị tọa độ Cửu U Tỏa Hồn Đại Trận của Hồn Điện; thăng cấp Tam Cấp Cửu Khúc Thủy Long Trận, xác lập vị thế đệ nhất bá chủ Hắc Giác Vực.
+* **Bối cảnh:** Xuất Vân Đế Quốc ➔ Độc Tông ➔ Vạn Độc Quật.
+* **Cảnh giới Lục Trần:** Đấu Linh đỉnh phong ➔ Đột phá Đấu Vương.
+* **Cốt lõi:** Tìm kiếm tung tích Tiểu Y Tiên; hóa giải độc chướng Xuất Vân; kề vai Tiểu Y Tiên chống lại tà phái và Hồn Điện thế lực; tìm phương thuốc khống chế Ách Nạn Độc Thể; thu nạp thế lực độc sư về dưới trướng liên minh Hàn Thủy Cung.
 
 ---
 
-## 6. Romance
-
-MC có thể phát triển tình cảm với nhiều nữ nhân vật canon.
-
-Tuy nhiên:
-
-- không yêu ngay;
-- không "thu nữ" vô não;
-- không phải nhân vật nữ nào cũng yêu MC;
-- nhân vật nữ có quyền từ chối;
-- nhân vật nữ có mục tiêu riêng;
-- tình cảm phải phát triển qua tương tác;
-- các mối quan hệ có thể xung đột với nhau;
-- romance phải có hậu quả thực tế.
-
-Ưu tiên các nhân vật nữ canon của Đấu Phá Thương Khung.
-
-Không chủ động tạo hàng loạt nữ nhân vật mới chỉ để làm hậu cung.
+### 🔹 QUYỂN 7: PHONG KHỞI TRUNG CHÂU · TINH VỰC PHONG BA (CHƯƠNG 0261 – 0340) — [KẾ HOẠCH]
+* **Bối cảnh:** Trung Châu Bắc Vực ➔ Thiên Cố Phong ➔ Đan Hội Thánh Thành ➔ Tinh Vực.
+* **Cảnh giới Lục Trần:** Đấu Vương đỉnh phong ➔ Đấu Hoàng ➔ Đột phá Đấu Tông.
+* **Cốt lõi:** Tiến vào Trung Châu; thành lập phân nhánh Hàn Thủy Các; tham gia Đan Hội; thâm nhập Tinh Vực thu phục Dị Hỏa Tam Thiên Diễm Viêm Hỏa; đối đầu kịch liệt với Hồn Điện Thiên Hộ Pháp và Tôn Giả; mở rộng trận đạo lên cấp độ Không Gian Trận Pháp.
 
 ---
 
-# III. CẤU TRÚC DÀI HẠN
-
-Truyện dự kiến có thể phát triển theo khoảng:
-
-```text
-Arc 1  → Khởi điểm
-Arc 2  → Tuổi thiếu niên
-Arc 3  → Tiêu gia và Gia Mã đế quốc
-Arc 4  → Vân Lam Tông / Thanh Sơn trấn / Đế quốc
-Arc 5  → Hắc Giác Vực
-Arc 6  → Nội viện
-Arc 7  → Trung Châu
-Arc 8  → Thế lực Trung Châu
-Arc 9  → Viễn Cổ thế lực / Dị Hỏa / Đấu Thánh
-Arc 10 → Đỉnh phong Đấu Khí đại lục
-Arc 11 → Đại chiến cuối
-Arc 12 → Kết thúc
-```
+### 🔹 QUYỂN 8: THÚ TỘC TRANH PHONG · CỔ GIỚI THẦN UY (CHƯƠNG 0341 – 0430) — [KẾ HOẠCH]
+* **Bối cảnh:** Thú Tộc Giới Vực (Cửu U Địa Minh Mãng, Thiên Yêu Hoàng tộc) ➔ Cổ Giới ➔ Thiên Mộ.
+* **Cảnh giới Lục Trần:** Đấu Tông đỉnh phong ➔ Đột phá Đấu Tôn.
+* **Cốt lõi:** Hỗ trợ Tử Nghiên và Thái Hư Cổ Long tộc dẹp loạn; tiến vào Cổ Giới gặp lại Huân Nhi; khảo nghiệm thực lực với thiên tài Cổ Tộc; thâm nhập Thiên Mộ tầm bảo cổ nhân; tôi luyện linh hồn lực đạt tới Thiên Cảnh.
 
 ---
 
-# IV. QUY HOẠCH TIẾN ĐỘ VÀ DUNG LƯỢNG (Target: 500 - 600 Chương)
-
-*   **Mục tiêu dung lượng người dùng xác nhận:** **500 – 600 chương**.
-*   **Định hướng nhịp độ:** Tăng nhịp độ tu luyện và biến cố vừa phải, cô đọng súc tích, giữ nguyên chất lượng tình tiết, mưu trí thực chiến và cảm xúc nhân vật.
-
-### Phân bổ nhịp độ tu luyện & các giai đoạn
-
-*   **Giai đoạn Đấu Giả (Chương 0001 – 0045):** ~4-5 chương / 1 tinh. (Hiện tại Chương 33: Đấu Giả tứ tinh; dứt điểm Lang Đầu dong binh đoàn ở khoảng Chương 34-38).
-*   **Giai đoạn Đấu Sư (Chương 0046 – 0110):** ~6-7 chương / 1 tinh. (Ma Thú sơn mạch sâu, gặp Tiêu Viêm, Hắc Sào Vân Lam Tông).
-*   **Giai đoạn Đại Đấu Sư (Chương 0111 – 0190):** ~8-9 chương / 1 tinh. (Gia Mã Đế Quốc, Tháp Qua Nhĩ Sa Mạc, Tam Niên Chi Ước).
-*   **Giai đoạn Đấu Linh – Đấu Vương (Chương 0191 – 0320):** Tập trung Hắc Giác Vực, Già Nam Học Viện (Nội Viện), Vân Lam Tông biến cố.
-*   **Đặc biệt - Sub-Arc Tây Nam Đại Lục (Hành Trình Độc Hành 2-3 Năm):**
-    - **Biến cố khởi đầu (High Drama):** Lục Trần khi solo độc hành ra biên giới Hắc Giác Vực bị Hộ Pháp Hồn Điện (hoặc sát thủ Đấu Hoàng tà tu) nhắm vào linh hồn lực và kỹ nghệ Thủy áp. Hắn nổ tung toàn bộ lực lượng giao chiến sinh tử, bị đánh trọng thương nứt giáp giội huyết, cắn răng dùng bí kỹ Thủy áp tự bạo trốn chạy, rơi xuống vực sương mù cổ đại biệt lập của **Tây Nam Đại Lục**.
-    - **Hành trình dài 2-3 năm (17.6 tuổi → ~20 tuổi):** Lục Trần trôi dạt dạt vào cấm địa **Vạn Đảo Hải Dương Ma Trận**, tĩnh dưỡng thương tích và bắt đầu chuỗi phiêu lưu độc hành 2-3 năm.
-    - **Cốt truyện cốt lõi:** Lục Trần đứng ra hòa giải mâu thuẫn 1.000 năm giữa **Thủy Nhân Tộc (nắm giữ Quy Linh Địa Hỏa #13)** và **Tinh Linh Tộc (nắm giữ Phong Lôi Nộ Liễm #18)**. Thu phục/luyện hóa Quy Linh Địa Hỏa để gia cố Trận Kỳ, bứt phá tu vi từ **Đại Đấu Sư 3★ lên Đấu Linh / Đấu Vương**, đúc lại Trọng Kiếm và trở thành **Trận Khí Sư Độc Tôn** trước khi tái xuất giang hồ!
-    - **Truyền thừa Trận Pháp & Luyện Khí cổ xưa (BƯỚC NGOẶT PHONG CÁCH CHIẾN ĐẤU):** Tại đáy **Vạn Đảo Hải Dương Ma Trận**, Lục Trần phát hiện di tích **Cổ Trận Thiên Cung** — truyền thừa của một Trận Khí Sư / Kiếm Tu Thủy Hệ thượng cổ đã thất truyền. **Đây là bước ngoặt làm thay đổi toàn bộ phong cách chiến đấu của Lục Trần:**
-      - **Chuyển sang phong cách Phi Kiếm (Kiếm Tiên):** Lục Trần từ bỏ lối đánh cận chiến / trận pháp phòng thủ, chuyển sang điều khiển **Phi Kiếm** từ xa như các truyện tiên hiệp. Kiếm là bản mệnh, dung hợp linh hồn — điều khiển bằng **Kiếm Ý + Linh Hồn Lực**.
-      - **Kế thừa Trận Đạo Cổ Pháp:** Bí kỹ bố trận áp lực nước cổ đại, khắc trận đồ lên **xương thú / Hải Tâm Thạch / Ngọc / Thủy Tinh**.
-      - **Luyện Khí Thuật Thủy Hệ (GIỚI HẠN VẬT LIỆU):** Chỉ luyện được các vật liệu **phi kim loại**: đá, ngọc, thủy tinh, xương thú, Hải Tâm Thạch, trân châu... **KHÔNG thể luyện kim loại** (sắt, thép, đồng...). Dùng Điệp Khổng Thủy Áp nén đúc Pháp Bảo / Trận Kỳ / Kiếm từ các vật liệu này.
-      - **Nhận Hải Tâm Thần Quyết:** Công pháp Huyền cấp cao giai → Địa cấp, thay thế Phù Vân Thủy Áp Quyết. Chuyên về kiếm đạo + trận pháp + linh hồn lực.
-      - **Kế thừa Đấu Kỹ Vạn Kiếm Quy Tông:** Chiêu thức đỉnh phong điều khiển hàng trăm ngàn phi kiếm đồng loạt công kích — sát thương diện rộng khủng khiếp. Học dần từ 1 kiếm → 3 kiếm → 9 kiếm → 36 kiếm → "Vạn Kiếm Quy Tông" hoàn chỉnh.
-      - **Rèn Bản Mệnh Phi Kiếm:** Dùng Hải Tâm Thạch + xương Đấu Tông + Mộc Lõi nén thành **Phi Kiếm Ngọc Thủy** — bản mệnh kiếm có Kiếm Linh.
-    - **Vai trò hai công chúa dị tộc:**
-      - **Tinh Á (Sylphia)** — Tiểu Công Chúa Tinh Linh Tộc: Thiên tài ngàn năm song hệ **Phong - Lôi**, truyền nhân Dị Hỏa **Phong Lôi Nộ Liễm (#18)**. Khởi đầu là kẻ thù tranh giành tài nguyên (truy nã "Lục Sắc"), trải qua sinh tử chuyển sang thán phục mưu trí & sự kiên cường của Lục Trần. **Mối tình phát triển dần trong suốt hành trình Nam Đại Lục** — từ thù → hiểu → thán phục → tin tưởng → nảy sinh tình cảm. Nàng là **cầu nối hòa giải với Tinh Linh Tộc** và là người dẫn đường cho Lục Trần trong Vạn Dặm Đại Ngàn.
-      - **Hải Âm** — Công Chúa Thủy Nhân Tộc: Biến dị Đấu Khí **Âm Thanh (Thủy - Âm Hệ)**, dùng tiếng hát tạo Đấu kỹ sóng âm (ảo thuật / chữa lành / sóng xung kích). Chán ghét sự tàn bạo của tộc mình, là chìa khóa hòa giải Thủy Nhân Tộc. **Lục Trần đúc Quy Linh Địa Hỏa #13 vào một cây Đàn Linh** (đàn có linh hồn giống Kiếm Linh) làm vũ khí tặng nàng — cây đàn dung hợp Dị Hỏa giúp Hải Âm phát huy tối đa sức mạnh Âm Thanh hệ.
-    - **Sự kiện then chốt:** Tử Linh cắn cổ Lục Trần để lại "Ám Chi Ấn" (Dấu ấn chủ quyền 17+), và sau 2 năm bế quan Lôi Phong Cấm Địa, hắn đột phá Đấu Tông đỉnh phong để tái kết. Hợp tác với Lục Trần tạo nên "Vạn Dặm Đại Ngàn" — nơi hòa giải 1.000 năm tranh chấp.
-*   **Giai đoạn Đấu Hoàng – Đấu Tông (Chương 0321 – 0450):** Tiến vào Trung Châu, Viễn Cổ Tam Tộc, Đan Hội, Tiêu Phủ, diệt Hồn Điện phân điện.
-*   **Giai đoạn Đấu Tôn – Đấu Thánh – Đấu Đế (Chương 0451 – 0550+):** Trung Châu đỉnh phong, Hồn Tộc đại chiến, mở ra Đấu Đế chi lộ.
+### 🔹 QUYỂN 9: VIỄN CỔ DI TÍCH · TỊNH LIÊN THU HOẠCH (CHƯƠNG 0431 – 0510) — [KẾ HOẠCH]
+* **Bối cảnh:** Không Gian Huyễn Cảnh ➔ Yêu Hỏa Không Gian ➔ Tịnh Liên Thánh Vực.
+* **Cảnh giới Lục Trần:** Đấu Tôn đỉnh phong ➔ Tấn thăng Đấu Thánh.
+* **Cốt lõi:** Ghép đủ 4 mảnh tàn đồ Tịnh Liên Yêu Hỏa; mở ra Yêu Hỏa Không Gian; dùng Thủy Hệ Chí Tôn Cổ Đạo và Thần Cấp Kiếm Trận thu phục Tịnh Liên Yêu Hỏa (#3); bứt phá ranh giới Đấu Thánh, trở thành đệ nhất Trận Thánh của đại lục.
 
 ---
 
-# V. SUB-ARC TIÊU ĐỌC
-
-## Sub-Arc 1 — Tây Nam Đại Lục (2-3 năm)
-
-| Bước | Sự kiện | Mục tiêu |
-|---|---|---|
-| 1 | Lục Trần xuất phát từ Hắc Giác Vực, solo độc hành | Thời gian: 1-2 tháng |
-| 2 | Đến Vạn Đảo Hải Dương Ma Trận, khám phá **Cổ Trận Thiên Cung** — kế thừa Trận Đạo Cổ Pháp, Luyện Khí Thuật, Hải Tâm Thần Quyết, Vạn Kiếm Quy Tông. **Chuyển sang phong cách Phi Kiếm** | 2-3 năm |
-| 3 | Gặp gỡ **Tinh Á** (Tiểu Công Chúa Tinh Linh) từ thù → bạn → **mối tình phát triển**, hợp tác chống Hồn Điện | Đồng minh + Cầu nối hòa giải Tinh Linh Tộc |
-| 4 | Gặp gỡ **Hải Âm** (Công Chúa Thủy Nhân Tộc), nhận Quy Linh Địa Hỏa #13 | Chìa khóa hòa giải Thủy Nhân Tộc |
-| 5 | **Đúc Quy Linh Địa Hỏa #13 vào Đàn Linh tặng Hải Âm** + Bế quan Lôi Phong Cấm Địa | Trở thành Kiếm Tiên / Trận Khí Sư Độc Tôn |
-| 6 | Hòa giải 1.000 năm giữa Thủy Nhân Tộc & Tinh Linh Tộc | Kiến tạo "Vạn Dặm Đại Ngàn" |
-| 7 | Tiêu Viêm xuất quan, đối đầu | Đấu Đế (Trận Chi Đế) |
-
----
-
-# VI. CHUẨN BẢN SỬ DỤNG
-
-Trước khi lập outline hoặc viết chương mới có nhân vật/sự kiện Canon:
-
-1. **Bước 1: Tra cứu Bảng thông tin Nguyên tác (Canon Registry)**
-   - Kiểm tra `07-canon-timeline.md` và `03-character-bible.md` để lấy thông tin đã được xác minh.
-2. **Bước 2: Tìm kiếm & Đột phá nghi vấn (Web/Raw Search Verification)**
-   - Nếu xuất hiện nhân vật/sự kiện canon mới hoặc chưa chắc chắn 100% về cảnh giới/tuổi tác/thuộc tính ở giai đoạn đó, AI **BẮT BUỘC dùng công cụ `search_web`** để tìm kiếm văn bản gốc (Raw BTTH tiếng Trung hoặc bản dịch Việt) để xác minh chính xác.
-   - Tuyệt đối KHÔNG suy đoán hay tự bịa cảnh giới cho nhân vật nguyên tác khi chưa verify.
-3. **Bước 3: Cập nhật thông tin vào Bible**
-   - Sau khi tra cứu chính xác, lập tức ghi chép nhân vật & cảnh giới đó vào `07-canon-timeline.md` để làm nguồn sự thật lâu dài.
-
----
-
-# VII. XỬ LÝ RỦI RO CỐT TRUYỆN
-
-> Chi tiết đầy đủ: **`planning/narrative-risk-mitigation.md`**
-
-## Luân phiên loại arc (tránh “bóng Tiêu Viêm”)
-
-| Loại | Mô tả |
-|------|--------|
-| **A — Divergence** | Con đường không có trong nguyên tác (Vạn Đảo, Cổ Đạo Hàn Thủy) |
-| **B — Tranh canon** | Cùng mục tiêu Tiêu Viêm — một bên thắng/thua có giá |
-| **C — Trả giá** | Thua, hòa xấu, hoặc thắng nhưng mất thứ khác |
-
-**Quy tắc:** Không liên tiếp hai arc cùng kiểu “cướp trước Tiêu Viêm”.
-
-## Leo thang Lục Trần ↔ Tiêu Viêm → kẻ thù
-
-1. **I — Cạnh tranh lạnh** (đến ~Ch.220)
-2. **II — Mâu thuẫn có máu** (Tiêu Viêm xuất quan)
-3. **III — Kẻ thù** (~Ch.221+ tuyên chiến; sinh tử sau)
-
-## Trước mỗi arc lớn
-
-- Điền **bảng trả giá** (thắng gì / mất gì)
-- Chọn loại arc A/B/C
-- Giới hạn **1** mối quan hệ nữ đẩy cấp lớn / arc
+### 🔹 QUYỂN 10: ĐẤU ĐẾ CHI LỘ · VẠN CỔ TRẬN THẦN (CHƯƠNG 0511 – 0600) — [KẾ HOẠCH KẾT THÚC]
+* **Bối cảnh:** Toàn bộ Trung Châu ➔ Hồn Giới ➔ Cổ Đế Động Phủ.
+* **Cảnh giới Lục Trần:** Đấu Thánh đỉnh phong ➔ Đột phá Đấu Đế (Trận Chi Đế).
+* **Cốt lõi:** Hồn Tộc phát động đại kiếp cướp đoạt Cổ Đế Ngọc; Lục Trần liên thủ Tiêu Viêm và liên minh các tộc viễn cổ; bố trí Chu Thiên Tinh Đấu Thủy Thần Đại Trận phong tỏa Trung Châu; luyện hóa đế phẩm đan dược hoặc truyền thừa Cổ Trận Thiên Cung thăng hoa Đấu Đế; cùng Viêm Đế song hùng bình định hắc ám, mở ra thời đại huy hoàng vạn cổ!
