@@ -544,6 +544,7 @@ $('#rvStart').addEventListener('click', async () => {
   if ($('#rvStyle').checked) dims.push('style');
   if ($('#rvPlaus').checked) dims.push('plausibility');
   if ($('#rvPace')?.checked) dims.push('pace');
+  if ($('#rvTerms')?.checked) dims.push('terms');
   if (!dims.length) { $('#rvErr').textContent = 'Vui lòng chọn ít nhất một tiêu chí rà soát'; return; }
   const range = rvRange();
   const model = (STATE.books.find(b => b.slug === CUR.slug) || CUR).model || STATE.config.defaultModel;
@@ -1418,6 +1419,13 @@ $('#btnRebuildOutline').addEventListener('click', async () => {
 $('#olApply').addEventListener('click', async () => {
   if (!CUR) return;
   const scope = $('#olScope').value;
+  const critique = $('#olCritique').textContent || '';
+  const isPassed = /【(总评|Đánh giá tổng thể)】\s*(可直接开写|Có thể viết ngay|ĐẠT|Đạt)/i.test(critique);
+  if (isPassed) {
+    $('#outlineModal').classList.add('hidden');
+    toast(`Dàn ý 【${scope}】 đã đạt chuẩn! Bạn có thể bấm 【Đồng Sáng Tác】 hoặc 【Viết Tự Động】 để bắt đầu viết.`);
+    return;
+  }
   const btn = $('#olApply'); btn.disabled = true;
   try {
     const r = await api('/api/book/apply-review', 'POST', { book: CUR.slug, scope, kind: 'outline' });
@@ -1440,6 +1448,13 @@ $('#olStart').addEventListener('click', async () => {
     const r = await api('/api/book/review-outline', 'POST', { book: CUR.slug, scope, inject });
     $('#olMeta').textContent = `Mô hình Biên tập: ${r.editorModel} ｜ Đã lưu vào reviews/${r.file}` + (inject ? ' ｜ Đã gửi cho AI sửa đổi' : '');
     $('#olCritique').textContent = r.critique || '(Chưa có nội dung)';
+    const isPassed = /【(总评|Đánh giá tổng thể)】\s*(可直接开写|Có thể viết ngay|ĐẠT|Đạt)/i.test(r.critique || '');
+    if (isPassed) {
+      $('#olApply').textContent = '🎉 Dàn Ý Đã Đạt Chuẩn · Sẵn Sàng Viết ▶';
+      $('#olApply').classList.remove('ghost');
+    } else {
+      $('#olApply').textContent = '✅ Yêu Cầu AI Sửa Dàn Ý Theo Góp Ý ▶';
+    }
     $('#olResult').classList.remove('hidden');
     $('#olStart').textContent = 'Thẩm Định Lại ▶';
     toast('Thẩm định hoàn tất: ' + scope);

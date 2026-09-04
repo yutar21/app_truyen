@@ -79,60 +79,96 @@ function outlineFilesFor(dir, scope) {
 }
 
 // 主编审稿 prompt：网文资深主编视角，重点盯节奏/格局/爽点/逻辑/规模/反流水账，给可执行改法。
-function buildEditorPrompt(book, scope, bible, outline) {
+function buildEditorPrompt(book, scope, bible, outline, priorCritique = '') {
   const isLatin = /[a-zA-Zà-ỹÀ-Ỹ]/.test(book.title);
   if (isLatin) {
+    const hasPrior = Boolean(priorCritique && priorCritique.length > 50 && !priorCritique.includes('自动放行'));
+    const priorSection = hasPrior ? [
+      `# BIÊN BẢN THẨM ĐỊNH LẦN TRƯỚC (ĐỂ ĐỐI CHIẾU TIẾN ĐỘ SỬA ĐỔI):`,
+      priorCritique,
+      ``,
+      `# NGUYÊN TẮC TÁI THẨM ĐỊNH KHÁCH QUAN & CHÍNH XÁC:`,
+      `1. Kiểm tra đối chiếu: Xem các [Lỗi nghiêm trọng] lần trước đã được giải quyết triệt để và tự nhiên chưa.`,
+      `2. Đánh giá chất lượng thực tế: KHÔNG duyệt bừa, KHÔNG tự động bỏ qua nếu cốt truyện còn lỗ hổng, nhưng cũng KHÔNG bới lông tìm vết các chi tiết vụn vặt không đáng có.`,
+      `3. Nếu dàn ý vẫn còn điểm yếu thực sự (như tụt áp sau cao trào, nhân vật hành xử gượng ép OOC, hoặc giải trình đối phó): Hãy thẳng thắn chỉ rõ chính xác ở chương nào và cách sửa dứt điểm.`,
+      `4. Nếu các vấn đề cốt lõi đã được giải quyết thỏa đáng, mạch truyện hấp dẫn, kịch tính và sẵn sàng viết: Đánh giá 【Đánh giá tổng thể】 Có thể viết ngay.`,
+      ``,
+    ] : [
+      `# MỤC TIÊU CỐT LÕI: "THẨM ĐỊNH TOÀN DIỆN VÉT CẠN MỘT LẦN"`,
+      `Không thẩm định hời hợt, không để sót lỗi lớn. Hãy rà soát kỹ lưỡng qua toàn bộ 5 trụ cột chất lượng bên dưới và chỉ ra HẾT tất cả các lỗi nghiêm trọng, nguy cơ tiềm ẩn và lỗ hổng kịch bản trong 1 lần duy nhất để tác giả khắc phục triệt để.`,
+      ``,
+    ];
+
     return [
-      `Bạn là một đại Tổng biên tập tiểu thuyết mạng kỳ cựu và cực kỳ khó tính, đang thực hiện thẩm định dàn ý trước khi viết. Nhiệm vụ của bạn là vạch ra những vấn đề có thể làm tác phẩm bị gãy mạch, đuối sức hoặc mất độc giả, và đưa ra giải pháp sửa đổi cụ thể.`,
+      `Bạn là một đại Tổng biên tập tiểu thuyết mạng kỳ cựu, sắc sảo và am hiểu sâu sắc tâm lý độc giả webnovel phương Đông (đặc biệt là thể loại Tiên hiệp, Huyền huyễn, Trí tuệ - Hiện thực Hardboiled). Nhiệm vụ của bạn là thẩm định dàn ý chi tiết trước khi tác giả chấp bút, đảm bảo tác phẩm giữ chân độc giả từ đầu đến cuối quyển.`,
       `Tác phẩm: 《${book.title}》; Phạm vi thẩm định: ${scope}.`,
       ``,
+      ...priorSection,
       `# Bối cảnh thiết lập (novel_bible.md)`,
       bible || '(Chưa có)',
       ``,
       `# Dàn ý cần duyệt`,
       outline,
       ``,
-      `# Tiêu chuẩn thẩm định (Kiểm tra từng điều, thẳng thắn, không khách sáo)`,
-      `1. Nhịp điệu / Cục diện: Mỗi quyển cảnh ngộ của nhân vật chính (địa điểm / cấp bậc quyền lực / thực lực / tầm cỡ đối thủ) có được thăng cấp rõ rệt không? Mục tiêu từng giai đoạn có được giải quyết trong 3-8 chương không?`,
-      `2. Tránh kể lể vụn vặt: Có nguy cơ biến các thủ tục hành chính, đối chiếu sổ sách vụn vặt thành diễn biến chính không?`,
-      `3. Cao trào & Sảng điểm: Cách vài chương có mang lại chiến thắng hay tiến triển cụ thể cho nhân vật chính không?`,
-      `4. Logic & Phục bút: Các nút thắt, bí mật có logic và hợp lý không? Động cơ nhân vật có nhất quán không?`,
-      `5. Độ tương thích thể loại: Dàn ý có bám sát điểm hấp dẫn của thể loại tiên hiệp/huyền huyễn không?`,
+      `# KHUNG TIÊU CHÍ THẨM ĐỊNH TOÀN DIỆN (RÀ SOÁT TẤT CẢ 5 TRỤ CỘT NÀY):`,
+      `1. [Cấu trúc hồi & Nhịp điệu]: Mở màn - Thắt nút - Đại cao trào - Thu dọn tàn cuộc. CÓ BỊ TỤT ÁP SAU CAO TRÀO KHÔNG? (Ví dụ: Đã diệt trùm lớn Đấu Tông và Hồn Điện xong, phần sau lại kéo dài lê thê đánh boss phụ cấp thấp làm mất hứng độc giả). Tiết tấu hành quân, dàn trận có bị bôi dài không?`,
+      `2. [Tâm lý & Động cơ nhân vật]: Động cơ của nhân vật chính và các nhân vật chủ chốt (Tiêu Viêm, Vân Sơn, Vân Vận, Mỹ Đỗ Toa...) có nhất quán, logic và giàu cảm xúc không? Có bị OOC (lạc tính cách) hoặc hành xử gượng gạo như công cụ không? Tuyến tình cảm/nữ nhân có tự nhiên không?`,
+      `3. [Logic chiến lực & Tôn chỉ Hardboiled]: Có vi phạm quy tắc vượt cấp không? Các màn đột phá, tăng tiến tu vi có hợp lý và có cái giá tương xứng không? Có biến thành "bàn tay vàng cắn thuốc" tùy tiện không?`,
+      `4. [Sảng điểm & Móc câu cuối chương (Hooks)]: Cứ cách 2-3 chương có tiến triển/chiến thắng cụ thể không? Móc câu cuối mỗi chương có tạo được độ hồi hộp (cliffhanger) buộc độc giả phải đọc tiếp chương sau không?`,
+      `5. [Độ thuần khiết của dàn ý]: Dàn ý có bị nhiễm văn phong "giải trình phòng thủ / cãi cọ với biên tập" (như chèn quá nhiều câu [Khắc phục triệt để lỗi...], [Vá kín logic...]) làm loãng diễn biến truyện thực tế không?`,
       ``,
       `# ĐỊNH DẠNG XUẤT (100% TIẾNG VIỆT, ĐƯA RA KẾT LUẬN TRỰC TIẾP, KHÔNG TÓM TẮT LẠI DÀN Ý) —— MỖI Ý MỘT DÒNG`,
-      `Mỗi ý kiến PHẢI ĐẶT TRÊN MỘT DÒNG ĐỘC LẬP, đầu dòng dùng thẻ phân loại:`,
-      `- [Lỗi nghiêm trọng] Một câu nêu rõ: Vấn đề là gì → Cụ thể sửa thế nào`,
+      `Nếu có lỗi cần sửa, mỗi ý kiến PHẢI ĐẶT TRÊN MỘT DÒNG ĐỘC LẬP, đầu dòng dùng thẻ phân loại:`,
+      `- [Lỗi nghiêm trọng] Chỉ rõ chương cụ thể: Vấn đề là gì → Cách khắc phục triệt để (Không nhận xét chung chung)`,
       `- [Nguy cơ tiềm ẩn] … (Tương tự, viết gọn trên 1 dòng)`,
       `- [Gợi ý] … (Tương tự, viết gọn trên 1 dòng)`,
-      `Chỉ dùng 3 nhãn: [Lỗi nghiêm trọng] / [Nguy cơ tiềm ẩn] / [Gợi ý]. Số lượng từ 3 - 10 điều.`,
-      `Sau toàn bộ các điều trên, xuống dòng kết luận: 【Đánh giá tổng thể】 Có thể viết ngay / Cần sửa lại rồi mới viết —— Một câu nêu rõ thay đổi mấu chốt nhất.`,
+      `Chỉ dùng 3 nhãn: [Lỗi nghiêm trọng] / [Nguy cơ tiềm ẩn] / [Gợi ý].`,
+      `Đánh giá đúng thực chất: Nếu dàn ý còn khuyết điểm, dũng cảm chỉ ra; nếu đã hoàn thiện tốt, không bịa thêm lỗi.`,
+      `Sau toàn bộ các điều trên, xuống dòng kết luận bắt buộc:`,
+      `【Đánh giá tổng thể】 Có thể viết ngay / Cần sửa lại rồi mới viết —— Một câu nêu rõ lý do hoặc điểm mấu chốt cần sửa nhất.`,
     ].join('\n');
   }
+  const hasPrior = Boolean(priorCritique && priorCritique.length > 50 && !priorCritique.includes('自动放行'));
+  const priorSection = hasPrior ? [
+    `# 上一轮审稿意见（对照核实作者是否已真正修订）`,
+    priorCritique,
+    ``,
+    `# 复审原则（客观求实）：`,
+    `- 对照核查上一轮【硬伤】是否真正解决，情节是否自然闭环。`,
+    `- 实事求是：绝不盲目放行夸赞，但也绝不无事生非硬抠字眼。若有深层结构问题（如高潮后严重泄气、人物动机失真等），明确点出章号与改法。`,
+    `- 若确实质量过硬无结构硬伤，判定【总评】可直接开写。`,
+    ``,
+  ] : [
+    `# 目标：一次性全面彻底排查全书五大核心维度`,
+    `按五大维度（节奏弧线/人物动机/战力硬逻辑/爽点节拍/大纲纯度）一次性扫清硬伤，给出彻底改法，拒绝零敲碎打返工。`,
+    ``,
+  ];
+
   return [
-    `你是一名极挑剔的资深网文主编，正在【开写前】审核一本长篇网文的大纲。你的职责是抓出"会让这本书写崩、读者弃书"的结构问题，并给出可执行的修改意见。`,
+    `你是一名资深网文主编，正在【开写前】审核一本长篇网文的大纲。你的职责是把关小说结构、节奏与看点，抓出"会让读者弃书、剧情崩坏"的根本问题，并给出落地改法。`,
     `书名：《${book.title}》；本次审核范围：${scope}。`,
     ``,
+    ...priorSection,
     `# 设定圣经（novel_bible.md）`,
     bible || '（缺失）',
     ``,
     `# 待审大纲`,
     outline,
     ``,
-    `# 审核要求（逐条核查，专挑硬骨头，别说客套话）`,
-    `1. 节奏/格局：每卷主角处境（地点/权力层级/实力/对手量级/格局）是否【可感升级】？有没有把一桩小事拖成几十章的风险？单个阶段目标是否能在 3–8 章兑现？`,
-    `2. 反流水账：是否存在大量"办牌/验册/对账/盘点/走流程"类事务被当成主线事件的苗头？这类内容会让书变成账本，必须点名。`,
-    `3. 爽点节拍：隔几章有没有给读者一次可感的进展或胜利（赢一场/收一人/揭真相/上台阶/打脸）？还是长期只压抑不兑现？`,
-    `4. 逻辑与伏笔：关键伏笔有没有回收章号？事件因果是否成立？有没有明显的人物动机硬伤或设定自相矛盾？`,
-    `5. 题材契合与卖点：大纲是否对得起"一句话卖点"和目标读者要的爽感？有没有跑偏成另一个题材？`,
-    `6. 规模合理性：卷数 × 每卷章数 × 单章字数 与目标总字数是否匹配？按这个大纲，能在规模内把故事讲完、还是会烂尾或注水？`,
+    `# 审核五大核心维度（逐条核查，直击痛点）：`,
+    `1. 节奏与回目：是否存在大高潮之后严重拖沓泄气（如刚灭掉斗宗大Boss，后面又花好几章打小怪）？前戏行军是否注水？`,
+    `2. 人物动机与心性：主角与核心配角（萧炎、云山、云韵、美杜莎等）的行为是否符合心性逻辑？是否存在机械降智、工具人化？情感线是否自然？`,
+    `3. 战力与 Hardboiled 铁律：是否越级违规？突破与战力跃迁是否有扎实代价？`,
+    `4. 爽点与章末钩子：每 2–3 章是否有明确胜利/推进？章末悬念是否扣人心弦？`,
+    `5. 大纲纯度：大纲内是否充斥着针对审稿的自辩词、解释词，干扰了实际故事走向？`,
     ``,
     `# 输出格式（中文，直接给结论，不要复述大纲）——【严格逐条，每条一行】`,
-    `把每一条意见【单独成行】，行首用严重度标签，格式必须是：`,
-    `- [硬伤] 一句话写清：问题是什么 → 具体怎么改（给到卷/章号或具体手法）`,
+    `若有问题，把每一条意见【单独成行】，行首用严重度标签，格式必须是：`,
+    `- [硬伤] 指出具体卷/章：核心问题是什么 → 具体怎么改（不讲空话）`,
     `- [隐患] …（同上，一行写完）`,
     `- [建议] …（同上，一行写完）`,
-    `严重度只用【硬伤】(会写崩，必须改) /【隐患】(有风险，建议改) /【建议】(锦上添花) 三选一。一条意见就一行，不要在条目下再分点、不要空行拆断一条。控制在 3–12 条，先列硬伤。`,
-    `全部条目之后，另起一行给：【总评】可直接开写 / 需修订后开写 —— 一句话说明最关键的那个改动。`,
+    `严重度只用【硬伤】/【隐患】/【建议】三选一。实事求是给出判断。`,
+    `全部条目之后，另起一行给：【总评】可直接开写 / 需修订后开写 —— 一句话说明最核心判定理由。`,
   ].join('\n');
 }
 
@@ -144,8 +180,13 @@ export async function reviewOutline({ book, scope = '立项', cfg, authorModel, 
   const outline = ofiles.map(f => `### ${path.basename(f)}\n` + readSafe(f)).join('\n\n').trim();
   if (!outline) throw new Error('未找到可审的大纲文件（outlines/ 为空？）');
 
+  const reviewsDir = path.join(dir, 'reviews');
+  try { fs.mkdirSync(reviewsDir, { recursive: true }); } catch { }
+  const file = path.join(reviewsDir, `大纲审稿-${safeName(scope)}.md`);
+  const priorCritique = readSafe(file);
+
   // 逐个审稿人尝试：超时/失败/空返回就自动换下一个（治"某个审稿模型无头卡死→审稿门永远过不去"）。
-  const prompt = buildEditorPrompt(book, scope, bible, outline);
+  const prompt = buildEditorPrompt(book, scope, bible, outline, priorCritique);
   const timeout = cfg?.editorReview?.timeoutMs || 180000;
   const candidates = reviewerCandidates(authorModel, cfg);
   let raw = '', editorModel = candidates[0], lastErr = null;
@@ -171,9 +212,6 @@ export async function reviewOutline({ book, scope = '立项', cfg, authorModel, 
       onLog({ level: 'warn', msg: `主编 ${cand} 输出无效（${lastErr.message}）→ 换下一个审稿人` });
     } catch (e) { lastErr = e; onLog({ level: 'warn', msg: `主编 ${cand} 审稿失败（${e.message}）→ 换下一个审稿人` }); }
   }
-  const reviewsDir = path.join(dir, 'reviews');
-  try { fs.mkdirSync(reviewsDir, { recursive: true }); } catch { }
-  const file = path.join(reviewsDir, `大纲审稿-${safeName(scope)}.md`);
   if (!raw) {
     // 所有审稿人都失败/无效 → 【自动放行】：写一份占位审稿让"审稿门"文件存在，作者据已有本卷大纲继续，绝不无限期卡死。
     const note = `本卷未能获得有效的独立主编审稿：所有可用审稿模型均失败或输出无效（最后错误：${lastErr?.message || '未知'}）。\n为避免写作在卷边界无限期卡死，本门【自动放行】——请作者按已有的本卷分章大纲继续写作，写作中自行留意主线／伏笔／人物／节奏的一致性。`;
