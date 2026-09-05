@@ -161,7 +161,9 @@
 
 ## 1. ĐỐI THỦ CẠNH TRANH & TÚC ĐỊCH KIÊU HÙNG — TIÊU VIÊM
 * **Vị thế:** Minh chủ Tiêu Môn, người thừa kế của Dược Lão, kiêu hùng mang dã tâm lớn và thiên mệnh chi tử.
-* **Quan hệ & Phương thức đối đầu:** Từ cạnh tranh ngầm chuyển biến thành tử địch không đội trời chung (Quyển 2). Bất đồng sâu sắc về quyền lực bá chủ Gia Mã; ghen tức vì Mỹ Đỗ Toa toàn tâm gắn bó với Lục Trần; đỉnh điểm oán hận thấu xương khi Dược Lão bị Vụ Hộ Pháp bắt đi mà Lục Trần từ chối liều mạng hy sinh để cứu, chỉ chặt tay phân hồn đoạt bảo. Sau biến cố Ch.223, Tiêu Viêm không còn hành vi bốc đồng nhảy nhót; hắn nuốt hận rút lui triệt để vào bóng tối bế quan tại Già Nam, xây dựng lực lượng Tiêu Môn và chuyển các đợt đối đầu tiếp theo sang dạng tranh đấu mưu lược, đọ sức tài nguyên và điều động thế lực từ xa tại Hắc Giác Vực và Trung Châu.
+* **Vũ khí bản mệnh:** **Huyền Trọng Xích (玄重尺)** — Cự xích đen kịt khổng lồ đúc từ Diễm Hỏa Huyền Thiết thô ráp, cực nặng, áp chế kinh mạch và đấu khí; đòn đánh mang sức nặng vạn cân kết hợp xích pháp. (BẮT BUỘC DÙNG TÊN CHUẨN: **Huyền Trọng Xích**, cự trọng xích, cự xích; TUYỆT ĐỐI CẤM DÙNG: "Huyền Trọng Dĩnh", "Huyền Trọng Thước").
+* **Đấu kỹ & Dị hỏa chủ đạo:** Phần Quyết, Bát Cực Băng, Hấp Chưởng, Xuy Hỏa Chưởng, Diễm Phân Thệ Điệp Xích, Phật Nộ Hỏa Liên; sở hữu Dị Hỏa #19 Thanh Liên Địa Tâm Hỏa, mượn nhờ Dị Hỏa #11 Cốt Linh Lãnh Hỏa từ Dược Lão.
+* **Quan hệ & Phương thức đối đầu:** Từ cạnh tranh ngầm chuyển biến thành tử địch không đội trời chung (Quyển 2). Bất đồng sâu sắc về quyền lực bá chủ Gia Mã; ghen tức vì Mỹ Đỗ Toa toàn tâm gắn bó với Lục Trần; đỉnh điểm oán hận thấu xương khi Dược Lão bị Vụ Hộ Pháp bắt đi mà Lục Trần từ chối liều mạng hy sinh để cứu, chỉ chặt tay phân hồn đoạt bảo. Sau biến cố Ch.225, Tiêu Viêm không còn hành vi bốc đồng nhảy nhót; hắn nuốt hận rút lui triệt để vào bóng tối bế quan tại Già Nam, xây dựng lực lượng Tiêu Môn và chuyển các đợt đối đầu tiếp theo sang dạng tranh đấu mưu lược, đọ sức tài nguyên và điều động thế lực từ xa tại Hắc Giác Vực và Trung Châu.
 
 ## 2. CÁC NHÂN VẬT ĐỒNG MINH THEN CHỐT
 * **Hải Ba Đông (Băng Hoàng):** Đấu Hoàng đỉnh phong, nguyên Trưởng lão Mễ Đặc Nhĩ gia tộc. Trọng thương tử chiến chống Vân Lam Tông, được Lục Trần cứu sống bằng lục phẩm đan dược.
@@ -223,5 +225,39 @@
 | **Quyển 3** (Ch.089 – 137) | 16.5 – 17.3 tuổi | **Đấu Sư 5★ ➔ Đại Đấu Sư 2★** | Điệp Khổng Thủy Áp, Bích Ngọc Giáp, Cửu Mạch Thủy Kỳ | Già Nam Ngoại Viện & Nội Viện, Cường Bảng, đoạt tàn đồ Dị Hỏa, đại loạn Vẫn Lạc Tâm Viêm. |
 | **Quyển 4** (Ch.138 – 194) | 17.3 – 19 tuổi | **Đại Đấu Sư 3★ ➔ Đấu Linh 1★ – 2★** | **Cổ Đạo Hàn Thủy, Ngọc Hải Lưu Ly Kiếm** | Vạn Đảo Nam Hải, khế ước Tử Linh, cứu Tinh Á & Hải Âm, Cổ Trận Thiên Cung, chuyển hóa Kiếm Tiên. |
 | **Quyển 5** (Ch.195 – 207) | 19 tuổi 0 tháng | **Đấu Linh 2★ đỉnh phong** | **Thập Bát Diệp Kiếm Trận, Tru Diệt Kiếm Võng** | Lập Hàn Thủy Cung, di cư 12.000 Xà Nhân, trảm Ưng Lệ, đẩy lui Vụ Hộ Pháp, thần binh giáng lâm cứu Gia Mã. |
-| **Quyển 2 (mới)** (Ch.208 – 230) | 19 tuổi 2 tháng | **Đấu Linh 2★ ➔ Đột phá Đấu Vương 1★** | **Cổ Đạo Hàn Thủy, Thập Bát Diệp Kiếm Trận, Thiên Thủy Kiếm Dực** | Diệt Vân Lam Tông, trảm Vân Sơn, song Đấu Tông ép Vụ Hộ Pháp đốt hồn tàn phế chạy tháo thân; thiết huyết đàm phán thâu tóm thủy mạch Gia Mã; lập Thiên Thương Kiếm Các; Nhã Phi & Mỹ Đỗ Toa quy phục; Tiêu Viêm nuốt hận rút lui bế quan Già Nam; đột phá Đấu Vương 1★, trảm sát Đấu Hoàng Vân Hám chấn nhiếp biên quan; phóng thuyền xuất chinh. |
-| **Quyển 3** (Ch.231 – 270) | 19 tuổi 3 tháng+ | **Đấu Vương 1★ ➔ Đấu Vương 5★** | **Thiên Cung Trận Xu, Thập Bát Diệp Kiếm Trận, Tam Cấp Thủy Long Trận** | Cung chủ Đấu Vương quy vị Hàn Thủy Cung; đại hội đấu giá ngầm Thiên Nhai Thành do Tàn dư Liên minh Hắc Minh tổ chức; đọ sức mưu lược tài chính với Tiêu Môn từ xa; đoạt Thiên Cung Trận Xu; định vị Cửu U Tỏa Hồn Đại Trận của Hồn Điện; xưng bá Hắc Giác Vực. |
+| **Quyển 2 (mới)** (Ch.208 – 232) | 19 tuổi 2 tháng | **Đấu Linh 2★ ➔ Đột phá Đấu Vương 1★** | **Cổ Đạo Hàn Thủy, Thập Bát Diệp Kiếm Trận, Thiên Thủy Kiếm Dực** | Diệt Vân Lam Tông, trảm Vân Sơn, song Đấu Tông ép Vụ Hộ Pháp đốt hồn tàn phế chạy tháo thân; thiết huyết đàm phán thâu tóm thủy mạch Gia Mã; lập Thiên Thương Kiếm Các; Nhã Phi & Mỹ Đỗ Toa quy phục; Tiêu Viêm nuốt hận rút lui bế quan Già Nam; đột phá Đấu Vương 1★, trảm sát Đấu Hoàng Vân Hám chấn nhiếp biên quan; phóng thuyền xuất chinh. |
+| **Quyển 3** (Ch.233 – 272+) | 19 tuổi 3 tháng+ | **Đấu Vương 1★ ➔ Đấu Vương 5★** | **Thiên Cung Trận Xu, Thập Bát Diệp Kiếm Trận, Tam Cấp Thủy Long Trận** | Cung chủ Đấu Vương quy vị Hàn Thủy Cung; đại hội đấu giá ngầm Thiên Nhai Thành do Tàn dư Liên minh Hắc Minh tổ chức; đọ sức mưu lược tài chính với Tiêu Môn từ xa; đoạt Thiên Cung Trận Xu; định vị Cửu U Tỏa Hồn Đại Trận của Hồn Điện; xưng bá Hắc Giác Vực. |
+
+---
+
+# PHẦN XI: BẢNG TRA CỨU THUẬT NGỮ & PHÁP BẢO NGUYÊN TÁC CHUẨN MỰC
+
+> **QUY ĐỊNH BẮT BUỘC ĐỐI VỚI AI VIẾT TRUYỆN & RÀ SOÁT:**
+> Mọi danh từ riêng, thuật ngữ võ học, pháp bảo, vũ khí, đấu kỹ, dị hỏa và địa danh trong tác phẩm đều phải tuân thủ chuẩn mực Hán-Việt chính thống của nguyên tác *Đấu Phá Thương Khung*. Tuyệt đối không tự ý bịa đặt, biến âm hoặc dùng từ ngữ lai tạp.
+
+## 1. VŨ KHÍ & PHÁP BẢO KINH ĐIỂN
+| Tên Hán Việt Chuẩn | Chữ Hán | Chủ nhân | Từ sai / Biến âm NGHIÊM CẤM dùng | Ghi chú thiết lập |
+| :--- | :--- | :--- | :--- | :--- |
+| **Huyền Trọng Xích** | 玄重尺 | Tiêu Viêm | ❌ Huyền Trọng Dĩnh, ❌ Huyền Trọng Thước | Cự xích đen khổng lồ đúc từ Diễm Hỏa Huyền Thiết, áp chế đấu khí. Được gọi tắt: *cự trọng xích, cự xích*. |
+| **Ngọc Hải Lưu Ly Kiếm** | 玉海琉璃剑 | Lục Trần | ❌ Ngọc Hải Kiếm | 9 thanh phi kiếm lam ngọc đúc từ Hải Tâm Thạch & Thủy Ngọc thuộc Thập Bát Diệp Kiếm Trận. |
+| **Ngưng Băng Kiếm** | 凝冰剑 | Lục Trần | ❌ Hàn Băng Kiếm | 9 thanh phi kiếm băng phách thuộc Thập Bát Diệp Kiếm Trận. |
+| **Thủy Vân Thuyền** | 水云船 | Hàn Thủy Cung | ❌ Thủy Vân Hạm | Cự hạm 50 trượng trang bị 4 trận văn Phong Lôi, vận hành bằng ma hạch ngũ giai. |
+| **Bích Ngọc Giáp** | 碧玉甲 | Lục Trần | ❌ Lam Ngọc Giáp | Đấu khí khải giáp của Lục Trần thời kỳ Đại Đấu Sư. |
+| **Bát Cực Băng** | 八极崩 | Tiêu Viêm | ❌ Bát Cực Bộc, ❌ Bát Cực Phá | Huyền giai cao cấp cận chiến đấu kỹ (8 tầng ám kình). |
+| **Diễm Phân Thệ Điệp Xích** | 焰分噬浪尺 | Tiêu Viêm | ❌ Diễm Phân Phệ Lãng Xích | Địa giai đê cấp xích pháp đấu kỹ do Dược Lão truyền thụ. |
+| **Phật Nộ Hỏa Liên** | 佛怒火莲 | Tiêu Viêm | ❌ Phật Nộ Hỏa Trận | Đấu kỹ tự sáng tạo dung hợp nhiều loại hỏa diễm/dị hỏa. |
+
+## 2. BẢNG TRA CỨU DỊ HỎA NGUYÊN TÁC
+- #03: **Tịnh Liên Yêu Hỏa** (净莲妖火) — Lục Trần giữ mảnh tàn đồ số 3.
+- #11: **Cốt Linh Lãnh Hỏa** (骨灵冷火) — Dược Lão sở hữu (cho Tiêu Viêm mượn dùng).
+- #13: **Quy Linh Địa Hỏa** (龟灵地火) — Lục Trần đoạt được, đúc thành Bích Hải Quy Linh Đàn tặng Hải Âm.
+- #14: **Vẫn Lạc Tâm Viêm** (陨落心炎) — Thiên Phần Luyện Khí Tháp, Già Nam Học Viện.
+- #18: **Phong Lôi Nộ Liễm** (风雷怒焱) — Tinh Á sở hữu.
+- #19: **Thanh Liên Địa Tâm Hỏa** (青莲地心火) — Tiêu Viêm đã luyện hóa tại Sa mạc Tháp Qua Nhĩ.
+
+## 3. THIẾT LẬP THẾ LỰC & DANH XƯNG GIA MÃ
+- **Hoàng thất Gia Mã:** Gia Hình Thiên (Đấu Hoàng đỉnh phong), Đại công chúa Yêu Dạ, Tiểu công chúa Yêu Nguyệt.
+- **Vân Lam Tông:** Lão tông chủ Vân Sơn (Đấu Tông), Tông chủ Vân Vận (Đấu Hoàng), Thiếu tông chủ Nạp Lan Yên Nhiên. Đại trưởng lão Vân Đốc, Trưởng lão Vân Sát (đã bị trảm ở Ch.208).
+- **Mễ Đặc Nhĩ gia tộc:** Băng Hoàng Hải Ba Đông, Tộc trưởng Đằng Sơn, Tộc trưởng tạm quyền Nhã Phi.
+- **Tiêu gia / Tiêu Môn:** Phụ thân Tiêu Chiến (bị Hồn Điện bắt), Tiêu Đỉnh, Tiêu Lệ, Tiêu Viêm.
+

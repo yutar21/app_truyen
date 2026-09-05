@@ -2,15 +2,15 @@
 ## TIỂU THUYẾT: 《ĐẤU PHÁ THƯƠNG KHUNG — LỤC TRẦN》
 
 > **Thống kê tổng quan:**  
-> - **Tổng số chương đã hoàn thành:** **208 chương** (Chương 0001 – Chương 0208)  
-> - **Tổng dung lượng văn bản:** **~407,877 chữ** (khoảng 2.873.000 ký tự)  
+> - **Tổng số chương đã hoàn thành:** **222 chương** (Chương 0001 – Chương 0222)  
+> - **Tổng dung lượng văn bản:** **~477.021 chữ** (khoảng 3.339.000 ký tự)  
 > - **Phân bố Quyển hiện tại:**  
 >   * 🔹 **Quyển 1: Hàn Vi Sơ Khởi · Ô Thản Phong Lôi** (Chương 0001 – Chương 0051): 51 chương  
 >   * 🔹 **Quyển 2: Hoàng Đô Đoạt Khôi · Sa Mạc Kỳ Duyên** (Chương 0052 – Chương 0088): 37 chương  
 >   * 🔹 **Quyển 3: Già Nam Phong Lôi · Tâm Hỏa Thôn Thiên** (Chương 0089 – Chương 0137): 49 chương  
 >   * 🔹 **Quyển 4: U Uyên Nam Hải · Cổ Trận Thiên Cung** (Chương 0138 – Chương 0194): 57 chương  
 >   * 🔹 **Quyển 5: Hàn Thủy Bá Nghiệp · Kiếm Chỉ Gia Mã** (Chương 0195 – Chương 0207): 13 chương  
->   * 🔹 **Quyển 2 (mới): Kiếm Phúc Vân Lam** (Chương 0208 – 0230): 23 chương (đã hoàn thành 1 chương)  
+>   * 🔹 **Quyển 2 (mới): Kiếm Phúc Vân Lam** (Chương 0208 – 0230): 23 chương (đã hoàn thành 15 chương)  
 > - **Độ khớp nối thực tế với thư mục chapters/:** **100.0%**
 
 ---
@@ -226,4 +226,18 @@
 | **205** | CHƯƠNG 205 — HẮC VỤ TÁC HỒN · SONG TÔNG TRẤN SÁT | Quyển 5: Hàn Thủy Bá Nghiệp | 2.579 | Đã hoàn thành | chapters/卷01/205Hắc Vụ Tác Hồn, Song Tông Trấn Sát.txt |
 | **206** | CHƯƠNG 206 — BINH XUẤT HẮC GIÁC · KIẾM CHỈ GIA MÃ | Quyển 5: Hàn Thủy Bá Nghiệp | 4.914 | Đã hoàn thành | chapters/卷01/206Binh Xuất Hắc Giác, Kiếm Chỉ Gia Mã.txt |
 | **207** | CHƯƠNG 207 — ĐẾ ĐÔ LÂM NGUY · THẦN BINH THIÊN GIÁNG | Quyển 5: Hàn Thủy Bá Nghiệp | 6.560 | Đã hoàn thành | chapters/卷01/207Đế Đô Lâm Nguy, Thần Binh Thiên Giáng.txt |
-| **208** | CHƯƠNG 208 — KIẾM TRẬN SƠ ĐỀ · TRẢM SÁT NHỊ HOÀNG | Quyển 2: Kiếm Phúc Vân Lam | 6.687 | Đã hoàn thành | chapters/卷02/208Kiếm Trận Sơ Đề, Trảm Sát Nhị Hoàng.txt |
+| **208** | CHƯƠNG 208 — KIẾM TRẬN SƠ ĐỀ · TRẢM SÁT NHỊ HOÀNG | Quyển 2: Kiếm Phúc Vân Lam | 6.673 | Đã hoàn thành | chapters/卷02/208Kiếm Trận Sơ Đề, Trảm Sát Nhị Hoàng.txt |
+| **209** | CHƯƠNG 209 — NGƯƠI VỀ MUỘN MỘT BƯỚC RỒI | Quyển 2: Kiếm Phúc Vân Lam | 3.237 | Đã hoàn thành | chapters/卷02/209Ngươi Về Muộn Một Bước Rồi.txt |
+| **210** | CHƯƠNG 210 — SAU LƯNG NÀNG LÀ MƯỜI TÁM THANH PHI KIẾM | Quyển 2: Kiếm Phúc Vân Lam | 3.295 | Đã hoàn thành | chapters/卷02/210Sau Lưng Nàng Là Mười Tám Thanh Phi Kiếm.txt |
+| **211** | CHƯƠNG 211 — AI NÓI ĐÂY LÀ TIỆC CHIA PHẦN | Quyển 2: Kiếm Phúc Vân Lam | 3.140 | Đã hoàn thành | chapters/卷02/211Ai Nói Đây Là Tiệc Chia Phần.txt |
+| **212** | CHƯƠNG 212 — TIỀN TIÊU BẠT TRẠI · BINH ÁP LẠC VÂN | Quyển 2: Kiếm Phúc Vân Lam | 4.338 | Đã hoàn thành | chapters/卷02/212Tiền Tiêu Bạt Trại, Binh Áp Lạc Vân.txt |
+| **213** | CHƯƠNG 213 — HẠP CỐC PHÁ TRẬN · LÔI ĐÌNH KHAI ĐẠO | Quyển 2: Kiếm Phúc Vân Lam | 7.477 | Đã hoàn thành | chapters/卷02/213Hạp Cốc Phá Trận, Lôi Đình Khai Đạo.txt |
+| **214** | CHƯƠNG 214 — SƯƠNG ẨN THÁM SƠN · BỐ TRẬN TỎA NHÃN | Quyển 2: Kiếm Phúc Vân Lam | 4.924 | Đã hoàn thành | chapters/卷02/214Sương Ẩn Thám Sơn, Bố Trận Tỏa Nhãn.txt |
+| **215** | CHƯƠNG 215 — TINH KỲ ÁP CẢNH · TỔNG LỰC PHÁ TRẬN | Quyển 2: Kiếm Phúc Vân Lam | 6.713 | Đã hoàn thành | chapters/卷02/215Tinh Kỳ Áp Cảnh, Tổng Lực Phá Trận.txt |
+| **216** | CHƯƠNG 216 — PHÁ VÂN ĐOẠN LƯU · TRẢM TOÁI THIÊN NIÊN | Quyển 2: Kiếm Phúc Vân Lam | 5.404 | Đã hoàn thành | chapters/卷02/216Phá Vân Đoạn Lưu, Trảm Toái Thiên Niên.txt |
+| **217** | CHƯƠNG 217 — TÔNG SƯ CHI DỊCH · SONG TÔNG XÉ TRỜI | Quyển 2: Kiếm Phúc Vân Lam | 5.848 | Đã hoàn thành | chapters/卷02/217Tông Sư Chi Dịch, Song Tông Xé Trời.txt |
+| **218** | CHƯƠNG 218 — KIẾM VÃN THIÊN KHUYNH · TRẢM ĐỨT HUYẾT ẤN | Quyển 2: Kiếm Phúc Vân Lam | 4.770 | Đã hoàn thành | chapters/卷02/218Kiếm Vãn Thiên Khuynh, Trảm Đứt Huyết Ấn.txt |
+| **219** | CHƯƠNG 219 — SƯƠNG PHONG HƯ KHÔNG · BĂNG NGHỊCH ĐẤU TÔNG | Quyển 2: Kiếm Phúc Vân Lam | 5.790 | Đã hoàn thành | chapters/卷02/219Sương Phong Hư Không, Băng Nghịch Đấu Tông.txt |
+| **220** | CHƯƠNG 220 — TRẢM DIỆT PHÀM THÂN · HẮC VỤ TÁC QUÁI | Quyển 2: Kiếm Phúc Vân Lam | 4.168 | Đã hoàn thành | chapters/卷02/220Trảm Diệt Phàm Thân, Hắc Vụ Tác Quái.txt |
+| **221** | CHƯƠNG 221 — VỤ HỘ PHÁP HIỆN THÂN · HẮC TỎA ĐOẠT HỒN | Quyển 2: Kiếm Phúc Vân Lam | 5.972 | Đã hoàn thành | chapters/卷02/221Vụ Hộ Pháp Hiện Thân, Hắc Tỏa Đoạt Hồn.txt |
+| **222** | CHƯƠNG 222 — TỎA HỒN KINH BIẾN · DƯỢC LÃO NGUY NAN | Quyển 2: Kiếm Phúc Vân Lam | 4.082 | Đã hoàn thành | chapters/卷02/222Tỏa Hồn Kinh Biến, Dược Lão Nguy Nan.txt |
