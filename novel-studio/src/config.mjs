@@ -189,11 +189,20 @@ export function loadConfig() {
   ensureDirs();
   let stored = {};
   if (fs.existsSync(CONFIG_FILE)) {
-    try { stored = JSON.parse(fs.readFileSync(CONFIG_FILE, 'utf8')); } catch { stored = {}; }
+    try {
+      const raw = fs.readFileSync(CONFIG_FILE, 'utf8').replace(/^\uFEFF/, '');
+      stored = JSON.parse(raw);
+    } catch { stored = {}; }
   }
   const cfg = deepMerge(DEFAULTS, stored);
+  // Nếu thư mục workspace cũ không tồn tại trên máy này nhưng DEFAULT_WORKSPACE tồn tại → tự động cập nhật
+  if ((!cfg.workspace || !fs.existsSync(cfg.workspace)) && fs.existsSync(DEFAULT_WORKSPACE)) {
+    cfg.workspace = DEFAULT_WORKSPACE;
+  }
   // 确保书库目录存在
-  fs.mkdirSync(cfg.workspace, { recursive: true });
+  if (cfg.workspace) {
+    try { fs.mkdirSync(cfg.workspace, { recursive: true }); } catch { }
+  }
   return cfg;
 }
 

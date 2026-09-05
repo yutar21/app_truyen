@@ -1,12 +1,45 @@
 // 书目注册表：book <-> profile <-> 项目目录
 import fs from 'node:fs';
-import { BOOKS_FILE } from './paths.mjs';
+import path from 'node:path';
+import { BOOKS_FILE, APP_DIR, DEFAULT_WORKSPACE } from './paths.mjs';
 import { ensureDirs } from './config.mjs';
 
 export function loadBooks() {
   ensureDirs();
   if (!fs.existsSync(BOOKS_FILE)) return [];
-  try { return JSON.parse(fs.readFileSync(BOOKS_FILE, 'utf8')); } catch { return []; }
+  let books = [];
+  try {
+    const raw = fs.readFileSync(BOOKS_FILE, 'utf8').replace(/^\uFEFF/, '');
+    books = JSON.parse(raw);
+  } catch { return []; }
+
+  // Tự phục hồi đường dẫn thư mục sách nếu sách bị chuyển máy hoặc đổi vị trí thư mục
+  let healed = false;
+  for (const b of books) {
+    if (b.dir && !fs.existsSync(b.dir)) {
+      const baseName = path.basename(b.dir);
+      const candidates = [
+        path.join(DEFAULT_WORKSPACE, b.slug),
+        path.join(DEFAULT_WORKSPACE, baseName),
+        path.join(path.dirname(APP_DIR), 'novels', b.slug),
+        path.join(path.dirname(APP_DIR), 'novels', baseName),
+        path.join(path.dirname(APP_DIR), 'books', b.slug),
+        path.join(path.dirname(APP_DIR), 'books', baseName),
+      ];
+      for (const cand of candidates) {
+        if (fs.existsSync(cand) && fs.statSync(cand).isDirectory()) {
+          b.dir = cand;
+          healed = true;
+          break;
+        }
+      }
+    }
+  }
+  if (healed) {
+    try { fs.writeFileSync(BOOKS_FILE, JSON.stringify(books, null, 2), 'utf8'); } catch { }
+  }
+
+  return books;
 }
 
 export function saveBooks(books) {
@@ -16,7 +49,14 @@ export function saveBooks(books) {
 }
 
 export function getBook(id) {
-  return loadBooks().find(b => b.id === id || b.slug === id || b.title === id);
+  const norm = String(id || '').toLowerCase();
+  return loadBooks().find(b =>
+    b.id === id ||
+    b.slug === id ||
+    b.title === id ||
+    (b.dir && path.basename(b.dir).toLowerCase() === norm) ||
+    (b.slug && b.slug.toLowerCase() === norm)
+  );
 }
 
 export function upsertBook(book) {

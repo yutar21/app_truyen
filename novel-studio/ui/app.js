@@ -1382,24 +1382,58 @@ async function openOutline() {
   $('#olErr').textContent = ''; $('#olResult').classList.add('hidden');
   $('#olCritique').textContent = ''; $('#olMeta').textContent = '';
   const b = STATE.books.find(x => x.slug === CUR.slug) || CUR;
-  const st = b.stats || {};
-  let vols = [...(st.volumes || [])];
+  let st = b.stats || {};
+  let options = [{ value: '立项', label: 'Khởi tạo / Toàn thư (novel_bible + tất cả dàn ý)' }];
+
   try {
     const t = await api('/api/book/files?book=' + encodeURIComponent(CUR.slug));
+    if (t && t.progress && t.progress.chapters != null) {
+      st = { ...st, chapters: t.progress.chapters };
+    }
     if (t && t.outlines && t.outlines.length) {
+      const addedValues = new Set(['立项']);
       for (const o of t.outlines) {
-        const m = (o.name || o.rel || '').match(/^(?:卷|Quyen_|Quyển_)?\s*0*(\d+)/i);
+        const rawName = (o.name || '').replace(/\.md$/i, '');
+        if (/STORY_ARCS/i.test(rawName)) {
+          options.push({ value: rawName, label: 'Đại cương cốt truyện toàn thư (STORY_ARCS.md)' });
+          addedValues.add(rawName);
+          continue;
+        }
+        const m = rawName.match(/^(?:卷|Quyen_|Quyển_|Quyển\s*)?\s*0*(\d+)(?:[_\-\s]*(.*))?$/i);
         if (m) {
-          const vTag = '卷' + m[1].padStart(2, '0');
-          if (!vols.includes(vTag)) vols.push(vTag);
+          const num = parseInt(m[1], 10);
+          const pad = String(num).padStart(2, '0');
+          const vTag = '卷' + pad;
+          let subTitle = (m[2] || '').replace(/_/g, ' ').trim();
+          let label = `Dàn ý Quyển ${pad}`;
+          if (subTitle && !/^(dan|y|phan|quyen|dai|cuong)/i.test(subTitle)) {
+            label += ` (${subTitle})`;
+          }
+          if (!addedValues.has(vTag)) {
+            options.push({ value: vTag, label });
+            addedValues.add(vTag);
+          }
+        } else {
+          if (!addedValues.has(rawName)) {
+            options.push({ value: rawName, label: `Dàn ý: ${rawName}` });
+            addedValues.add(rawName);
+          }
         }
       }
-      vols.sort();
     }
   } catch { }
-  $('#olBookInfo').textContent = `(Tổng cộng ${st.chapters || 0} chương` + (vols.length ? ` · ${vols.length} quyển` : '') + ')';
-  $('#olScope').innerHTML = ['<option value="立项">Khởi tạo / Dàn ý toàn thư</option>']
-    .concat(vols.map(v => `<option value="${esc(v)}">Dàn ý ${esc(v)}</option>`)).join('');
+
+  if (options.length === 1 && st.volumes && st.volumes.length) {
+    for (const v of st.volumes) {
+      const numMatch = String(v).match(/\d+/);
+      const label = numMatch ? `Dàn ý Quyển ${numMatch[0].padStart(2, '0')}` : `Dàn ý ${v}`;
+      options.push({ value: v, label });
+    }
+  }
+
+  const volCount = Math.max(options.filter(o => o.value !== '立项' && !/STORY_ARCS/i.test(o.value)).length, (st.volumes || []).length);
+  $('#olBookInfo').textContent = `(Tổng cộng ${st.chapters || 0} chương` + (volCount ? ` · ${volCount} quyển` : '') + ')';
+  $('#olScope').innerHTML = options.map(o => `<option value="${esc(o.value)}">${esc(o.label)}</option>`).join('');
   $('#olStart').disabled = false; $('#olStart').textContent = 'Bắt Đầu Thẩm Định ▶';
   $('#outlineModal').classList.remove('hidden');
 }

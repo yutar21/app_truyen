@@ -8,6 +8,7 @@ import { getSession, removeSession } from './sessions.mjs';
 import { getStyle } from './styles.mjs';
 import { resolveRomance, DEFAULT_ROMANCE } from './romance.mjs';
 import { loadConfig } from './config.mjs';
+import { APP_DIR, DEFAULT_WORKSPACE } from './paths.mjs';
 
 // 删除一本书：停会话、删 profile、移出书架；可选连磁盘文件夹一起删（危险）
 export function deleteBook(slugOrId, { deleteFiles = false } = {}) {
@@ -564,7 +565,7 @@ export function bookStats(book) {
     try {
       const odir = path.join(book.dir, 'outlines');
       for (const f of fs.readdirSync(odir)) {
-        const m = f.match(/^(?:卷|Quyen_|Quyển_)?\s*0*(\d+)/i);
+        const m = f.match(/^(?:卷|Quyen_|Quyển_|Quyển\s*)?\s*0*(\d+)/i);
         if (m) vSet.add('卷' + m[1].padStart(2, '0'));
       }
     } catch {}
@@ -582,8 +583,13 @@ export function autoDiscoverWorkspaceBooks() {
     const cfg = loadConfig();
     const wsDirs = new Set();
     if (cfg.workspace) wsDirs.add(path.resolve(cfg.workspace));
+    if (DEFAULT_WORKSPACE) wsDirs.add(path.resolve(DEFAULT_WORKSPACE));
     const parentNovels = path.resolve(path.dirname(cfg.workspace || ''), 'novels');
     if (fs.existsSync(parentNovels)) wsDirs.add(parentNovels);
+    const devNovels = path.join(path.dirname(APP_DIR), 'novels');
+    if (fs.existsSync(devNovels)) wsDirs.add(path.resolve(devNovels));
+    const devBooks = path.join(path.dirname(APP_DIR), 'books');
+    if (fs.existsSync(devBooks)) wsDirs.add(path.resolve(devBooks));
 
     for (const ws of wsDirs) {
       if (!fs.existsSync(ws)) continue;
@@ -593,7 +599,19 @@ export function autoDiscoverWorkspaceBooks() {
         if (!ent.isDirectory()) continue;
         const fullDir = path.join(ws, ent.name);
         const normDir = path.resolve(fullDir).toLowerCase();
-        if (currentBooks.some(b => b.dir && path.resolve(b.dir).toLowerCase() === normDir)) continue;
+        const existing = currentBooks.find(b =>
+          (b.dir && path.resolve(b.dir).toLowerCase() === normDir) ||
+          b.slug === ent.name ||
+          (b.dir && path.basename(b.dir).toLowerCase() === ent.name.toLowerCase())
+        );
+        if (existing) {
+          // Nếu sách đã đăng ký nhưng dir cũ trỏ sai hoặc không tồn tại -> cập nhật sang fullDir
+          if (!existing.dir || !fs.existsSync(existing.dir) || path.resolve(existing.dir).toLowerCase() !== normDir) {
+            existing.dir = fullDir;
+            upsertBook(existing);
+          }
+          continue;
+        }
         const hasBible = fs.existsSync(path.join(fullDir, 'novel_bible.md'));
         const hasChapters = fs.existsSync(path.join(fullDir, 'chapters'));
         const hasStudio = fs.existsSync(path.join(fullDir, '.studio'));

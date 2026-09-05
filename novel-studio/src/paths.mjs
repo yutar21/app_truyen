@@ -64,3 +64,32 @@ const defaultDevWorkspace = fs.existsSync(path.join(path.dirname(APP_DIR), 'nove
 export const DEFAULT_WORKSPACE = PACKAGED
   ? path.join(HOME, 'NovelStudio', 'books')
   : defaultDevWorkspace;
+
+// Tự động tìm Git nếu chưa có trong PATH (hỗ trợ GitHub Desktop, Git for Windows)
+if (IS_WIN) {
+  try {
+    const p = process.env.PATH || '';
+    const hasGit = p.split(';').some(dir => {
+      try { return fs.existsSync(path.join(dir, 'git.exe')); } catch { return false; }
+    });
+    if (!hasGit) {
+      const candidates = [
+        'C:\\Program Files\\Git\\cmd',
+        path.join(HOME, 'AppData', 'Local', 'Programs', 'Git', 'cmd'),
+      ];
+      const ghBase = path.join(HOME, 'AppData', 'Local', 'GitHubDesktop');
+      if (fs.existsSync(ghBase)) {
+        try {
+          const appDirs = fs.readdirSync(ghBase).filter(d => d.startsWith('app-')).sort().reverse();
+          for (const d of appDirs) candidates.push(path.join(ghBase, d, 'resources', 'app', 'git', 'cmd'));
+        } catch { }
+      }
+      for (const c of candidates) {
+        if (fs.existsSync(path.join(c, 'git.exe'))) {
+          process.env.PATH = c + ';' + process.env.PATH;
+          break;
+        }
+      }
+    }
+  } catch { }
+}

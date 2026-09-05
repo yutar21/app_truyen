@@ -63,16 +63,23 @@ function runModelOnceAsync(model, prompt, cfg, timeoutMs = 180000) {
   });
 }
 
-// 找出该 scope 要审的大纲文件：立项/全书=全部；卷NN=该卷的分章大纲。
+// 找出该 scope 要审的大纲文件：立项/全书=全部；卷NN/Quyển NN=该卷的分章大纲；或精确指定的文件。
 function outlineFilesFor(dir, scope) {
   const odir = path.join(dir, 'outlines');
   let files = [];
   try { files = fs.readdirSync(odir).filter(f => /\.md$/i.test(f)); } catch { }
-  if (/立项|全书|all/i.test(scope)) return files.map(f => path.join(odir, f));
-  const m = String(scope).match(/卷?\s*0*(\d+)/);
+  if (!files.length) return [];
+  if (/立项|全书|all|toàn thư/i.test(scope)) return files.map(f => path.join(odir, f));
+  
+  // 1. Khớp chính xác tên file (ví dụ STORY_ARCS, 卷01_Gia_Ma_Phong_Van)
+  const exact = files.find(f => f.toLowerCase() === String(scope).toLowerCase() || f.replace(/\.md$/i, '').toLowerCase() === String(scope).toLowerCase());
+  if (exact) return [path.join(odir, exact)];
+
+  // 2. Khớp theo số thứ tự quyển (卷01 / Quyển 01 / Quyen_01...)
+  const m = String(scope).match(/(?:卷|Quyen_|Quyển_|Quyển\s*)?\s*0*(\d+)/i);
   if (m) {
     const n = m[1];
-    const hit = files.filter(f => new RegExp('卷0*' + n + '(?!\\d)').test(f));
+    const hit = files.filter(f => new RegExp('(?:卷|Quyen_|Quyển_|Quyển\\s*)0*' + n + '(?!\\d)', 'i').test(f));
     if (hit.length) return hit.map(f => path.join(odir, f));
   }
   return files.map(f => path.join(odir, f));  // 兜底：审全部
