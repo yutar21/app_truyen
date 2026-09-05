@@ -2,44 +2,43 @@
 
 ## 📌 当前态快照
 
-- 进度：已写到第 222 章
+- 进度：已写到第 231 章
 
 ### 人物现状
-- **Lục Trần (19t, Cung chủ Hàn Thủy Cung, Đấu Linh 2★ đỉnh):** Ngự Thập Bát Diệp Kiếm Trận cùng Cổ Đạo Hàn Thủy che chở chiến trận; chỉ huy song Đấu Tông đánh chặn Vụ Hộ Pháp; cất giữ nạp giới và ngọc bội Tông chủ Vân Sơn.
-- **Mỹ Đỗ Toa (Nữ Vương Xà Nhân Tộc / Thái Thượng Trưởng Lão, Đấu Tông 1★):** Tập kích sườn Vụ Hộ Pháp bằng Thất Thải Đấu Khí, bị Hồn Vực hãm trệ không gian làm chậm một nhịp thở.
-- **Tử Linh (Cung Chủ Phu Nhân, Đấu Tông 1★):** Phóng 18 xích linh hồn phong tỏa đường lui của Vụ Hộ Pháp, bị Hồn Vực ghìm giữ làm chậm một nhịp phá vây.
-- **Tiêu Viêm (Minh chủ Tiêu Môn, Đấu Vương):** Gãy 3 xương sườn, kiệt sức thổ huyết gục trên quảng trường sau khi Dược Lão bị bắt.
-- **Dược Lão (Dược Tôn Giả, Thiên giai linh hồn lực):** Hồn lực cạn kiệt, hồn thể rạn nứt, bị 9 sợi Tỏa Hồn Xích khóa chặt tứ chi lơ lửng giữa trời.
-- **Vụ Hộ Pháp (Hồn Điện, Đấu Tông trung kỳ):** Cắn nuốt oán hồn Vân Sơn, dựng Hồn Vực thiêu đốt oán linh; giáng Bách Hồn Thiên Sát Tử Lao, dùng 9 xích khóa chặt Dược Lão.
-- **Vân Sơn (Cựu Tông chủ Vân Lam Tông - ĐÃ CHẾT):** Phàm thân đông cứng trên quảng trường; oán hồn bị Vụ Hộ Pháp cắn nuốt.
-- **Vân Vận (Đấu Hoàng 3★) & Nạp Lan Yên Nhiên (Đại Đấu Sư):** Niêm phong trong thạch thất cấm địa bằng Thủy Phách Phong Ma Trận, an toàn chờ xong trận.
-- **Gia Hình Thiên, Pháp Mã, Hải Ba Đông, Nạp Lan Kiệt:** Mười vạn liên quân bị Hồn Khiêu Chấn Đãng rung chuyển linh hồn; Gia Hình Thiên thu hẹp quân né tránh Hồn Điện.
-- **Tinh Á (Đấu Linh 3★), Hải Âm (Đại Đấu Sư 8★), Tiêu Đỉnh, Tiêu Lệ:** Hộ vệ trận địa trước bão hắc vụ và Tỏa Hồn Xích.
-- **Nhã Phi (Đấu Sư trung kỳ):** An toàn tại Mễ Đặc Nhĩ trang viên Gia Mã Đế Đô.
-- **Mặc Ba Tư, Nguyệt Mị, Tiểu Y Tiên, Tô Thiên, Tử Nghiên, Lục Thiết:** Hậu phương an toàn (Thủy Ngạc / Già Nam / Ô Thản).
-- **Đã chết / Bị phế:** Vân Sơn (Ch.220); Vân Lôi, Vân Túc, Vân Tiêu, Vân Giác (Ch.216); Vân Phong, Vân Tê (Ch.213); Vân Đốc, Vân Sát (Ch.208).
+- **Lục Trần (19t, Các chủ Kiếm Các, Đấu Vương 1★):** Đột phá Đấu Vương 1★, ngưng Kiếm Tinh & Kiếm Dực; giao kinh tài cho Nhã Phi; bật trận Thủy Ngự; ngự Thủy Vân Thuyền đến Trấn Ma Quan phá 12 trận nhãn Hủ Cốt trận; kinh mạch rạn nứt đang điều dưỡng.
+- **Mỹ Đỗ Toa (Xà Tộc Nữ Vương, Đấu Tông 1★):** Phong tỏa Trấn Ma Quan, xà lôi diệt 1.000 thổ phỉ; trên Thủy Vân Thuyền truyền khí giúp Lục Trần ổn định kinh mạch.
+- **Tử Linh (Cung Chủ Phu Nhân, Đấu Tông 1★):** Đông cứng không gian Trấn Ma Quan, cùng Mỹ Đỗ Toa khóa trận cho Lục Trần thử kiếm.
+- **Tiêu Viêm (Minh chủ Tiêu Môn, Đấu Vương 1★):** Rút Tiêu Môn về Già Nam bế quan Luyện Khí Tháp, chuẩn bị đánh Đoạn Hồn Cốc cứu cha và Dược Lão.
+- **Dược Lão (Dược Tôn Giả, Thiên giai linh hồn):** Bị giam tại Cửu U Tỏa Hồn Trận (Đoạn Hồn Cốc, Hắc Giác Vực).
+- **Vụ Hộ Pháp (Hồn Điện, Đấu Tông trung kỳ):** Cụt tay, trọng thương, áp giải Dược Lão về Đoạn Hồn Cốc.
+- **Vân Vận (Đấu Vương đỉnh) & Yên Nhiên (Đại Đấu Sư):** Lập thệ rời Gia Mã vĩnh viễn.
+- **Nhã Phi (Đấu Sư trung kỳ):** Nhận trận bàn Thủy Ngự, Kim Tinh Ấn, ngọc giản phân hồn, Bích Hải đan & Hộ Mệnh Kiếm Phù; làm Tổng Quản Sự Kiếm Các Gia Mã.
+- **Gia Hình Thiên, Pháp Mã, Hải Ba Đông:** Quy phục Kiếm Các; Pháp Mã truyền tin Đoạn Hồn Cốc cho Tiêu Môn.
+- **Tiêu Đỉnh, Tiêu Lệ:** Hộ tống Tiêu Viêm về Già Nam bế quan.
+- **Mặc Ba Tư, Nguyệt Mị, Xà tộc:** An cư Thủy Ngạc và 12 ốc đảo Tháp Qua Nhĩ.
+- **Vân Hám (Đấu Hoàng 1★):** Tàn dư Vân Lam lập Hủ Cốt trận; bị Lục Trần phá trận trúng phản phệ tàn phế, đang đốt đấu hồn liều chết vung kiếm lao vào Lục Trần.
+- **Đã chết / Bị phế:** Vân Sơn, các trưởng lão Vân Lam, 1.000 thổ phỉ biên ải.
 
 ### 未回收伏笔 / 待查
-- **Dược Lão:** Bị 9 sợi Tỏa Hồn Xích khóa chặt lơ lửng giữa trời (Ch.222; chuẩn bị Ch.223 Tiêu Viêm đặt cược đàm phán cùng Lục Trần).
-- **Thạch thất Vân Vận & Yên Nhiên:** Niêm phong bằng Thủy Phách Phong Ma Trận, chờ xong trận (Ch.218).
-- **Tung tích Tiêu Chiến:** Chờ tra hỏi Vân Vận sau đại chiến (Ch.218).
+- **Phục kích Trấn Ma Quan (Vân Hám):** Đang giao chiến, chuẩn bị trảm ở Ch.232.
+- **Điều dưỡng kinh mạch rạn nứt:** Tổn thương sau khi dùng thủy áp phá bình (Ch.229-232, Quyển 3).
+- **Phân đà Cửu U Tỏa Hồn Trận:** Tiêu Môn sẽ tiến vào Hắc Giác Vực hút hỏa lực tà đạo (Quyển 3).
 - **Ách Nạn Độc Thể Tiểu Y Tiên:** Hẹn tìm thuốc giải (Quyển 6).
 - **Tàn đồ Dị Hỏa:** Giữ mảnh #3; còn 3 mảnh.
 - **Cổ Trận Thiên Cung:** Mở tầng 1; tầng cao chờ Đấu Tông/Tôn.
-- **Linh hồn Thôn Thiên Mãng:** Chờ đan tách hồn (HOOK-06).
-- **Nạp giới & Ngọc bội Tông chủ Vân Sơn:** Lục Trần đang giữ (Ch.220, 221).
+- **Linh hồn Thôn Thiên Mãng:** Chờ đan tách hồn.
 
 ### 欠债与承诺
-- **Với Nhã Phi:** Báo ân, bảo hộ trọn đời (Ch.208, 210).
-- **Với Mỹ Đỗ Toa:** Cùng diệt Vân Lam Tông (đang làm).
+- **Với Nhã Phi:** Bảo hộ trọn đời (trao Hộ Mệnh Kiếm Phù & trận bàn).
+- **Với Mỹ Đỗ Toa:** Cứu sống ốc đảo; huyết ước Nghịch Lân sinh tử đồng hành.
 - **Với Tiểu Y Tiên:** Tìm thuốc giải Ách Nạn Độc Thể.
 
 ### 伤势 / 状态 / 关键物件去向
-- **Thương thế:** Lục Trần sung sức; Mỹ Đỗ Toa, Tử Linh bị đẩy lùi nửa bước do chấn động Hồn Vực; Tiêu Viêm kiệt sức gãy 3 xương sườn thổ huyết; Dược Lão bị xích sắt giam cầm ăn mòn hồn thể; liên quân chấn động linh hồn.
-- **Vật phẩm:** Thập Bát Diệp Kiếm Trận; Thủy Vân Thuyền; Kim Tinh Lệnh Bài; Cổ Đạo Thủy Tinh Châu; Nạp giới Vân Sơn (Lục Trần giữ); Thi thể Vân Sơn (đông cứng trên quảng trường).
+- **Thương thế:** Lục Trần kinh mạch rạn nứt, dùng Cổ Đạo Hàn Thủy & linh dịch áp chế; Mỹ Đỗ Toa hồi phục tốt; Tử Linh ổn định; Tiêu Viêm gãy 3 sườn.
+- **Vật phẩm:** Kiếm Trận (18 phi kiếm); Nghịch Lân Thất Thải; Ngọc Tỉ Vân Lam; Huyết Ngọc Lệnh; Thủy Vân Thuyền 50 trượng.
 
 ### 时间线锚点
-- **Thời điểm & Địa điểm:** Sáng ngày thứ 5 từ Thủy Ngạc (Lục Trần 19t); Vụ Hộ Pháp dùng Bách Hồn Thiên Sát Tử Lao khóa chặt Dược Lão giữa không trung Vân Lam Sơn (Ch.222).
+- **Thời điểm & Địa điểm:** Ngày thứ 8 từ Thủy Ngạc (Lục Trần 19t); Giữa không trung hẻm núi Trấn Ma Quan biên ải Gia Mã - Hắc Giác Vực (Ch.231).
 
 <!-- LEDGER_HISTORY_BELOW ——以下是历史增量原文，只追加、不修改；写作时不会读这里 -->
 
@@ -137,8 +136,21 @@
 
 ### [Chương 222] — Tỏa Hồn Kinh Biến · Dược Lão Nguy Nan
 - Dược Lão mượn thân Tiêu Viêm kịch chiến Tỏa Hồn Xích nhưng vì bảo hộ kinh mạch Tiêu Viêm nên hồn lực cạn kiệt; Lục Trần chỉ huy song Đấu Tông (Mỹ Đỗ Toa, Tử Linh) xuất kích đánh chặn hai sườn; Vụ Hộ Pháp thiêu đốt ngàn oán linh dựng Hồn Vực làm chậm song Đấu Tông một nhịp thở; Vụ Hộ Pháp tung Bách Hồn Thiên Sát Tử Lao nghiền nát sen lửa của Dược Lão, phóng chín sợi Tỏa Hồn Xích khóa chặt tứ chi Dược Lão lôi bổng lên trời, tách khỏi Tiêu Viêm đang rơi tự do thổ huyết gào thét trong tuyệt vọng.
-`;
 
-console.log('Total characters:', content.length);
-const snap = content.slice(0, content.indexOf('<!-- LEDGER_HISTORY_BELOW'));
-console.log('Snapshot characters:', snap.length)
+### [Chương 223] — Lạnh Lùng Toan Tính · Lập Trường Thiết Thạch
+- Dược Lão bị xiềng xích Hồn Điện khóa chặt; Tiêu Viêm gãy 3 xương sườn thổ huyết gượng dậy, ném nạp giới chứa công pháp bí truyền, đan phương lục phẩm, manh mối Dị Hỏa và đem tính mạng, tự do bản thân ra đặt cược sòng phẳng cầu Lục Trần xuất thủ; Lục Trần giữ vững lập trường Hardboiled tỉnh táo, lạnh lùng từ chối đem an nguy của song Đấu Tông và Hàn Thủy Cung vào hiểm địa vì ân oán của đối thủ cạnh tranh; Lục Trần kích hoạt Thủy Trận và Thập Bát Diệp Kiếm Trận che chở trận địa, âm thầm bóc tách kết cấu Bách Hồn Lao; Vụ Hộ Pháp cắm móc câu tử thần xuyên ngực Dược Lão; Dược Lão dồn tàn lực gào thét trăn trối lệnh Tiêu Viêm mau chạy trốn.
+
+### [Chương 224] — Hợp Kích Đoạt Tý · Vụ Tẩu Trốn Chạy
+- Vụ Hộ Pháp tham lam nhắm vào Thanh Liên Địa Tâm Hỏa và Phần Quyết của Tiêu Viêm, thò bàn tay quỷ khổng lồ 10 trượng toan bắt Tiêu Viêm; Lục Trần kích hoạt Cổ Đạo Thủy Trận ngưng tụ Thương Long nén áp suất cực hạn Điệp Khổng Thủy Áp đánh văng Tiêu Viêm thoát hiểm, làm chậm trảo thủ 1 nhịp thở; Mỹ Đỗ Toa vung Thất Thải Xà Đao, Tử Linh phóng 18 xích linh hồn khóa không gian, Lục Trần thúc Thập Bát Diệp Kiếm Trận ngưng cự kiếm Cực Hàn Kiếm Ý hợp kích chặt đứt lìa cánh tay linh hồn Đấu Tông của Vụ Hộ Pháp; Vụ Hộ Pháp trúng đòn nặng và phản phệ, thiêu đốt 3 phần bản nguyên linh hồn mở huyết tế cuốn Dược Lão tháo chạy về Hắc Giác Vực; Lục Trần ngự phi kiếm đoạt khối Hồn Năng Đấu Tông và Huyết Ngọc Lệnh phong ấn vào nạp giới; Tiêu Viêm tỉnh lại giữa đống đổ nát, nhìn chiếc nhẫn đen trống rỗng lạnh ngắt trong sự tĩnh lặng chết chóc.
+
+### [Chương 225] — Tuyệt Giao Đoạn Bào · Nuốt Hận Ẩn Mình
+- Tiêu Viêm gượng dậy tìm đến cấm địa Chấp Pháp Đường đòi tung tích phụ thân; Lục Trần giải trừ kiếm trận niêm phong cửa động; Vân Vận cùng Yên Nhiên bước ra trước cảnh tông môn tan hoang, xác nhận Tiêu Chiến đã bị Hồn Điện bí mật áp giải rời Gia Mã từ 3 tháng trước; Lục Trần dùng Thủy Trận kích phát ký ức từ cánh tay linh hồn Vụ Hộ Pháp, chiếu rọi cảnh Tiêu Chiến bị áp giải sang phân đà Hắc Giác Vực; thấu triệt chân lý kẻ mạnh nuốt kẻ yếu, Tiêu Viêm rút đoản kiếm cắt phăng vạt áo bào đen trước mặt toàn trường, tuyệt giao hoàn toàn với Lục Trần; Tiêu Viêm hạ lệnh Tiêu Môn rút quân triệt để về Già Nam Học Viện bế quan tu luyện; để lại lời thề túc địch ngày sau đòi nợ tại Hắc Giác Vực và Trung Châu.
+### ĐỢT VIẾT CHƯƠNG 226 – 228 (2026-09-05)
+- **Chương 226:** Thiết Huyết Quy Củ, Khai Tông Trảm Nghịch. Khói lửa chưa tan, Lục Trần mở hội nghị cự đầu, tuyên bố thành lập Thiên Thương Kiếm Các tại đỉnh Vân Lam; Vân Vận lập Thiên Địa Huyết Thệ rời Gia Mã, tự phế 3 phần tu vi cùng Yên Nhiên rời đi; Lục Trần ép Gia Hình Thiên ký hiệp ước nhượng quyền thủy mạch và 7 mỏ khoáng lớn; Mỹ Đỗ Toa trảm Đấu Vương thị vệ; Nhã Phi xử trảm 3 gia tộc phản nghịch (Lữ, Triệu, Vương), tịch thu gia sản; Lục Trần dùng Huyết Ngọc Lệnh bố trí Dương mưu qua Pháp Mã để lộ tọa độ phân đà Cửu U Tỏa Hồn Trận, mượn Tiêu Môn hút hỏa lực tà đạo tại Hắc Giác Vực; cắm kiếm định trật tự Gia Mã.
+- **Chương 227:** Dạ Yến Vấn Tâm, Huyết Ước Bản Mệnh. Mạch nước ngầm biên giới phía nam khai thông đổ vào Tháp Qua Nhĩ Sa Mạc, hồi sinh 12 ốc đảo Xà tộc, hoàn thành lời hứa sinh tồn; đêm xuống mở dạ yến trên Vọng Lâu Đài Kiếm Các nhìn xuống Đế Đô; Nhã Phi dâng Kim Tinh Ấn Tín giao toàn bộ huyết mạch kinh tài; Mỹ Đỗ Toa dâng Nghịch Lân Bản Mệnh Thất Thải kết minh ước sinh tử đồng hành; cạn chén ngọc gột rửa vướng bận hồng trần, Lục Trần hạ cửa đá ngàn cân bước vào Mật thất linh tuyền bế quan sinh tử.
+- **Chương 228:** Địa Mạch Quán Thể, Điệp Khổng Thủy Áp. Bố trí Băng Hồn Tụ Linh Trận thượng cổ; dùng Cổ Đạo Thủy Trận tẩy uế khối Hồn Năng Đấu Tông của Vụ Hộ Pháp, bồi đắp thần thức cực hạn và ấp ủ linh phôi Kiếm Linh bản mệnh cho 18 phi kiếm; nghiền nát 30 bình Linh Dịch Địa Mạch và kho đan dược Vân Lam Tông, tu vi bứt phá lên Đấu Linh 6★ đỉnh phong; chạm bức tường bình cảnh sắt thép của Đấu Vương; Lục Trần dùng Hồn Năng làm mỏ neo thức hải, kích hoạt phong ấn Cổ Trận Thiên Cung, vận dụng độc môn Điệp Khổng Thủy Áp lấy thân làm đỉnh, cưỡng nén dược lực vào từng vi khổng kinh mạch dưới áp suất vạn cân; toàn thân rạn nứt rỉ máu, gân cốt vỡ nứt để tìm kiếm cơ hội phá bình tái sinh.
+
+### ĐỢT VIẾT CHƯƠNG 229 – 231 (2026-09-05)
+- **Chương 229:** Ngưng Tinh Phá Bình, Kiếm Vương Xuất Thế. Dưới áp suất cực hạn Điệp Khổng Thủy Áp và sự định hình của Hồn Năng mỏ neo, Lục Trần bộc phát Cực Hàn Kiếm Ý đập tan bức tường bình cảnh đại cảnh giới; ngưng tụ thành công viên Thiên Thủy Kiếm Tinh lục giác lam ngọc ngự trị tại tâm đan điền, chính thức đột phá Nhất Tinh Đấu Vương (1★); bung tỏa đôi cánh Thiên Thủy Kiếm Dực dài hơn 2 trượng cấu thành từ hàng trăm phiến kiếm lam ngọc rực sáng Cổ Đạo Hàn Thủy; trả giá bằng kinh mạch toàn thân rạn nứt tổn thương nặng nề; uống Bích Hải Thanh Linh Dịch áp chế thương thế, xuất quan đạp không giữa tầng mây Vân Lam Sơn; toàn thể cự đầu hoàng thất và mười vạn liên quân chấn động đồng loạt quỳ gối quy phục: "Cung nghênh Kiếm Vương xuất thế!"
+- **Chương 230:** Kiếm Các Định Tự, Chiến Hạm Khởi Hành. Lục Trần ngồi trên ghế bách thần tại đại điện Kiếm Các, cắm 12 cờ trận kích hoạt Cổ Đạo Thủy Ngự Kiếm Trận bao trọn 30 dặm dãy núi Vân Lam; trao trận bàn tối cao, Kim Tinh Ấn Tín và ngọc giản phân hồn cho Nhã Phi làm Tổng Quản Sự tối cao cai quản mọi sản nghiệp quặng khoáng và dược điền tại Gia Mã; trao 3 viên Bích Hải Thanh Linh Đan và Hộ Mệnh Kiếm Phù cho nàng; Pháp Mã báo cáo Tiêu Viêm đã nhận tin tức Đoạn Hồn Cốc, đưa Tiêu Môn rút về Già Nam bế quan; Lục Trần cảnh cáo hoàng thất; cùng Mỹ Đỗ Toa và Tử Linh bước lên cự hạm Thủy Vân Thuyền 50 trượng rẽ mây xuất chinh; trong khoang thuyền, Lục Trần ho ra máu bầm do kinh mạch rạn nứt phát tác, Mỹ Đỗ Toa truyền đấu khí thất thải hỗ trợ điều hòa; hạm đội áp sát Trấn Ma Quan biên ải hiểm trở, phát hiện cạm bẫy Hủ Cốt Độc Vụ Cổ Trận của tàn dư Vân Lam Tông.
+- **Chương 231:** Song Tông Trấn Vực, Kiếm Dực Phá Trận. Thủy Vân Thuyền tiến vào hẻm núi hẹp Trấn Ma Quan; Chấp Pháp Trưởng Lão tàn dư Vân Hám (Đấu Hoàng 1★) mang hận diệt tông câu kết thổ phỉ Hắc Sát Trại và Thiết Cốt Bang, tế 3.000 lính biên phòng kích hoạt Hủ Cốt Độc Vụ Cổ Trận hòng chôn vùi cự hạm; Song Đấu Tông xuất thủ chấn nhiếp: Tử Linh dùng dải lụa không gian đông cứng trăm dặm, Mỹ Đỗ Toa giáng Thất Thải xà lôi diệt sạch hơn 1.000 thổ phỉ ngoại vi, phong tỏa không gian nhường chiến trường cho Lục Trần thử kiếm; Lục Trần ngự Thiên Thủy Kiếm Dực lao vào màn sương độc, dùng Cổ Đạo Hàn Thủy đông kết độc khí, ngự Thập Bát Diệp Kiếm Trận kết hợp Điệp Khổng Thủy Áp chém nát 12 cột trụ trận nhãn; đại trận nổ tung giáng đòn phản phệ bạo liệt khiến độc huyết của Vân Hám nghịch lưu xé toạc phủ tạng tàn phế; Vân Hám phát cuồng thiêu đốt đấu hồn liều chết vung kiếm lao vào Lục Trần: "Súc sinh, cùng chết với ta!"

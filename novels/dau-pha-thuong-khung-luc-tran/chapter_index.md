@@ -241,3 +241,12 @@
 | **220** | CHƯƠNG 220 — TRẢM DIỆT PHÀM THÂN · HẮC VỤ TÁC QUÁI | Quyển 2: Kiếm Phúc Vân Lam | 4.168 | Đã hoàn thành | chapters/卷02/220Trảm Diệt Phàm Thân, Hắc Vụ Tác Quái.txt |
 | **221** | CHƯƠNG 221 — VỤ HỘ PHÁP HIỆN THÂN · HẮC TỎA ĐOẠT HỒN | Quyển 2: Kiếm Phúc Vân Lam | 5.972 | Đã hoàn thành | chapters/卷02/221Vụ Hộ Pháp Hiện Thân, Hắc Tỏa Đoạt Hồn.txt |
 | **222** | CHƯƠNG 222 — TỎA HỒN KINH BIẾN · DƯỢC LÃO NGUY NAN | Quyển 2: Kiếm Phúc Vân Lam | 4.082 | Đã hoàn thành | chapters/卷02/222Tỏa Hồn Kinh Biến, Dược Lão Nguy Nan.txt |
+| **223** | CHƯƠNG 223 — LẠNH LÙNG TOAN TÍNH · LẬP TRƯỜNG THIẾT THẠCH | Quyển 2: Kiếm Phúc Vân Lam | 3.752 | Đã hoàn thành | chapters/卷02/223Lạnh Lùng Toan Tính, Lập Trường Thiết Thạch.txt |
+| **224** | CHƯƠNG 224 — HỢP KÍCH ĐOẠT TÝ · VỤ TẨU TRỐN CHẠY | Quyển 2: Kiếm Phúc Vân Lam | 3.583 | Đã hoàn thành | chapters/卷02/224Hợp Kích Đoạt Tý, Vụ Tẩu Trốn Chạy.txt |
+| **225** | CHƯƠNG 225 — TUYỆT GIAO ĐOẠN BÀO · NUỐT HẬN ẨN MÌNH | Quyển 2: Kiếm Phúc Vân Lam | 3.631 | Đã hoàn thành | chapters/卷02/225Tuyệt Giao Đoạn Bào, Nuốt Hận Ẩn Mình.txt |
+| **226** | CHƯƠNG 226 — THIẾT HUYẾT QUY CỦ · KHAI TÔNG TRẢM NGHỊCH | Quyển 2: Kiếm Phúc Vân Lam | 5.726 | Đã hoàn thành | chapters/卷02/226Thiết Huyết Quy Củ, Khai Tông Trảm Nghịch.txt |
+| **227** | CHƯƠNG 227 — DẠ YẾN VẤN TÂM · HUYẾT ƯỚC BẢN MỆNH | Quyển 2: Kiếm Phúc Vân Lam | 3.767 | Đã hoàn thành | chapters/卷02/227Dạ Yến Vấn Tâm, Huyết Ước Bản Mệnh.txt |
+| **228** | CHƯƠNG 228 — ĐỊA MẠCH QUÁN THỂ · ĐIỆP KHỔNG THỦY ÁP | Quyển 2: Kiếm Phúc Vân Lam | 3.428 | Đã hoàn thành | chapters/卷02/228Địa Mạch Quán Thể, Điệp Khổng Thủy Áp.txt |
+| **229** | CHƯƠNG 229 — NGƯNG TINH PHÁ BÌNH · KIẾM VƯƠNG XUẤT THẾ | Quyển 2: Kiếm Phúc Vân Lam | 5.068 | Đã hoàn thành | chapters/卷02/229Ngưng Tinh Phá Bình, Kiếm Vương Xuất Thế.txt |
+| **230** | CHƯƠNG 230 — KIẾM CÁC ĐỊNH TỰ · CHIẾN HẠM KHỞI HÀNH | Quyển 2: Kiếm Phúc Vân Lam | 4.144 | Đã hoàn thành | chapters/卷02/230Kiếm Các Định Tự, Chiến Hạm Khởi Hành.txt |
+| **231** | CHƯƠNG 231 — SONG TÔNG TRẤN VỰC · KIẾM DỰC PHÁ TRẬN | Quyển 2: Kiếm Phúc Vân Lam | 3.416 | Đã hoàn thành | chapters/卷02/231Song Tông Trấn Vực, Kiếm Dực Phá Trận.txt |

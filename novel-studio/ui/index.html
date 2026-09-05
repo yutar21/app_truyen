@@ -630,11 +630,11 @@
 
   <!-- Modal duyệt dàn ý -->
   <div class="modal hidden" id="outlineModal">
-    <div class="modal-card">
+    <div class="modal-card" style="width: 860px; max-width: 95vw;">
       <button class="modal-close" id="olClose" title="Đóng (Esc)">✕</button>
-      <h2>📋 Duyệt Dàn Ý</h2>
-      <p class="modal-hint">Sử dụng mô hình AI đóng vai trò Tổng Biên Tập để thẩm định dàn ý theo các tiêu chí: nhịp điệu, logic, phục bút và độ kịch tính.</p>
-      <label class="field"><span>Phạm vi thẩm định <span id="olBookInfo" class="dim-note"></span></span>
+      <h2>📋 Thẩm Định & Tối Ưu Dàn Ý</h2>
+      <p class="modal-hint">Mô hình AI đóng vai trò Tổng Biên Tập: vừa thẩm định sâu 5 trụ cột chất lượng (nhịp điệu, logic, phục bút, sảng điểm, độ kịch tính), vừa trực tiếp tối ưu hóa và xuất ra <b>Bản Dàn Ý Hoàn Thiện Tốt Và Hay Nhất</b>.</p>
+      <label class="field"><span>Phạm vi thẩm định & tối ưu <span id="olBookInfo" class="dim-note"></span></span>
         <select id="olScope"><option value="立项">Khởi tạo / Dàn ý toàn thư</option></select>
       </label>
       <label class="chk" style="margin:6px 0"><input type="checkbox" id="olInject"> Nếu đang trong phiên viết, gửi ý kiến góp ý cho AI</label>
@@ -644,9 +644,32 @@
       </div>
       <div class="modal-err" id="olErr"></div>
       <div class="ol-result hidden" id="olResult">
-        <div class="dim-note" id="olMeta"></div>
-        <pre id="olCritique"></pre>
-        <div class="btn-row end"><button class="btn primary" id="olApply">✅ Yêu Cầu AI Sửa Dàn Ý Theo Góp Ý ▶</button></div>
+        <div class="dim-note" id="olMeta" style="margin-bottom: 8px;"></div>
+        
+        <div class="seg" id="olTabRow" style="margin: 10px 0 12px;">
+          <button type="button" class="seg-btn active" id="olTabOptimized">🏆 Bản Dàn Ý Tối Ưu Hay Nhất</button>
+          <button type="button" class="seg-btn" id="olTabCritique">📋 Báo Cáo Thẩm Định & Đánh Giá</button>
+        </div>
+
+        <!-- Panel 1: Bản dàn ý tối ưu -->
+        <div id="olPanelOptimized">
+          <div class="modal-hint" style="margin-bottom: 8px; color: var(--muted); font-size: 13px;">
+            ✨ Bản dàn ý đã được Tổng Biên Tập tinh chỉnh & tối ưu hóa hoàn thiện. Bạn có thể chỉnh sửa trực tiếp bên dưới hoặc bấm nút áp dụng ngay vào tác phẩm:
+          </div>
+          <textarea id="olOptimizedText" class="code-area" style="width: 100%; min-height: 380px; max-height: 520px; font-family: inherit; font-size: 13.5px; line-height: 1.6; resize: vertical; padding: 12px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-2); color: var(--text); box-sizing: border-box;"></textarea>
+          <div class="btn-row end" style="margin-top: 10px; gap: 8px;">
+            <button class="btn ghost" id="olCopyOutline" type="button">📋 Sao Chép Dàn Ý</button>
+            <button class="btn primary" id="olApplyOptimized" type="button">⚡ Áp Dụng Dàn Ý Tối Ưu Này Vào Tác Phẩm ▶</button>
+          </div>
+        </div>
+
+        <!-- Panel 2: Báo cáo thẩm định -->
+        <div id="olPanelCritique" class="hidden">
+          <pre id="olCritique" class="rb-critique" style="max-height: 460px; overflow-y: auto; white-space: pre-wrap; word-break: break-word;"></pre>
+          <div class="btn-row end" style="margin-top: 10px;">
+            <button class="btn ghost" id="olApply" type="button">🤖 Yêu Cầu AI Sửa Dàn Ý Theo Góp Ý (Chạy nền) ▶</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>

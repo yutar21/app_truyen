@@ -32,7 +32,7 @@ import { loadUsage, bookUsage, codexTokensForDir, claudeTokensForDir } from './u
 import { proposeTitles, buildKickoffInstruction, buildCompassKickoffInstruction, buildFreehandKickoffInstruction, buildVolumePlanPrompt, buildResumeInstruction, buildReviewInstruction, generateSynopsis, buildFinaleInstruction, buildRewriteInstruction, buildReprojectInstruction, buildAfterwordInstruction, buildRebuildOutlineInstruction, buildReviseSettingInstruction, buildRenameInstruction, resolveGenModel, runModelOnce, analyzeStyleSample } from './planner.mjs';
 import { styleFromFanqieUrl } from './refstyle.mjs';
 import { gitSnapshot } from './scaffold.mjs';
-import { reviewOutline, snapshotOutline, reviewEnding, buildReviseInstruction, buildReviseFromItems, buildEndingRenudgeInstruction } from './editor.mjs';
+import { reviewOutline, snapshotOutline, reviewEnding, buildReviseInstruction, buildReviseFromItems, buildEndingRenudgeInstruction, applyOptimizedOutlineToBook } from './editor.mjs';
 import { getPending, clearPending, setReviewEvery, getReviewEvery, getReviewDefault, setResume } from './pending.mjs';
 import { listBookFiles, readBookFile, saveBookFile, renumberGlobalChapters, deleteChapters, deleteReviews, listReviews } from './files.mjs';
 import { previewPublish, publishToFanqie, republishRange } from './publish.mjs';
@@ -893,7 +893,27 @@ async function api(p, req, res, u) {
           const { buildReviseInstruction } = await import('./editor.mjs');
           try { await sendToBook(book.slug, buildReviseInstruction(book, scope, r.file), cfg); } catch { }
         }
-        return json(res, 200, { ok: true, scope, editorModel: r.editorModel, file: path.basename(r.file), critique: r.critique });
+        return json(res, 200, {
+          ok: true,
+          scope,
+          editorModel: r.editorModel,
+          file: path.basename(r.file),
+          critique: r.critique,
+          optimizedOutline: r.optimizedOutline || '',
+          fullText: r.fullText || r.critique
+        });
+      } catch (e) { pushLog(slugOf(body.book), { level: 'error', msg: e.message }); return json(res, 500, { error: e.message }); }
+    }
+    if (p === '/api/book/apply-optimized-outline') {
+      // Áp dụng trực tiếp Bản Dàn Ý Tối Ưu Nhất vào tệp dàn ý tương ứng (outlines/...)
+      try {
+        const book = getBook(body.book); if (!book) return json(res, 400, { error: '找不到书：' + body.book });
+        const scope = body.scope || '立项';
+        const outlineText = body.outlineText;
+        if (!outlineText || !String(outlineText).trim()) return json(res, 400, { error: 'Nội dung dàn ý tối ưu không được để trống' });
+        const r = applyOptimizedOutlineToBook({ book, scope, outlineText });
+        pushLog(book.slug, { level: 'act', msg: `🎉 Đã áp dụng Dàn Ý Tối Ưu vào outlines/${r.fileName} (${r.bytesWritten} bytes)` });
+        return json(res, 200, { ok: true, scope, fileName: r.fileName, backupFile: r.backupFile ? path.basename(r.backupFile) : null });
       } catch (e) { pushLog(slugOf(body.book), { level: 'error', msg: e.message }); return json(res, 500, { error: e.message }); }
     }
     if (p === '/api/book/finale') {

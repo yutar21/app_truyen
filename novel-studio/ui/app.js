@@ -1378,10 +1378,30 @@ $('#flLocate').addEventListener('click', async () => {
 });
 
 // ---------- 大纲审稿 ----------
+function setOutlineTab(tab) {
+  const isOpt = tab === 'optimized';
+  const tabOpt = $('#olTabOptimized');
+  const tabCrit = $('#olTabCritique');
+  const panelOpt = $('#olPanelOptimized');
+  const panelCrit = $('#olPanelCritique');
+  if (tabOpt && tabCrit) {
+    tabOpt.classList.toggle('active', isOpt);
+    tabCrit.classList.toggle('active', !isOpt);
+  }
+  if (panelOpt && panelCrit) {
+    panelOpt.classList.toggle('hidden', !isOpt);
+    panelCrit.classList.toggle('hidden', isOpt);
+  }
+}
+$('#olTabOptimized')?.addEventListener('click', () => setOutlineTab('optimized'));
+$('#olTabCritique')?.addEventListener('click', () => setOutlineTab('critique'));
+
 async function openOutline() {
   if (!CUR) return;
   $('#olErr').textContent = ''; $('#olResult').classList.add('hidden');
   $('#olCritique').textContent = ''; $('#olMeta').textContent = '';
+  if ($('#olOptimizedText')) $('#olOptimizedText').value = '';
+  setOutlineTab('optimized');
   const b = STATE.books.find(x => x.slug === CUR.slug) || CUR;
   let st = b.stats || {};
   let options = [{ value: '立项', label: 'Khởi tạo / Toàn thư (novel_bible + tất cả dàn ý)' }];
@@ -1400,7 +1420,7 @@ async function openOutline() {
           addedValues.add(rawName);
           continue;
         }
-        const m = rawName.match(/^(?:卷|Quyen_|Quyển_|Quyển\s*)?\s*0*(\d+)(?:[_\-\s]*(.*))?$/i);
+        const m = rawName.match(/^(?:卷|Quyen|Quyển|Vol(?:ume)?|Tap|Tập|Hoi|Hồi|Phan|Phần|Book|Arc)?[_\-\s]*0*(\d+)(?:[_\-\s]*(.*))?$/i);
         if (m) {
           const num = parseInt(m[1], 10);
           const pad = String(num).padStart(2, '0');
@@ -1454,7 +1474,7 @@ $('#olApply').addEventListener('click', async () => {
   if (!CUR) return;
   const scope = $('#olScope').value;
   const critique = $('#olCritique').textContent || '';
-  const isPassed = /【(总评|Đánh giá tổng thể)】\s*(可直接开写|Có thể viết ngay|ĐẠT|Đạt)/i.test(critique);
+  const isPassed = /【(总评|Đánh giá tổng thể)】\s*(可直接开写|Có thể viết ngay|ĐẠT|Đạt|Đã được tối ưu|Đã tối ưu)/i.test(critique);
   if (isPassed) {
     $('#outlineModal').classList.add('hidden');
     toast(`Dàn ý 【${scope}】 đã đạt chuẩn! Bạn có thể bấm 【Đồng Sáng Tác】 hoặc 【Viết Tự Động】 để bắt đầu viết.`);
@@ -1469,6 +1489,50 @@ $('#olApply').addEventListener('click', async () => {
   } catch (e) { $('#olErr').textContent = e.message; }
   finally { btn.disabled = false; }
 });
+
+$('#olApplyOptimized')?.addEventListener('click', async () => {
+  if (!CUR) return;
+  const scope = $('#olScope').value;
+  const outlineText = ($('#olOptimizedText').value || '').trim();
+  if (!outlineText) {
+    alert('Nội dung Dàn Ý Tối Ưu đang trống!');
+    return;
+  }
+  const btn = $('#olApplyOptimized');
+  const oldText = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = 'Đang lưu vào tác phẩm…';
+  try {
+    const r = await api('/api/book/apply-optimized-outline', 'POST', {
+      book: CUR.slug,
+      scope,
+      outlineText
+    });
+    toast(`🎉 Đã áp dụng Dàn Ý Tối Ưu vào outlines/${r.fileName} thành công!`);
+    $('#outlineModal').classList.add('hidden');
+    if (typeof rdLoadTree === 'function') { try { await rdLoadTree(CUR); } catch {} }
+    if (typeof refresh === 'function') { try { await refresh(); } catch {} }
+  } catch (e) {
+    $('#olErr').textContent = 'Lỗi áp dụng: ' + e.message;
+  } finally {
+    btn.disabled = false;
+    btn.textContent = oldText;
+  }
+});
+
+$('#olCopyOutline')?.addEventListener('click', async () => {
+  const text = ($('#olOptimizedText').value || '').trim();
+  if (!text) { toast('Chưa có nội dung để sao chép'); return; }
+  try {
+    await navigator.clipboard.writeText(text);
+    toast('📋 Đã sao chép Dàn Ý Tối Ưu vào clipboard!');
+  } catch {
+    $('#olOptimizedText').select();
+    document.execCommand('copy');
+    toast('📋 Đã sao chép Dàn Ý Tối Ưu!');
+  }
+});
+
 $('#olClose').addEventListener('click', () => $('#outlineModal').classList.add('hidden'));
 $('#olCancel').addEventListener('click', () => $('#outlineModal').classList.add('hidden'));
 // [已禁用点背景关闭：功能弹窗只能点关闭/取消按钮结束，避免误触丢失操作] $('#outlineModal').addEventListener('click', (e) => { if (e.target === $('#outlineModal')) $('#outlineModal').classList.add('hidden'); });
@@ -1476,22 +1540,31 @@ $('#olStart').addEventListener('click', async () => {
   if (!CUR) return;
   const scope = $('#olScope').value;
   const inject = $('#olInject').checked;
-  $('#olStart').disabled = true; $('#olStart').textContent = 'Tổng Biên Tập đang thẩm định… (~1–2 phút)';
+  $('#olStart').disabled = true; $('#olStart').textContent = 'Tổng Biên Tập đang thẩm định & tối ưu… (~1–2 phút)';
   $('#olErr').textContent = ''; $('#olResult').classList.add('hidden');
   try {
     const r = await api('/api/book/review-outline', 'POST', { book: CUR.slug, scope, inject });
     $('#olMeta').textContent = `Mô hình Biên tập: ${r.editorModel} ｜ Đã lưu vào reviews/${r.file}` + (inject ? ' ｜ Đã gửi cho AI sửa đổi' : '');
-    $('#olCritique').textContent = r.critique || '(Chưa có nội dung)';
-    const isPassed = /【(总评|Đánh giá tổng thể)】\s*(可直接开写|Có thể viết ngay|ĐẠT|Đạt)/i.test(r.critique || '');
+    
+    const optText = (r.optimizedOutline || '').trim();
+    const critText = (r.critique || '').trim();
+    $('#olOptimizedText').value = optText || r.fullText || '(Chưa có nội dung dàn ý tối ưu)';
+    $('#olCritique').textContent = critText || '(Chưa có nội dung nhận xét)';
+
+    // Mặc định chuyển sang Tab Dàn ý tối ưu hay nhất
+    setOutlineTab(optText ? 'optimized' : 'critique');
+
+    const isPassed = /【(总评|Đánh giá tổng thể)】\s*(可直接开写|Có thể viết ngay|ĐẠT|Đạt|Đã được tối ưu|Đã tối ưu)/i.test(r.critique || '');
     if (isPassed) {
       $('#olApply').textContent = '🎉 Dàn Ý Đã Đạt Chuẩn · Sẵn Sàng Viết ▶';
       $('#olApply').classList.remove('ghost');
     } else {
-      $('#olApply').textContent = '✅ Yêu Cầu AI Sửa Dàn Ý Theo Góp Ý ▶';
+      $('#olApply').textContent = '🤖 Yêu Cầu AI Sửa Dàn Ý Theo Góp Ý (Chạy nền) ▶';
+      $('#olApply').classList.add('ghost');
     }
     $('#olResult').classList.remove('hidden');
-    $('#olStart').textContent = 'Thẩm Định Lại ▶';
-    toast('Thẩm định hoàn tất: ' + scope);
+    $('#olStart').textContent = 'Thẩm Định & Tối Ưu Lại ▶';
+    toast('Thẩm định & tối ưu hoàn tất: ' + scope);
   } catch (e) { $('#olErr').textContent = 'Thất bại: ' + e.message; $('#olStart').textContent = 'Bắt Đầu Thẩm Định ▶'; }
   finally { $('#olStart').disabled = false; }
 });
