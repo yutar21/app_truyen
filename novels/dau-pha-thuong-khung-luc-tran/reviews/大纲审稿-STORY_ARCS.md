@@ -1,3 +1,23 @@
+# Đại Cương Thẩm Định & Tối Ưu（STORY_ARCS）
+
+> Thẩm định: Tổng biên tập mô hình gemini（Tác giả: agy）
+> Thời gian: 2026-09-05T17:04:00.684Z
+
+# PHẦN 1: BÁO CÁO THẨM ĐỊNH & ĐÁNH GIÁ CHẤT LƯỢNG
+
+- [Lỗi nghiêm trọng] Đánh số phân quyển và phân bổ chương bị đứt gãy: Dàn ý STORY_ARCS.md bỏ sót hoàn toàn Quyển 5 (Ch.195–207), sau đó đánh số thụt lùi thành "Quyển 2 (Ch.208–230)" và "Quyển 3 (Ch.231–270)", rồi nhảy cóc đè số chương từ Quyển 3 lên Quyển 7 (Ch.0261–0340) làm mất hẳn Quyển 5 và Quyển 6 → Tái thiết lập hệ thống 10 Phân Quyển chuẩn mực từ Chương 0001 đến 0600, xác định dải Ch.208–232 là Quyển 6 và phân chia dải chương tịnh tiến không trùng lặp.
+- [Lỗi nghiêm trọng] Mục Xuất Vân Đế Quốc bị rơi rụng tiêu đề và thụt lùi cảnh giới: Đoạn văn về Xuất Vân đứng lơ lửng sau Quyển 3 và ghi lùi cảnh giới Lục Trần thành "Đấu Linh đỉnh phong ➔ Đột phá Đấu Vương" trong khi trước đó đã đạt Đấu Vương 5★ → Định danh chính thức thành Quyển 8 (Ch.276–330): Vạn Độc Xuất Vân, chuẩn hóa mốc tu vi Lục Trần là "Đấu Vương 5★ ➔ Đấu Hoàng 2★" để bảo đảm tính logic với tiến trình giải cứu Tiểu Y Tiên.
+- [Lỗi nghiêm trọng] Xung đột thiết lập cốt lõi về Dị Hỏa ở Quyển 7 và Quyển 9: Đề xuất Lục Trần "thu phục Tam Thiên Diễm Viêm Hỏa" và "thu phục Tịnh Liên Yêu Hỏa" theo lối mòn luyện hóa vào cơ thể, vi phạm tôn chỉ "Thuộc tính Thủy độc tôn, không tu Phần Quyết" của `novel_bible.md` → Chuyển đổi toàn diện cơ chế sang Trận Khí Sư Thủy Hệ: Vận dụng quy luật Thủy Hỏa tương sinh / Âm Dương trận đạo để phong ấn Dị Hỏa làm Trận Nhãn chí tôn, rút Tinh Hạch Long Hồn tôi luyện Thập Bát Diệp Kiếm Trận chứ không hấp thu dị hỏa vào kinh mạch.
+- [Lỗi nghiêm trọng] Phá vỡ hình tượng túc địch kiêu hùng với Tiêu Viêm ở Quyển 10: Xây dựng tình tiết "Lục Trần liên thủ Tiêu Viêm... cùng Viêm Đế song hùng bình định hắc ám", rơi vào lối mòn huynh đệ đồng minh sáo rỗng, OOC hoàn toàn với thiết lập "Túc địch kiêu hùng, cạnh tranh sinh tồn lạnh lùng" → Định vị lại thành thế chân vạc kiêu hùng độc lập: Hai bên duy trì thế lực riêng (Hàn Thủy Cung vs Tiêu Môn/Thiên Phủ Liên Minh), chỉ tạm thời đình chiến trước đại kiếp diệt thế của Hồn Tộc vì sinh tồn đại cục, cuối cùng phân định trật tự đại lục giữa Kiếm Trận Chí Tôn và Viêm Đế.
+- [Nguy cơ tiềm ẩn] Nguy cơ tụt áp nhịp điệu sau cao trào Vân Lam Sơn (Ch.223–228): Sau khi chém Vân Sơn và đánh lui Vụ Hộ Pháp, mạch truyện có nguy cơ chùng xuống nếu chỉ tập trung đàm phán kinh tế và tiếp quản tài nguyên thủy mạch một cách hành chính → Duy trì áp lực phản kích quân sự từ Đấu Hoàng Vân Hám cùng tử sĩ tàn dư Vân Lam Tông tại Trấn Ma Quan biên giới, biến quá trình đột phá Đấu Vương và sáng lập Thiên Thương Kiếm Các thành đòn bẩy quân sự nghẹt thở.
+- [Nguy cơ tiềm ẩn] Quy tắc Luyện Khí phi kim loại dễ bị lơ là: Các phân đoạn rèn kiếm và thăng cấp Thủy Vân Thuyền ở các quyển sau có thể vô tình đưa kim loại vào nếu thiếu kiểm soát → Cố định tuyệt đối nguyên tắc vật liệu thép: Chỉ dùng Hải Tâm Thạch, Thủy Ngọc, Băng Tinh và Xương Ma Thú nén bằng Thủy Áp, cấm tiệt việc rèn đúc kim loại sắt thép.
+- [Gợi ý] Nâng tầm thủ đoạn đối đầu mưu lược với Tiêu Môn ở Quyển 7: Nên đẩy mạnh chiến tranh tài chính gián tiếp thông qua mạng lưới thương hội của Nhã Phi và bẫy đấu giá tại Thiên Nhai Thành, tạo sảng điểm đấu trí lạnh lùng đặc sắc mang đậm phong vị Hardboiled.
+- [Gợi ý] Lộ trình thu hồi 7 đại phục bút (HOOK-01 đến HOOK-07): Cần phân bổ việc thu hồi các mắt xích rải đều qua từng quyển (HOOK-03 tại Quyển 6–7; HOOK-01 tại Quyển 8; HOOK-02, 04, 06 tại Quyển 9–10) để bảo đảm mạch ngầm trường thiên vững chắc.
+
+【Đánh giá tổng thể】 Cần sửa lại rồi mới viết —— Dàn ý hiện tại bị đứt gãy phân quyển, nhảy số chương, thụt lùi cảnh giới và OOC quan hệ túc địch với Tiêu Viêm, cần được tái cấu trúc toàn diện theo trục 10 quyển chuẩn xác.
+
+---
+
 # PHẦN 2: BẢN DÀN Ý TỐI ƯU HOÀN THIỆN NHẤT
 ## (PROPOSED OPTIMIZED OUTLINE — STORY ARCS)
 

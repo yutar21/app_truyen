@@ -84,6 +84,44 @@ function writeIfMissing(p, content) {
 
 function bibleTemplate(b) {
   const std = b.standards || {};
+  const isLatin = /[a-zA-Zà-ỹÀ-Ỹ]/.test(b.title || '') || /[a-zA-Zà-ỹÀ-Ỹ]/.test(b.genre || '');
+  if (isLatin) {
+    return `# 《${b.title}》Thiết Lập Thánh Kinh (novel_bible.md)
+
+## Điểm Bán Cốt Lõi
+${b.genre || '（Thể loại / Điểm bán / Độc giả mục tiêu）'}
+
+## Thiết Lập Cơ Bản
+- Độc giả mục tiêu:
+- Thời đại / Thế giới quan:
+- Hệ thống năng lực / Sức mạnh: ${std.system || '（Có dùng hệ thống không? Võ hiệp/tiên hiệp truyền thống khuyến nghị hệ thống nhẹ, chỉ ghi nhận hoặc thanh toán nhiệm vụ, không thay thế quá trình tu luyện và đạo tâm）'}
+- Nhân vật chính:
+- Nhân vật phụ then chốt:
+- Thế lực đối kháng:
+- Chủ đề:
+- Điều cấm kỵ (taboo):
+
+## Quy Mô Toàn Thư
+- Tổng số từ dự kiến: ${std.totalWords || '?'}
+- Số quyển: ${std.volumes || '?'}
+- Số chương ước tính mỗi quyển: ${std.chaptersPerVolume || '?'}
+- Số từ mục tiêu mỗi chương: ${std.targetCharsLo || 2500}–${std.targetCharsHi || 3500} từ
+
+## Nhịp Điệu & Nâng Tầm Cục Diện (Bắt buộc, chống quanh quẩn / lan man)
+> Mỗi quyển 1 câu: Quyển này cảnh ngộ nhân vật chính từ 「trạng thái nào」 nâng lên 「trạng thái nào」 (Địa điểm / Quyền lực / Thực lực / Đối thủ / Phạm vi kiểm soát).
+- Quyển 01: Từ 「」→「」
+- Quyển 02: Từ 「」→「」
+- Số chương tối đa hoàn thành 1 mục tiêu giai đoạn: 3–8 chương; cấm biến thủ tục hành chính/kiểm kê/sổ sách thành mạch truyện chính kéo dài nhiều chương.
+- Tiết tấu sảng điểm: Cứ khoảng ___ chương cho độc giả 1 bước tiến hoặc thắng lợi rõ ràng (Thắng 1 trận / Thu phục 1 người / Hé lộ chân tướng / Lên cấp bậc / Vả mặt).
+
+## Tuyến Phát Triển Dài Hạn
+- Tuyến trung hạn (20–60 chương):
+- Tuyến quyển (150–300 chương):
+
+## Phong Cách Đặt Tên & Khẩu Khí
+-
+`;
+  }
   return `# 《${b.title}》设定圣经（novel_bible.md）
 
 ## 一句话卖点
@@ -124,6 +162,35 @@ ${b.genre || '（类型 / 卖点 / 目标读者）'}
 // 探索式(freehand)的 bible：只允许三节——故事概述 / 主角 / 写作手法。没有世界观、没有配角表、没有任何大纲。
 function freehandBibleTemplate(b) {
   const std = b.standards || {};
+  const isLatin = /[a-zA-Zà-ỹÀ-Ỹ]/.test(b.title || '') || /[a-zA-Zà-ỹÀ-Ỹ]/.test(b.genre || '');
+  if (isLatin) {
+    return `# 《${b.title}》Cơ Sở Sáng Tác (novel_bible.md)
+
+> Tác phẩm theo phong cách 【Tự Do / Khám Phá】: Tài liệu này chỉ quy định 「cách viết」 và thông tin cơ bản nhất 「ai đang viết câu chuyện gì」.
+> Toàn thư không lập trước dàn ý —— cốt truyện do tác giả cung cấp từng đoạn, AI tự tách thành 3–5 chương.
+> 【NGHIÊM CẤM】 trong tệp này: Viết trường thiên thế giới quan, bảng hệ thống sức mạnh, danh sách nhân vật phụ/thế lực phức tạp, hoặc quy hoạch chương hồi dài dòng.
+
+## Tóm Tắt Cốt Truyện
+${b.genre || '（150–250 từ: Nhân vật chính là ai, hoàn cảnh ra sao, mâu thuẫn cốt lõi, định hướng tổng thể. Không chia giai đoạn, không chia chương, không viết kết cục.）'}
+
+## Nhân Vật Chính
+- Họ tên:
+- Thân phận / Tính cách / Hoàn cảnh ban đầu:
+（Nhân vật phụ không liệt kê ở đây —— viết đến ai thì đặt tên lúc đó, sau đó ghi vào danh bạ nhân vật continuity_ledger.md.）
+
+## Thủ Pháp Sáng Tác (Phần trọng tâm của tài liệu, toàn thư tuân theo thủ pháp này)
+- Ngôi kể và góc nhìn trần thuật:
+- Khẩu khí / Ngữ cảm:
+- Cấu trúc câu và đoạn văn: Đoạn văn vừa phải, xuống dòng mạch lạc, tỷ lệ đối thoại và miêu tả cân đối.
+- Cấu trúc từng chương (Mở đầu ra sao / Thân bài đẩy xung đột / Cuối chương tung móc câu thế nào):
+- Dung lượng mỗi chương: ${std.targetCharsLo || 2500}–${std.targetCharsHi || 3500} từ
+- Cách dẫn dắt chi tiết:
+- Nghệ thuật đối thoại (Lời thoại có ẩn ý, phân hóa khẩu khí từng nhân vật):
+- Cách tạo sảng điểm và giữ nhịp điệu:
+- Quy tắc đặt tên (Tên người / Địa danh mang phong vị gì —— khi đặt tên nhân vật phụ phải tuân theo):
+- Yêu cầu cứng: Không lặp lại câu từ để câu chữ, không bình luận kiểu tác giả ngoài lề, không mang văn phong AI sáo rỗng.
+`;
+  }
   return `# 《${b.title}》创作基线（novel_bible.md）
 
 > 本书为【探索式】：这个文件只写「怎么写」和最基本的「谁在写什么故事」。
@@ -154,6 +221,20 @@ ${b.genre || '（150–250 字：主角是谁、什么处境、核心矛盾、�
 
 // 探索式的台账 = 一张人物名册（临时起名的配角随写随登记，防改名/串名）。
 function rosterTemplate(b) {
+  const isLatin = /[a-zA-Zà-ỹÀ-Ỹ]/.test(b.title || '') || /[a-zA-Zà-ỹÀ-Ỹ]/.test(b.genre || '');
+  if (isLatin) {
+    return `# 《${b.title}》Danh Bạ Nhân Vật (continuity_ledger.md)
+
+> Tác phẩm không có dàn ý cố định. Nhân vật phụ xuất hiện đến đâu đặt tên đến đó —— đặt xong ghi ngay vào đây, toàn thư dùng nhất quán, tuyệt đối không đổi tên, không nhầm lẫn.
+
+| Họ Tên | Thân Phận | Tình Trạng Hiện Tại | Chương Xuất Hiện Đầu Tiên |
+|---|---|---|---|
+|  |  |  |  |
+
+## Các Sự Kiện / Sự Thật Cần Ghi Nhớ (Bổ sung khi viết, mỗi dòng một mục)
+-
+`;
+  }
   return `# 《${b.title}》人物名册（continuity_ledger.md）
 
 > 本书没有大纲、没有人物设定表。配角写到谁才起名——起了就登记在这里，全书沿用，绝不改名、绝不串名。
@@ -168,6 +249,14 @@ function rosterTemplate(b) {
 }
 
 function indexTemplate(b) {
+  const isLatin = /[a-zA-Zà-ỹÀ-Ỹ]/.test(b.title || '') || /[a-zA-Zà-ỹÀ-Ỹ]/.test(b.genre || '');
+  if (isLatin) {
+    return `# 《${b.title}》Chỉ Mục Chương (chapter_index.md)
+
+| Số Chương | Tên Chương | Quyển | Đường Dẫn | Trạng Thái |
+|---|---|---|---|---|
+`;
+  }
   return `# 《${b.title}》章节索引（chapter_index.md）
 
 | 全局章号 | 章名 | 卷 | 路径 | 状态 |
@@ -176,6 +265,37 @@ function indexTemplate(b) {
 }
 
 function ledgerTemplate(b) {
+  const isLatin = /[a-zA-Zà-ỹÀ-Ỹ]/.test(b.title || '') || /[a-zA-Zà-ỹÀ-Ỹ]/.test(b.genre || '');
+  if (isLatin) {
+    return `# 《${b.title}》Sổ Nhật Ký Liền Mạch (continuity_ledger.md)
+
+> Mỗi đợt viết xong cập nhật ngay; tự kiểm tra logic toàn văn dựa trên sổ này để đối chiếu nhanh, tránh phải đọc lại toàn bộ tác phẩm.
+
+## Mốc Thời Gian
+-
+
+## Hiện Trạng Nhân Vật / Thông Tin Đã Biết (Ai biết điều gì)
+-
+
+## Phục Bút Chưa Thu Hồi
+-
+
+## Nợ Nần / Lời Hứa
+-
+
+## Thương Thế / Trạng Thái
+-
+
+## Tung Tích Vật Phẩm Quan Trọng
+-
+
+## Địa Danh / Tổ Chức / Thuật Ngữ
+-
+
+## Điểm Cần Làm Rõ (Các câu hỏi logic còn bỏ ngỏ)
+-
+`;
+  }
   return `# 《${b.title}》连贯性台账（continuity_ledger.md）
 
 > 每批写完顺手更新；全文逻辑自检时以此为索引快速比对，避免重读全书。
@@ -208,6 +328,27 @@ function ledgerTemplate(b) {
 
 function outlineTemplate(b) {
   const per = b.standards?.chaptersPerVolume || '?';
+  const isLatin = /[a-zA-Zà-ỹÀ-Ỹ]/.test(b.title || '') || /[a-zA-Zà-ỹÀ-Ỹ]/.test(b.genre || '');
+  if (isLatin) {
+    return `# 《${b.title}》Quyển 01 Dàn Ý Phân Chương
+
+> Khoảng chương: 001–${per}
+> Mục tiêu giai đoạn quyển này:
+> Cục diện cuối quyển (Móc câu bàn giao cho quyển sau):
+
+## Beat Phân Chương (Trước khi viết phải cụ thể hóa từng dòng cho mỗi chương)
+
+| Chương | Sự Kiện Cốt Lõi / Xung Đột | Thúc Đẩy Điều Gì (Nhân vật / Quan hệ / Manh mối) | Móc Câu Cuối Chương |
+|---|---|---|---|
+| 001 | Mở đầu: Cảnh tượng mở đầu cuốn hút + bí ẩn cốt lõi | | |
+
+## Bảng Bố Trí Phục Bút Quyển Này
+
+| Phục Bút | Chương Gài | Chương Dự Kiến Thu Hồi | Trạng Thái |
+|---|---|---|---|
+|  |  |  | Chưa thu hồi |
+`;
+  }
   return `# 《${b.title}》卷01 分章大纲
 
 > 章号区间：001–${per}

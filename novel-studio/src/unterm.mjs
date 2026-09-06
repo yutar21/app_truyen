@@ -280,7 +280,7 @@ export function winShell() {
 export function spawnInstance({ profile, cwd, launchScript }) {
   const cliBin = findUntermCli();
   const exe = findUntermExe();
-  if (!cliBin && !exe) throw new Error('未找到 unterm 可执行文件（设 UNTERM_EXE / UNTERM_CLI，或装到 ~/.local/bin / Program Files）');
+  if (!cliBin && !exe) throw new Error('Không tìm thấy tệp thực thi Unterm (UNTERM_EXE / UNTERM_CLI hoặc trong Program Files). Hệ thống sẽ chuyển sang chế độ chạy ngầm CLI.');
   // 首段命令（新旧两种调用方式共用）
   let cmd;
   if (IS_WIN) {

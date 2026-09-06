@@ -118,42 +118,132 @@
 
 ---
 
-# PHẦN V: TUYẾN NHÂN VẬT NỮ & QUAN HỆ TÌNH CẢM
+# PHẦN V: TUYẾN NHÂN VẬT NỮ & QUAN HỆ TÌNH CẢM (HỆ THỐNG 16 HỒNG NHAN ĐẠO LỮ)
+
+> **Tôn chỉ phát triển tình cảm:**  
+> Dù sở hữu dàn hậu cung hùng hậu 16 mỹ nhân tuyệt sắc khắp Đấu Khí Đại Lục, toàn bộ quá trình tương tác và kết nạp bắt buộc phải tuân thủ nghiêm ngặt tôn chỉ **Lạnh lùng hiện thực (Hardboiled) / Trí tuệ**: Mỗi nhân vật nữ đều có cá tính, vị thế chính trị, giá trị võ học/thế lực độc lập; tình cảm phát triển qua hoạn nạn sinh tử, đọ trí mưu lược hoặc liên minh lợi ích sâu sắc, tuyệt đối bài trừ mô-típ "não tàn vừa gặp đã đổ" rẻ tiền.
+
+---
+
+### 🔹 NHÓM 1: BỘ BA NÒNG CỐT KHỞI NGUYÊN (TÂY BẮC & NAM HẢI)
 
 ## 1. TỬ LINH (ĐẠI CÔNG CHÚA HẮC TINH LINH)
 * **Cảnh giới:** **Đấu Tông nhất tinh (1★)**.
-* **Thân phận:** Đại công chúa Hắc Tinh Linh Tộc; hiện là **Thái Thượng Trưởng Lão kiêm Cung Chủ Phu Nhân Hàn Thủy Cung**.
+* **Thân phận:** Đại công chúa Hắc Tinh Linh Tộc; **Thái Thượng Trưởng Lão kiêm Cung Chủ Phu Nhân Hàn Thủy Cung**.
 * **Đặc điểm:** Mỹ mạo tuyệt trần, da trắng như tuyết, tóc đen như mực, khí chất lãnh diễm quý phái, chưởng quản Ám Dạ Chi Lực.
 * **Quan hệ với Lục Trần:** Đã viên mãn song tu điều hòa đấu khí (Ch.201). Toàn tâm toàn ý gắn bó, là điểm tựa chiến lực không gian vững chắc nhất của Lục Trần.
 
 ## 2. MỸ ĐỖ TOA NỮ VƯƠNG / THẢI LÂN
 * **Cảnh giới:** **Đấu Tông nhất tinh sơ kỳ (1★)**.
-* **Thân phận:** Nữ Vương Xà Nhân Tộc; hiện là **Thái Thượng Trưởng Lão Hàn Thủy Cung**.
-* **Đặc điểm:** Quyến rũ tột bực, kiêu ngạo, tàn nhẫn với kẻ địch nhưng mang gánh nặng sinh tồn của hơn một vạn tộc nhân xà nhân.
-* **Quan hệ với Lục Trần:** Minh ước đồng minh chiến lược sâu sắc. Lục Trần giải cứu cơn khát ngàn năm và di cư 12.000 xà nhân về Bình nguyên Thủy Ngạc màu mỡ. Tình cảm ở mức tôn trọng sâu sắc, kề vai sinh tử, cùng xuất chinh trừng phạt Vân Lam Tông.
+* **Thân phận:** Nữ Vương Xà Nhân Tộc; **Thái Thượng Trưởng Lão Hàn Thủy Cung**.
+* **Đặc điểm:** Quyến rũ tột bực, kiêu ngạo, mang gánh nặng sinh tồn của hơn một vạn tộc nhân xà nhân.
+* **Quan hệ với Lục Trần:** Minh ước đồng minh chiến lược sâu sắc. Lục Trần cứu sống 12.000 xà nhân về Bình nguyên Thủy Ngạc; tại Ch.227, Nữ Vương trao vảy ngược hộ tâm Thất Thải kết lập **Huyết ước bản mệnh sinh tử đồng hành**, kề vai tác chiến như một cặp vương giả song hành.
 
 ## 3. NHÃ PHI
 * **Cảnh giới:** Đấu Sư trung kỳ.
-* **Thân phận:** Tộc trưởng tạm quyền Mễ Đặc Nhĩ gia tộc.
-* **Đặc điểm:** Sắc sảo, thông minh tuyệt đỉnh, nắm giữ huyết mạch kinh doanh và tin tức của Gia Mã Đế Quốc; kiều mị bên ngoài nhưng nội tâm kiên trinh bất khuất.
-* **Quan hệ với Lục Trần:** Ân tình thuở hàn vi Ô Thản Thành. Được Lục Trần thần binh thiên giáng cứu thoát cảnh cắt cổ tự vẫn ở Ch.207; mối thâm tình khắc cốt ghi tâm chính thức thăng hoa.
+* **Thân phận:** **Tổng Quản Sự Thiên Thương Kiếm Các** / Tộc trưởng Mễ Đặc Nhĩ.
+* **Đặc điểm:** Sắc sảo, thông minh tuyệt đỉnh, nắm giữ huyết mạch kinh tài và mạng lưới tin tức; kiều mị bên ngoài nhưng nội tâm kiên trinh bất khuất.
+* **Quan hệ với Lục Trần:** Ân tình thuở hàn vi Ô Thản Thành. Nhã Phi quỳ dâng Kim Tinh Lệnh Bài trao trọn huyết mạch kinh tài cho Lục Trần; Lục Trần lập thệ dùng 18 thanh phi kiếm làm lá chắn chở che cho nàng trọn đời.
+
+---
+
+### 🔹 NHÓM 2: CẶP ĐÔI DUYÊN PHẬN NAM ĐẠI LỤC
 
 ## 4. TINH Á (TIỂU CÔNG CHÚA TINH LINH TỘC)
 * **Cảnh giới:** **Đấu Linh tam tinh (3★)**.
-* **Thân phận:** Tiểu công chúa Tinh Linh Tộc; hiện là **Phó Cung Chủ Hàn Thủy Cung**.
+* **Thân phận:** Tiểu công chúa Tinh Linh Tộc; **Phó Cung Chủ Hàn Thủy Cung**.
 * **Đặc điểm:** Nắm giữ Dị Hỏa Phong Lôi Nộ Liễm (#18), giương Phong Lôi Cung xạ kích tuyệt luân; tính cách bướng bỉnh nhưng ngây thơ, chân thành.
-* **Quan hệ với Lục Trần:** Từ tử địch truy sát chuyển thành tình cảm rung động sâu sắc sau chuỗi ngày đồng sinh cộng tử dưới đáy vực sâu Nam Đại Lục.
+* **Quan hệ với Lục Trần:** Từ tử địch truy sát chuyển thành tình cảm sâu sắc sau chuỗi ngày đồng sinh cộng tử dưới đáy vực sâu Nam Đại Lục.
 
 ## 5. HẢI ÂM (CÔNG CHÚA THỦY NHÂN TỘC)
 * **Cảnh giới:** **Đại Đấu Sư bát tinh (8★)**.
-* **Thân phận:** Mỹ nhân ngư vương nữ Thủy Nhân Tộc; hiện là **Âm Luật Trưởng Lão Hàn Thủy Cung**.
-* **Đặc điểm:** Dị biến Đấu Khí Âm Thanh; sử dụng **Bích Hải Quy Linh Đàn** (đàn dung hợp Quy Linh Địa Hỏa #13 do Lục Trần đúc tặng) để tạo sóng âm công kích và an thần trị thương.
-* **Quan hệ với Lục Trần:** Biết ơn sâu sắc và dành trọn sự dịu dàng cho ân nhân cứu mình thoát khỏi cảnh xiềng xích Hải Ngục.
+* **Thân phận:** Mỹ nhân ngư vương nữ Thủy Nhân Tộc; **Âm Luật Trưởng Lão Hàn Thủy Cung**.
+* **Đặc điểm:** Biến dị Đấu Khí Âm Thanh; sử dụng **Bích Hải Quy Linh Đàn** (đàn dung hợp Quy Linh Địa Hỏa #13 do Lục Trần đúc tặng) để trị thương an thần.
+* **Quan hệ với Lục Trần:** Dành trọn sự dịu dàng, thuần khiết và lòng biết ơn cho ân nhân cứu mình khỏi xiềng xích Hải Ngục.
+
+---
+
+### 🔹 NHÓM 3: TRI KỶ THỜI THIẾU NIÊN & XUẤT VÂN ĐỘC HẬU
 
 ## 6. TIỂU Y TIÊN
-* **Cảnh giới:** Hiện đang bặt vô âm tín (dự kiến Đấu Hoàng / Độc Tông Tông chủ tại Xuất Vân Đế Quốc).
+* **Cảnh giới:** Đấu Hoàng đỉnh phong ➔ Đột phá Đấu Tông (Tông chủ Độc Tông).
 * **Đặc điểm:** Sở hữu Ách Nạn Độc Thể, thiện lương nhưng số phận bi đát.
-* **Quan hệ với Lục Trần:** Hồng nhan tri kỷ thuở thiếu thời tại Trấn Thanh Sơn. Lục Trần luôn mang theo lời hẹn ước tìm phương thuốc hóa giải độc thể cho nàng (Trọng tâm của Quyển 6).
+* **Quan hệ với Lục Trần:** Hồng nhan tri kỷ thuở thiếu thời tại Trấn Thanh Sơn. Lục Trần luôn mang theo lời hẹn ước tìm phương thuốc hóa giải độc thể (trọng tâm Quyển 6 tại Xuất Vân Đế Quốc). Lục Trần dùng Cổ Đạo Hàn Thủy và bí thuật Trận Khí hóa giải độc thể, đón nàng về làm Độc Hậu của Hàn Thủy Cung.
+
+## 7. THANH LÂN
+* **Cảnh giới:** Đấu Sư ➔ Đột phá Đấu Tôn (tại Thiên Xà Phủ).
+* **Đặc điểm:** Sở hữu dị đồng viễn cổ **Bích Xà Tam Hoa Đồng**, có khả năng khống chế vạn xà ma thú; tính cách nhu thuận, ngoan ngoãn và hết mực trung thành.
+* **Quan hệ với Lục Trần:** Từng được Lục Trần bảo bọc tại Thạch Mạc Thành; sau này tái ngộ tại Trung Châu khi nàng đã là Đấu Tôn của Thiên Xà Phủ, Thanh Lân một lòng hướng về Lục Trần và Xà tộc, trở thành trợ thủ đắc lực bên cạnh Thải Lân.
+
+---
+
+### 🔹 NHÓM 4: CHÍ TÔN THÚ TỘC VIỄN CỔ (THÁI HƯ CỔ LONG HOÀNG)
+
+## 8. TỬ NGHIÊN (LONG HOÀNG THÁI HƯ CỔ LONG TỘC)
+* **Cảnh giới:** Đấu Hoàng ➔ Đấu Tông ➔ Đấu Tôn ➔ Đấu Thánh đỉnh phong.
+* **Thân phận:** Vương nữ / **Đương nhiệm Long Hoàng Thái Hư Cổ Long Tộc**; con gái của Lão Long Hoàng Chúc Khôn.
+* **Đặc điểm:** Mái tóc tím buông dài, đôi mắt tử đồng cao quý, khí chất long uy chí tôn bễ nghễ thiên hạ; từ hình hài cô bé tham ăn linh dược tại Nội Viện Già Nam hóa hình thành tuyệt sắc vương giả cái thế.
+* **Quan hệ với Lục Trần:** Gắn bó keo sơn từ thuở Nội Viện (Lục Trần dùng tài nghệ Trận Khí và tìm kiếm linh dược quý nuôi dưỡng nàng). Đến Trung Châu, Lục Trần dùng Cổ Đạo Hàn Thủy và Kiếm Trận trợ giúp nàng luyện hóa Long Hoàng Bản Nguyên Quả, dẹp loạn tam đại Long Vương phân liệt, thống nhất toàn bộ Thái Hư Cổ Long Tộc. Tử Nghiên dành trọn sự ỷ lại, quyến luyến từ ấu thơ đến khi xưng hoàng, nguyện trao trọn bản nguyên Cổ Long và bước vào hậu cung Lục Trần với tư cách Long Hoàng Thê Tử, nắm giữ toàn bộ Thú Tộc viễn cổ tối cường.
+
+---
+
+### 🔹 NHÓM 5: THIÊN KIÊU TRUNG CHÂU BẮC VỰC & ĐAN THÁP
+
+## 9. HÀN NGUYỆT
+* **Cảnh giới:** Đấu Hoàng ➔ Đấu Tông.
+* **Thân phận:** Đại tiểu thư Hàn Gia (Thiên Bắc Thành, Trung Châu Bắc Vực); nguyên học tỷ Nội viện Già Nam.
+* **Đặc điểm:** Dung mạo thanh tao thoát tục, tóc bạc tuyết cơ, tính cách lãnh đạm, chưởng khống Băng thuộc tính.
+* **Quan hệ với Lục Trần:** Tương hợp tuyệt đối về võ học (Băng - Thủy đồng nguyên). Lục Trần ngự kiếm giáng lâm Thiên Bắc Thành cứu nguy Hàn gia trước Phong Lôi Các và Hồng gia; cùng Lục Trần mở rộng thế lực Thiên Thương Các tại Bắc Vực.
+
+## 10. TÀO DĨNH (YÊU NỮ ĐAN THÁP)
+* **Cảnh giới:** Đấu Hoàng đỉnh phong ➔ Đấu Tông (Luyện dược sư Thất phẩm đỉnh phong / Bát phẩm).
+* **Thân phận:** Thiên chi kiêu nữ Đan Tháp, đệ tử của Cự đầu Huyền Không Tử.
+* **Đặc điểm:** Mị hoặc yêu kiều, thông minh xuất chúng, kiêu ngạo, sở hữu linh hồn lực Thiên cảnh sơ kỳ kinh thế hãi tục.
+* **Quan hệ với Lục Trần:** Màn đọ sức nghẹt thở tại Đan Hội giữa "Yêu Nữ Đan Đạo" và "Kiếm Tiên Trận Đạo". Tào Dĩnh bị chinh phục hoàn toàn bởi trí tuệ thực tế và thủ đoạn Trận Khí Sư độc tôn của Lục Trần, trở thành cầu nối tối cao giữa Đan Tháp và Hàn Thủy Cung.
+
+## 11. ĐAN THẦN
+* **Cảnh giới:** Đấu Hoàng (Luyện dược sư Thất phẩm).
+* **Thân phận:** Muội muội của Đan Hiên, thiên tài Đan Gia.
+* **Đặc điểm:** Nhu nhược, rụt rè, e lệ, thể chất linh hồn tự động thôn phệ linh khí xung quanh khiến nàng luôn đau khổ và cô độc.
+* **Quan hệ với Lục Trần:** Lục Trần dùng *Bát Quái Trấn Hồn Trận* và mỏ neo linh hồn của Cổ Trận Thiên Cung ổn định dị biến linh hồn cho nàng. Đan Thần xem Lục Trần là chỗ dựa duy nhất trong cuộc đời, toàn tâm trao trọn tình cảm.
+
+## 12. PHƯỢNG THANH NHI
+* **Cảnh giới:** Đấu Hoàng đỉnh phong ➔ Đấu Tông (Thiên Yêu Hoàng Tộc).
+* **Thân phận:** Thiên chi kiều nữ Thiên Yêu Hoàng Tộc, đệ tử chân truyền của Phong Lôi Các Lôi Tôn Giả.
+* **Đặc điểm:** Cực kỳ kiêu ngạo, phong thái vương giả, nắm giữ Phong Lôi chi lực viễn cổ.
+* **Quan hệ với Lục Trần:** Từ thế lực tử địch đối đầu sinh tử, Lục Trần dùng kiếm trận và bí thuật Trận Khí đè bẹp sự ngạo mạn của nàng; cứu nàng khỏi cạm bẫy tranh quyền đoạt vị nội bộ Thú Tộc; từng bước khuất phục con phượng hoàng kiêu hãnh thành thê thiếp trung thành.
+
+---
+
+### 🔹 NHÓM 6: TÔNG MÔN TRUNG CHÂU & HOA TÔNG TÁI DUYÊN
+
+## 13. VÂN VẬN
+* **Cảnh giới:** Đấu Hoàng đỉnh phong ➔ Đột phá Đấu Tôn (Tông chủ Hoa Tông).
+* **Thân phận:** Nguyên Tông chủ Vân Lam Tông; người thừa kế Hoa Tông.
+* **Đặc điểm:** Khí chất đoan trang cao quý, thanh nhã như hoa lan rừng, kiếm thuật phong linh phiêu dật.
+* **Quan hệ với Lục Trần:** Sau khi lập thệ rời Gia Mã ở Ch.226, Vân Vận lưu lạc Trung Châu và rơi vào kiếp nạn bức hôn tại Hoa Tông. Lục Trần ngự vạn kiếm giá lâm dẹp tan phản loạn, cứu sống và giải tỏa toàn bộ nút thắt ân oán năm xưa. Tình cảm trải qua phong ba bão táp thăng hoa thành đạo lữ thấu hiểu sâu sắc.
+
+---
+
+### 🔹 NHÓM 7: THƯỢNG GIỚI VIỄN CỔ BÁT TỘC & ĐẠI KẾT CỤC
+
+## 14. HỎA TRĨ (VIÊM TỘC)
+* **Cảnh giới:** Đấu Tôn đỉnh phong ➔ Bán Thánh (Viêm Tộc).
+* **Thân phận:** Đệ nhất mỹ nhân Viêm Tộc, sở hữu Dị Hỏa #08 **Hồng Liên Nghiệp Hỏa**.
+* **Đặc điểm:** Mái tóc đỏ rực, khí chất thoát tục tĩnh lặng, mắt ngọc lung linh.
+* **Quan hệ với Lục Trần:** Đỉnh cao cộng hưởng **Thủy Hỏa Thái Cực** giữa Cổ Đạo Hàn Thủy và Hồng Liên Nghiệp Hỏa. Cùng Lục Trần hợp kích tại Yêu Hỏa Không Gian và liên minh chống Hồn Tộc.
+
+## 15. DƯỢC LINH (DƯỢC TỘC)
+* **Cảnh giới:** Đấu Tôn (Dược Tộc).
+* **Thân phận:** Nữ thiên tài Dược Tộc, mang linh hồn lực công kích trời sinh.
+* **Đặc điểm:** Thanh thuần, hoạt bát, tinh thông y thuật viễn cổ.
+* **Quan hệ với Lục Trần:** Trong thảm họa Hồn Tộc huyết tế Dược Tộc, Lục Trần tung Thần Cấp Kiếm Trận xé toạc vòng vây cứu Dược Linh thoát chết, đem nàng về cưu mang tại Hàn Thủy Cung, bảo tồn huyết mạch linh đan cho đại lục.
+
+## 16. TIÊU HUÂN NHI (CỔ HUÂN NHI)
+* **Cảnh giới:** Đấu Tôn ➔ Đấu Thánh (Cổ Tộc Thần Phẩm Huyết Mạch).
+* **Thân phận:** Thiên chi kiều nữ tối cao của Cổ Tộc, nắm giữ Dị Hỏa #04 **Kim Đế Phần Thiên Viêm**.
+* **Đặc điểm:** Khí chất thanh nhã như sen tuyết, lãnh diễm tuyệt trần, phong hoa tuyệt đại.
+* **Quan hệ với Lục Trần:** Chứng kiến Tiêu Viêm từng bước sa đọa vào tâm ma thù hận mù quáng và đánh mất phong cốt, Huân Nhi nhận thức sâu sắc ai mới là bậc đế vương chân chính gánh vác thương sinh. Lục Trần với phong thái Kiếm Tiên Trận Đế đè bẹp toàn bộ thiên tài Cổ Giới, kề vai tác chiến cùng nàng trong Thiên Mộ; Huân Nhi rung động trước ý chí sắt đá và trí tuệ kiệt xuất của Lục Trần, chính thức bước vào hậu cung Trận Chi Đế.
 
 ---
 
@@ -169,7 +259,7 @@
 * **Hải Ba Đông (Băng Hoàng):** Đấu Hoàng đỉnh phong, nguyên Trưởng lão Mễ Đặc Nhĩ gia tộc. Trọng thương tử chiến chống Vân Lam Tông, được Lục Trần cứu sống bằng lục phẩm đan dược.
 * **Tiêu Đỉnh & Tiêu Lệ:** Thủ lĩnh Mạc Thiết Dong Binh Đoàn / Tiêu Môn. Cảm kích đại ân cứu mạng gia tộc của Lục Trần.
 * **Pháp Mã (Hội trưởng Luyện Dược Sư Công Hội) & Gia Hình Thiên (Hoàng Thất Gia Mã):** Cường giả đỉnh tiêm Gia Mã, kinh hoàng và kính nể uy lực của Thủy Vân Thuyền và song Đấu Tông dưới trướng Lục Trần.
-* **Đại trưởng lão Tô Thiên & Tử Nghiên:** Trụ cột Già Nam Học Viện, bằng hữu chân thành của Lục Trần trong giai đoạn Nội Viện.
+* **Đại trưởng lão Tô Thiên:** Trụ cột Già Nam Học Viện, tiền bối đức cao vọng trọng che chở và hỗ trợ Lục Trần.
 * **Lục Thiết:** Phụ thân Lục Trần, người cha mẫu mực bảo bọc con từ thuở hàn vi Ô Thản Thành.
 * **Mặc Ba Tư & Nguyệt Mị:** Đại thống lĩnh Xà Nhân Tộc (Đấu Vương), trung thành bảo vệ Bình nguyên Thủy Ngạc và phối hợp chặt chẽ với Hàn Thủy Cung.
 

@@ -31,22 +31,28 @@ export function pickAuxModel(bookModel, cfg) {
   return alt || bookModel || 'codex';
 }
 
-// 把模型输出清洗成"一段约150字的纯中文简介"：先砍掉被回显的 prompt，再去引导语/引号/空白。
-function cleanSynopsis(text) {
+// 把模型输出清洗成一段纯文本简介：先砍掉被回显的 prompt，再去引导语/引号/空白。
+function cleanSynopsis(text, isLatin = false) {
   let t = String(text || '')
     .replace(/\x1b\[[0-9;?]*[ -\/]*[@-~]/g, '').replace(/\x1b[@-Z\\-_]/g, '').replace(/[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]/g, '')  // 去 ANSI/控制码防乱码
     .replace(/```[\s\S]*?```/g, ' ');
   // codex exec 等常把指令原样回显，粘在简介后面 → 在回显 prompt 的标志处截断（位置 >40 才截，避免误伤开头）。
-  const cut = t.search(/你是资深网文编辑|为下面这本小说写一段|硬性要求[：:]|小说信息[：:]/);
+  const cut = t.search(/你是资深网文编辑|为下面这本小说写一段|硬性要求[：:]|小说信息[：:]|Bạn là Tổng biên tập|Hãy viết|Yêu cầu[：:]/i);
   if (cut > 40) t = t.slice(0, cut);
-  const META = /^(简介|内容简介|文案|以下|这是|好的|输出|note|here|小说信息|书名[：:]|题材[：:]|文风[：:])/i;
+  const META = /^(简介|内容简介|文案|以下|这是|好的|输出|note|here|小说信息|书名[：:]|题材[：:]|文风[：:]|giới thiệu|tóm tắt|nội dung|sau đây)/i;
   const lines = t.split(/\r?\n/).map(l => l.trim()).filter(Boolean).filter(l => !META.test(l) && !/^[#>\-*]/.test(l));
+  if (isLatin) {
+    let s = lines.join(' ').replace(/\s+/g, ' ').trim();
+    s = s.replace(/^[「『（("'\s]+|[」』）)"'\s]+$/g, '').replace(/^(giới thiệu|tóm tắt|nội dung|văn án)[：:]\s*/i, '').trim();
+    if (s.length > 500) s = s.slice(0, 490) + '…';
+    if (s.split(/\s+/).length < 20) return '';
+    return s;
+  }
   const cand = lines.filter(l => (l.match(/[一-鿿]/g) || []).length >= 8);
   let s = (cand.length ? cand.join('') : lines.join('')).trim();
   s = s.replace(/^[「『（("'\s]+|[」』）)"'\s]+$/g, '').replace(/^(简介|内容简介|文案)[：:]\s*/, '').replace(/\s+/g, '').trim();
   if (s.length > 240) s = s.slice(0, 230) + '…';
-  // 兜底闸：简介必须是中文正文。CLI 横幅/英文报错洗出来的串中文占比极低——宁可返回空让上层换模型重试，
-  // 也绝不能把 "OpenAICodexv0.141.0workdir:..." 这种东西存成作品简介（会被番茄发布直接采用）。
+  // 兜底闸：简介必须是中文正文。
   if (s && (s.match(/[一-鿿]/g) || []).length < s.length * 0.6) return '';
   return s;
 }
@@ -61,26 +67,35 @@ function auxCandidates(bookModel, cfg) {
   return [...new Set([first, ...avail].filter(Boolean))];
 }
 
-// 生成一段约150字的中文简介/推广文案（写作模型是 claude 时自动换 codex/gemini 来跑）。
+// 生成一段约150字的简介/推广文案（写作模型是 claude 时自动换 codex/gemini 来跑）。
 // 一个 CLI 失败（额度/登录/限流）或吐出非中文垃圾 → 自动换下一个，全挂才报错并说清每个为什么挂。
 export function generateSynopsis(book, cfg) {
   let bible = '';
   try { bible = fs.readFileSync(path.join(book.dir, 'novel_bible.md'), 'utf8').slice(0, 3000); } catch {}
-  const ground = bible || [book.title && '书名：' + book.title, book.genre && '题材：' + book.genre].filter(Boolean).join('\n');
-  const prompt =
-    `你是资深网文编辑。为下面这本小说写一段【中文简介/推广文案】，用于发布到网文平台、分享给读者。\n` +
-    `硬性要求：①长度 150 字左右（130–170 字）；②一段话，不分段、不用列表；③点出核心卖点、主角处境与主要冲突，留一个悬念钩子；④不剧透结局；⑤不要出现"本书/简介/作者/读者/爽点/大纲"等元词，也不要任何引导语；⑥只输出简介正文本身，不要解释、不要标题、不要加引号。\n` +
-    `小说信息：\n${ground}`;
+  const isLatin = /[a-zA-Zà-ỹÀ-Ỹ]/.test(book.title || '') || /[a-zA-Zà-ỹÀ-Ỹ]/.test(book.genre || '');
+  const ground = bible || [book.title && (isLatin ? 'Tên tác phẩm: ' : '书名：') + book.title, book.genre && (isLatin ? 'Thể loại: ' : '题材：') + book.genre].filter(Boolean).join('\n');
+  const prompt = isLatin
+    ? `Bạn là Tổng biên tập tiểu thuyết kỳ cựu. Hãy viết một đoạn 【GIỚI THIỆU / TÓM TẮT QUẢNG BÁ TIỂU THUYẾT】 (khoảng 100–150 từ) hoàn toàn bằng TIẾNG VIỆT cho tác phẩm dưới đây để giới thiệu đến độc giả mạng.\n` +
+      `Yêu cầu cốt lõi: ① Đoạn văn liền mạch, súc tích, không gạch đầu dòng; ② Làm nổi bật điểm cuốn hút nhất, hoàn cảnh nhân vật chính và xung đột then chốt, kết thúc bằng một nút thắt hồi hộp; ③ Không spoil cái kết; ④ 100% TIẾNG VIỆT CHUẨN MỰC, TUYỆT ĐỐI KHÔNG DÙNG TIẾNG TRUNG HOẶC CHỮ HÁN; ⑤ Chỉ xuất phần nội dung tóm tắt, không kèm lời chào, giải thích hay tiêu đề.\n` +
+      `Thông tin tác phẩm:\n${ground}`
+    : `你是资深网文编辑。为下面这本小说写一段【中文简介/推广文案】，用于发布到网文平台、分享给读者。\n` +
+      `硬性要求：①长度 150 字左右（130–170 字）；②一段话，不分段、不用列表；③点出核心卖点、主角处境与主要冲突，留一个悬念钩子；④不剧透结局；⑤不要出现"本书/简介/作者/读者/爽点/大纲"等元词，也不要任何引导语；⑥只输出简介正文本身，不要解释、不要标题、不要加引号。\n` +
+      `小说信息：\n${ground}`;
   const notes = [];
   for (const id of auxCandidates(book.model, cfg)) {
     const name = getModel(id)?.name || id;
     try {
-      const s = cleanSynopsis(runModelOnce(id, prompt, cfg, 120000) || '');
-      if (s && (s.match(/[一-鿿]/g) || []).length >= 60) return { synopsis: s, model: id };
-      notes.push(`${name}：没给出像样的中文简介`);
+      const s = cleanSynopsis(runModelOnce(id, prompt, cfg, 120000) || '', isLatin);
+      if (isLatin) {
+        if (s && s.split(/\s+/).length >= 20) return { synopsis: s, model: id };
+        notes.push(`${name}: Chưa tạo được tóm tắt tiếng Việt đạt yêu cầu`);
+      } else {
+        if (s && (s.match(/[一-鿿]/g) || []).length >= 60) return { synopsis: s, model: id };
+        notes.push(`${name}：没给出像样的中文简介`);
+      }
     } catch (e) { notes.push(`${name}：${e.message.replace(/^.*?跑不动：/, '')}`); }
   }
-  throw new Error('简介生成失败——挨个试过的本地模型都不行：' + notes.join('；') + '。可换个模型、或先自己写一段。');
+  throw new Error(isLatin ? 'Tạo tóm tắt thất bại qua tất cả mô hình cục bộ: ' + notes.join('; ') + '. Có thể đổi mô hình hoặc tự viết tay.' : '简介生成失败——挨个试过的本地模型都不行：' + notes.join('；') + '。可换个模型、或先自己写一段。');
 }
 
 // CLI「根本没跑成」的典型输出：额度、限流、未登录、网络。这些绝不能被当成"模型的回答"往下用——
@@ -175,16 +190,26 @@ function extractJsonArray(text) {
 
 // 生成 3 个候选书名（含一句话简介）
 export async function proposeTitles({ theme, words, model }, cfg) {
-  const prompt =
-    `你是资深网文主编。请据下面的题材，生成 3 个适合该题材的中文网文书名，各配一句话简介。\n` +
-    `题材：${theme}\n目标总字数：${words || '长篇'}\n` +
-    `只输出严格 JSON 数组，不要任何多余文字、不要 markdown 代码块。` +
-    `简介里【不要使用英文双引号】，需要引用时用中文引号「」。格式：` +
-    `[{"title":"书名","premise":"一句话简介"},{"title":"...","premise":"..."},{"title":"...","premise":"..."}]`;
+  const isLatin = /[a-zA-Zà-ỹÀ-Ỹ]/.test(theme || '') || !/[\u4e00-\u9fa5]/.test(theme || '');
+  const prompt = isLatin
+    ? `Bạn là Tổng biên tập tiểu thuyết mạng kỳ cựu. Dựa vào thể loại / ý tưởng dưới đây, hãy tạo 3 tên tác phẩm tiểu thuyết mạng TIẾNG VIỆT hấp dẫn, cuốn hút và phù hợp nhất với thể loại này, mỗi tên kèm theo một câu giới thiệu / tóm tắt cốt truyện ngắn gọn (premise) hoàn toàn bằng TIẾNG VIỆT.\n` +
+      `Ý tưởng / Thể loại: ${theme}\nSố chữ dự kiến: ${words || 'Truyện dài'}\n` +
+      `YÊU CẦU QUAN TRỌNG NHẤT:\n` +
+      `1. 100% TIẾNG VIỆT CHUẨN MỰC, TUYỆT ĐỐI KHÔNG DÙNG TIẾNG TRUNG HOẶC CHỮ HÁN.\n` +
+      `2. Tên tác phẩm và câu giới thiệu phải thuần Việt hoặc âm Hán-Việt tự nhiên, cuốn hút, đúng gu độc giả tiểu thuyết mạng Việt Nam.\n` +
+      `3. Chỉ xuất DUY NHẤT một mảng JSON hợp lệ, không có bất kỳ văn bản thừa nào khác, không bọc trong markdown code block.\n` +
+      `4. Trong phần premise KHÔNG dùng dấu ngoặc kép tiếng Anh ", nếu cần trích dẫn hãy dùng ngoặc đơn ' hoặc ngoặc vuông [].\n` +
+      `Định dạng JSON chuẩn:\n` +
+      `[{"title":"Tên truyện tiếng Việt 1","premise":"Một câu giới thiệu tóm tắt bằng tiếng Việt"},{"title":"Tên truyện tiếng Việt 2","premise":"Một câu giới thiệu tóm tắt bằng tiếng Việt"},{"title":"Tên truyện tiếng Việt 3","premise":"Một câu giới thiệu tóm tắt bằng tiếng Việt"}]`
+    : `你是资深网文主编。请据下面的题材，生成 3 个适合该题材的中文网文书名，各配一句话简介。\n` +
+      `题材：${theme}\n目标总字数：${words || '长篇'}\n` +
+      `只输出严格 JSON 数组，不要任何多余文字、不要 markdown 代码块。` +
+      `简介里【不要使用英文双引号】，需要引用时用中文引号「」。格式：` +
+      `[{"title":"书名","premise":"一句话简介"},{"title":"...","premise":"..."},{"title":"...","premise":"..."}]`;
   const out = runModelOnce(model, prompt, cfg, 120000);
   const arr = extractJsonArray(out);
   if (!arr || !arr.length) {
-    const e = new Error('AI 返回未能解析为书名候选，请重试或换模型');
+    const e = new Error(isLatin ? 'AI không thể tạo danh sách tên truyện gợi ý, vui lòng thử lại hoặc đổi mô hình khác' : 'AI 返回未能解析为书名候选，请重试或换模型');
     e.raw = out.slice(-600);
     throw e;
   }
@@ -194,12 +219,17 @@ export async function proposeTitles({ theme, words, model }, cfg) {
 
 // AI 据题材/故事线，从预设文风里推荐最合适的一个（含理由），并可给一条本书专属的微调建议。
 export async function recommendStyle({ theme, model }, cfg) {
+  const isLatin = /[a-zA-Zà-ỹÀ-Ỹ]/.test(theme || '') || !/[\u4e00-\u9fa5]/.test(theme || '');
   const list = STYLES.map(s => `${s.id}：${s.name}（${s.short}）`).join('；');
-  const prompt =
-    `你是资深网文主编。下面是一本书的题材/故事线，请从给定的文风预设里挑一个【最合适】的，并给一句话理由，` +
-    `再补一句"本书专属的文风微调建议"。\n题材：${theme}\n可选文风：${list}\n` +
-    `只输出严格 JSON，不要多余文字、不要双引号嵌套（需要引用用「」）：` +
-    `{"id":"预设id","reason":"为什么最合适","tweak":"本书专属微调建议"}`;
+  const prompt = isLatin
+    ? `Bạn là Tổng biên tập tiểu thuyết mạng kỳ cựu. Dưới đây là thể loại/ý tưởng của một tác phẩm, hãy chọn MỘT phong cách văn phong phù hợp nhất từ danh sách cho sẵn, đưa ra 1 câu lý do bằng tiếng Việt, và bổ sung 1 gợi ý tinh chỉnh văn phong riêng cho tác phẩm này bằng tiếng Việt.\n` +
+      `Thể loại / ý tưởng: ${theme}\nDanh sách phong cách tùy chọn: ${list}\n` +
+      `Chỉ xuất DUY NHẤT mã JSON hợp lệ, không có văn bản thừa, không bọc trong markdown code block, không dùng dấu ngoặc kép lồng nhau: ` +
+      `{"id":"id_phong_cach","reason":"Lý do tiếng Việt vì sao phù hợp nhất","tweak":"Gợi ý tinh chỉnh riêng cho tác phẩm này"}`
+    : `你是资深网文主编。下面是一本书的题材/故事线，请从给定的文风预设里挑一个【最合适】的，并给一句话理由，` +
+      `再补一句"本书专属的文风微调建议"。\n题材：${theme}\n可选文风：${list}\n` +
+      `只输出严格 JSON，不要多余文字、不要双引号嵌套（需要引用用「」）：` +
+      `{"id":"预设id","reason":"为什么最合适","tweak":"本书专属微调建议"}`;
   const out = runModelOnce(model, prompt, cfg, 120000);
   // 解析（容错）
   let id, reason = '', tweak = '';
@@ -209,7 +239,7 @@ export async function recommendStyle({ theme, model }, cfg) {
     // 兜底：从输出里找一个预设 id
     const hit = STYLES.find(s => out.includes(s.id) || out.includes(s.name));
     id = hit ? hit.id : 'hardboiled';
-    if (!reason) { const rm = out.match(/[reason"：:\s]*([^"\n}]{4,60})/); reason = rm ? rm[1].trim() : 'AI 推荐'; }
+    if (!reason) { const rm = out.match(/[reason"：:\s]*([^"\n}]{4,60})/); reason = rm ? rm[1].trim() : (isLatin ? 'Gợi ý từ AI' : 'AI 推荐'); }
   }
   const s = getStyle(id);
   return { id, name: s.name, short: s.short, reason, tweak };
@@ -220,25 +250,34 @@ export async function recommendStyle({ theme, model }, cfg) {
 // 注入每个 AGENTS/CLAUDE/GEMINI/QWEN.md 的「本书文风」段，写作时 agent 自动遵守。
 export async function analyzeStyleSample({ sample, model }, cfg) {
   const s = String(sample || '').replace(/\r/g, '').trim();
-  if (s.length < 40) throw new Error('样本太短，请贴几百字以上的对标正文');
-  const prompt =
-    `你是资深网文主编与文风分析师。下面是一段【对标作品的正文样本】。请分析它的写作风格，产出一份能让另一个 AI「照着这个腔写」的【文风指南】。\n` +
-    `要抓住并写清（用"硬性照做"的祈使句、具体可执行，别写空泛形容词）：段落形态（长短、一句一段还是长段、换行密度）、语言基调（平白还是文学、口语程度）、叙事节奏与信息密度、感官细节多寡、叙述口吻（吐槽/爽/克制）、对话风格、爽点与钩子节奏。\n` +
-    `另外必须给出三样【能直接照着仿】的硬抓手：①**招牌句式 / 高频口头禅** 3–5 个（从样本里摘具体的短句/句式，让 AI 能直接套）；②**这种风格特有的禁忌** 3–5 条（它绝不用的词、腔调、写法——例如"绝不写心理独白""绝不用仿佛/宛如"）；③**单章节奏骨架**一句话（如"开头钩子→中段一次小爽→结尾抛新麻烦"）。\n` +
-    `末尾附 2 段最能代表该风格的【原文摘录】（从样本里选，各 2-4 句），当校准锚。\n\n` +
-    `严格按下面格式输出（第一行必须是"风格名="，之后是指南正文；不要代码块、不要多余话）：\n` +
-    `风格名=<一句话风格名，如：番茄爽文·快平短口语>\n` +
-    `<从这里开始是文风指南正文……>\n\n` +
-    `对标样本如下：\n----\n${s.slice(0, 12000)}\n----`;
+  const isLatin = /[a-zA-Zà-ỹÀ-Ỹ]/.test(s);
+  if (isLatin ? s.split(/\s+/).length < 40 : s.length < 40) throw new Error(isLatin ? 'Đoạn văn mẫu quá ngắn, vui lòng dán vài trăm chữ văn mẫu' : '样本太短，请贴几百字以上的对标正文');
+  const prompt = isLatin
+    ? `Bạn là Tổng biên tập và chuyên gia phân tích văn phong tiểu thuyết mạng. Dưới đây là đoạn 【TRÍCH ĐOẠN VĂN MẪU】. Hãy phân tích phong cách viết và đúc kết thành một bản 【HƯỚNG DẪN VĂN PHONG】 HOÀN TOÀN BẰNG TIẾNG VIỆT để AI có thể "bắt chước chuẩn xác ngữ điệu này" khi sáng tác.\n` +
+      `Nêu rõ các yếu tố cụ thể: Hình thái đoạn văn (độ dài ngắn, ngắt dòng), giọng điệu (bình dị hay hoa mỹ, mức độ khẩu ngữ), nhịp điệu tự sự và mật độ thông tin, mức độ chi tiết cảm quan, sắc thái trần thuật, phong cách đối thoại, nhịp tạo điểm sảng khoái và móc câu.\n` +
+      `Đặc biệt cung cấp 3 điểm mấu chốt: ① Mẫu câu / khẩu khí đặc trưng (3–5 câu từ mẫu); ② Cấm kỵ đặc thù của phong cách này (3–5 điều); ③ Khung xương nhịp điệu của một chương.\n` +
+      `Cuối cùng đính kèm 2 đoạn trích tiêu biểu nhất làm mỏ neo hiệu chuẩn.\n\n` +
+      `Định dạng xuất (Dòng đầu tiên bắt buộc là "Phong cách=", sau đó là nội dung hướng dẫn; không dùng code block, không thêm lời thừa):\n` +
+      `Phong cách=<Tên phong cách trong 1 câu ngắn gọn>\n` +
+      `<Nội dung hướng dẫn văn phong tiếng Việt từ đây...>\n\n` +
+      `Đoạn văn mẫu đối chiếu:\n----\n${s.slice(0, 12000)}\n----`
+    : `你是资深网文主编与文风分析师。下面是一段【对标作品的正文样本】。请分析它的写作风格，产出一份能让另一个 AI「照着这个腔写」的【文风指南】。\n` +
+      `要抓住并写清（用"硬性照做"的祈使句、具体可执行，别写空泛形容词）：段落形态（长短、一句一段还是长段、换行密度）、语言基调（平白还是文学、口语程度）、叙事节奏与信息密度、感官细节多寡、叙述口吻（吐槽/爽/克制）、对话风格、爽点与钩子节奏。\n` +
+      `另外必须给出三样【能直接照着仿】的硬抓手：①**招牌句式 / 高频口头禅** 3–5 个（从样本里摘具体的短句/句式，让 AI 能直接套）；②**这种风格特有的禁忌** 3–5 条（它绝不用的词、腔调、写法——例如"绝不写心理独白""绝不用仿佛/宛如"）；③**单章节奏骨架**一句话（如"开头钩子→中段一次小爽→结尾抛新麻烦"）。\n` +
+      `末尾附 2 段最能代表该风格的【原文摘录】（从样本里选，各 2-4 句），当校准锚。\n\n` +
+      `严格按下面格式输出（第一行必须是"风格名="，之后是指南正文；不要代码块、不要多余话）：\n` +
+      `风格名=<一句话风格名，如：番茄爽文·快平短口语>\n` +
+      `<从这里开始是文风指南正文……>\n\n` +
+      `对标样本如下：\n----\n${s.slice(0, 12000)}\n----`;
   const raw = runModelOnce(model, prompt, cfg, 240000) || '';
   // 去 ANSI/控制符（CLI 输出常带），再从"风格名="处开始截（丢掉前面的横幅日志）
   const clean = raw.replace(/\x1b\[[0-9;?]*[ -\/]*[@-~]/g, '').replace(/[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]/g, '');
-  const m = clean.match(/风格名\s*[=＝：:]\s*([^\n]+)\n([\s\S]+)/);
+  const m = clean.match(/(?:风格名|Phong cách)\s*[=＝：:]\s*([^\n]+)\n([\s\S]+)/i);
   let name, rules;
   if (m) { name = m[1].trim(); rules = m[2].trim(); }
-  else { name = '对标文风'; rules = clean.trim(); }
+  else { name = isLatin ? 'Văn phong đối chiếu' : '对标文风'; rules = clean.trim(); }
   rules = rules.replace(/\n{3,}/g, '\n\n').trim();
-  if (rules.length < 40) { const e = new Error('AI 分析结果异常（太短），请重试或换模型'); e.raw = raw.slice(-500); throw e; }
+  if (rules.length < 40) { const e = new Error(isLatin ? 'Kết quả phân tích AI bất thường (quá ngắn), vui lòng thử lại hoặc đổi mô hình' : 'AI 分析结果异常（太短），请重试或换模型'); e.raw = raw.slice(-500); throw e; }
   return { name: name.slice(0, 40), rules };
 }
 
@@ -292,6 +331,19 @@ export function buildReviewInstruction(book, range, dims, note) {
 // 导入的半成品书：先恢复上下文再续写。单行。
 export function buildResumeInstruction(book) {
   const batch = book.standards?.batchSize || 3;
+  const isLatin = /[a-zA-Zà-ỹÀ-Ỹ]/.test(book.title || '');
+  if (isLatin) {
+    const ingest = book.flatImport
+      ? `Bước 0: Thu dọn và lưu trữ (quan trọng): Các chương đã viết hiện đang nằm phân tán ở thư mục gốc, chưa vào chapters/. Hãy phân loại tệp chính văn, di chuyển theo thứ tự vào chapters/Quyen_01/ với định dạng 3 số toàn cục (ví dụ: 001Tên_Chương.txt), đăng ký vào chapter_index.md, gom thiết lập vào novel_bible.md hoặc outlines/. Xong mới làm bước tiếp theo. `
+      : '';
+    const s = `Đây là một cuốn tiểu thuyết đã viết một phần 《${book.title}》, bây giờ cần viết tiếp nối. ` + ingest +
+      `Bước 1 Khôi phục ngữ cảnh: Đọc kỹ tất cả các chương đã viết trong chapters/ (theo thứ tự tên tệp), cũng như novel_bible.md, outlines/, chapter_index.md (nếu chưa hoàn thiện thì dựa vào chính văn để tái lập/bổ sung hoàn toàn bằng TIẾNG VIỆT CHUẨN MỰC); ` +
+      `Hệ thống lại: Thế giới quan, cảnh giới/thiết lập, nhân vật chính và các nhân vật then chốt cùng cảnh ngộ hiện tại, phục bút chưa thu hồi, manh mối chưa sáng tỏ, ghi vào novel_bible.md và continuity_ledger.md bằng TIẾNG VIỆT. ` +
+      `Bước 2 Hiệu chuẩn: Xác định số chương toàn cục mới nhất và quyển hiện tại, bổ sung dàn ý phân chương cho quyển nếu cần. ` +
+      `Bước 3 Viết tiếp: Nối tiếp chương mới nhất, viết đợt tiếp theo gồm ${batch} chương HOÀN TOÀN BẰNG TIẾNG VIỆT, tuyệt đối tuân thủ mạch truyện cũ, ngữ điệu và văn phong, không sửa đổi các chương cũ; viết xong tự kiểm tra chất lượng. ` +
+      `Toàn bộ 100% TIẾNG VIỆT CHUẨN MỰC, TUYỆT ĐỐI KHÔNG DÙNG TIẾNG TRUNG. Tuân thủ AGENTS.md.`;
+    return s.replace(/[\r\n]+/g, ' ');
+  }
   // 导入的"平铺分章"书：已写章节散在书目录根下、不在 chapters/ 里 → 先整理归档再恢复。
   const ingest = book.flatImport
     ? `第0步整理归档（重要）：本书的已写章节目前是【平铺在书目录根下的 .txt/.md 文件】，不在 chapters/ 子目录里。请先逐个查看根目录下的 .txt/.md：先判定哪些是正文章节、哪些是设定/大纲/笔记（排除 novel_bible.md、各卷大纲、chapter_index.md、continuity_ledger.md、AGENTS.md/CLAUDE.md/GEMINI.md、README 等非正文）；把正文章节依正确先后顺序（看文件名编号或正文衔接判断）逐章移动到 chapters/卷xx/ 下，重命名为「3位全局章号+唯一章名.txt」、内容仅保留正文（去掉标题行/卷名/注释），并逐条登记进 chapter_index.md；把设定/大纲类内容并入 novel_bible.md 或 outlines/。归档过程已 git 受控、可回溯。整理完成后再继续下面步骤。`
@@ -330,6 +382,20 @@ export function buildRebuildOutlineInstruction(book) {
 export function buildCompassKickoffInstruction(book, theme, words, volumes, characters) {
   const nv = Math.max(3, parseInt(volumes, 10) || 30);
   const chars = String(characters || '').replace(/[\r\n]+/g, '；').trim();
+  const isLatin = /[a-zA-Zà-ỹÀ-Ỹ]/.test(book.title || '') || /[a-zA-Zà-ỹÀ-Ỹ]/.test(theme || '');
+  if (isLatin) {
+    const charLine = chars
+      ? `【Tác giả đã chỉ định các nhân vật sau, bắt buộc sử dụng nguyên vẹn, không đổi tên hoặc thay thế】: ${chars}. Hãy ghi các nhân vật này vào novel_bible.md ở phần nhân vật chính/phụ làm mốc chuẩn cho toàn thư; các nhân vật phụ chưa chỉ định sẽ do bạn bổ sung sau nhưng phải cùng phong cách. `
+      : '';
+    const s = `Bạn là Tổng biên tập tiểu thuyết mạng kỳ cựu. Hãy thực hiện 【KHỞI TẠO TÁC PHẨM NHẸ NHÀNG (COMPASS KICKOFF) — CHỈ THIẾT LẬP BỐ CỤC & LA BÀN TOÀN THƯ BẰNG 100% TIẾNG VIỆT, TUYỆT ĐỐI KHÔNG VIẾT CHÍNH VĂN, KHÔNG CHI TIẾT HÓA BẤT KỲ CHƯƠNG NÀO】 cho tác phẩm 《${book.title}》. ` +
+      `Thể loại / ý tưởng: ${theme || '（Xem mô tả thể loại）'}; Tổng dung lượng dự kiến: ${words || 'Truyện dài'}. ` +
+      charLine +
+      `Bước 1: Viết tệp novel_bible.md bằng TIẾNG VIỆT CHUẨN MỰC (Điểm bán một câu, độc giả mục tiêu, bối cảnh thế giới quan, hệ thống tu vi/năng lực, nhân vật chính, nhân vật phụ then chốt, thế lực đối địch, chủ đề, điều cấm kỵ, phong cách đặt tên và văn phong). ` +
+      `Bước 2: Tạo tệp 【LA BÀN TOÀN THƯ】 outlines/La_Ban_Toan_Thu.md (hoặc outlines/全书罗盘.md) bằng TIẾNG VIỆT —— Quy hoạch khoảng ${nv} quyển (có thể tùy chỉnh theo độ dài cốt truyện); 【MỖI QUYỂN CHỈ VIẾT ĐÚNG 1 DÒNG】: Số thứ tự quyển + Tên quyển (4–8 chữ hào hùng) + Định hướng cốt truyện trong 1 câu (quyển này xảy ra biến cố gì lớn, cảnh ngộ của nhân vật chính thăng cấp từ trạng thái nào lên trạng thái nào, cuối quyển bàn giao cục diện gì cho quyển sau), bao quát đến tận đại kết cục. Đây là kim chỉ nam định hướng toàn thư. ` +
+      `Bước 3: Khởi tạo continuity_ledger.md bằng TIẾNG VIỆT (ghi nhận điểm xuất phát của nhân vật chính và các thiết lập ban đầu). ` +
+      `【RÀNG BUỘC CỨNG】 Tuyệt đối không lập dàn ý chi tiết từng chương cho bất kỳ quyển nào, tuyệt đối không viết bất kỳ chương chính văn nào. Tác phẩm này áp dụng cơ chế đồng sáng tạo từng quyển. Sau khi hoàn thành xuất riêng một dòng: 「【LA BÀN TOÀN THƯ ĐÃ SẴN SÀNG: CHỜ ĐỒNG SÁNG TẠO TỪNG QUYỂN】」 rồi dừng lại. Toàn bộ tài liệu phải viết 100% BẰNG TIẾNG VIỆT CHUẨN MỰC, TUYỆT ĐỐI KHÔNG DÙNG TIẾNG TRUNG HOẶC CHỮ HÁN. Tuân thủ chuẩn AGENTS.md.`;
+    return s.replace(/[\r\n]+/g, ' ');
+  }
   const charLine = chars
     ? `【作者已指定角色，务必原样采用、不得改名或替换】：${chars}。请把这些角色（姓名、身份/性格）写进 bible 的主角/配角，并作为全书命名与人物基线；未指定的次要角色再由你补齐、风格与之统一。`
     : '';
@@ -347,6 +413,32 @@ export function buildCompassKickoffInstruction(book, theme, words, volumes, char
 // 绝不写世界观长篇/力量体系/配角名单/势力表，绝不出全书概略大纲、绝不出罗盘、绝不建任何卷/分章大纲、绝不写正文。
 // 剧情全部由作者逐段给（写作时 AI 据作者这段情节自拆 3–5 章），配角写到时临时起名并登记名册。单行。
 export function buildFreehandKickoffInstruction(book, theme, words, characters) {
+  const isLatin = /[a-zA-Zà-ỹÀ-Ỹ]/.test(book.title || '') || /[a-zA-Zà-ỹÀ-Ỹ]/.test(theme || '');
+  if (isLatin) {
+    let refsHint = '';
+    try {
+      const dir = path.join(book.dir, 'style_refs');
+      if (fs.readdirSync(dir).some(f => /\.(txt|md)$/i.test(f))) {
+        refsHint = '【Căn cứ văn phong duy nhất】 Trong thư mục style_refs/ có văn bản mẫu tác giả đã duyệt. Đọc kỹ văn mẫu trước khi viết phần Thủ pháp sáng tác; đúc kết chính xác thủ pháp từ văn mẫu, không viết sáo rỗng. ';
+      }
+    } catch {}
+    const chars = String(characters || '').replace(/[\r\n]+/g, '；').trim();
+    const lo = book?.standards?.minChars || 2500;
+    const hi = book?.standards?.targetCharsHi || 4000;
+    const charLine = chars
+      ? `【Nhân vật tác giả đã chỉ định, bắt buộc giữ nguyên】: ${chars}. Nhân vật chính ghi vào mục Nhân vật chính, các nhân vật khác ghi vào danh bạ nhân vật.`
+      : '';
+    const s = `Bạn là Tổng biên tập tiểu thuyết kỳ cựu. Hãy khởi tạo tác phẩm 《${book.title}》 theo 【PHONG CÁCH TỰ DO (FREEHAND) — CHỈ ĐỊNH HƯỚNG CÁCH VIẾT, KHÔNG LẬP DÀN Ý, 100% TIẾNG VIỆT】: ` +
+      `Ý tưởng tác giả: ${theme || '（Xem mô tả）'}${words ? `; Số từ dự kiến: ${words}` : ''}. ` +
+      charLine +
+      `Chỉ làm đúng một việc: Soạn thảo novel_bible.md HOÀN TOÀN BẰNG TIẾNG VIỆT CHUẨN MỰC với đúng 3 mục: ` +
+      `①【Tóm tắt cốt truyện】: 150–250 từ nêu rõ nhân vật chính là ai, hoàn cảnh ra sao, mâu thuẫn cốt lõi là gì, hướng đi đại khái. Không chia giai đoạn, không chia chương hồi, không xếp kết cục. ` +
+      `②【Nhân vật chính】: Tên tuổi + thân phận, tính cách, hoàn cảnh ban đầu. Không liệt kê nhân vật phụ. ` +
+      `③【Thủ pháp sáng tác】: Chiếm 80% dung lượng, quy định rõ góc nhìn trần thuật, khẩu khí, hình thái đoạn văn, cấu trúc từng chương, dung lượng ${lo}–${hi} từ tiếng Việt/chương, cách tạo sảng điểm, quy tắc đặt tên. ` +
+      refsHint +
+      `TUYỆT ĐỐI KHÔNG TẠO BẤT KỲ TỆP NÀO TRONG outlines/, KHÔNG VIẾT CHÍNH VĂN. Khởi tạo continuity_ledger.md thành danh bạ nhân vật. Hoàn thành xuất dòng: 「【THỦ PHÁP SẴN SÀNG: CHỜ TÁC GIẢ GIAO CỐT TRUYỆN】」. Toàn bộ tài liệu 100% TIẾNG VIỆT.`;
+    return s.replace(/[\r\n]+/g, ' ');
+  }
   // 有范本 → 手法一节应该从范本里【观察】出来，而不是模型凭空发明一套
   let refsHint = '';
   try {
@@ -375,10 +467,6 @@ export function buildFreehandKickoffInstruction(book, theme, words, characters) 
     `句式与段落形态（段落多长、换行密度、对话与叙述配比）、单章结构（开头怎么起、中段怎么推、章末钩子怎么抛）、` +
     `单章 ${lo}–${hi} 字、细节怎么给、对话怎么写（人物口吻如何区分）、爽点与节奏的做法、` +
     `命名口味基线（人名/地名什么味道——这条是给你以后【临时起配角名】时照着起的，务必写具体）。` +
-    // 【删掉了】原来这里还要求写进"严禁逐句换行 / 实锚密度每 250–400 字一个 / 反 AI 味禁令
-    // （禁段尾点题升华、禁句长均匀）"。那是开发者的纯文学审美，被这条指令【固化进书自己的
-    // novel_bible.md】，此后每批都读到——改代码都救不回已经生成的书。
-    // 文风该由 style_refs/ 的范本决定；bible 里的手法一节只该记这本书自己的观察。
     (refsHint ? refsHint : '') +
     `【硬性·绝不违反】bible 里不要写世界观设定长篇、力量/等级体系表、人物关系表、势力表、时间线、主题与禁区清单；` +
     `不要写任何剧情走向、阶段规划、卷数与章数规划、全书概略大纲；` +
@@ -451,6 +539,15 @@ export function buildVolumePlanPrompt(book, volNum, { bibleBrief = '', compass =
 export function buildRenameInstruction(book, from, to) {
   const f = String(from || '').replace(/[\r\n]+/g, ' ').trim();
   const t = String(to || '').replace(/[\r\n]+/g, ' ').trim();
+  const isLatin = /[a-zA-Zà-ỹÀ-Ỹ]/.test(book.title || '');
+  if (isLatin) {
+    return (`Tác giả muốn đổi tên 【${f}】 trong toàn bộ tác phẩm thành 【${t}】. Đây là một đợt đổi tên nhận biết ngữ cảnh toàn thư, yêu cầu sạch sẽ, nhất quán, không sót, không nhầm lẫn: ` +
+      `Bước 1: Đọc kỹ novel_bible.md để xác định rõ 【${f}】 là ai —— họ tên đầy đủ, tên gọi tắt/biệt danh, và cách người khác xưng hô. ` +
+      `Bước 2: Đổi tất cả các cách gọi chỉ nhân vật này trong novel_bible.md, outlines/, continuity_ledger.md, chapter_index.md và chapters/ (toàn bộ chính văn các chương) sang cách gọi mới tương ứng. ` +
+      `Bước 3 TUYỆT ĐỐI KHÔNG ĐỔI NHẦM: Các chữ ngẫu nhiên trùng với nhân vật khác, địa danh hoặc thuật ngữ không liên quan thì giữ nguyên. ` +
+      `Bước 4: Cập nhật đồng bộ các thiết lập liên quan trong bible để tránh mâu thuẫn. ` +
+      `Chỉ sửa các tệp trên, tuyệt đối không viết thêm chương mới. Báo cáo bằng tiếng Việt số lượng vị trí đã đổi và dừng lại. Tuân thủ AGENTS.md.`).replace(/[\r\n]+/g, ' ');
+  }
   return (`作者要把本书里的【${f}】改名叫【${t}】。这是一次【上下文感知的全书改名】，务必干净、一致、不误伤：` +
     `第一步：通读 novel_bible.md 弄清【${f}】到底是谁——TA 的全名、单名/小名、以及别人对 TA 的各种称呼（如"某老师/老某/小某/姓某"这类），列个清单。` +
     `第二步：把【所有指向这个角色的叫法】在 novel_bible.md、outlines/、continuity_ledger.md、chapter_index.md 和 chapters/ 下【所有已写章节正文】里，一致改成对应的新叫法（全名→新全名、单名→新单名、"姓X老师"→"姓Y老师"…）。` +
@@ -462,6 +559,16 @@ export function buildRenameInstruction(book, from, to) {
 // 创作台：按作者【大白话】改设定/角色 或 某卷大纲，AI 只改对应文件、不写新正文。单行。
 export function buildReviseSettingInstruction(book, { target, scope, instruction } = {}) {
   const ask = String(instruction || '').replace(/[\r\n]+/g, ' ').trim();
+  const isLatin = /[a-zA-Zà-ỹÀ-Ỹ]/.test(book.title || '');
+  if (isLatin) {
+    if (target === 'outline') {
+      const s = (scope || 'Quyển hiện tại').replace(/[\r\n]+/g, ' ').trim();
+      return (`Tác giả muốn điều chỉnh dàn ý 【${s}】. Hãy 【CHỈ】 mở và chỉnh sửa tệp dàn ý tương ứng trong outlines/ (nếu cần thì đồng bộ novel_bible.md và continuity_ledger.md), sửa theo yêu cầu: 「${ask}」. ` +
+        `Điều chỉnh chi tiết đến từng beat chương; giữ nguyên tính nhất quán với chính văn đã viết. 【TUYỆT ĐỐI KHÔNG VIẾT THÊM CHƯƠNG MỚI (.txt)】. Sửa xong xuất 1 dòng tiếng Việt tóm tắt nội dung đã sửa rồi dừng lại. Tuân thủ AGENTS.md.`).replace(/[\r\n]+/g, ' ');
+    }
+    return (`Tác giả muốn điều chỉnh thiết lập / nhân vật của tác phẩm. Hãy 【CHỈ】 mở và chỉnh sửa novel_bible.md (nếu liên quan hướng đi sau này có thể đồng bộ outlines/ và continuity_ledger.md), sửa theo yêu cầu: 「${ask}」. ` +
+      `Giữ tính nhất quán với chính văn đã viết. 【TUYỆT ĐỐI KHÔNG VIẾT THÊM CHƯƠNG MỚI (.txt)】. Sửa xong xuất 1 dòng tiếng Việt tóm tắt nội dung đã sửa rồi dừng lại. Tuân thủ AGENTS.md.`).replace(/[\r\n]+/g, ' ');
+  }
   if (target === 'outline') {
     const s = (scope || '当前卷').replace(/[\r\n]+/g, ' ').trim();
     return (`作者要调整【${s}】的大纲。请【只】打开并修改 outlines/ 下【${s}】对应的分章大纲（必要时同步 novel_bible.md 相关设定与 continuity_ledger.md），据作者要求改：「${ask}」。` +
@@ -473,8 +580,17 @@ export function buildReviseSettingInstruction(book, { target, scope, instruction
 
 // 范围重写：把指定范围的章节【推倒重写】（不是润色）。单行。
 export function buildRewriteInstruction(book, range, note) {
-  const r = (range || '全书').trim();
-  const focus = note ? `本次重写的重点要求：${String(note).replace(/[\r\n]+/g, ' ')}。` : '';
+  const isLatin = /[a-zA-Zà-ỹÀ-Ỹ]/.test(book.title || '');
+  const r = (range || (isLatin ? 'Toàn tác phẩm' : '全书')).trim();
+  const focus = note ? (isLatin ? `Yêu cầu trọng tâm đợt viết lại này: ${String(note).replace(/[\r\n]+/g, ' ')}. ` : `本次重写的重点要求：${String(note).replace(/[\r\n]+/g, ' ')}。`) : '';
+  if (isLatin) {
+    const s = `Thực hiện 【VIẾT LẠI HOÀN TOÀN】 cho tác phẩm 《${book.title}》 trong 【phạm vi ${r}】 —— viết lại phiên bản mới xuất sắc hơn từ đầu (bản cũ đã được git lưu trữ, có thể hoàn tác). ` +
+      `Bước 1: Đọc kỹ novel_bible.md, dàn ý outlines/ tương ứng và các chương sau phạm vi để đảm bảo bản mới khớp 100% về nhân vật, phục bút, thiết lập, dòng thời gian. ` +
+      `Bước 2: Viết lại toàn bộ từng chương trong phạm vi, ghi đè vào tệp .txt cũ; cấu trúc số chương và thư mục quyển giữ nguyên. ${focus}` +
+      `Bước 3: Tự kiểm tra từng chương và cập nhật chapter_index.md. Tuyệt đối không sửa các chương ngoài phạm vi, không thêm chương mới. ` +
+      `Toàn bộ 100% TIẾNG VIỆT CHUẨN MỰC, TUYỆT ĐỐI KHÔNG DÙNG TIẾNG TRUNG. Văn phong bám sát mẫu trong style_refs/. Tuân thủ nghiêm ngặt AGENTS.md.`;
+    return s.replace(/[\r\n]+/g, ' ');
+  }
   const s = `对《${book.title}》的【范围 ${r}】做【推倒重写】——不是润色、是从头写出更好的版本（旧版本已 git 存档、可回退）。` +
     `第一步：通读 novel_bible.md、该范围对应的 outlines 分章大纲，以及范围【之后】已写的章节，确保新版与后文在人物、伏笔、设定、时间线上严丝合缝。` +
     `第二步：把范围内每一章【整章重写】，覆盖原 .txt 文件；章号与卷目录结构保持不变（若大纲要求调整命名则同步改 chapter_index.md）。${focus}` +
@@ -485,7 +601,16 @@ export function buildRewriteInstruction(book, range, note) {
 
 // 整本重立项：保留题材方向，重写 bible + 大纲 + 全部正文。单行。
 export function buildReprojectInstruction(book, note) {
-  const focus = note ? `调整重点：${String(note).replace(/[\r\n]+/g, ' ')}。` : '';
+  const isLatin = /[a-zA-Zà-ỹÀ-Ỹ]/.test(book.title || '');
+  const focus = note ? (isLatin ? `Trọng tâm điều chỉnh: ${String(note).replace(/[\r\n]+/g, ' ')}. ` : `调整重点：${String(note).replace(/[\r\n]+/g, ' ')}。`) : '';
+  if (isLatin) {
+    const s = `Thực hiện 【TÁI KHỞI TẠO TOÀN TÁC PHẨM】 cho 《${book.title}》 (bible / dàn ý / chính văn cũ đã được git lưu trữ, có thể hoàn tác). Giữ định hướng thể loại lớn, nhưng lập lại quy hoạch và chính văn: ` +
+      `Bước 1 Viết lại novel_bible.md bằng TIẾNG VIỆT: Điểm bán, độc giả, thế giới quan, cảnh giới, nhân vật chính/phụ, thế lực thù địch, chủ đề, cấm kỵ, cam kết tiết tấu, quy mô toàn thư. ${focus}` +
+      `Bước 2 Sắp xếp lại dàn ý phân chương toàn quyển trong outlines/ bằng Tiếng Việt. ` +
+      `Bước 3 Viết lại chính văn từ Chương 1 bằng TIẾNG VIỆT CHUẨN MỰC, mỗi đợt ${book.standards?.batchSize || 3} chương rồi tự kiểm tra. ` +
+      `Bước 4 Tái lập chapter_index.md khớp với chính văn mới. Toàn bộ 100% TIẾNG VIỆT, TUYỆT ĐỐI KHÔNG DÙNG TIẾNG TRUNG. Tuân thủ AGENTS.md.`;
+    return s.replace(/[\r\n]+/g, ' ');
+  }
   const s = `对《${book.title}》做【整本推倒重立项】（旧的 bible / 大纲 / 正文已 git 存档、可回退）。保留题材大方向，但重做规划与正文：` +
     `第一步重写 novel_bible.md：一句话卖点、目标读者、时代世界观、力量/设定体系、主角与关键人物、对抗势力、主题、禁区、开篇策略、节奏与格局承诺、全书规模（卷数/每卷章数/总字数）。${focus}` +
     `第二步在 outlines/ 重排全卷分章大纲（每卷章级 beat 表 + 伏笔布点表，覆盖到全书结局）；为每一卷起一个有意境的卷名（4–6字副标题），大纲文件名带上卷名（卷xx<卷名>分章大纲.md），并把各卷卷名列进 bible 的“全书规模/卷名”（发布番茄按卷名建卷、卷必须有名）。` +
@@ -496,6 +621,21 @@ export function buildReprojectInstruction(book, note) {
 
 // 收束令：进入收尾/完本冲刺阶段发给作者的指令。first=首次进入(给全套纪律)；否则给精简续推。单行。
 export function buildFinaleInstruction(book, { first = false } = {}) {
+  const isLatin = /[a-zA-Zà-ỹÀ-Ỹ]/.test(book.title || '');
+  if (isLatin) {
+    if (first) {
+      const s = `Bây giờ bước vào giai đoạn 【KẾT THÚC / NƯỚC RÚT HOÀN THÀNH】 của tác phẩm 《${book.title}》, từ đợt này trở đi 【CHỈ THU KHÔNG PHÓNG】: ` +
+        `Bước 1: Đọc kỹ continuity_ledger.md và dàn ý các quyển, liệt kê tất cả phục bút chưa thu hồi, lời hứa/nợ nần chưa giải quyết, nhân vật và manh mối chưa hoàn tất; ` +
+        `Bước 2: Tuyệt đối không mở thêm nhân vật mới, thế lực mới, tuyến truyện mới hay đào thêm hố mới; ` +
+        `Bước 3: Từng chương tăng tốc đẩy nhanh về phía đại cao trào của toàn thư, giải quyết dứt điểm các việc còn dang dở; ` +
+        `Bước 4: Cho nhân vật chính và từng nhân vật phụ then chốt một kết cục xứng đáng; ` +
+        `Bước 5: Viết nên đại cao trào và đại kết cục hoàn mỹ bằng TIẾNG VIỆT CHUẨN MỰC. ` +
+        `Khi xác nhận xung đột cốt lõi đã giải quyết xong, phục bút đã thu hồi trọn vẹn, kết cục đã viết xong, 【DỪNG LẠI KHÔNG VIẾT TIẾP】, xuất riêng một dòng 「【HOÀN THÀNH CHỜ DUYỆT】」 rồi dừng lại. Toàn bộ 100% TIẾNG VIỆT.`;
+      return s.replace(/[\r\n]+/g, ' ');
+    }
+    const s = `Tiếp tục thu kết: Tiếp tục lệnh thu thúc, chỉ thu không mở thêm tuyến mới, đối chiếu continuity_ledger.md giải quyết nốt các phục bút còn lại, đẩy mạnh đại cao trào và kết cục. Viết xong đợt này tự kiểm tra; khi đã viết xong kết cục xuất 「【HOÀN THÀNH CHỜ DUYỆT】」 rồi dừng lại. Toàn bộ 100% TIẾNG VIỆT.`;
+    return s.replace(/[\r\n]+/g, ' ');
+  }
   if (first) {
     const s = `现在进入《${book.title}》的【收尾 / 完本冲刺】阶段，从这一批起【只收不放】：` +
       `第一步通读 continuity_ledger.md 与各卷大纲，列出所有未回收伏笔、未了欠债与承诺、未交代的人物与线索、未兑现的开篇卖点；` +
@@ -513,6 +653,14 @@ export function buildFinaleInstruction(book, { first = false } = {}) {
 
 // 完本审稿通过后，最后的收尾指令：写完结感言 + 标注全书完结。单行。
 export function buildAfterwordInstruction(book) {
+  const isLatin = /[a-zA-Zà-ỹÀ-Ỹ]/.test(book.title || '');
+  if (isLatin) {
+    const s = `Chúc mừng, tác phẩm 《${book.title}》 đã được thẩm định hoàn thành và chính thức kết thúc toàn thư. Hãy thực hiện bước thu dọn cuối cùng: ` +
+      `① Viết một chương ngắn 《Lời Cảm Nghĩ Hoàn Thành / Lời Bạt Của Tác Giả》 (khoảng 300–600 từ bằng tiếng Việt chân thành, cảm tạ độc giả, chia sẻ cảm xúc sáng tác) hoặc một đoạn vĩ thanh ngắn; ` +
+      `② Đánh dấu "TOÀN THƯ HOÀN THÀNH" ở cuối tệp chapter_index.md (kèm tổng số chương, tổng số từ); ` +
+      `③ Cập nhật trên đầu tệp novel_bible.md ghi chú 【ĐÃ HOÀN THÀNH】. Xong là hoàn tất toàn bộ, không cần viết thêm chương nào. Toàn bộ 100% TIẾNG VIỆT.`;
+    return s.replace(/[\r\n]+/g, ' ');
+  }
   const s = `恭喜，《${book.title}》已通过完本审稿、正式完结。请做最后收尾：` +
     `①可选写一章简短的《完本感言 / 作者的话》（200–400字，真诚、不套路，谢读者、谈创作初衷与遗憾），或写一段简短尾声；` +
     `②在 chapter_index.md 末尾标注"全书完"（含总章数、约总字数）；③更新 novel_bible.md 顶部标注【已完结】。做完即全部结束，无需再写任何正文。`;
@@ -523,6 +671,30 @@ export function buildAfterwordInstruction(book) {
 // 必须是【单行】——多行 prompt 会被 agent 当作多行草稿、等待人工回车，无法自动开跑。
 export function buildKickoffInstruction(book, theme, words, opts = {}) {
   const batch = book.standards?.batchSize || 3;
+  const isLatin = /[a-zA-Zà-ỹÀ-Ỹ]/.test(book.title || '') || /[a-zA-Zà-ỹÀ-Ỹ]/.test(theme || '');
+  if (isLatin) {
+    if (opts.planOnly) {
+      const p = `Bạn là Tổng biên tập tiểu thuyết mạng kỳ cựu, hãy lập 【QUY HOẠCH KHỞI TẠO TÁC PHẨM 100% TIẾNG VIỆT】 cho 《${book.title}》 (chỉ xây dựng thiết lập và dàn ý, TUYỆT ĐỐI KHÔNG VIẾT CHÍNH VĂN). ` +
+        `Thể loại: ${theme || '（Xem mô tả）'}; Dung lượng mục tiêu: ${words || 'Truyện dài, tự định lượng theo số quyển và số chương'}. ` +
+        `Bước 1: Soạn thảo novel_bible.md bằng TIẾNG VIỆT (Điểm bán 1 câu, độc giả mục tiêu, thế giới quan thời đại, hệ thống tu vi/thiết lập, nhân vật chính, nhân vật phụ then chốt, thế lực thù địch, chủ đề, cấm kỵ, phong cách đặt tên). ` +
+        `Bước 2: Quy hoạch quy mô toàn thư (tổng số quyển, số chương mỗi quyển, số từ mỗi chương, cam kết thăng cấp cảnh ngộ từng quyển) ghi vào novel_bible.md. ` +
+        `Bước 3: Hướng đi toàn thư: Ghi hướng đi 1 câu của toàn thư, tuyến sảng điểm chính và bảng phục bút đại cục vào novel_bible.md. ` +
+        `Bước 4: Chỉ chi tiết hóa Quyển 1 đến cấp chương: Đặt tên cho Quyển 1, tạo outlines/Quyen_01_Dan_Y.md bằng Tiếng Việt (mỗi chương 1 dòng gồm sự kiện cốt lõi, tiến triển, móc câu cuối chương) và bảng phục bút trong quyển. ` +
+        `Bước 5: Khởi tạo continuity_ledger.md bằng Tiếng Việt. ` +
+        `Bước 6: Dừng lại ngay lập tức, không viết chương chính văn nào. Xuất dòng 「【LẬP QUY HOẠCH HOÀN THÀNH: SẴN SÀNG VIẾT】」. Toàn bộ 100% bằng TIẾNG VIỆT CHUẨN MỰC, KHÔNG DÙNG TIẾNG TRUNG.`;
+      return p.replace(/[\r\n]+/g, ' ');
+    }
+    const s = `Bạn là Tổng biên tập và tác giả tiểu thuyết mạng kỳ cựu, hãy khởi tạo và bắt đầu viết cho tác phẩm 《${book.title}》. ` +
+      `Thể loại: ${theme || '（Xem mô tả）'}; Dung lượng mục tiêu: ${words || 'Truyện dài'}. ` +
+      `Bước 1: Soạn thảo novel_bible.md bằng TIẾNG VIỆT (thế giới quan, hệ thống cảnh giới, nhân vật chính, nhân vật phụ, thế lực đối địch, văn phong). ` +
+      `Bước 2: Quy hoạch toàn thư (tổng số quyển, cam kết thăng cấp nhân vật từng quyển) đưa vào novel_bible.md. ` +
+      `Bước 3: Hướng đi toàn thư & bảng phục bút đại cục trong novel_bible.md. ` +
+      `Bước 4: Chi tiết hóa Quyển 1 đến cấp độ từng chương: Đặt tên cho Quyển 1, tạo outlines/Quyen_01_Dan_Y.md (mỗi chương 1 dòng ghi rõ biến cố cốt lõi, bước tiến triển, móc câu cuối chương). ` +
+      `Bước 5: Khởi tạo continuity_ledger.md bằng Tiếng Việt. ` +
+      `Bước 6: Viết đợt ${batch} chương chính văn đầu tiên vào chapters/Quyen_01/, lưu dưới dạng .txt, chỉ chứa nội dung chính văn tiếng Việt mượt mà hấp dẫn, không kèm tiêu đề trong tệp, sau đó tự kiểm tra chất lượng. ` +
+      `Toàn bộ quá trình bắt buộc 100% BẰNG TIẾNG VIỆT CHUẨN MỰC, TUYỆT ĐỐI KHÔNG DÙNG TIẾNG TRUNG HOẶC CHỮ HÁN. Tuân thủ nghiêm ngặt AGENTS.md.`;
+    return s.replace(/[\r\n]+/g, ' ');
+  }
   // planOnly：网页版模型立项——只建 设定圣经 + 全卷大纲，不写正文（正文由网页版引擎另行续写）。
   if (opts.planOnly) {
     const p = `你是资深网文主编，现在为《${book.title}》做【立项规划】（只搭设定与大纲，绝不写正文）。` +

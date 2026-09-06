@@ -2,15 +2,12 @@
 ## TIỂU THUYẾT: 《ĐẤU PHÁ THƯƠNG KHUNG — LỤC TRẦN》
 
 > **Thống kê tổng quan:**  
-> - **Tổng số chương đã hoàn thành:** **222 chương** (Chương 0001 – Chương 0222)  
-> - **Tổng dung lượng văn bản:** **~477.021 chữ** (khoảng 3.339.000 ký tự)  
+> - **Tổng số chương đã hoàn thành:** **238 chương** (Chương 0001 – Chương 0238)  
+> - **Tổng dung lượng văn bản:** **~553.632 chữ** (khoảng 3.876.000 ký tự)  
 > - **Phân bố Quyển hiện tại:**  
 >   * 🔹 **Quyển 1: Hàn Vi Sơ Khởi · Ô Thản Phong Lôi** (Chương 0001 – Chương 0051): 51 chương  
->   * 🔹 **Quyển 2: Hoàng Đô Đoạt Khôi · Sa Mạc Kỳ Duyên** (Chương 0052 – Chương 0088): 37 chương  
->   * 🔹 **Quyển 3: Già Nam Phong Lôi · Tâm Hỏa Thôn Thiên** (Chương 0089 – Chương 0137): 49 chương  
->   * 🔹 **Quyển 4: U Uyên Nam Hải · Cổ Trận Thiên Cung** (Chương 0138 – Chương 0194): 57 chương  
->   * 🔹 **Quyển 5: Hàn Thủy Bá Nghiệp · Kiếm Chỉ Gia Mã** (Chương 0195 – Chương 0207): 13 chương  
->   * 🔹 **Quyển 2 (mới): Kiếm Phúc Vân Lam** (Chương 0208 – 0230): 23 chương (đã hoàn thành 15 chương)  
+>   * 🔹 **Quyển 2 (mới): Kiếm Phúc Vân Lam** (Chương 0208 – 0232): 25 chương (Đã hoàn thành)  
+>   * 🔹 **Quyển 3 (mới): Hắc Vực Cuồng Lan · Kiếm Trấn Bát Phương** (Chương 0233 – 0263): Đã hoàn thành 6 chương (Ch.233 – 0238)  
 > - **Độ khớp nối thực tế với thư mục chapters/:** **100.0%**
 
 ---
@@ -250,3 +247,10 @@
 | **229** | CHƯƠNG 229 — NGƯNG TINH PHÁ BÌNH · KIẾM VƯƠNG XUẤT THẾ | Quyển 2: Kiếm Phúc Vân Lam | 5.068 | Đã hoàn thành | chapters/卷02/229Ngưng Tinh Phá Bình, Kiếm Vương Xuất Thế.txt |
 | **230** | CHƯƠNG 230 — KIẾM CÁC ĐỊNH TỰ · CHIẾN HẠM KHỞI HÀNH | Quyển 2: Kiếm Phúc Vân Lam | 4.144 | Đã hoàn thành | chapters/卷02/230Kiếm Các Định Tự, Chiến Hạm Khởi Hành.txt |
 | **231** | CHƯƠNG 231 — SONG TÔNG TRẤN VỰC · KIẾM DỰC PHÁ TRẬN | Quyển 2: Kiếm Phúc Vân Lam | 3.416 | Đã hoàn thành | chapters/卷02/231Song Tông Trấn Vực, Kiếm Dực Phá Trận.txt |
+| **232** | CHƯƠNG 232 — KIẾM TRẤN BIÊN QUAN · ĐỘC TRẢM ĐẤU HOÀNG | Quyển 2: Kiếm Phúc Vân Lam | 5.315 | Đã hoàn thành | chapters/卷02/232Kiếm Trấn Biên Quan, Độc Trảm Đấu Hoàng.txt |
+| **233** | CHƯƠNG 233 — PHÓNG THUYỀN XUẤT CẢNH · ĐỊNH TUYẾN HẮC VỰC | Quyển 3: Hắc Vực Cuồng Lan | 5.939 | Đã hoàn thành | chapters/卷03/233Phóng Thuyền Xuất Cảnh, Định Tuyến Hắc Vực.txt |
+| **234** | CHƯƠNG 234 — HẮC VỰC KINH LÔI · CỰ HẠM TRẤN SƠN HÀ | Quyển 3: Hắc Vực Cuồng Lan | 6.114 | Đã hoàn thành | chapters/卷03/234Hắc Vực Kinh Lôi, Cự Hạm Trấn Sơn Hà.txt |
+| **235** | CHƯƠNG 235 — ĐIỆP KHỔNG ĐOẠT PHÁCH · NHẤT KIẾM TOÁI CUỒNG SƯ | Quyển 3: Hắc Vực Cuồng Lan | 5.840 | Đã hoàn thành | chapters/卷03/235Điệp Khổng Đoạt Phách, Nhất Kiếm Toái Cuồng Sư.txt |
+| **236** | CHƯƠNG 236 — QUY VỊ THỦY CUNG · KHAI MỞ THỦY LONG TRẬN | Quyển 3: Hắc Vực Cuồng Lan | 6.604 | Đã hoàn thành | chapters/卷03/236Quy Vị Thủy Cung, Khai Mở Thủy Long Trận.txt |
+| **237** | CHƯƠNG 237 — ĐÊM ĐÀM CƠ MẬT · MƯU LƯỢC ĐOẠT TRẬN XU | Quyển 3: Hắc Vực Cuồng Lan | 4.686 | Đã hoàn thành | chapters/卷03/237Đêm Đàm Cơ Mật, Mưu Lược Đoạt Trận Xu.txt |
+| **238** | CHƯƠNG 238 — THIẾT KHAI THƯƠNG LỘ · ĐỘT PHÁ NHỊ TINH VƯƠNG | Quyển 3: Hắc Vực Cuồng Lan | 5.598 | Đã hoàn thành | chapters/卷03/238Thiết Khai Thương Lộ, Đột Phá Nhị Tinh Vương.txt |

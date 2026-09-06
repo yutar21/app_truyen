@@ -840,6 +840,22 @@ async function api(p, req, res, u) {
         : buildCompassKickoffInstruction(book, body.theme || body.genre, body.words, body.volumes, body.characters);
       if (freehand) pushLog(book.slug, { level: 'info', msg: '🌱 探索式立项：圣经只写【写作手法 + 主角名 + 故事概述】，不出全书大纲、不出卷大纲——剧情你一段一段给，AI 自拆 3–5 章' });
       rtOf(book.slug).logs = [];
+      const exe = findUntermExe();
+      const cli = findUntermCli();
+      if (!exe && !cli) {
+        pushLog(book.slug, { level: 'act', msg: `▶ Bắt đầu lập dàn ý & thiết lập tác phẩm (Mô hình ${launchModel} chạy ngầm)…` });
+        runHeadless(launchModel, instruction, { cwd: book.dir, cfg, timeoutMs: 1800000 })
+          .then(r => {
+            if (r.ok) {
+              pushLog(book.slug, { level: 'act', msg: '✅ Lập dàn ý & thiết lập tác phẩm hoàn tất! Bạn có thể bắt đầu sáng tác.' });
+              broadcast(book.slug, 'launched', { ok: true });
+            } else {
+              pushLog(book.slug, { level: 'warn', msg: 'Lập dàn ý thất bại: ' + (r.err || r.out || 'Không có phản hồi từ mô hình') });
+            }
+          })
+          .catch(e => pushLog(book.slug, { level: 'error', msg: 'Lỗi khởi tạo: ' + e.message }));
+        return json(res, 200, { ok: true, book: { ...book, stats: { chapters: 0, kb: 0 }, tokens: 0 }, mode: 'headless', planOnly: isWebModel });
+      }
       try {
         const session = await startWriting({ book, model: launchModel, instruction, cfg, onLog: (e) => pushLog(book.slug, e), onFreshRestart: mkFresh(book.slug, cfg), autopilotConfirmOnly: true });
         rtOf(book.slug).session = session;
@@ -941,7 +957,20 @@ async function api(p, req, res, u) {
           pushLog(book.slug, { level: 'act', msg: `已让 AI 上下文改名：${from}→${to}（辨认所有叫法、不误伤、不写正文）` });
           return json(res, 200, { ok: true, mode: 'inserted' });
         }
-        const session = await startWriting({ book, model: body.model || book.model || cfg.defaultModel, instruction, cfg, onLog: (e) => pushLog(book.slug, e), onFreshRestart: mkFresh(book.slug, cfg), autopilotConfirmOnly: true });
+        const model = body.model || book.model || cfg.defaultModel;
+        const exe = findUntermExe();
+        const cli = findUntermCli();
+        if (!exe && !cli) {
+          pushLog(book.slug, { level: 'act', msg: `▶ Bắt đầu đổi tên nhân vật ${from} → ${to} (Mô hình ${model} ngầm)…` });
+          runHeadless(model, instruction, { cwd: book.dir, cfg, timeoutMs: 1800000 })
+            .then(r => {
+              if (r.ok) pushLog(book.slug, { level: 'act', msg: `✅ Đổi tên nhân vật ${from} → ${to} hoàn tất!` });
+              else pushLog(book.slug, { level: 'warn', msg: 'Đổi tên thất bại: ' + (r.err || r.out || 'Không có phản hồi') });
+            })
+            .catch(e => pushLog(book.slug, { level: 'error', msg: 'Lỗi đổi tên: ' + e.message }));
+          return json(res, 200, { ok: true, mode: 'headless' });
+        }
+        const session = await startWriting({ book, model, instruction, cfg, onLog: (e) => pushLog(book.slug, e), onFreshRestart: mkFresh(book.slug, cfg), autopilotConfirmOnly: true });
         return json(res, 200, { ok: true, mode: 'opened', instanceId: session.instance?.id });
       } catch (e) { return json(res, 500, { error: e.message }); }
     }
@@ -1080,7 +1109,20 @@ async function api(p, req, res, u) {
           pushLog(book.slug, { level: 'act', msg: '已穿插指令：写《完本感言 / 尾声》' });
           return json(res, 200, { ok: true, mode: 'inserted' });
         }
-        const session = await startWriting({ book, model: body.model || book.model || cfg.defaultModel, instruction, cfg, onLog: (e) => pushLog(book.slug, e), onFreshRestart: mkFresh(book.slug, cfg), autopilotConfirmOnly: true });
+        const model = body.model || book.model || cfg.defaultModel;
+        const exe = findUntermExe();
+        const cli = findUntermCli();
+        if (!exe && !cli) {
+          pushLog(book.slug, { level: 'act', msg: `▶ Bắt đầu viết Lời kết / Cảm tưởng (Mô hình ${model} ngầm)…` });
+          runHeadless(model, instruction, { cwd: book.dir, cfg, timeoutMs: 1800000 })
+            .then(r => {
+              if (r.ok) pushLog(book.slug, { level: 'act', msg: '✅ Viết Lời kết hoàn tất!' });
+              else pushLog(book.slug, { level: 'warn', msg: 'Viết Lời kết thất bại: ' + (r.err || r.out || 'Không có phản hồi') });
+            })
+            .catch(e => pushLog(book.slug, { level: 'error', msg: 'Lỗi: ' + e.message }));
+          return json(res, 200, { ok: true, mode: 'headless' });
+        }
+        const session = await startWriting({ book, model, instruction, cfg, onLog: (e) => pushLog(book.slug, e), onFreshRestart: mkFresh(book.slug, cfg), autopilotConfirmOnly: true });
         return json(res, 200, { ok: true, mode: 'opened', instanceId: session.instance?.id });
       } catch (e) { return json(res, 500, { error: e.message }); }
     }
@@ -1624,8 +1666,21 @@ async function api(p, req, res, u) {
           await ensureAutopilot(book.slug, cfg);
           return json(res, 200, { ...r, mode: 'inserted', snapshot: hash });
         }
+        const model = book.model || cfg.defaultModel;
+        const exe = findUntermExe();
+        const cli = findUntermCli();
+        if (!exe && !cli) {
+          pushLog(book.slug, { level: 'act', msg: `▶ Bắt đầu ${isRe ? 'tái thiết lập toàn bộ' : 'viết lại phạm vi ' + body.range} (Mô hình ${model} ngầm)…` });
+          runHeadless(model, instruction, { cwd: book.dir, cfg, timeoutMs: 1800000 })
+            .then(r => {
+              if (r.ok) pushLog(book.slug, { level: 'act', msg: `✅ ${isRe ? 'Tái thiết lập' : 'Viết lại'} hoàn tất!` });
+              else pushLog(book.slug, { level: 'warn', msg: 'Thất bại: ' + (r.err || r.out || 'Không có phản hồi') });
+            })
+            .catch(e => pushLog(book.slug, { level: 'error', msg: 'Lỗi: ' + e.message }));
+          return json(res, 200, { ok: true, mode: 'headless', snapshot: hash });
+        }
         rtOf(book.slug).logs = [];
-        const session = await startWriting({ book, model: book.model || cfg.defaultModel, instruction, cfg, onLog: (e) => pushLog(book.slug, e), onFreshRestart: mkFresh(book.slug, cfg) });
+        const session = await startWriting({ book, model, instruction, cfg, onLog: (e) => pushLog(book.slug, e), onFreshRestart: mkFresh(book.slug, cfg) });
         rtOf(book.slug).session = session;
         pushLog(book.slug, { level: 'act', msg: (isRe ? '整本重立项' : '范围重写：' + body.range) + ' 已开窗' + (hash ? '（已存档 ' + hash + '，可回退）' : '') });
         return json(res, 200, { ok: true, mode: 'started', instance: session.instance.id, snapshot: hash });
@@ -1905,6 +1960,19 @@ async function doWrite(body, cfg, res) {
     }
   }
   rtOf(slug).logs = [];
+  const exe = findUntermExe();
+  const cli = findUntermCli();
+  if (!exe && !cli) {
+    try {
+      const untilTarget = body.untilTarget === true || (book.targetChapters > 0 && body.batches == null);
+      const batches = Math.max(1, parseInt(body.batches, 10) || book.standards?.batchSize || 3);
+      const out = startStatelessRun(book, { model, batches, untilTarget, cfg });
+      return json(res, 200, out);
+    } catch (e) {
+      pushLog(slug, { level: 'error', msg: e.message });
+      return json(res, 500, { error: e.message });
+    }
+  }
   try {
     const session = await startWriting({
       book, model, instruction, cfg,

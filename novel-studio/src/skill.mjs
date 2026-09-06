@@ -75,10 +75,18 @@ export function skillBody(book) {
 
 ${ROMANCE_REDLINE}
 `;
+  const isLatin = /[a-zA-Zà-ỹÀ-Ỹ]/.test(b.title || '') || /[a-zA-Zà-ỹÀ-Ỹ]/.test(b.genre || '');
+  const langNotice = isLatin ? `
+## ⚠️ QUY ĐỊNH BẮT BUỘC VỀ NGÔN NGỮ (LANGUAGE REQUIREMENT)
+- **100% TIẾNG VIỆT CHUẨN MỰC**: Toàn bộ dự án này (dàn ý outlines/, thiết lập novel_bible.md, nhật ký continuity_ledger.md, chỉ mục chapter_index.md, và toàn bộ chính văn các chương trong chapters/) BẮT BUỘC PHẢI ĐƯỢC VIẾT HOÀN TOÀN BẰNG TIẾNG VIỆT.
+- **TUYỆT ĐỐI KHÔNG DÙNG TIẾNG TRUNG/CHỮ HÁN**: Tuyệt đối không xuất hiện chữ Hán, không sót lại câu từ tiếng Trung thô chưa dịch, lời thoại và miêu tả đều dùng văn phong tiếng Việt mượt mà, thuần thục, lôi cuốn.
+` : '';
+
   return `# 长篇网文写作规范（${SKILL_NAME}）
 
 > 本文件由 Novel Studio 自动生成，等同 codex 的 longform-webnovel-writer skill。
 > 无论使用 Codex / Claude / Gemini，都必须严格遵守本规范。把小说当作"持久化项目文件"来写，而不是聊天文本。
+${langNotice}
 
 ## 本书档案
 
