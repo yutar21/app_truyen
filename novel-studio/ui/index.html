@@ -225,7 +225,7 @@
         <h2>Tạo Tác Phẩm Mới · Khởi Tạo Bằng AI</h2>
         <p class="modal-hint">Nhập thể loại, ý tưởng và (tùy chọn) các nhân vật bạn muốn. AI sẽ gợi ý tên, thiết lập thế giới và lập la bàn toàn thư.</p>
         <label class="field"><span>Thể loại / Ý tưởng cốt truyện *</span><textarea id="nbTheme" rows="3" placeholder="Ví dụ: Huyền huyễn dị giới, nhân vật chính xuyên không mang theo hệ thống luyện đan..."></textarea></label>
-        <label class="field"><span>Nhân vật chính & cốt lõi (Tùy chọn, mỗi dòng 1 người: Tên — Thân phận / Tính cách)</span><textarea id="nbChars" rows="2" placeholder="Ví dụ: Lục Trần — Đệ tử ngoại môn, bề ngoài điềm tĩnh nhưng tính toán sâu sắc&#10;Dược Lão — Sư phụ bí ẩn trong giới chỉ"></textarea></label>
+        <label class="field"><span>Nhân vật chính & cốt lõi (Tùy chọn, mỗi dòng 1 người: Tên — Thân phận / Tính cách)</span><textarea id="nbChars" rows="2" placeholder="Ví dụ: Tên nhân vật chính — Thân phận / Tính cách đặc trưng&#10;Tên nhân vật quan trọng — Vai trò trong cốt truyện"></textarea></label>
         <div class="grid2">
           <label class="field"><span>Mục tiêu tổng số từ</span>
             <div class="with-unit"><input id="nbWords" type="number" min="1" placeholder="Ví dụ 100" /><span class="unit">Vạn chữ</span></div>
@@ -352,7 +352,7 @@
 
       <div class="field">
         <span id="cwIntentLabel">✍️ Yêu cầu chi tiết cho chương này (Nhân vật, tình tiết, cao trào, kết chương — Càng chi tiết AI viết càng chuẩn)</span>
-        <textarea id="cwIntent" rows="5" placeholder="Ví dụ: Nhân vật chính tiến vào sơn động, phát hiện cấm chế cổ xưa; gặp gỡ Tiêu Y Tiên đang hái thuốc; cuối chương có dị biến từ bầy ma thú..."></textarea>
+        <textarea id="cwIntent" rows="5" placeholder="Ví dụ: Nhân vật chính tiến vào địa điểm mới, phát hiện manh mối bí ẩn; đụng độ nhân vật then chốt; cuối chương xuất hiện biến cố bất ngờ mở ra xung đột mới..."></textarea>
       </div>
       <label class="cw-check" style="display:flex;gap:6px;align-items:center;font-size:13px;margin:-2px 0 8px">
         <input type="checkbox" id="cwUseLast" checked /> Nối tiếp đoạn kết chương trước (Giữ mạch văn liền mạch)
@@ -537,7 +537,7 @@
             <option value="Khoa huyễn mạt thế">Khoa huyễn mạt thế</option>
             <option value="Đồng nhân / Phái sinh">Đồng nhân / Phái sinh</option>
           </select></label>
-          <label class="field"><span>Tên nhân vật chính 1 (≤5 từ, có thể để trống)</span><input id="cbHero" type="text" maxlength="5" placeholder="Ví dụ: Lục Trần"></label>
+          <label class="field"><span>Tên nhân vật chính 1 (≤5 từ, có thể để trống)</span><input id="cbHero" type="text" maxlength="5" placeholder="Tên nhân vật chính"></label>
           <label class="field"><span>Tên nhân vật chính 2 (≤5 từ, có thể để trống)</span><input id="cbHero2" type="text" maxlength="5" placeholder="Có thể để trống"></label>
         </div>
         <div class="btn-row" style="margin-top:8px"><button class="btn primary" id="cbCreate">📕 Tạo Tác Phẩm Mới ▶</button></div>
@@ -736,9 +736,9 @@
       <div class="st-rename">
         <div class="st-rename-h">🔤 Đổi tên? <b>Tên nhân vật dùng「AI Đổi Tên Thông Minh」</b> — AI rà soát toàn bộ tác phẩm để thay thế nhất quán các biệt danh/danh xưng mà <b>không làm ảnh hưởng</b> các danh từ khác. Với địa danh có thể dùng「Thay thế trực tiếp」.</div>
         <div class="pick-row">
-          <input id="stFrom" placeholder="Tên cũ, ví dụ: Tiêu Viêm hoặc Ô Thản Thành" />
+          <input id="stFrom" placeholder="Tên cũ cần thay thế" />
           <span class="st-arrow">→</span>
-          <input id="stTo" placeholder="Tên mới, ví dụ: Lục Trần hoặc Hắc Ấn Thành" />
+          <input id="stTo" placeholder="Tên mới thay thế" />
         </div>
         <div class="btn-row" style="margin-top:8px">
           <button class="btn primary" id="stAiRename" type="button">🤖 AI Đổi Tên Thông Minh (Khuyên dùng)</button>
