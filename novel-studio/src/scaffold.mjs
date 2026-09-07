@@ -13,6 +13,9 @@ const stripTitle = (t) => String(t || '').replace(/^#\s[^\n]*\n+/, '');
 function gitInit(dir) {
   try {
     if (fs.existsSync(path.join(dir, '.git'))) return;
+    // Nếu thư mục đã nằm trong một kho Git cha (như app_truyen), không tạo .git lồng nhau để tránh lỗi submodule/conflict
+    const check = spawnSync('git', ['rev-parse', '--is-inside-work-tree'], { cwd: dir, encoding: 'utf8', timeout: 5000 });
+    if ((check.stdout || '').trim() === 'true') return;
     const r = spawnSync('git', ['init'], { cwd: dir, encoding: 'utf8', timeout: 15000 });
     if (r.status !== 0) return;
     fs.writeFileSync(path.join(dir, '.gitignore'), '.studio/\n', 'utf8');
