@@ -3,6 +3,11 @@
 > 本文件由 Novel Studio 自动生成，等同 codex 的 longform-webnovel-writer skill。
 > 无论使用 Codex / Claude / Gemini，都必须严格遵守本规范。把小说当作"持久化项目文件"来写，而不是聊天文本。
 
+## ⚠️ QUY ĐỊNH BẮT BUỘC VỀ NGÔN NGỮ (LANGUAGE REQUIREMENT)
+- **100% TIẾNG VIỆT CHUẨN MỰC**: Toàn bộ dự án này (dàn ý outlines/, thiết lập novel_bible.md, nhật ký continuity_ledger.md, chỉ mục chapter_index.md, và toàn bộ chính văn các chương trong chapters/) BẮT BUỘC PHẢI ĐƯỢC VIẾT HOÀN TOÀN BẰNG TIẾNG VIỆT.
+- **TUYỆT ĐỐI KHÔNG DÙNG TIẾNG TRUNG/CHỮ HÁN**: Tuyệt đối không xuất hiện chữ Hán, không sót lại câu từ tiếng Trung thô chưa dịch, lời thoại và miêu tả đều dùng văn phong tiếng Việt mượt mà, thuần thục, lôi cuốn.
+
+
 ## 本书档案
 
 - 书名：《Đấu Phá Thương Khung — Lục Trần》
@@ -67,7 +72,7 @@ reviews/
 - 扩展名 `.txt`；文件名 = 全局章号 + 唯一章名，如 `001重生.txt`、`206白袖人再递糖签.txt`。
 - **章号必须是【全书全局连续编号】**：从 001 起跨卷一直往上数（卷02 接着卷01 末尾的号继续，绝不是每卷都从 001 重新数）。例：卷01 写到 040，则卷02 第一章是 041 而非 001。这样全书章节才能正确排序、续写才接得上。
 - 章号至少 3 位零填充（直到 999）。**章名全书唯一，绝不重复**——取名前必须在 `chapter_index.md` 全表检索确认无同名（连意思高度相近的也错开）；这是长书最易犯的错（写到后面忘了前面用过的名），务必每次查重。
-- 放入正确的卷目录。内容仅正文，不含任何标题/注释/元信息。
+- **放入正确的卷目录（硬性·跨卷必须建新目录）**：每次动笔前，必须对照大纲确认当前章节属于第几卷（如进入新卷，必须在 `chapters/` 下新建对应卷目录，如 `chapters/卷02/`、`chapters/卷03/`，并写入对应卷目录下）。严禁把后续各卷的正文章节全部堆在 `卷01` 里。内容仅正文，不含任何标题/注释/元信息。
 
 ## 写作标准
 
@@ -222,7 +227,7 @@ reviews/
 - 与上一批连续性完好；人物行为符合既定弧光；无重大线索/证人/物件/关系/伤势矛盾。
 
 **内容质量·七维复核（每批扫一遍，发现问题就地精修那一处、不整章重写；把结论写进 reviews/）**：
-1. **设定与专有名词一致**：世界观/规则/人物档案/原著武器与法宝（如萧炎必须用玄重尺、严防AI造词或错译）有没有对不上？——发现即引用原文举证并就地改。
+1. **设定与专有名词一致**：世界观/规则/人物档案/专属武器与关键道具（严格对照 novel_bible.md，严防AI幻觉造词、错译或串用其他作品设定）有没有对不上？——发现即引用原文举证并就地改。
 2. **人物行为**：性格/动机/弧光是否站得住？有没有为了推进而 OOC？
 3. **节奏格局**：这几章处境有没有可感升级？有没有卡在同一地点/同一桩小事打转？
 4. **叙事连贯**：因果链、时间线、前后呼应有无断裂？

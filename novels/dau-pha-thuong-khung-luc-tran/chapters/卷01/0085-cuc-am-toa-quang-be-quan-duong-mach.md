@@ -14,11 +14,11 @@ Lục Trần kéo nhẹ vành nón trúc che nghiêng ánh nắng chói chang c�
 
 "Ta không sao. Đã thu hoạch xong thứ cần tìm."
 
-Hắn liếc nhìn xuống xoáy cát lún khổng lồ phía sau. Bên dưới độ sâu hàng chục trượng, những vệt sóng hỏa năng cuồng bạo của đóa **Thanh Liên Địa Tâm Hỏa** vẫn đang cuộn xoáy kịch liệt. Hắn biết rõ Tiêu Viêm lúc này đang được Dược Lão bao bọc linh hồn lực để tiến hành thu thập Dị Hỏa vào hộp ngọc. Việc thiếu đi đài sen Cực Âm Thanh Liên Tọa sẽ khiến quá trình bế quan nuốt hỏa của Tiêu Viêm về sau gian khổ và nguy hiểm hơn gấp bội.
+Hắn liếc nhìn xuống xoáy cát lún khổng lồ phía sau. Bên dưới độ sâu hàng chục trượng, những vệt sóng hỏa năng cuồng bạo của dòng nham tương địa tâm vẫn đang cuộn xoáy kịch liệt. Hắn biết rõ Tiêu Viêm lúc này đã thu thập xong khối Địa Tâm Hỏa Tinh để bắt đầu quá trình bế quan thuần hóa củng cố Dị Hỏa. Việc thiếu đi đài sen Cực Âm Thanh Liên Tọa hạ nhiệt sẽ khiến quá trình dung hợp hỏa tinh, dập tắt hỏa độc của Tiêu Viêm gian khổ và thử thách hơn nhiều.
 
 *Nước sông không phạm nước giếng.* 
 
-Lục Trần không có ý định nán lại để chứng kiến cảnh Tiêu Viêm thu hỏa. Giữa hai con đường tu luyện Hỏa và Thủy, sự phân tranh tài nguyên và mầm mống đối đầu đã chính thức được gieo rắc. Việc ở lại địa điểm bùng nổ năng lượng chỉ làm tăng thêm khả năng bị các thế lực xung quanh (như Xà Nhân Tộc hoặc dong binh sa mạc) phát hiện.
+Lục Trần không có ý định nán lại để chứng kiến cảnh Tiêu Viêm bế quan. Giữa hai con đường tu luyện Hỏa và Thủy, sự phân tranh tài nguyên và mầm mống đối đầu đã chính thức được gieo rắc. Việc ở lại địa điểm bùng nổ năng lượng chỉ làm tăng thêm khả năng bị các thế lực xung quanh (như Xà Nhân Tộc hoặc dong binh sa mạc) phát hiện.
 
 "Lên đường thôi, Thanh Lân." Lục Trần leo lên lưng lạc đà sa mạc, cất giọng lạnh tĩnh trầm ổn: "Chúng ta cần tìm một địa điểm tĩnh lặng, có nguồn thủy mạch ngầm để bế quan."
 
@@ -122,27 +122,33 @@ Tại một hang đá núi lửa cô lập cách Thạch Mạc Thành năm mươ
 
 Bầu không khí bên trong hang đá nóng đến mức nham thạch thành vách cũng phải đỏ hồng lên như than lửa. 
 
-Tiêu Viêm khoanh chân ngồi trên một tảng đá nung rát, toàn thân trần trụi nửa người trên. Những vệt mồ hôi vừa tiết ra từ lỗ chân lông lập tức bị bốc hơi thành từng làn khói trắng chói mắt. Trước ngực hắn, chiếc hộp ngọc chuyên dụng mở ra, đóa hỏa diễm màu vàng kim **Thanh Liên Địa Tâm Hỏa** lơ lửng xoáy tròn, tỏa ra luồng hỏa năng bạo liệt nghìn độ thiêu đốt không khí xung quanh!
+Tiêu Viêm khoanh chân ngồi trên một tảng đá nung rát, toàn thân trần trụi nửa người trên. Những vệt mồ hôi vừa tiết ra từ lỗ chân lông lập tức bị bốc hơi thành từng làn khói trắng chói mắt. Trước ngực hắn, chiếc hộp ngọc chuyên dụng mở ra, khối tinh cầu hỏa diễm màu vàng kim **Địa Tâm Hỏa Tinh** lơ lửng xoáy tròn, tỏa ra luồng nhiệt năng Cực Dương thuần khiết!
+
+Trong đan điền Tiêu Viêm, ngọn lửa xanh ngọc bích **Thanh Liên Địa Tâm Hỏa** vốn đang xao động bởi hỏa độc tích tụ sau trận Đan Hội Hoàng Đô lập tức rít lên từng hồi cộng hưởng cuồng bạo!
 
 *Phốc... Xèo...*
 
 Tiêu Viêm cắn chặt răng đến mức bật máu tươi nơi khóe môi, hai bờ vai run lên bàng hoàng đau đớn kịch liệt! 
 
-Không có tòa đài sen ngọc bích **Thanh Liên Tọa** tích tụ tinh khí Cực Âm để tọa thiền hạ nhiệt đan điền, cái nóng địa nhiệt của Dị Hỏa xộc thẳng vào kinh mạch hắn như hàng ngàn thanh sắt nung đỏ đâm xuyên qua da thịt! Mỗi vòng tuần hoàn của công pháp Phần Quyết là một lần kinh mạch hắn bị thiêu rụi rồi gượng ép hồi phục bằng dược lực Trút Cơ Thần Dịch và linh hồn lực che chở của Dược Lão.
+Không có tòa đài sen ngọc bích **Thanh Liên Tọa** tích tụ tinh khí Cực Âm để tọa thiền hạ nhiệt đan điền, việc dung nạp khối Địa Tâm Hỏa Tinh cực nóng để tôi luyện và thuần hóa ngọn Dị Hỏa sẵn có trở thành một gánh nặng khủng khiếp lên kinh mạch! Luồng Hỏa Tinh Cực Dương hòa quyện vào ngọn Thanh Liên Địa Tâm Hỏa như dầu sôi đổ vào lửa cháy, điên cuồng thiêu đốt từng đường kinh lạc, tẩy trừ hoàn toàn độc tố tàn dư của ma hỏa Viêm Lợi và những tạp chất hỏa độc còn sót lại!
 
 Cơn đau đớn thấu xương tủy khiến gân xanh trên trán Tiêu Viêm nổi phồng lên như những con giun đất!
 
-Linh hồn thể hư ảo của **Dược Lão** lơ lửng bên cạnh, đôi mắt thâm thúy tinh anh ngập tràn sự nghiêm nghị và lo lắng sâu sắc. Ông liên tục rót luồng linh hồn lực màu trắng bạc bao bọc lấy trái tim và tâm trí Tiêu Viêm để giữ cho hắn không bị hỏa tính Dị Hỏa thiêu rụi thần trí.
+Linh hồn thể hư ảo của **Dược Lão** lơ lửng bên cạnh, đôi mắt thâm thúy tinh anh ngập tràn sự nghiêm nghị và lo lắng sâu sắc. Ông liên tục rót luồng linh hồn lực màu trắng bạc bao bọc lấy trái tim và tâm trí Tiêu Viêm để giữ cho hắn không bị nhiệt lượng nung cháy thần trí.
 
-*"Tiêu Viêm! Cố gắng cắn răng chịu đựng!"* Giọng nói Dược Lão vang vọng nghiêm cẩn trong tâm trí Tiêu Viêm: *"Không có Thanh Liên Tọa hạ nhiệt, cuộc thử thách này sẽ đau đớn gấp mười lần! Nhưng sự nung nấu bằng máu và lửa này sẽ giúp xương cốt và Phần Quyết của con kiên cường hơn bất kỳ ai! Lục Trần đã lấy đi đài sen của con... Đừng bao giờ quên cảm giác đau đớn này!"*
+*"Tiêu Viêm! Cố gắng cắn răng chịu đựng!"* Giọng nói Dược Lão vang vọng nghiêm cẩn trong tâm trí Tiêu Viêm: *"Không có Thanh Liên Tọa hạ nhiệt, quá trình tôi luyện hỏa chủng bằng Địa Tâm Hỏa Tinh này sẽ đau đớn gấp bội! Nhưng sau khi dung hợp thành công khối Hỏa Tinh cội nguồn này, ngọn Thanh Liên Địa Tâm Hỏa của con mới thực sự đạt đến cảnh giới viên mãn không còn tỳ vết, hỏa độc tiêu trừ, Phần Quyết sẽ hoàn toàn ổn định! Lục Trần đã lấy đi đài sen của con... Đừng bao giờ quên cảm giác đau đớn này!"*
 
 "ÁẠC... HỰ!"
 
 Tiêu Viêm gầm lên một tiếng đau đớn thảm thiết nghẹn ngào trong cổ họng!
 
-Đôi mắt hắn đỏ ngầu hằn lên sự bất khuất cuồng nộ và ngọn lửa kiêu hãnh cháy rực. Hắn siết chặt hai nắm tay đến mức móng tay đâm sâu vào thịt ra máu, cố chấp ép dòng hỏa diễm màu vàng kim Thanh Liên Địa Tâm Hỏa chui thẳng vào lòng đan điền!
+Đôi mắt hắn đỏ ngầu hằn lên sự bất khuất cuồng nộ và ngọn lửa kiêu hãnh cháy rực. Hắn siết chặt hai nắm tay đến mức móng tay đâm sâu vào thịt ra máu, cố chấp ép dòng năng lượng Cực Dương của Địa Tâm Hỏa Tinh hòa quyện trọn vẹn vào ngọn lửa Thanh Liên Địa Tâm Hỏa trong lòng đan điền!
 
-Trong cơn đau đớn xé rách thân thể, hình ảnh gã thiếu niên mang nón trúc áo xanh Lục Trần điềm tĩnh cất Thanh Liên Tọa rồi sải bước rời đi khắc sâu vào tâm trí Tiêu Viêm như một vệt dao khắc không thể xóa nhòa.
+*OANH!*
+
+Một luồng hỏa diễm màu xanh lục thẫm bộc phát từ sâu trong kinh mạch, hỏa độc hoàn toàn bị thanh lọc, ngọn Thanh Liên Địa Tâm Hỏa thăng hoa rực rỡ, chính thức viên mãn dung hợp vào bản nguyên Phần Quyết!
+
+Trong cơn đau đớn xé rách thân thể rồi niết bàn tái sinh, hình ảnh gã thiếu niên mang nón trúc áo xanh Lục Trần điềm tĩnh cất Thanh Liên Tọa rồi sải bước rời đi khắc sâu vào tâm trí Tiêu Viêm như một vệt dao khắc không thể xóa nhòa.
 
 Sự kiêng khem, cảnh giác cao độ và ngọn lửa đối đầu sinh tử giữa hai thiên tài thời đại mới chính thức bộc phát mãnh liệt dưới sự tôi luyện của máu và lửa!
 

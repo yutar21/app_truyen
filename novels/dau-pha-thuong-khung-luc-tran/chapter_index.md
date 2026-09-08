@@ -2,12 +2,12 @@
 ## TIỂU THUYẾT: 《ĐẤU PHÁ THƯƠNG KHUNG — LỤC TRẦN》
 
 > **Thống kê tổng quan:**  
-> - **Tổng số chương đã hoàn thành:** **238 chương** (Chương 0001 – Chương 0238)  
-> - **Tổng dung lượng văn bản:** **~553.632 chữ** (khoảng 3.876.000 ký tự)  
+> - **Tổng số chương đã hoàn thành:** **253 chương** (Chương 0001 – Chương 0253)  
+> - **Tổng dung lượng văn bản:** **~643.455 chữ** (khoảng 4.450.000 ký tự)  
 > - **Phân bố Quyển hiện tại:**  
 >   * 🔹 **Quyển 1: Hàn Vi Sơ Khởi · Ô Thản Phong Lôi** (Chương 0001 – Chương 0051): 51 chương  
 >   * 🔹 **Quyển 2 (mới): Kiếm Phúc Vân Lam** (Chương 0208 – 0232): 25 chương (Đã hoàn thành)  
->   * 🔹 **Quyển 3 (mới): Hắc Vực Cuồng Lan · Kiếm Trấn Bát Phương** (Chương 0233 – 0263): Đã hoàn thành 6 chương (Ch.233 – 0238)  
+>   * 🔹 **Quyển 3 (mới): Hắc Vực Cuồng Lan · Kiếm Trấn Bát Phương** (Chương 0233 – 0263): Đã hoàn thành 21 chương (Ch.233 – 0253)  
 > - **Độ khớp nối thực tế với thư mục chapters/:** **100.0%**
 
 ---
@@ -254,3 +254,18 @@
 | **236** | CHƯƠNG 236 — QUY VỊ THỦY CUNG · KHAI MỞ THỦY LONG TRẬN | Quyển 3: Hắc Vực Cuồng Lan | 6.604 | Đã hoàn thành | chapters/卷03/236Quy Vị Thủy Cung, Khai Mở Thủy Long Trận.txt |
 | **237** | CHƯƠNG 237 — ĐÊM ĐÀM CƠ MẬT · MƯU LƯỢC ĐOẠT TRẬN XU | Quyển 3: Hắc Vực Cuồng Lan | 4.686 | Đã hoàn thành | chapters/卷03/237Đêm Đàm Cơ Mật, Mưu Lược Đoạt Trận Xu.txt |
 | **238** | CHƯƠNG 238 — THIẾT KHAI THƯƠNG LỘ · ĐỘT PHÁ NHỊ TINH VƯƠNG | Quyển 3: Hắc Vực Cuồng Lan | 5.598 | Đã hoàn thành | chapters/卷03/238Thiết Khai Thương Lộ, Đột Phá Nhị Tinh Vương.txt |
+| **239** | CHƯƠNG 239 — THIÊN NHAI LÂM MÔN · QUẦN MA TỤ HỘI | Quyển 3: Hắc Vực Cuồng Lan | 7.126 | Đã hoàn thành | chapters/卷03/239Thiên Nhai Lâm Môn, Quần Ma Tụ Hội.txt |
+| **240** | CHƯƠNG 240 — GIÁM ĐỊNH KINH BIẾN · BĂNG TINH ÁP TRẬN | Quyển 3: Hắc Vực Cuồng Lan | 3.396 | Đã hoàn thành | chapters/卷03/240Giám Định Kinh Biến, Băng Tinh Áp Trận.txt |
+| **241** | CHƯƠNG 241 — PHONG KHỞI VÂN DŨNG · ĐẤU GIÁ TRANH HÙNG | Quyển 3: Hắc Vực Cuồng Lan | 5.800 | Đã hoàn thành | chapters/卷03/241Phong Khởi Vân Dũng, Đấu Giá Tranh Hùng.txt |
+| **242** | CHƯƠNG 242 — KIM TỆ THAO TÚNG · NẪNG TAY TRÊN CỰC THỦY | Quyển 3: Hắc Vực Cuồng Lan | 7.821 | Đã hoàn thành | chapters/卷03/242Kim Tệ Thao Túng, Nẫng Tay Trên Cực Thủy.txt |
+| **243** | CHƯƠNG 243 — ĐOẠT TRẬN XU VIỄN CỔ · SÁT CƠ BỐN PHÍA | Quyển 3: Hắc Vực Cuồng Lan | 6.417 | Đã hoàn thành | chapters/卷03/243Đoạt Trận Xu Viễn Cổ, Sát Cơ Bốn Phía.txt |
+| **244** | CHƯƠNG 244 — TỬ THẠCH PHỤC SÁT · BĂNG PHÁCH TRẢM HOÀNG | Quyển 3: Hắc Vực Cuồng Lan | 5.459 | Đã hoàn thành | chapters/卷03/244Tử Thạch Phục Sát, Băng Phách Trảm Hoàng.txt |
+| **245** | CHƯƠNG 245 — DUNG NẠP CỰC THỦY · ĐỘT PHÁ TAM TINH VƯƠNG | Quyển 3: Hắc Vực Cuồng Lan | 6.323 | Đã hoàn thành | chapters/卷03/245Dung Nạp Cực Thủy, Đột Phá Tam Tinh Vương.txt |
+| **246** | CHƯƠNG 246 — SƠN CỐC HỖN CHIẾN · LỤC ĐỤC QUẦN HÙNG | Quyển 3: Hắc Vực Cuồng Lan | 4.771 | Đã hoàn thành | chapters/卷03/246Sơn Cốc Hỗn Chiến, Lục Đục Quần Hùng.txt |
+| **247** | CHƯƠNG 247 — NHẤT KIẾM ĐOẠT MỆNH · CỨU NGƯỜI DƯỚI CHƯỞNG | Quyển 3: Hắc Vực Cuồng Lan | 5.329 | Đã hoàn thành | chapters/卷03/247Nhất Kiếm Đoạt Mệnh, Cứu Người Dưới Chưởng.txt |
+| **248** | CHƯƠNG 248 — THẬP BÁT DIỆP TRẬN KHỞI · NGHỊCH SÁT NGŨ TINH HOÀNG | Quyển 3: Hắc Vực Cuồng Lan | 7.985 | Đã hoàn thành | chapters/卷03/248Thập Bát Diệp Trận Khởi, Nghịch Sát Ngũ Tinh Hoàng.txt |
+| **249** | CHƯƠNG 249 — PHÁ TRỪ HÓA THÂN · ĐOẠT HÀI CỐT ĐẤU TÔNG | Quyển 3: Hắc Vực Cuồng Lan | 6.246 | Đã hoàn thành | chapters/卷03/249Phá Trừ Hóa Thân, Đoạt Hài Cốt Đấu Tông.txt |
+| **250** | CHƯƠNG 250 — HỒI QUY THỦY NGẠC · TRẤN HỒN TÁC ĐỘNG | Quyển 3: Hắc Vực Cuồng Lan | 7.654 | Đã hoàn thành | chapters/卷03/250Hồi Quy Thủy Ngạc, Trấn Hồn Tác Động.txt |
+| **251** | CHƯƠNG 251 — BINH PHÁT ĐOẠN HỒN · SONG TÔNG ĐỒNG XUẤT | Quyển 3: Hắc Vực Cuồng Lan | 4.455 | Đã hoàn thành | chapters/卷03/251Binh Phát Đoạn Hồn, Song Tông Đồng Xuất.txt |
+| **252** | CHƯƠNG 252 — PHÁ CỬU U TRẬN · TRẢM SÁT HỒN SAI | Quyển 3: Hắc Vực Cuồng Lan | 4.515 | Đã hoàn thành | chapters/卷03/252Phá Cửu U Trận, Trảm Sát Hồn Sai.txt |
+| **253** | CHƯƠNG 253 — HUYẾT CHIẾN VỰC SÂU · ĐẤU TÔNG TÀN HỒN | Quyển 3: Hắc Vực Cuồng Lan | 6.526 | Đã hoàn thành | chapters/卷03/253Huyết Chiến Vực Sâu, Đấu Tông Tàn Hồn.txt |

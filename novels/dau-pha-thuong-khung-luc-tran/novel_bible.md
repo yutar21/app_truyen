@@ -337,13 +337,15 @@
 | **Diễm Phân Thệ Điệp Xích** | 焰分噬浪尺 | Tiêu Viêm | ❌ Diễm Phân Phệ Lãng Xích | Địa giai đê cấp xích pháp đấu kỹ do Dược Lão truyền thụ. |
 | **Phật Nộ Hỏa Liên** | 佛怒火莲 | Tiêu Viêm | ❌ Phật Nộ Hỏa Trận | Đấu kỹ tự sáng tạo dung hợp nhiều loại hỏa diễm/dị hỏa. |
 
+| **Thanh Liên Tọa** | 青莲座 | Lục Trần | ❌ Thanh Liên Đài | Tòa đài sen ngọc bích 8 cánh Cực Âm ngàn năm đoạt tại lòng đất Thạch Mạc Sa Mạc (Ch.84), bảo vật bế quan tôi luyện Thủy Thạch đan điền. |
+
 ## 2. BẢNG TRA CỨU DỊ HỎA NGUYÊN TÁC
 - #03: **Tịnh Liên Yêu Hỏa** (净莲妖火) — Lục Trần giữ mảnh tàn đồ số 3.
 - #11: **Cốt Linh Lãnh Hỏa** (骨灵冷火) — Dược Lão sở hữu (cho Tiêu Viêm mượn dùng).
 - #13: **Quy Linh Địa Hỏa** (龟灵地火) — Lục Trần đoạt được, đúc thành Bích Hải Quy Linh Đàn tặng Hải Âm.
 - #14: **Vẫn Lạc Tâm Viêm** (陨落心炎) — Thiên Phần Luyện Khí Tháp, Già Nam Học Viện.
 - #18: **Phong Lôi Nộ Liễm** (风雷怒焱) — Tinh Á sở hữu.
-- #19: **Thanh Liên Địa Tâm Hỏa** (青莲地心火) — Tiêu Viêm đã luyện hóa tại Sa mạc Tháp Qua Nhĩ.
+- #19: **Thanh Liên Địa Tâm Hỏa** (青莲地心火) — Tiêu Viêm đoạt tại đầm tiến hóa Xà tộc (Ch.63), sau đó lấy Địa Tâm Hỏa Tinh tại nham tương Thạch Mạc để thuần hóa củng cố triệt để (Ch.84–85).
 
 ## 3. THIẾT LẬP THẾ LỰC & DANH XƯNG GIA MÃ
 - **Hoàng thất Gia Mã:** Gia Hình Thiên (Đấu Hoàng đỉnh phong), Đại công chúa Yêu Dạ, Tiểu công chúa Yêu Nguyệt.

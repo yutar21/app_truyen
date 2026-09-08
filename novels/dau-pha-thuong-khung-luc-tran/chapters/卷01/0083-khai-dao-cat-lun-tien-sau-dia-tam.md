@@ -102,23 +102,25 @@ Lục Trần nhận ra nó ngay lập tức không phải vì hắn đã từng 
 
 *Đó là đài sen.* Nham thạch nguội trong trung tâm nhiệt độ cao nhất, tích lũy tinh khí âm lạnh ngược chiều hàng trăm năm trong lòng hỏa mạch. Cực Âm sinh ra từ Cực Dương.
 
-Bên cạnh điểm sáng xanh đó — thứ còn tỏa ra năng lượng mãnh liệt hơn nữa, khiến cả không khí trong hang rung lên như đang đun sôi.
+Phía dưới cuống đài sen ngọc bích — thứ còn tỏa ra năng lượng nhiệt hỏa cuồng bạo ngút ngàn, khiến cả không khí trong hang rung lên như đang đun sôi.
 
-Ánh vàng kim rực rỡ, xoáy tròn trong không trung phía trên đài sen ngọc bích.
+Một khối tinh cầu hỏa diễm màu vàng kim rực rỡ, ngưng tụ sâu thẳm dưới rễ sen cắm chặt vào lòng biển dung nham.
 
-**Thanh Liên Địa Tâm Hỏa.**
+**Địa Tâm Hỏa Tinh.**
 
-*Tiêu huynh...* Lục Trần nghĩ thầm. *Thứ đó mới là điều huynh cần.*
+Tinh túy Cực Dương ngàn năm từng thai nghén ra Dị Hỏa, chính là nguồn năng lượng cội nguồn hoàn mỹ nhất để bù đắp, tôi luyện và thuần hóa triệt để ngọn Thanh Liên Địa Tâm Hỏa trong cơ thể Tiêu Viêm sau những hao tổn của trận Đan Hội Hoàng Đô!
+
+*Tiêu huynh...* Lục Trần nghĩ thầm. *Thứ đó mới là điều huynh cần để dập tắt hỏa độc phản phệ.*
 
 Tiếng bước chân trầm nặng vang lên từ phía đối diện trên thành hang. Tiêu Viêm đã xuống tới nơi, đứng trên một mỏm đá ở phía bên kia, cũng đang nhìn xuống phía dưới.
 
-Trong ánh sáng đỏ cam của nham tương, khuôn mặt hắn dưới lớp mồ hôi và bụi cát ửng hồng rực vì nhiệt. Nhưng đôi mắt hắn — đôi mắt hắn tối thẫm và cháy bỏng bằng một thứ lửa không phải của hỏa đấu khí mà của ý chí sắt đá thuần túy — đang dán chặt vào ánh vàng kim cuộn xoáy phía dưới.
+Trong ánh sáng đỏ cam của nham tương, khuôn mặt hắn dưới lớp mồ hôi và bụi cát ửng hồng rực vì nhiệt. Nhưng đôi mắt hắn — đôi mắt hắn tối thẫm và cháy bỏng bằng một thứ lửa không phải của hỏa đấu khí mà của ý chí sắt đá thuần túy — đang dán chặt vào khối Địa Tâm Hỏa Tinh cuộn xoáy dưới gốc sen. Hắn cảm nhận rõ rệt ngọn Thanh Liên Địa Tâm Hỏa trong đan điền mình đang rung lên từng nhịp cộng hưởng cuồng nhiệt không thể kìm nén!
 
 Hắn nắm chặt tay đến mức xương ngón tay trắng bệch.
 
 Một Tiêu Viêm đang dốc toàn bộ khát vọng nhìn về mục tiêu. Điều đó không cần lời nào để giải thích.
 
-Lục Trần quay mắt trở lại ánh xanh ngọc bích của Thanh Liên Tọa phía dưới. Hai mục tiêu, hai con đường. Một hang động chia đôi bởi biển nham tương.
+Lục Trần quay mắt trở lại ánh xanh ngọc bích của Thanh Liên Tọa phía dưới. Hai mục tiêu, hai con đường. Một hang động chia đôi bởi biển nham tương: Một bên là đài sen Cực Âm ngọc bích, một bên là hỏa tinh Cực Dương bừng cháy.
 
 Hắn điều chỉnh lại vành nón trúc trên đầu, cân bằng Thủy áp quanh thân, rồi bắt đầu tìm đường xuống tiếp theo.
 

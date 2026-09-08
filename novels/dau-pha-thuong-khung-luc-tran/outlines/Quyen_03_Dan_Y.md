@@ -73,7 +73,7 @@
   *Tiến triển cốt truyện & Sảng điểm:* Khẳng định tầm nhìn Trận Khí Sư độc tôn; trong khi đó món hàng cuối cùng là Bồ Đề Hóa Thể Dãi (giả) do hóa thân Ưng Sơn Lão Nhân tung ra khiến toàn trường bùng nổ huyết chiến; Lục Trần nhận thấy sát khí dày đặc liền bí mật rời sàn đấu qua đường hầm ngầm.
   *Móc câu cuối chương:* Vừa bước ra khỏi hẻm đá hoang vắng, một luồng chưởng phong hỏa diễm màu lục xé toạc vách đá đánh thẳng vào sau lưng Lục Trần: *"Để lại Huyền Minh Cực Thủy, lão phu cho ngươi chết toàn thây!"*
 
-* **Chương 244: Hẻm Tối Huyết Chiến, Băng Phách Trảm Đấu Hoàng**
+* **Chương 244: Tử Thạch Phục Sát, Băng Phách Trảm Hoàng** `[ĐÃ HOÀN THÀNH]`
   *Sự kiện cốt lõi:* Tam trưởng lão Ma Viêm Cốc (Đấu Hoàng 1★) cùng hai Đấu Vương mai phục Lục Trần trong hẻm tối; Lục Trần bung Thập Bát Diệp Kiếm Trận, lợi dụng địa hình chật hẹp nén thủy áp phản sát.
   *Tiến triển cốt truyện & Sảng điểm:* Trận chiến chuẩn mực: Lục Trần dùng Nhu kình triệt tiêu kình lực hỏa diễm, dẫn dắt hơi lạnh của Huyền Minh Cực Thủy ngưng tụ trên mũi kiếm Ngưng Băng; một kiếm xuyên thủng hỏa giáp đóng băng đan điền Tam trưởng lão; 18 thanh phi kiếm xoay tròn chém chết 2 Đấu Vương đồng bọn.
   *Móc câu cuối chương:* Lục soát nạp giới kẻ chết, Lục Trần phát hiện một bức đồ hình bố trí phục kích tiêu diệt toàn bộ sứ đoàn Tiêu Môn tại sơn cốc Thiên Mục!
@@ -88,12 +88,12 @@
   *Tiến triển cốt truyện & Sảng điểm:* Lục Trần ngự kiếm ẩn mình trên tầng mây lạnh quan sát thế cục; Tiêu Lệ tử chiến dùng hết Phật Nộ Hỏa Liên tiêu hao nhưng vẫn rơi vào tuyệt lộ; Lục Trần tính toán logic: nếu Tiêu Lệ chết ở đây, Ma Viêm Cốc sẽ độc chiếm Hắc Giác Vực gây bất lợi cho Hàn Thủy Cung, do đó quyết định ra tay can thiệp.
   *Móc câu cuối chương:* Phương Ngôn cười gằn giáng chưởng diễm độc xuống đầu Tiêu Lệ: *"Chết đi, Tiêu Môn từ nay biến mất khỏi Hắc Giác Vực!"*
 
-* **Chương 247: Nhất Kiếm Đoạt Mệnh, Cứu Người Dưới Chưởng**
+* **Chương 247: Nhất Kiếm Đoạt Mệnh, Cứu Người Dưới Chưởng** `[ĐÃ HOÀN THÀNH]`
   *Sự kiện cốt lõi:* Đúng khoảnh khắc sinh tử, một thanh Ngưng Băng Kiếm mang Điệp Khổng Thủy Áp từ trên trời cắm thẳng xuống đất, sóng xung kích đóng băng chưởng phong đẩy lùi Phương Ngôn năm trượng.
   *Tiến triển cốt truyện & Sảng điểm:* Lục Trần áo xanh đạp gió giáng lâm giữa vòng vây; Tiêu Lệ bàng hoàng nhận ra ân nhân chính là Cung chủ Hàn Thủy Cung; Lục Trần ném cho Tiêu Lệ một bình đan dược trị thương: *"Ngươi nợ Hàn Thủy Cung một mạng, về bảo Tiêu Viêm chuẩn bị trả lời."*
   *Móc câu cuối chương:* Phương Ngôn ôm bàn tay bị băng sương gặm nhấm, gầm lên cuồng nộ: *"Tiểu tử không biết sống chết, hôm nay cả hai đứa các ngươi đều phải chôn thây!"*
 
-* **Chương 248: Thập Bát Diệp Trận Khởi, Nghịch Sát Ngũ Tinh Hoàng**
+* **Chương 248: Thập Bát Diệp Trận Khởi, Nghịch Sát Ngũ Tinh Hoàng** `[ĐÃ HOÀN THÀNH]`
   *Sự kiện cốt lõi:* Cuộc quyết đấu giữa Lục Trần (Đấu Vương 3★) và Phương Ngôn (Đấu Hoàng 5★); Phương Ngôn thi triển Hóa Hỏa Đại Pháp triệu hồi hỏa mãng cuồng bạo.
   *Tiến triển cốt truyện & Sảng điểm:* Đỉnh cao vận dụng quy tắc khắc chế Thủy - Hỏa; Lục Trần mở Tru Diệt Kiếm Võng, 18 thanh phi kiếm nén thủy áp cắt đứt liên kết năng lượng hỏa mãng; bộc phát Điệp Khổng Thủy Áp xuyên thủng ngực Phương Ngôn, một kiếm chém rơi đầu Đấu Hoàng ngũ tinh.
   *Móc câu cuối chương:* Chiếc đầu lâu rơi xuống đất làm câm nín toàn bộ cường giả Hắc Bảng đang giao chiến xung quanh; ánh mắt Lục Trần đảo qua khiến quần ma run rẩy lùi bước.

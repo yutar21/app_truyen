@@ -12,19 +12,19 @@ Mỗi hơi thở vào là một dòng nhiệt khí như than hồng xộc thẳn
 
 Ở phía bên kia rãnh nham tương rộng lớn, Tiêu Viêm cũng đã hạ xuống một mỏm đá nham thạch tương đối. 
 
-Thân ảnh hắc bào của hắn sừng sững giữa cái nóng, luồng Hỏa đấu khí đỏ cam bốc lên quanh thân nhịp nhàng kháng lại sức nóng địa nhiệt. Nhờ tu luyện công pháp **Phần Quyết** đặc thù và được luồng linh hồn lực hùng hậu của Dược Lão che chở trong bóng tối, Tiêu Viêm không bị sức nóng sa mạc áp đảo. Tuy nhiên, đôi mắt hắn lúc này bùng lên luồng Hỏa tinh rực rỡ, cố định hoàn toàn vào luồng hỏa diễm màu vàng kim đang lơ lửng giữa không trung.
+Thân ảnh hắc bào của hắn sừng sững giữa cái nóng, luồng Hỏa đấu khí đỏ cam bốc lên quanh thân nhịp nhàng kháng lại sức nóng địa nhiệt. Nhờ tu luyện công pháp **Phần Quyết** đặc thù và được luồng linh hồn lực hùng hậu của Dược Lão che chở trong bóng tối, Tiêu Viêm không bị sức nóng sa mạc áp đảo. Tuy nhiên, đôi mắt hắn lúc này bùng lên luồng Hỏa tinh rực rỡ, cố định hoàn toàn vào khối tinh cầu hỏa diễm màu vàng kim đang cuộn xoáy sâu dưới lòng nham tương.
 
-**Thanh Liên Địa Tâm Hỏa.**
+**Địa Tâm Hỏa Tinh.**
 
-Dị Hỏa xếp hạng thứ mười chín trên Dị Hỏa Bảng. Đối với một người tu luyện Phần Quyết như Tiêu Viêm, đây chính là thần dược cải biến vận mệnh, là chìa khóa duy nhất để công pháp Phần Quyết tiến hóa từ Hoàng cấp đê giai lên các cấp bậc cao hơn. Khát vọng trong mắt hắn nóng rực đến mức tưởng như có thể thiêu đốt cả hư không xung quanh.
+Tinh túy Cực Dương ngàn năm kết tụ nơi cội nguồn từng thai nghén ra ngọn Thanh Liên Địa Tâm Hỏa! Đối với một người tu luyện Phần Quyết như Tiêu Viêm, ngọn Dị hỏa vừa đoạt được trước Đan Hội vẫn còn chứa hỏa độc cuồng tàn và thiếu hụt nguồn dưỡng chất cội rễ. Khối Địa Tâm Hỏa Tinh này chính là chìa khóa then chốt để hắn dung hòa triệt để, dập tắt hỏa độc phản phệ, thúc đẩy công pháp Phần Quyết tiến hóa và thăng hoa uy lực của ngọn Dị Hỏa thứ 19 lên tầm cao mới! Khát vọng trong mắt hắn nóng rực đến mức tưởng như có thể thiêu đốt cả hư không xung quanh.
 
-Tuy nhiên, ngay bên dưới đóa hỏa diễm màu vàng kim xoáy tròn ấy — chính là **Thanh Liên Tọa**.
+Tuy nhiên, ngay bên trên khối hỏa tinh bừng cháy ấy — chính là **Thanh Liên Tọa**.
 
 Đó là một tòa đài sen bằng ngọc bích tự nhiên bát cánh, đường kính rộng chừng năm thước, toàn thân trong suốt như ngọc tuyết ngàn năm, tỏa ra luồng quang mỏng màu xanh ngọc bích thanh tao tịch mịch. Giữa lòng đại dương nham tương cuồng bạo nóng bỏng đến mức có thể nung chảy kim loại trong tích tắc, tòa đài sen ngọc bích kia lại lơ lửng điềm nhiên, không hề bị sức nóng xâm hại. Trái lại, chính nhờ sự tích tụ của vô vàn tinh khí Cực Âm trong lòng địa mạch hàng trăm năm ròng rã dưới nhiệt độ cực hạn, nó mới ngưng tụ thành một hình thái ổn định đến kỳ diệu.
 
 Cực Dương sinh Cực Âm. Vật cực tất phản.
 
-Trong khi ánh mắt của Tiêu Viêm bị đóa Dị Hỏa màu vàng kim thu hút hoàn toàn, thì toàn bộ thần trí và cảm quan linh hồn của Lục Trần lại dán chặt vào tòa đài sen ngọc bích Thanh Liên Tọa.
+Trong khi ánh mắt của Tiêu Viêm bị khối Địa Tâm Hỏa Tinh thu hút hoàn toàn, thì toàn bộ thần trí và cảm quan linh hồn của Lục Trần lại dán chặt vào tòa đài sen ngọc bích Thanh Liên Tọa.
 
 *Rung... Rung...*
 
@@ -32,23 +32,23 @@ Trường ứng lực của bí kỹ **Điệp Khổng Thủy Thuật** phát ra
 
 Một tu luyện giả Thủy hệ như Lục Trần nếu có thể sở hữu tòa Thanh Liên Tọa này để tọa thiền tu luyện hoặc dùng nó làm vạc nén áp suất chế tác dược dịch, tốc độ tích lũy đấu khí và tính tinh thuần của Thủy Thạch đan điền sẽ tăng vọt ít nhất gấp ba lần! Đây mới chính là chí bảo hoàn hảo nhất dành riêng cho con đường Thủy hệ của hắn.
 
-Dị Hỏa dành cho Hỏa hệ Phần Quyết của Tiêu Viêm.
+Địa Tâm Hỏa Tinh Cực Dương dành cho Tiêu Viêm để bồi dưỡng thuần hóa Dị Hỏa.
 
-Đài sen Cực Âm dành cho Thủy hệ dẻo dai của Lục Trần.
+Đài sen Thanh Liên Tọa Cực Âm dành cho Thủy hệ dẻo dai của Lục Trần.
 
 Hai người đứng trên hai gờ đá đối diện nhau giữa lòng hang ngầm. Không cần một lời thương lượng nào được thốt ra từ khuôn miệng, chỉ qua một ánh mắt chạm nhau trong bóng tối rực lửa, một sự thấu hiểu ngầm đầy tôn trọng và sòng phẳng đã tự động hình thành giữa hai thiên tài thiếu niên.
 
-Tiêu Viêm nheo mắt nhìn Lục Trần. Hắn nhận ra ánh mắt của gã thiếu niên mang nón trúc áo xanh kia không hề có lấy một vệt tham lam hay thèm khát dành cho đóa Thanh Liên Địa Tâm Hỏa màu vàng kim. Ánh mắt ấy phẳng lặng như mặt nước hồ thu, mục tiêu duy nhất đã xác định rõ ràng: tòa đài sen ngọc bích bên dưới.
+Tiêu Viêm nheo mắt nhìn Lục Trần. Hắn nhận ra ánh mắt của gã thiếu niên mang nón trúc áo xanh kia không hề có lấy một vệt tham lam hay thèm khát dành cho khối Hỏa Tinh nóng bỏng. Ánh mắt ấy phẳng lặng như mặt nước hồ thu, mục tiêu duy nhất đã xác định rõ ràng: tòa đài sen ngọc bích bên trên.
 
 Một luồng cảm xúc ngạc nhiên sâu sắc cùng sự thán phục trào dâng trong lòng Tiêu Viêm. 
 
-Hắn hiểu rõ giá trị của Dị Hỏa trên Đấu Khí Đại Lục — vô số cường giả Đấu Hoàng, Đấu Tông thậm chí tranh giành đến sứt đầu sứt trán, máu chảy thành sông vì một tia hỏa mầm. Vậy mà gã thiếu niên Thủy hệ trước mặt, dù sở hữu linh hồn lực nhạy bén và tiến vào lòng hang ngầm trước hắn một bước, lại chủ động buông bỏ cuộc tranh đoạt Dị Hỏa để đi theo con đường thuộc tính riêng của mình. Hành động đó đòi hỏi một sự lý trí, định lực và tự trọng cao đến mức đáng sợ.
+Hắn hiểu rõ giá trị của các kỳ vật hỏa mạch trên Đấu Khí Đại Lục — vô số cường giả Đấu Hoàng, Đấu Tông thậm chí tranh giành đến sứt đầu sứt trán, máu chảy thành sông vì một tia tinh hỏa. Vậy mà gã thiếu niên Thủy hệ trước mặt, dù sở hữu linh hồn lực nhạy bén và tiến vào lòng hang ngầm trước hắn một bước, lại phân định ranh giới vô cùng rành mạch, đi theo con đường thuộc tính riêng của mình. Hành động đó đòi hỏi một sự lý trí, định lực và tự trọng cao đến mức đáng sợ.
 
 Tiêu Viêm siết chặt nắm tay dưới vạt hắc bào, khẽ gật đầu chừng mực về phía Lục Trần — một cử chỉ ngầm công nhận đối thủ và ghi nhận ân tình sòng phẳng của những bậc trượng phu.
 
 Lục Trần khẽ nhếch môi mỉm cười điềm tĩnh dưới vành nón trúc che nghiêng. Hắn đưa tay trái ra, năm ngón tay xòe rộng về phía dải nham tương cuồng nộ dưới chân.
 
-"Tiêu huynh," Lục Trần cất giọng trầm ổn, tiếng nói xuyên qua tiếng gầm rú của nham tương chảy xiết: "Huynh lấy hỏa diễm. Ta lấy đài sen. Ai thu hoạch xong trước, người đó tự do rút lui."
+"Tiêu huynh," Lục Trần cất giọng trầm ổn, tiếng nói xuyên qua tiếng gầm rú của nham tương chảy xiết: "Huynh lấy Hỏa Tinh. Ta lấy Đài Sen. Ai thu hoạch xong trước, người đó tự do rút lui."
 
 "Được!" Tiêu Viêm đáp trả ngắn gọn, khí thế bộc phát mãnh liệt: "Một lời đã định!"
 
@@ -58,7 +58,7 @@ Lục Trần khẽ nhếch môi mỉm cười điềm tĩnh dưới vành nón t
 
 Tiêu Viêm ra tay trước.
 
-Thân hình hắn tựa một tia chớp đen lao vút ra khỏi gờ đá bazan. Không có đôi cánh Đấu Khí Chi Dực của cường giả Đấu Vương, Tiêu Viêm mượn trọng lực và sức bật cơ thể kiên cường rèn luyện từ Huyền Trọng Thước, đạp mạnh lên những tảng đá nham thạch nhô lên giữa dòng nham tương. Luồng Hỏa đấu khí đỏ cam dưới chân bộc phát liên tục tạo lực đẩy dã ngoại, thân ảnh hắn bay lướt qua khoảng không mười trượng tiến thẳng về phía đóa hỏa diễm màu vàng kim lơ lửng!
+Thân hình hắn tựa một tia chớp đen lao vút ra khỏi gờ đá bazan. Không có đôi cánh Đấu Khí Chi Dực của cường giả Đấu Vương, Tiêu Viêm mượn trọng lực và sức bật cơ thể kiên cường rèn luyện từ Huyền Trọng Thước, đạp mạnh lên những tảng đá nham thạch nhô lên giữa dòng nham tương. Luồng Hỏa đấu khí đỏ cam dưới chân bộc phát liên tục tạo lực đẩy dã ngoại, thân ảnh hắn bay lướt qua khoảng không mười trượng tiến thẳng về phía khối Địa Tâm Hỏa Tinh màu vàng kim cuộn xoáy dưới rễ sen!
 
 Cùng lúc đó!
 
@@ -108,7 +108,7 @@ Chưa dừng lại ở đó! Ngay bên cạnh cái đầu thứ nhất, một c�
 
 Tam cấp đỉnh phong ma thú — tương đương với cường giả Đấu Linh của nhân loại! Con ma thú bảo hộ địa tâm nham tương vốn ngủ say dưới đáy sâu hàng trăm năm nay đã hoàn toàn bị đánh thức bởi sự xâm nhập của hai kẻ ngoại lai!
 
-Hai cái đầu rắn khổng lồ khè ra những luồng độc hỏa màu đỏ tím thẫm, một cái vồ thẳng về phía Tiêu Viêm đang tiến lại gần đóa Dị Hỏa màu vàng kim, cái đầu thứ hai với khoảng miệng rộng ngoạc tới ba thước cuồng nộ đạm thẳng về phía Lục Trần đang đứng trên đài sen Thanh Liên Tọa!
+Hai cái đầu rắn khổng lồ khè ra những luồng độc hỏa màu đỏ tím thẫm, một cái vồ thẳng về phía Tiêu Viêm đang tiến lại gần khối Địa Tâm Hỏa Tinh màu vàng kim, cái đầu thứ hai với khoảng miệng rộng ngoạc tới ba thước cuồng nộ đạm thẳng về phía Lục Trần đang đứng trên đài sen Thanh Liên Tọa!
 
 Trận chiến sinh tử thực sự dưới lòng Địa Tâm Nham Tương chính thức bùng nổ!
 
@@ -184,27 +184,29 @@ Sóng nham tương dạt sang hai bên, con ma thú Tam cấp đỉnh phong chì
 
 Trong lòng hang đá ngầm rơi vào sự tĩnh mịch tạm thời đầy ngột ngạt.
 
-Ánh sáng vàng kim của đóa **Thanh Liên Địa Tâm Hỏa** lơ lửng giữa không trung lúc này càng trở nên lung linh rực rỡ, nhưng bầu không khí giữa hai người không hề dịu đi, mà bỗng nhiên siết chặt lại bởi sự cảnh giác ngầm.
+Ánh sáng vàng kim của khối **Địa Tâm Hỏa Tinh** cuộn xoáy dưới gốc đá nham thạch lúc này càng trở nên lung linh rực rỡ, tỏa ra từng đợt nhiệt hỏa tinh thuần bổ dưỡng. Tiêu Viêm bước nhanh tới, lật tay lấy ra chiếc Hộp Ngọc Phong Hỏa chuyên dụng, kết xuất thủ ấn Phần Quyết thu trọn vẹn khối Địa Tâm Hỏa Tinh vào trong hộp ngọc, phong ấn cẩn thận.
+
+Bầu không khí giữa hai người không hề dịu đi sau chiến thắng, mà bỗng nhiên siết chặt lại bởi sự cảnh giác ngầm của những đối thủ truyền kiếp.
 
 Tiêu Viêm đứng trên mỏm đá nham thạch, hơi thở có phần dồn dập sau trận chiến kịch liệt. Hắn siết chặt chôi Huyền Trọng Thước, đôi mắt sâu thẫm dán chặt vào Lục Trần đang thản nhiên cất **Thanh Liên Tọa** vào nhẫn trữ vật.
 
-Trong tâm trí Tiêu Viêm, tiếng nói trầm lắng đầy cảnh báo của **Dược Lão** khẽ vang lên từ chiếc nhẫn đen:
+Trong tâm trí Tiêu Viêm, tiếng nói trầm lắng đầy thán phục của **Dược Lão** khẽ vang lên từ chiếc nhẫn đen:
 
-*"Tiêu Viêm, chớ để sự phối hợp tạm thời này làm mờ mắt. Thiếu niên áo xanh này sâu không thấy đáy! Hắn chủ động nhường Dị Hỏa không phải vì tử tế hay nể mặt con, mà vì hắn tính toán vô cùng chính xác: Thủy hệ của hắn không thể luyện hóa Dị Hỏa, nhưng tòa Thanh Liên Tọa kia lại chứa đựng tinh khí Cực Âm cực hạn. Hắn lấy mất đài sen, đồng nghĩa với việc con mất đi điểm tựa bế quan hạ nhiệt an toàn nhất khi nuốt Dị Hỏa... Sự điềm tĩnh và tính toán sắc lạnh của hắn sau này nhất định sẽ là đối thủ sinh tử đáng sợ nhất của con!"*
+*"Tiêu Viêm, thiếu niên áo xanh này sâu không thấy đáy! Hắn lấy tòa Thanh Liên Tọa kia chứa đựng tinh khí Cực Âm cực hạn để bồi dưỡng Thủy Thạch đan điền, nhường lại khối Địa Tâm Hỏa Tinh Cực Dương cho con hoàn thiện bản nguyên Dị Hỏa... Sự phân định rành mạch, không tham lam nhưng tính toán sâu sắc này chứng tỏ hắn có tầm nhìn vượt xa tuổi tác. Sau này bước ra đại lục, gã Lục Trần này nhất định sẽ là đối thủ lớn nhất của con!"*
 
-Tiêu Viêm siết chặt nắm tay, ngọn lửa kiêu hãnh và sự phòng bị trong mắt bùng lên. Hắn nhìn Lục Trần, giọng nói trầm xuống đầy sức ép:
+Tiêu Viêm siết chặt nắm tay, ngọn lửa kiêu hãnh và sự công nhận trong mắt bùng lên. Hắn nhìn Lục Trần, cất giọng chừng mực:
 
-"Lục huynh... Huynh lấy đi Thanh Liên Tọa, quả nhiên là một nước đi không sót một tẹo nào."
+"Lục huynh... Huynh lấy đi Thanh Liên Tọa, quả nhiên là một nước đi dứt khoát không chút do dự."
 
-Lục Trần kéo nhẹ vành nón trúc che khuất nửa khuôn mặt, khóe môi nhếch lên một vệt mỉm cười nhạt lạnh tĩnh:
+Lục Trần kéo nhẹ vành nón trúc che khuất nửa khuôn mặt, khóe môi nhếch lên một vệt mỉm cười nhạt điềm tĩnh:
 
-"Mỗi người lấy thứ mình cần. Tiêu huynh có Dị Hỏa, tại hạ có đài sen. Nước sông không phạm nước giếng, đây là sự lựa chọn tốt nhất cho cả hai lúc này."
+"Mỗi người lấy thứ mình cần. Tiêu huynh có Địa Tâm Hỏa Tinh để thuần hóa Dị Hỏa và dập tắt hỏa độc, tại hạ có đài sen Cực Âm. Nước sông không phạm nước giếng, đây là sự lựa chọn tốt nhất cho cả hai lúc này."
 
 Nói rồi, Lục Trần không hề nán lại dù chỉ một giây. Hắn thi triển thân pháp Thủy áp, lội ngược theo lối ống thẳng đứng vừa khai phá, vọt thẳng lên phía trên lối thoát Cát Lún Lòng Chảo, biến mất hoàn toàn trong làn khói lưu huỳnh đặc quánh.
 
-Tiêu Viêm đứng lại giữa biển nham tương, nhìn theo bóng lưng áo xanh vừa khuất trong bóng tối. Hắn cảm nhận rõ luồng áp lực đè nặng lên vai — không chỉ từ việc sắp sửa luyện hóa Dị Hỏa nguy hiểm đến sinh tử, mà còn từ sự tồn tại của một đối thủ đáng sợ đang lớn mạnh song hành cùng mình trong cùng một thời đại.
+Tiêu Viêm đứng lại giữa biển nham tương, nhìn theo bóng lưng áo xanh vừa khuất trong bóng tối. Hắn cảm nhận rõ luồng áp lực đè nặng lên vai — ngọn Thanh Liên Địa Tâm Hỏa trong cơ thể đang thôi thúc hắn phải lập tức bế quan hấp thu Hỏa Tinh để hoàn thiện cảnh giới, bởi vì người thiếu niên áo xanh kia đang tiến bước với tốc độ kinh hoàng.
 
-"Sư phụ nói đúng..." Tiêu Viêm thầm nghĩ, mắt lóe lên luồng hỏa tinh sắc lẹm: "Lần tới gặp lại, giữa chúng ta sẽ không còn là sự hợp lực tạm thời như hôm nay nữa."
+"Sư phụ nói đúng..." Tiêu Viêm thầm nghĩ, mắt lóe lên luồng hỏa tinh sắc lẹm: "Lần tới gặp lại, giữa chúng ta sẽ là một cuộc đọ sức đỉnh cao thực sự."
 
 Cánh cửa xung đột và đối đầu sinh tử trong tương lai đã chính thức được gieo mầm dưới đáy Địa Tâm Nham Tương.
 

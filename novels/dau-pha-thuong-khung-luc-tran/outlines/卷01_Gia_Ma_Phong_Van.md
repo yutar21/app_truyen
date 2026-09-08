@@ -47,7 +47,7 @@
   - `Ch.052 – 059`: Tiến vào Gia Mã Hoàng Đô gặp lại Nhã Phi (Mễ Đặc Nhĩ); phá vòng vây ám sát ngoại thành; tới biên cảnh Thạch Mạc Thành kết giao Thanh Lân; thâm nhập Hắc Nham Thành quen biết Tuyết Mị, Lâm Phỉ, thể hiện thiên phú luyện chế Thủy Tề đan dược kinh động Dược Kế sư công hội.
   - `Ch.060 – 064`: Tháp Qua Nhĩ Sa Mạc đại loạn; chứng kiến Vân Vận dẫn cường giả Gia Mã đột kích Xà tộc; Mỹ Đỗ Toa Nữ Vương cắn răng dùng Thanh Liên Địa Tâm Hỏa tiến hóa Thất Thải Thôn Thiên Mãng; Lục Trần bí mật thu thập linh dịch dung nham, đột phá Đấu Sư Song Tinh.
   - `Ch.065 – 074`: Trở lại Hoàng Đô tham gia Đại Hội Luyện Dược Sư; dùng Thủy Hỏa tương tể thuật phá giải bẫy đề thi vòng hai, đánh bại các đối thủ đoạt ngôi Quán Quân trước sự thán phục của Cổ Hà và Hội trưởng Pháp Mã; đập tan các âm mưu phục kích ban đêm của kẻ địch.
-  - `Ch.075 – 088`: Rời Hoàng Đô tái nhập Thạch Mạc Thành; gặp gỡ Mạc Thiết Dong Binh Đoàn (Tiêu Đỉnh, Tiêu Lệ) và Tiêu Viêm; Lục Trần cùng Tiêu Viêm thâm nhập địa hỏa mạch ngầm; Tiêu Viêm lấy Dị Hỏa, Lục Trần thu phục kỳ trân Cực Âm Cực Dương Tinh Dịch; thiết lập lời hẹn ngầm với Mỹ Đỗ Toa trước khi hướng về phương Bắc.
+  - `Ch.075 – 088`: Rời Hoàng Đô tái nhập Thạch Mạc Thành; hái Thiên Huyết Hà Liên; tái ngộ Mạc Thiết Dong Binh Đoàn và Tiêu Viêm; Lục Trần cùng Tiêu Viêm thâm nhập địa hỏa mạch ngầm cội nguồn; Lục Trần thu phục Thanh Liên Tọa (đài sen ngọc bích Cực Âm), Tiêu Viêm đoạt Địa Tâm Hỏa Tinh để bồi dưỡng, thuần hóa triệt để Thanh Liên Địa Tâm Hỏa và dập tắt phản phệ hỏa độc; thiết lập lời hẹn ngầm với Mỹ Đỗ Toa trước khi hướng về phương Bắc.
 
 ---
 
