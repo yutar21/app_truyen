@@ -1,0 +1,160 @@
+# PHẦN 2: BẢN DÀN Ý TỐI ƯU HOÀN THIỆN NHẤT
+### QUYỂN 02: BÙN LẦY RIKARISU — BẢN NĂNG LOÀI GIÁN
+*(Phạm vi: Chương 28 đến Chương 58 — Chuẩn mực Hardboiled & Đồng bộ 100% Thế Giới Quan)*
+
+---
+
+* **Chương 28: Xe Quặng Băng Sa Mạc**
+  *Sự kiện cốt lõi:* Khang dùng thịt thối ma thú hun khói và đá lửa đổi lấy một chỗ nép dưới gầm cỗ xe bọc thép chở quặng bazan, bắt đầu chuyến hành trình 10 ngày vượt sa mạc đá đỏ tiến về Thị trấn Rikarisu.
+  *Tiến triển cốt truyện & Sảng điểm:* Khắc họa sự tàn khốc của sa mạc: bão cát ma lực cào rách da thịt, rận rệp hút máu và nhiệt độ đêm đông hạ xuống âm độ; Khang không một lời than vãn mà vận dụng kỹ năng quan sát của dân cơ khí mổ xẻ, ghi nhớ cấu trúc khớp nối cỗ xe và thói quen thở của lũ thú kéo; sức sống lì lợm của kẻ thất nghiệp giúp hắn sống sót qua cơn đói rét mà không cần một tia Đấu Khí.
+  *Móc câu cuối chương:* Khi màn bụi đỏ tan đi, hình bóng pháo đài Rikarisu sừng sững hiện ra như một bộ xương quái thú khổng lồ ghim vào đường chân trời, đi kèm tiếng gầm rú man dại của hàng ngàn sinh vật dị tộc vọng lại theo chiều gió.
+
+* **Chương 29: Thành Trì Của Quỷ**
+  *Sự kiện cốt lõi:* Khang đặt chân qua cổng thành Rikarisu ngập ngụa mùi máu tanh và phân thú, chủ động tìm đến Công Hội Mạo Hiểm Giả để kiếm tấm thẻ căn cước sinh tồn giữa đô thị dị tộc.
+  *Tiến triển cốt truyện & Sảng điểm:* Bức tường ngôn ngữ Ma Thần Ngữ ập đến như búa tạ; Khang lập tức cụp mắt đóng giả câm điếc, nép sát chân tường bước đi; ngay trước cửa công hội, hắn bị tên gác cửa Ma tộc Đầu Bò to xác chặn đường, túm cổ áo nhấc bổng ném thẳng vào giữa sảnh rượu làm trò tiêu khiển cho đám đông say xỉn.
+  *Móc câu cuối chương:* Một tràng cười man dại rộ lên khắp sảnh khi bàn tay hộ pháp của gã tiếp tân Ma tộc đè nghiến lòng bàn tay Khang lên bề mặt viên đá thử ma lực hình đầu lâu đen đúa.
+
+* **Chương 30: Tấm Thẻ Gỗ Hạng F**
+  *Sự kiện cốt lõi:* Viên đá thử ma lực hoàn toàn trơ trơ không chút phản ứng; Khang bị tiếp tân ném vào mặt tấm Thẻ Gỗ Hạng F rách nát kèm theo những lời sỉ nhục cay độc của cả sảnh công hội.
+  *Tiến triển cốt truyện & Sảng điểm:* Nỗi nhục nhã tột cùng của một phàm nhân mang chỉ số "Mana = 0 tuyệt đối" giữa vùng đất tôn sùng sức mạnh; Khang không hề lộ ra một tia phẫn nộ hay tự ti, hắn lạnh lùng cúi người nhặt tấm thẻ gỗ dính đầy bia bẩn, lặng lẽ ghi nhớ từng khuôn mặt đang cười cợt vào sâu trong đáy mắt.
+  *Móc câu cuối chương:* Tại góc tối quầy bar, một gã Ma tộc đầu ngựa với ánh mắt giảo hoạt khẽ nhếch mép, đánh dấu gã tân thủ "không chút ma lực" vào danh sách con mồi tống tiền béo bở.
+
+* **Chương 31: Đáy Cùng Chuồng Thú**
+  *Sự kiện cốt lõi:* Không có một đồng dính túi và bất đồng ngôn ngữ, Khang tìm đến khu chuồng nuôi Bao Cước Thú ở rìa thị trấn, ra dấu xin làm phu dọn phân và mổ xác quái chết dịch để đổi lấy chỗ ngả lưng cạnh máng cỏ.
+  *Tiến triển cốt truyện & Sảng điểm:* Hiện thực bẩn thỉu đến tột cùng: giòi bọ ma thú bò lổm ngổm trên nền phân nhớp nháp; Khang vận dụng kỹ năng giải phẫu và phân loại nội tạng kiếp trước, xẻ thịt những xác quái thối rữa ngăn nắp, biến góc chuồng ẩm mốc thành căn cứ an toàn; trong lúc mổ xác một con Cự Túc Giáp Trùng chết nghẹn, hắn phát hiện túi dịch kiềm cô đặc kỳ lạ chưa bị phân hủy trong dạ dày nó.
+  *Móc câu cuối chương:* Giọt dịch kiềm rơi xuống phiến đá bazan bốc khói xèo xèo, trung hòa hoàn toàn vệt máu ma thú mang tính axit cao một cách kỳ diệu.
+
+* **Chương 32: Bào Chế Màng Bọc Hai Lớp**
+  *Sự kiện cốt lõi:* Khang tận dụng góc chuồng thú đêm khuya tiến hành thí nghiệm hóa sinh thực nghiệm: pha trộn sáp mỡ ma thú chịu nhiệt với túi dịch kiềm để chế tạo lớp màng bọc kép bảo vệ Ma Tinh Thạch.
+  *Tiến triển cốt truyện & Sảng điểm:* Phân tích cơ chế y sinh học: dịch vị dạ dày người chứa axit HCl cực mạnh; lớp màng bọc mới có khả năng trung hòa axit trong 40 giây đầu trước khi tan rã, triệt tiêu cú sốc ma lực đâm thủng vách dạ dày cấp tính và mở rộng ngưỡng duy trì Đấu Khí an toàn lên 3 phút 45 giây.
+  *Móc câu cuối chương:* Khang nuốt thử một viên đá vụn cấp E bọc màng kép; dạ dày hắn chỉ ấm nóng như vừa uống một ngụm rượu mạnh, không hề nôn ra một giọt máu tươi nào.
+
+* **Chương 33: Bẻ Khớp Giữa Đống Phân**
+  *Sự kiện cốt lõi:* Ba tên lưu manh Ma tộc hạ đẳng lần mò vào chuồng thú trong đêm định cướp đoạt mẩu bánh mì khô và tấm áo da thú rách của Khang.
+  *Tiến triển cốt truyện & Sảng điểm:* Khang tuyệt đối không kích hoạt Đấu Khí để giấu kín bài tẩy; hắn áp dụng triệt để đòn đánh bẩn Bắc Thần Lưu: hất xẻng phân ướt mù mắt tên đi đầu, ngã trượt trên bùn bẻ gãy khớp gối tên thứ hai, rồi dùng dùi sắt cống rãnh đâm xuyên mu bàn chân tên thứ ba; hạ gục cả ba tên trong bóng tối chỉ sau 20 giây mà không phát ra tiếng động lớn.
+  *Móc câu cuối chương:* Khang giẫm nát ngón tay tên cầm đầu, gằn từng hơi thở lạnh băng; ánh mắt dã thú của kẻ từng mổ xác khiến lũ lưu manh đái ra quần bò chạy trốn trong màn đêm.
+
+* **Chương 34: Học Tiếng Bằng Than Củi**
+  *Sự kiện cốt lõi:* Khang nhặt các mẩu than củi và da thú rách, ngày đêm ngồi ở bậc thềm công hội ghi chép lại hình dáng các ký tự Ma Thần Ngữ treo trên bảng nhiệm vụ.
+  *Tiến triển cốt truyện & Sảng điểm:* Tư duy logic của người hiện đại phát huy tối đa: Khang phân loại các nhóm ký tự lặp lại (tiền tố chỉ địa danh, hậu tố chỉ số tiền quặng sắt, biểu tượng đầu lâu chỉ độ nguy hiểm); xâu chuỗi khẩu hình của mạo hiểm giả say xỉn với mặt chữ, giải mã được 15 từ vựng sinh tồn then chốt đầu tiên.
+  *Móc câu cuối chương:* Một bàn chân móng guốc nặng nề giẫm nát mẩu than củi của Khang; bóng đen cao kều của gã kỵ ma tộc Nokopara đổ ập xuống trang da thú.
+
+* **Chương 35: Lời Đe Dọa Của Nokopara**
+  *Sự kiện cốt lõi:* Nokopara ném cho Khang cuộn giấy da nhiệm vụ bắt buộc của Rank F, dùng vài từ ngữ cộc lốc kèm động tác cứa cổ đe dọa hắn phải hoàn thành trong 3 ngày nếu không muốn bị tước thẻ mạo hiểm giả.
+  *Tiến triển cốt truyện & Sảng điểm:* Khang giải mã được biểu tượng trên giấy: "Thu gom nấm độc dạ quang tại Hang Đá Vôi Hắc Phong" — cái bẫy chết người vì đây là tổ bầy Thạch Hạt; Khang không hề nao núng, thản nhiên cúi đầu nhận lệnh, âm thầm ghi nhớ mùi lưu huỳnh nồng nặc và dấu móng guốc đặc trưng của gã kỵ ma tộc.
+  *Móc câu cuối chương:* Rời khỏi quán rượu, Khang móc từ túi áo ra một chiếc răng nanh ma thú đã mài sắc cạnh — chuyến đi săn độc hành đầu tiên chính thức bắt đầu.
+
+* **Chương 36: Lò Mổ Dưới Hang Vôi**
+  *Sự kiện cốt lõi:* Khang một mình thâm nhập Hang Đá Vôi Hắc Phong ngập tràn khí gas độc hại, chạm trán bầy Thạch Hạt cấp E mang lớp mai cứng như đá tảng.
+  *Tiến triển cốt truyện & Sảng điểm:* Không dùng Touki, Khang vận dụng triệt để bẫy rập tự nhiên: hun khói mù dồn bầy bọ cạp vào khe nứt hẹp, dùng đá tảng đập vỡ khớp nối đuôi độc, nhặt từng chiếc càng gãy cắm ngược vào mắt chúng; thu hoạch toàn bộ nấm dạ quang và 6 viên Ma Tinh Thạch cấp E nguyên vẹn mà không tốn một giọt máu.
+  *Móc câu cuối chương:* Khi Khang đang bóc tách túi độc cuối cùng, một tiếng rít xé gió từ trần hang vang lên — con Nhện Thạch Giáp cấp D khổng lồ bất ngờ giáng xuống ngay trên đỉnh đầu hắn.
+
+* **Chương 37: Lăn Cát Chém Khớp Nhện**
+  *Sự kiện cốt lõi:* Trận chiến sinh tử với quái thú cấp D đầu tiên; Khang nuốt viên Ma Tinh bọc màng kép cấp E, ép Đấu Khí xám bạc bộc phát trong 3 phút 45 giây.
+  *Tiến triển cốt truyện & Sảng điểm:* Lối đánh Bắc Thần Lưu gai góc và thực dụng: Khang liên tục trượt ngã dưới bụng nhện, dùng áo choàng cuốn bùn tạt mù 8 con mắt quái thú; đoản kiếm rỉ sét đâm xuyên khớp đốt mềm, chặt đứt 4 chân bên trái khiến con nhện đổ sụp; nhát kiếm cuối cùng đâm xuyên màng não từ hàm dưới.
+  *Móc câu cuối chương:* Khang thọc họng nôn viên đá ra bãi cát, ho sặc sụa nhưng khóe môi nhếch lên nụ cười lạnh khi moi được từ đầu con nhện một viên Ma Tinh Thạch cấp D xanh biếc to bằng quả trứng chim.
+
+* **Chương 38: Giải Mã Thanh Quản Dị Tộc**
+  *Sự kiện cốt lõi:* Trong ngách hang đá vôi sâu, Khang phát hiện một xác ướp Ma tộc tự nhiên được luồng khí khô và bụi vôi bảo quản nguyên vẹn; hắn dùng dao mổ giải phẫu tỉ mỉ cấu trúc sụn thanh quản và vòm họng dị tộc.
+  *Tiến triển cốt truyện & Sảng điểm:* Đột phá mang tính khoa học: Ma Thần Ngữ đòi hỏi độ rung của khoang thanh quản phụ để phát ra các âm tiết trầm đục; Khang kết hợp kiến thức giải phẫu với khẩu hình từng quan sát ở quán rượu, ép cơ vòm họng người Trái Đất thích nghi và tự mình phát âm trọn vẹn 3 khẩu lệnh sinh tồn đầu tiên.
+  *Móc câu cuối chương:* Đứng trước cửa hang lộng gió lạnh buốt, Khang cất giọng khàn đặc như hai thanh sắt cọ vào nhau: "Ta... không phải... kẻ câm."
+
+* **Chương 39: Bẻ Gãy Bẫy Tống Tiền**
+  *Sự kiện cốt lõi:* Khang trở về công hội giao nộp nấm dạ quang và xác nhện cấp D; hai tên tay sai Ma tộc của Nokopara lập tức áp sát đòi tịch thu 80% tiền thưởng với lý do "thuế bảo kê tân thủ".
+  *Tiến triển cốt truyện & Sảng điểm:* Khang không nhượng bộ; ngay trước mặt đám đông, hắn dùng mũi dao thép chỉ thẳng vào phiến đá khắc luật sảnh chính, gằn từng từ Ma Thần Ngữ trầm đục như tiếng búa nện: "Hội... quy... Cấm... cướp!"; sự bình tĩnh và ánh mắt khát máu của Khang khiến nhân viên công hội buộc phải can thiệp, trao đủ tiền thưởng cho hắn.
+  *Móc câu cuối chương:* Nokopara đứng trên gác hai bóp nát chiếc ly đồng trong tay, ánh mắt lộ rõ sát cơ đối với "con rệp thẻ gỗ" dám công khai bẻ gãy luật ngầm của gã.
+
+* **Chương 40: Lò Rèn Thép Đen Phế Liệu**
+  *Sự kiện cốt lõi:* Khang cầm toàn bộ số tiền thưởng và chiến lợi phẩm tìm đến một lò rèn đổ nát ở khu phế tích do một gã thợ rèn Ma tộc một mắt, cụt một tay làm chủ.
+  *Tiến triển cốt truyện & Sảng điểm:* Giao dịch thực dụng: Khang dùng xác nhện cấp D và bản vẽ cơ khí đổi lấy một thanh đoản kiếm thép đen dày bản chuyên đâm chọc, cùng bộ đai dao rọc xương giải phẫu giấu kín sau bắp chân và dưới nách; lão thợ rèn kinh ngạc trước thiết kế tàn độc chỉ nhắm vào động mạch và khớp xương của Khang.
+  *Móc câu cuối chương:* Lão thợ rèn một mắt phun ngụm rượu vào lưỡi thép đỏ rực, gằn giọng cảnh báo: "Nokopara đã mua mạng ngươi ở hắc thị rồi đấy, thằng nhãi."
+
+* **Chương 41: Thăng Lên Thẻ Đồng Hạng E**
+  *Sự kiện cốt lõi:* Nhờ nộp Ma Tinh cấp D hoàn thành vượt mức nhiệm vụ, Khang được công hội thu hồi thẻ gỗ và cấp tấm Thẻ Đồng Hạng E (Rank E Bronze Plate).
+  *Tiến triển cốt truyện & Sảng điểm:* Bước ngoặt vị thế: Từ kẻ rác rưởi bị giẫm đạp, Khang chính thức bước vào hàng ngũ thợ săn tự do; hắn được phép nhận nhiệm vụ ngoài hoang dã xa xôi và học thêm 30 từ vựng chuyên môn về địa lý Ma Đại Lục.
+  *Móc câu cuối chương:* Tấm thẻ đồng vừa đeo lên cổ, Nokopara đã bước tới với nụ cười giả tạo ghê tởm: "Chúc mừng thăng hạng... Ta có một hợp đồng lớn ngoài hoang dã dành riêng cho ngươi."
+
+* **Chương 42: Bẫy Sập Hẻm Núi Đỏ**
+  *Sự kiện cốt lõi:* Nokopara dùng quyền hạn điều động Khang vào tổ đội liên minh lâm thời ngoài luồng gồm 2 mạo hiểm giả Rank D (Ma tộc Đầu Chó và Thằn Lằn) để săn Quỷ Diện Trĩ tại Hẻm Núi Đỏ.
+  *Tiến triển cốt truyện & Sảng điểm:* Khang thừa biết đây là chuyến đi lành ít dữ nhiều nhưng vẫn thản nhiên nhận lời; hắn âm thầm chuẩn bị 3 viên Ma Tinh bọc màng kép, 2 túi bột vôi sống trộn ớt khô và dây thép bẫy giấu quanh thắt lưng; tâm lý kẻ đi săn sẵn sàng biến cạm bẫy của đối phương thành mồ chôn của chúng.
+  *Móc câu cuối chương:* Cửa hẻm núi đỏ khép lại sau lưng ba bóng người; gió sa mạc thổi rít lên qua khe đá như tiếng khóc của những kẻ từng bỏ mạng nơi tử địa.
+
+* **Chương 43: Thăm Dò Tử Địa**
+  *Sự kiện cốt lõi:* Di chuyển sâu vào hẻm núi đá tai mèo sắc nhọn; hai tên Ma tộc liên tục đẩy Khang đi đầu dò đường và kích hoạt các tổ quái nhỏ.
+  *Tiến triển cốt truyện & Sảng điểm:* Khang giả vờ vụng về, vấp ngã liên tục để bí mật rải bột lưu huỳnh đánh dấu các điểm sụt lún địa hình và hướng gió; qua các câu trò chuyện cộc lốc của hai tên sát thủ, Khang nắm được tin tức: Nokopara ăn tiền của đường dây buôn lậu để thu gom thẻ mạo hiểm giả của các tân thủ "mất tích".
+  *Móc câu cuối chương:* Tiếng gầm rú đinh tai nhức óc vang lên từ vách đá — con Quỷ Diện Trĩ lông vũ đỏ như máu, vuốt sắc như thép lao thẳng xuống từ tầng mây.
+
+* **Chương 44: Đòn Phản Trắc Giữa Bầy Máu**
+  *Sự kiện cốt lõi:* Khi quái thú lao vào, hai tên đồng đội Rank D bất ngờ vung đao chém đứt dây thừng bảo hiểm của Khang, đạp mạnh hắn về phía móng vuốt quái vật để làm mồi nhử rồi quay đầu bỏ chạy.
+  *Tiến triển cốt truyện & Sảng điểm:* Sự tàn nhẫn nằm trong dự tính; Khang không hề hoảng loạn; ngay trên không trung, hắn vung móc sắt móc chặt vào hông tên Ma tộc Thằn Lằn, kéo giật gã trở lại làm bia đỡ đòn; móng vuốt Quỷ Diện Trĩ xé toạc lồng ngực tên Thằn Lằn thành hai nửa.
+  *Móc câu cuối chương:* Máu đen bắn tung tóe mặt Khang; tên Đầu Chó quay đầu lại kinh hoàng nhìn thấy Khang đang nuốt chửng một viên đá ma tinh rực sáng vào dạ dày.
+
+* **Chương 45: Cuồng Nộ Bạc Xám**
+  *Sự kiện cốt lõi:* Khang kích hoạt Touki 3 phút 45 giây; tốc độ và sức bật tăng vọt, biến đáy hẻm núi thành sàn đấu đẫm máu.
+  *Tiến triển cốt truyện & Sảng điểm:* Bắc Thần Lưu đỉnh cao thực chiến: Khang dụ quái thú cuồng nộ lao thẳng về phía tên Đầu Chó; lợi dụng lúc tên sát thủ đang chật vật đỡ đòn, Khang trượt trên vũng máu cắt đứt gân kheo đối phương; sau đó dùng áo choàng trùm đầu Quỷ Diện Trĩ, đâm ngập lưỡi thép đen vào hốc tai quái thú.
+  *Móc câu cuối chương:* Cả quái thú và tên sát thủ ngã gục trong vũng máu; Đấu Khí xám vụt tắt, để lại Khang quỳ sụp xuống nền đá với tiếng thở dốc nồng nặc mùi tanh của dịch vị.
+
+* **Chương 46: Phẫu Thuật Sinh Tử Dưới Bão Cát**
+  *Sự kiện cốt lõi:* Lớp màng bọc tan hết, viên ma tinh bắt đầu cắn phá niêm mạc ruột; cơn co thắt dữ dội ập đến buộc Khang phải tự cấp cứu giữa bão cát hoang mạc.
+  *Tiến triển cốt truyện & Sảng điểm:* Miêu tả chân thực, rùng rợn phong cách Hardboiled: Khang thọc hai ngón tay sâu vào cuống họng, co bóp cơ hoành nôn tháo viên đá lẫn dịch vị sẫm màu ra cát; phát hiện máu tươi lẫn trong bãi nôn, hắn dùng kim xương và chỉ gân tự khâu vết rách cơ thành bụng trong hang đá, uống cạn túi dịch kiềm để dập tắt cơn sốt ma lực.
+  *Móc câu cuối chương:* Sau 2 giờ ngất lịm vì đau đớn, Khang mở mắt giữa đêm đen lạnh buốt; vết thương đã tạm cầm máu, ánh mắt hắn trở nên lạnh lẽo như thép tôi.
+
+* **Chương 47: Lục Soát Tín Vật Giết Người**
+  *Sự kiện cốt lõi:* Khang quay lại bãi chiến trường, mổ lấy Ma Tinh Quỷ Diện Trĩ và lục soát thi thể hai tên mạo hiểm giả phản bội.
+  *Tiến triển cốt truyện & Sảng điểm:* Thu hoạch mang tính bước ngoặt: Tìm thấy 40 đồng quặng sắt, xâu 5 tấm thẻ gỗ của các tân thủ mất tích, và tờ lệnh thanh trừng có đóng dấu sáp độc quyền của Nokopara; đặc biệt trên tờ lệnh có ghi chép ký hiệu quán trọ 'Móng Đỏ' và mã số chuyển hàng ngầm về Cảng Zant.
+  *Móc câu cuối chương:* Khang siết chặt mảnh giấy dính máu trong tay, khóe môi nhếch lên nụ cười lạnh: "Nokopara... Giờ thì mày hết đường chối cãi."
+
+* **Chương 48: Bóng Ma Đội Lốt Bùn**
+  *Sự kiện cốt lõi:* Khang vác đầu Quỷ Diện Trĩ và hai tấm thẻ bài mạo hiểm giả Rank D đẫm máu quay trở lại Rikarisu giữa ban trưa nắng cháy.
+  *Tiến triển cốt truyện & Sảng điểm:* Cả sảnh công hội chết lặng kinh hoàng; do đây là hợp đồng săn quái ngoài luồng, Công Hội chỉ chiếu theo luật rừng Ma Đại Lục "kẻ sống sót hưởng trọn phần thưởng" mà trao tiền cho Khang, hoàn toàn không can thiệp việc hai gã Rank D mất mạng; Nokopara cắn răng không dám hé răng tố cáo vì sợ lộ chuyện tự ý giăng bẫy giết người.
+  *Móc câu cuối chương:* Nokopara ngồi ở góc phòng, mồ hôi lạnh túa ra trên vầng trán ngựa khi nhận ra Khang đang nhìn chằm chằm vào cổ họng gã với ánh mắt của một tên đồ tể nhìn con lợn chuẩn bị lên bàn mổ.
+
+* **Chương 49: Tối Hậu Thư Của Kền Kền**
+  *Sự kiện cốt lõi:* Biết chuyện mờ ám sắp bại lộ, Nokopara chặn Khang trong hẻm tối ngoài công hội, rút kiếm ngắn ép hắn giao nộp tờ lệnh có dấu sáp máu trước nửa đêm.
+  *Tiến triển cốt truyện & Sảng điểm:* Đỉnh cao tâm lý chiến: Nokopara rút dao uy hiếp nhưng không dám hạ sát Khang ngay tại chỗ vì biết bức thư đã bị giấu đi, nếu Khang chết thì thư sẽ lọt vào tay chấp pháp công hội; Khang đọc vị sự sợ hãi của đối phương, gằn từng từ Ma Thần Ngữ vạch trần thế bí của gã; Nokopara buộc phải lùi bước chuyển sang giăng bẫy tiêu hủy chứng cứ.
+  *Móc câu cuối chương:* Nokopara gầm lên điên tiết bỏ đi: "Nửa đêm nay, lò thuộc da bỏ hoang... Mang bức thư đến, hoặc xác ngươi sẽ nổi trên mương phân!"
+
+* **Chương 50: Chuẩn Bị Trận Địa Sát Sinh**
+  *Sự kiện cốt lõi:* Khang dùng nhựa cây ma thú và vải rách siết chặt khung sườn nén cơn đau xuất huyết bụng, dùng toàn bộ tiền thưởng mua vôi sống, mỡ dễ cháy, bột ớt ma thú và đột nhập lò thuộc da trước giờ hẹn 4 tiếng.
+  *Tiến triển cốt truyện & Sảng điểm:* Bản năng loài gián biến thành cạm bẫy giết chóc: Khang khảo sát từng xà nhà mục nát, đổ mỡ trơn dọc lối thoát hiểm duy nhất, treo các bọc vôi bột nối với dây cước bẫy ở tầm mắt; chuẩn bị sẵn 2 viên Ma Tinh Thạch cấp D bọc màng kiềm đặc chế cho trận tử chiến cuối cùng.
+  *Móc câu cuối chương:* Tiếng chuông nửa đêm của thị trấn điểm; dưới ánh trăng đỏ quạch, Nokopara dẫn theo 4 tên tay sai Ma tộc trang bị giáp sắt nặng nề bước vào lò thuộc da.
+
+* **Chương 51: Màn Khói Mù Lò Thuộc Da**
+  *Sự kiện cốt lõi:* Nokopara bước vào điểm hẹn nhưng chỉ thấy chiếc túi rỗng nằm trơ trọi trên bàn mổ; ngay khi gã chạm tay vào, Khang giật dây kích hoạt bẫy từ trên xà nhà.
+  *Tiến triển cốt truyện & Sảng điểm:* Bão vôi sống và bột ớt nổ tung trong không gian kín; tiếng gào thét mù lòa xé toạc màn đêm; Khang từ trên xà nhà lao xuống như bóng ma, thanh đoản kiếm thép đen đâm xuyên từ gáy ra họng tên xạ thủ Ma tộc trước khi gã kịp giương cung.
+  *Móc câu cuối chương:* Khói độc lan tỏa cay xè; Nokopara ho sặc sụa, vung ngọn thương dài bộc phát Đấu Khí màu vàng nhạt gầm lên: "Thằng súc sinh câm điếc! Ra đây cho tao!"
+
+* **Chương 52: Cắt Gân Trong Bóng Tối**
+  *Sự kiện cốt lõi:* Cuộc săn lùng đảo ngược trong lò thuộc da ngập tràn khói độc; Khang vận dụng triệt để địa hình và bóng tối để triệt hạ từng tên hộ vệ của Nokopara.
+  *Tiến triển cốt truyện & Sảng điểm:* Nghệ thuật cận chiến Bắc Thần Lưu tàn độc: Khang trượt ngã dưới gầm bàn chém đứt gân gót chân tên Ma tộc thứ hai, dùng móc sắt giật sập giá treo da thuộc nặng hàng trăm cân đè bẹp tên thứ ba; không có những chiêu thức hoa mỹ, chỉ có những nhát dao giải phẫu lạnh lùng kết liễu mạng sống trong tích tắc.
+  *Móc câu cuối chương:* Tên tay sai cuối cùng ngã gục trong vũng máu; Nokopara hoảng loạn nhận ra chỉ còn lại một mình gã đối diện với bóng đen đang chầm chậm bước ra từ màn khói.
+
+* **Chương 53: Ngọn Thương Của Kỵ Ma Tộc**
+  *Sự kiện cốt lõi:* Nokopara dồn toàn bộ Touki vào ngọn thương dài, tung ra thương thuật tầm xa dày dạn kinh nghiệm áp chế hoàn toàn cự ly ngắn của Khang.
+  *Tiến triển cốt truyện & Sảng điểm:* Chênh lệch đẳng cấp thực chiến: Nokopara là mạo hiểm giả Rank C; ngọn thương quét ngang phá vỡ tấm chắn gỗ, rạch một đường sâu hoắm trên lồng ngực Khang, hất văng hắn vào góc tường mục nát; thanh đoản kiếm thép đen của Khang bị đánh gãy làm đôi.
+  *Móc câu cuối chương:* Nokopara dồn Khang vào góc chết, mũi thương nhắm thẳng yết hầu hắn cười man rợ: "Mày chỉ là một con rệp không mana! Chết đi!"
+
+* **Chương 54: Nuốt Song Tinh Bộc Phát Cực Hạn**
+  *Sự kiện cốt lõi:* Rơi vào tuyệt cảnh sinh tử, Khang bất chấp nguy cơ hoại tử nội tạng, tống liền 2 viên Ma Tinh cấp D bọc màng vào miệng nuốt chửng.
+  *Tiến triển cốt truyện & Sảng điểm:* Cơn đau xé ruột bùng nổ biến thành luồng Đấu Khí xám bạc đậm đặc chưa từng thấy cuộn trào quanh thân xác; Khang không lùi mà tiến, dùng chính lòng bàn tay trái kẹp chặt lấy mũi thương sắt nhọn hoắt, kéo giật Nokopara về phía mình; cú đấm tay phải bọc Touki nện vỡ nát xương hàm của tên kỵ ma tộc.
+  *Móc câu cuối chương:* Nokopara rú lên kinh hoàng khi thấy Khang rút từ sau bắp chân ra một lưỡi dao rọc xương sáng loáng, cắm phập vào hốc mắt gã.
+
+* **Chương 55: Lưỡi Dao Bắc Thần Kết Liễu**
+  *Sự kiện cốt lõi:* Khang đè Nokopara xuống sàn nhà đầy máu, kết liễu mạng sống của con kền kền Rikarisu bằng một nhát rạch đứt động mạch cổ dứt khoát.
+  *Tiến triển cốt truyện & Sảng điểm:* Khang quỳ gục xuống nôn tháo hai viên đá ma tinh lẫn dịch mật và máu đen ra sàn; hắn nghiến răng chịu đựng cơn co thắt nội tạng dữ dội, dùng bột thuốc cầm máu ép chặt vào vết thương ngực; lục soát thi thể Nokopara, hắn đoạt lấy chiếc nhẫn cất giấu chìa khóa két sắt ngầm có khắc biểu tượng móng ngựa và số phòng của quán trọ 'Móng Đỏ'.
+  *Móc câu cuối chương:* Khang nuốt vội một nắm bột than củi thô để trung hòa axit dịch vị dư thừa, lê bước chân tập tễnh rời khỏi lò thuộc da trước khi trời rạng sáng.
+
+* **Chương 56: Quét Sạch Tổ Kền Kền**
+  *Sự kiện cốt lõi:* Nén cơn xuất huyết dạ dày xé ruột, Khang lần theo ký hiệu trên chìa khóa đột nhập phòng trọ bí mật của Nokopara tại quán trọ 'Móng Đỏ', mở khóa két sắt ngầm thu hồi toàn bộ tài sản tích cóp của băng tống tiền.
+  *Tiến triển cốt truyện & Sảng điểm:* Sảng điểm thu hoạch sinh tử: Thu được hơn 200 đồng quặng sắt, 5 viên Ma Tinh Thạch cấp C nguyên chất, một tấm bản đồ da thú chi tiết dẫn tới Cảng Zant; Khang dùng dầu đèn và vôi bột ăn mòn ổ khóa két sắt, đốt sạch giấy nợ và hồ sơ buôn người trong chậu than sưởi bằng đồng kín khói, rồi khóa trái cửa phòng từ bên ngoài bằng chìa của Nokopara; câu giờ quý giá để kéo lê bao tài sản giấu sâu xuống đáy chuồng phân thú trước khi ngất lịm trong cơn sốt ma lực.
+  *Móc câu cuối chương:* Tiếng còi báo động rền vang khắp các nẻo đường Rikarisu; lò mổ đẫm máu tại lò thuộc da đêm qua chính thức bị phát giác khi mặt trời vừa ló rạng.
+
+* **Chương 57: Rikarisu Dưới Bình Minh Đỏ**
+  *Sự kiện cốt lõi:* Sáng hôm sau, tin tức cái chết của Nokopara và toàn bộ băng đảng làm chấn động Rikarisu; lính canh thị trấn ráo riết phong tỏa các cổng thành để truy lùng hung thủ Rank B/A.
+  *Tiến triển cốt truyện & Sảng điểm:* Khang tỉnh dậy sau cơn mê sảng sốt rét, chủ động tháo tấm thẻ đồng Rank E giấu kín vào đống rơm, bôi trét phân thú khắp người và đeo tấm thẻ gỗ rác nát giả làm phu dọn phân câm điếc; đội tuần tra lướt qua máng cỏ mà không mảy may nghi ngờ kẻ hạ đẳng dưới đáy chuồng; giữa lúc căng thẳng tột độ, một kỵ sĩ đưa tin từ Cảng Zant chạy gục ngựa xông thẳng vào sảnh công hội.
+  *Móc câu cuối chương:* Trên tay kỵ sĩ là một ống thư bọc giáp sắt, niêm phong bằng một khối sáp ma pháp màu tím đậm mang phù hiệu hoàng gia Asura.
+
+* **Chương 58: Tiếng Sấm Fittoa — Nhận Thức Sụp Đổ**
+  *Sự kiện cốt lõi:* Đám đông mạo hiểm giả bu kín bảng cáo thị công hội; Khang trong lốt phu dọn phân đẩy xe cào rơm sát mép sảnh, nhặt được tờ công văn sao chép bị giẫm rách dưới vũng bùn mang về góc chuồng thú giải mã.
+  *Tiến triển cốt truyện & Sảng điểm:* Đại cao trào nhận thức (Cognitive Collapse): Khang ráp nối các âm tiết chữ viết: "Thiên tai ma lực màu tím... Cột sáng chọc trời... Thành phố Roa... Lãnh địa Fittoa... Toàn bộ sinh mệnh bị xé toạc không gian...". Chiếc chén đất trên tay Khang rơi xuống nền đá vỡ tan tành; đồng tử co rút tột độ; những mảnh ký ức tiền kiếp về cuốn tiểu thuyết *Mushoku Tensei* ùa về như thác lũ; hắn bàng hoàng nhận ra vết nứt không gian hút mình chính là Thảm họa Dịch chuyển Fittoa, và bản thân đang đứng ngay giữa tâm bão tận thế của thế giới tàn khốc này!
+  *Móc câu cuối chương:* Khang siết chặt chuôi đoản kiếm gãy, ngẩng đầu nhìn lên bầu trời đỏ rực như máu của Ma Đại Lục, lẩm bẩm trong sự ớn lạnh thấu xương: "Fittoa... Roa... Hóa ra... ta đang ở ngay giữa tâm bão của ngày tận thế."

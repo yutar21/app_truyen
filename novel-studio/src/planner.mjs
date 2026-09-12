@@ -289,14 +289,14 @@ const REVIEW_DIMS = {
   style: '【文风】把抽查的章节与本书 style_refs/ 里的范本【并排读】，判断语感是否一致：叙述者的姿态、句子的呼吸、段落的换行密度、用词口味、情绪的外放程度、一章的起收方式。只指出【明显跑偏范本】的地方，并说清跑偏在哪一面。若本书没有范本，这一维跳过、不要评价。另外查两条与文风无关的：有没有复读凑字、有没有作者旁白。',
   plausibility: '【故事合理性】人物动机是否可信、因果是否成立、反转与实力变化是否有铺垫与代价、世界/设定规则是否自洽',
   pace: '【节奏/格局/读者体验】主角处境(地点/权力层级/实力/对手量级/格局)是否随章可感升级还是原地打转；是否有连续多章以办牌/验册/对账/盘点/走流程为主线的事务流水账；隔几章有没有可感的进展或爽点(赢一场/收一人/揭真相/上台阶)还是全程压抑无回报；对照本卷阶段目标进度是否跑偏',
-  terms: '【专有名词/法宝/原著术语】核查人名、地名、功法、斗技、法宝、武器、异火等专有名词与设定体系及原著的一致性（严防AI幻觉造词、错别字或音译漂移，如将玄重尺写偏）',
+  terms: '【专有名词/设定术语】核查人名、地名、技能体系、关键武器/道具等专有名词与设定体系的一致性（严格对照 novel_bible.md，严防AI幻觉造词、错别字或音译漂移）',
 };
 const REVIEW_DIMS_VN = {
-  logic: '【Tính logic & Nhất quán】 Trật tự dòng thời gian, thiết lập và thu hồi phục bút, các mâu thuẫn sự kiện/quan hệ/thương tích/pháp bảo/nợ nần, tính nhất quán trong nhận thức nhân vật, các lỗ hổng cốt truyện',
+  logic: '【Tính logic & Nhất quán】 Trật tự dòng thời gian, thiết lập và thu hồi phục bút, các mâu thuẫn sự kiện/quan hệ/thương tích/trang bị/đồ vật/nợ nần, tính nhất quán trong nhận thức nhân vật, các lỗ hổng cốt truyện',
   style: '【Văn phong & Ngữ cảm】 Đọc đối chiếu với văn mẫu trong style_refs/ để thẩm định ngữ cảm: tư thế người kể chuyện, nhịp điệu ngắt đoạn, khẩu vị dùng từ ngữ/Hán-Việt, cảm xúc, cách mở và đóng chương',
-  plausibility: '【Độ hợp lý của tình tiết】 Động cơ nhân vật có đáng tin cậy không, quan hệ nhân quả có logic không, các bước ngoặt và sự thay đổi thực lực có được chuẩn bị kỹ lưỡng không, quy tắc thế giới/tu vi có tự nhất quán không',
+  plausibility: '【Độ hợp lý của tình tiết】 Động cơ nhân vật có đáng tin cậy không, quan hệ nhân quả có logic không, các bước ngoặt và sự thay đổi thực lực có được chuẩn bị kỹ lưỡng không, quy tắc thế giới/tu vi/năng lực có tự nhất quán không',
   pace: '【Tiết tấu & Sảng điểm & Trải nghiệm độc giả】 Cảnh ngộ nhân vật chính (địa điểm/thực lực/quyền lực/tầm cỡ đối thủ) có được thăng cấp rõ rệt không; có bị sa lầy vào kể lể thủ tục vụn vặt không; cách vài chương có tạo được chiến thắng/tiến triển cụ thể hay toàn ức chế dồn nén',
-  terms: '【Thuật ngữ & Pháp bảo & Danh từ nguyên tác】 Độ chuẩn xác 100% của danh từ riêng, tên nhân vật, vũ khí, pháp bảo, đấu kỹ, dị hỏa, địa danh đối chiếu nguyên tác Đấu Phá Thương Khung và novel_bible.md (Bắt buộc kiểm tra kỹ: vũ khí của Tiêu Viêm bắt buộc là Huyền Trọng Xích, nghiêm cấm các biến âm sai như Huyền Trọng Dĩnh hay Huyền Trọng Thước; tên dị hỏa, đấu kỹ, công pháp phải chuẩn xác)',
+  terms: '【Thuật ngữ & Danh từ riêng & Thiết lập nguyên tác】 Độ chuẩn xác 100% của danh từ riêng, tên nhân vật, vũ khí, trang bị, kỹ năng/năng lượng, địa danh đối chiếu theo novel_bible.md và nguyên tác (nếu là đồng nhân); phát hiện và sửa triệt để các lỗi sai lệch, AI hallucination bịa từ, biến âm dịch thuật hoặc lẫn lộn thiết lập từ tác phẩm khác',
 };
 export function buildReviewInstruction(book, range, dims, note) {
   const isLatin = /[a-zA-Zà-ỹÀ-Ỹ]/.test(book.title);
@@ -308,7 +308,7 @@ export function buildReviewInstruction(book, range, dims, note) {
     const s = `Hãy thực hiện một đợt 【RÀ SOÁT & THẨM ĐỊNH TÍNH NHẤT QUÁN TOÀN DIỆN】 cho tác phẩm 《${book.title}》, phạm vi: ${r}. ${focus}` +
       `Tập trung kiểm tra các tiêu chí sau: ${sel.join('; ')}. ` +
       `Đọc kỹ lưỡng từng chương trong phạm vi (kết hợp đối chiếu novel_bible.md, outlines/, continuity_ledger.md, chapter_index.md); ` +
-      `ĐẶC BIỆT chú trọng kiểm tra đối soát từng câu chữ về tính chuẩn xác của các danh từ riêng, tên nhân vật, vũ khí, pháp bảo, đấu kỹ, dị hỏa theo đúng nguyên tác Đấu Phá Thương Khung và novel_bible.md (phát hiện và sửa triệt để các lỗi dịch sai âm Hán-Việt hoặc AI hallucination bịa từ như gọi Huyền Trọng Xích thành Huyền Trọng Dĩnh); ` +
+      `ĐẶC BIỆT chú trọng kiểm tra đối soát từng câu chữ về tính chuẩn xác của các danh từ riêng, tên nhân vật, hệ thống năng lực, vũ khí/trang bị theo đúng thiết lập trong novel_bible.md của tác phẩm này (phát hiện và sửa triệt để các lỗi sai lệch âm Hán-Việt, lẫn lộn thiết lập từ tác phẩm khác, hoặc AI hallucination tự bịa từ); ` +
       `Ghi nhận toàn bộ phát hiện và phân loại theo 3 mức 【Lỗi nghiêm trọng / Nguy cơ tiềm ẩn / Gợi ý nâng cấp】 vào tệp reviews/ra-soat-${r.replace(/[\s\\/:*?"<>|]+/g, '_')}.md HOÀN TOÀN BẰNG TIẾNG VIỆT. ` +
       `Cách xử lý: Lỗi logic, mâu thuẫn thiết lập hoặc sai sót thuật ngữ/vũ khí cần sửa trực tiếp tại chỗ trong các tệp chương (giữ nguyên khung cốt truyện); văn phong cần trau chuốt mượt mà; ` +
       `Nếu có tình tiết cần thay đổi lớn, ghi rõ phương án đề xuất trong báo cáo, không tự ý đảo lộn cốt truyện cũ. ` +
@@ -363,8 +363,8 @@ export function buildRebuildOutlineInstruction(book) {
   if (isLatin) {
     const s = `Đây là một tác phẩm tiểu thuyết đã có sẵn chính văn: 《${book.title}》, nhưng 【Thiết Lập / Novel Bible và Dàn Ý / Outlines】 chưa đầy đủ. Hãy 【CHỈ TÁI LẬP BỐ CỤC VÀ THIẾT LẬP HOÀN TOÀN BẰNG TIẾNG VIỆT, TUYỆT ĐỐI KHÔNG VIẾT CHƯƠNG MỚI】: ` +
       `Bước 1: Đọc lướt qua các chương đã viết trong thư mục chapters/ (theo thứ tự tên tệp). ` +
-      `Bước 2: Dựa vào chính văn tiếng Việt để tái lập tệp novel_bible.md bằng TIẾNG VIỆT CHUẨN MỰC —— thế giới quan, hệ thống cảnh giới/tu vi, nhân vật chính Lục Trần và các nhân vật nữ/phụ, thế lực đối địch, phục bút chưa thu hồi; đồng bộ các sự kiện then chốt vào continuity_ledger.md. ` +
-      `Bước 3: Đặt tên quyển đậm chất huyền huyễn cho từng quyển, xây dựng hoặc bổ sung trong outlines/ các tệp dàn ý chi tiết từng chương bằng Tiếng Việt. ` +
+      `Bước 2: Dựa vào chính văn tiếng Việt để tái lập tệp novel_bible.md bằng TIẾNG VIỆT CHUẨN MỰC —— thế giới quan, hệ thống cảnh giới/tu vi/năng lực, nhân vật chính và các nhân vật phụ/đối trọng then chốt, thế lực đối địch, phục bút chưa thu hồi; đồng bộ các sự kiện then chốt vào continuity_ledger.md. ` +
+      `Bước 3: Đặt tên quyển phù hợp với thể loại tác phẩm cho từng quyển, xây dựng hoặc bổ sung trong outlines/ các tệp dàn ý chi tiết từng chương bằng Tiếng Việt. ` +
       `Bước 4: Đối chiếu và đồng bộ lại tệp chapter_index.md cho khớp 100% với các tệp thực tế trong chapters/. ` +
       `【RÀNG BUỘC CỨNG】 Không tạo/sửa/xóa bất kỳ tệp chương chính văn nào, chỉ tạo/cập nhật novel_bible.md, outlines/, continuity_ledger.md, chapter_index.md. Sau khi hoàn thành xuất ra một dòng: 「【THIẾT LẬP VÀ DÀN Ý ĐÃ TÁI LẬP THÀNH CÔNG】」. Toàn bộ tài liệu phải viết bằng TIẾNG VIỆT CHUẨN MỰC.`;
     return s.replace(/[\r\n]+/g, ' ');
@@ -494,7 +494,7 @@ export function buildVolumePlanPrompt(book, volNum, { bibleBrief = '', compass =
           : `Căn cứ: Thiết lập tác phẩm + Cục diện hồi kết của các chương trước. Hãy đề xuất 【2–3 phương án hướng đi cốt truyện cho quyển này】(mỗi phương án 1-2 câu để tác giả chọn), sau đó chọn phương án tối ưu nhất để lập dàn ý chi tiết từng chương (${approx}).`);
 
     return [
-      `Bạn là Tổng biên tập tiểu thuyết tiên hiệp/huyền huyễn phương Đông giàu kinh nghiệm. Hãy lập bản thảo dàn ý chi tiết từng chương (Chapter Beats) cho 【Quyển ${n}】 của tác phẩm 《${book.title}》 để tác giả duyệt và chỉnh sửa.`,
+      `Bạn là Tổng biên tập tiểu thuyết mạng giàu kinh nghiệm. Hãy lập bản thảo dàn ý chi tiết từng chương (Chapter Beats) cho 【Quyển ${n}】 của tác phẩm 《${book.title}》 để tác giả duyệt và chỉnh sửa.`,
       basis,
       ``,
       dir ? `# ĐỊNH HƯỚNG TÁC GIẢ GIAO CHO QUYỂN NÀY (Ưu tiên cao nhất, bắt buộc bám sát):\n${dir}\n` : '',
