@@ -14,9 +14,10 @@ export const MODELS = {
     name: 'Antigravity CLI (agy)',
     bin: AGY_BIN,
     untermAgentId: 'agy-cli',
-    seedArgs: (instruction, cfg) => {
+    seedArgs: (instruction, cfg, bookDir) => {
       const args = ['--effort', cfg?.agyEffort || 'high'];
       if (cfg?.agyModel) args.push('--model', cfg.agyModel);
+      if (bookDir) args.push('--add-dir', bookDir);
       args.push('--print-timeout', '30m');
       args.push('-p', instruction, '--dangerously-skip-permissions', '--output-format', 'text');
       return args;
@@ -52,9 +53,10 @@ export const MODELS = {
     name: 'Gemini CLI / Antigravity',
     bin: fs.existsSync(AGY_BIN) ? AGY_BIN : 'gemini',
     untermAgentId: 'gemini-cli',
-    seedArgs: (instruction, cfg) => {
+    seedArgs: (instruction, cfg, bookDir) => {
       const args = ['--effort', cfg?.agyEffort || 'high'];
       if (cfg?.agyModel) args.push('--model', cfg.agyModel);
+      if (bookDir) args.push('--add-dir', bookDir);
       args.push('-p', instruction, '--dangerously-skip-permissions', '--output-format', 'text');
       return args;
     },

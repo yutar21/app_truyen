@@ -22,12 +22,13 @@ import { pacingGate } from './pacing.mjs';   // 写后节奏闸：治章长超�
 import { inspect as inspectLedger, needsSeed, ensureStructure, seedInstruction, snapshotGate } from './ledgersnap.mjs';   // 台账当前态快照：治「每批喂的是开篇旧账」
 
 // 各模型"无头 + 自动批准文件读写"的参数。
-function writeArgs(model, cfg) {
+function writeArgs(model, cfg, cwd) {
   if (model === 'codex') return ['exec', '--skip-git-repo-check', '--dangerously-bypass-approvals-and-sandbox'];
   if (model === 'claude') return ['-p', '--dangerously-skip-permissions'];
   if (model === 'agy' || model === 'gemini') {
     const args = ['--effort', cfg?.agyEffort || 'high'];
     if (cfg?.agyModel) args.push('--model', cfg.agyModel);
+    if (cwd) args.push('--add-dir', cwd);
     const timeoutSec = Math.max(1800, Math.round((cfg?.stateless?.batchTimeoutMs || 1800000) / 1000));
     args.push('--print-timeout', `${timeoutSec}s`);
     args.push('--dangerously-skip-permissions', '--output-format', 'text');
@@ -45,7 +46,7 @@ export function runHeadless(model, prompt, { cwd, cfg, timeoutMs = 900000, onChu
   return new Promise((resolve) => {
     let out = '', err = '', killed = false;
     const isWinCmd = process.platform === 'win32' && /\.(cmd|bat)$/i.test(m.bin);
-    const child = spawn(m.bin, writeArgs(model, cfg), { cwd, env, shell: isWinCmd, windowsHide: true });
+    const child = spawn(m.bin, writeArgs(model, cfg, cwd), { cwd, env, shell: isWinCmd, windowsHide: true });
     const timer = setTimeout(() => { killed = true; try { child.kill('SIGTERM'); } catch {} }, timeoutMs);
     try { child.stdin.write(prompt); child.stdin.end(); } catch {}
     child.stdout.on('data', d => { const s = d.toString(); out += s; if (onChunk) try { onChunk(s); } catch {} });

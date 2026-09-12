@@ -110,7 +110,7 @@ export function writeLaunchScript(book, model, instruction, cfg) {
   if (!m) throw new Error('未知模型：' + model);
   assertCliModel(m, model);
   // 安全网：把任何换行折叠成空格 —— 多行 prompt 会被 agent 当多行草稿、等人工回车，无法自动开跑。
-  const seed = m.seedArgs(instruction, cfg).map(a => String(a).replace(/[\r\n]+/g, ' '));
+  const seed = m.seedArgs(instruction, cfg, book.dir).map(a => String(a).replace(/[\r\n]+/g, ' '));
   const proxy = cfg.enableProxy ? proxyUrl() : '';
   const dir = path.join(book.dir, '.studio');
   fs.mkdirSync(dir, { recursive: true });

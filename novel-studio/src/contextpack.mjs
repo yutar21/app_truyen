@@ -229,12 +229,12 @@ export function buildBatchPack(book, { count = 3, mode = 'continue' } = {}) {
       `## YÊU CẦU CHO ĐỢT VIẾT NÀY\n` +
       `1. Viết chương ${numList.join('、')} HOÀN TOÀN BẰNG TIẾNG VIỆT.\n` +
       `   ★ 【DUNG LƯỢNG LÀ CHỈ TIÊU CỨNG NHẤT】: Mỗi chương mục tiêu đạt 3.000 – 4.500 TỪ TIẾNG VIỆT (tương đương khoảng 15.000 – 22.000 ký tự có dấu cách). TUYỆT ĐỐI KHÔNG ĐƯỢC VIẾT NGẮN DƯỚI 2.800 TỪ TIẾNG VIỆT!\n` +
-      `   ★ Không được viết lướt như tóm tắt kịch bản. Phải viết thật chi tiết: không gian môi trường, tâm lý nhân vật, cử chỉ ánh mắt, từng đòn thế võ học và luồng đấu khí va chạm, hội thoại sống động mang đậm phong vị tiên hiệp huyền huyễn phương Đông.\n` +
+      `   ★ Không được viết lướt như tóm tắt kịch bản. Phải viết thật chi tiết: không gian môi trường sinh thái, áp lực sinh tồn, tâm lý nhân vật, cử chỉ ánh mắt, từng hành vi của sinh vật và tương tác thực chiến khốc liệt, hội thoại tự nhiên sống động, bám sát phong cách thiết lập của tác phẩm.\n` +
       `   ${last.hanzi && last.hanzi >= 2500 ? `(Chương trước đạt ~${last.hanzi} từ rất đầy đặn, hãy tiếp tục duy trì dung lượng phong phú này, không được viết ngắn cụt lủn.)` : `⚠️(LƯU Ý ĐẶC BIỆT: Nếu chương trước bị ngắn, tuyệt đối không được bắt chước viết ngắn theo. Chương này phải viết đầy đặn, dài đủ 3.000 – 4.500 từ.)`}\n` +
       `2. Bám sát dàn ý chi tiết phân chương, đẩy mạnh xung đột kịch tính, kết chương có móc câu (hook) mở ra tình huống mới kích thích sự tò mò của độc giả.\n` +
-      `3. Lưu tệp vào thư mục chapters/${volDir}/. Tên tệp định dạng: ${numList[0]}<Tên_Chương>.txt (hoặc .md). Nội dung CHỈ CHỨA CHÍNH VĂN THUẦN TÚY, không chứa dòng tiêu đề, số chương, chú thích tác giả hay markdown.\n` +
+      `3. Lưu tệp trực tiếp vào thư mục chapters/${volDir}/ trong thư mục gốc của tác phẩm (workspace). Tên tệp định dạng: ${numList[0]}<Tên_Chương>.txt (hoặc .md). Ví dụ: chapters/${volDir}/${numList[0]}_Ten_Chương.txt. Nội dung CHỈ CHỨA CHÍNH VĂN THUẦN TÚY, không chứa dòng tiêu đề, số chương, chú thích tác giả hay markdown.\n` +
       `4. Kiểm tra tên chương không trùng lặp trong chapter_index.md, viết xong cập nhật dòng mới vào chapter_index.md.\n` +
-      `5. Cập nhật continuity_ledger.md ở phần trạng thái mới nhất.\n` +
+      `5. Cập nhật continuity_ledger.md ở phần snapshot trạng thái mới nhất: sửa trực tiếp phần「📌 当前态快照」ở đầu tệp để giữ nguyên dòng \`- 进度：已写到第 ${String(lastNum).padStart(3, '0')} 章\`, cập nhật trang bị, vết thương, thể trạng nhân vật chính và tiến độ cốt truyện; nội dung chi tiết bổ sung ghi xuống dưới dòng LEDGER_HISTORY_BELOW.\n` +
       `6. Tự kiểm tra lại số từ trước khi kết thúc (đảm bảo đủ trên 3.000 từ tiếng Việt).`
     );
   } else {
