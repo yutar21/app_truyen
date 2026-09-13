@@ -1,13 +1,14 @@
 # 《Khi Pokémon Không Còn Là Trò Chơi》Thiết Lập Thánh Kinh (novel_bible.md)
 
 ## Điểm Bán Cốt Lõi
-Đồng nhân Pokémon, xuyên không, phiêu lưu, sinh tồn, Dark Fantasy, trí tuệ thực chiến, trưởng thành trường thiên.
+Đồng nhân Pokémon, xuyên không, phiêu lưu sinh tồn thực tế (Low-Fantasy Realism), trí tuệ thực chiến, tình bạn đồng hành (Bond), bảo lưu trọn vẹn tinh thần Anime và sự kỳ diệu cốt lõi, trưởng thành trường thiên.
 
-Nhân vật chính Lục Trần là một người cực kỳ yêu thích Pokémon ở thế giới hiện đại. Anh am hiểu sâu rộng về anime, game, tập tính sinh thái, chiêu thức, hệ, Ability, chiến thuật Gym, Elite Four, Champion cũng như các biến cố lịch sử thế giới Pokémon. Sau một biến cố, anh xuyên không đến thế giới Pokémon và đối diện với hiện thực trần trụi: đây là một thế giới sinh thái tự nhiên máu thịt, nguy hiểm và phức tạp, không phải trò chơi điện tử hay thước phim màu hồng.
+Nhân vật chính Lục Trần là một người cực kỳ yêu thích Pokémon ở thế giới hiện đại. Anh am hiểu sâu rộng về anime, game, tập tính sinh thái, chiêu thức, hệ, Ability, chiến thuật Gym, Elite Four, Champion cũng như các biến cố lịch sử thế giới Pokémon. Sau một biến cố, anh xuyên không đến thế giới Pokémon và đối diện với hiện thực tự nhiên: đây là một thế giới sinh thái sống động, có quy luật sinh tồn, chuỗi thức ăn và cạm bẫy hoang dã, không phải trò chơi điện tử vô hại hay thước phim hoạt họa đơn giản hóa.
 
-Pokémon hoang dã có bản năng săn mồi, tranh giành lãnh thổ khốc liệt và hoàn toàn có thể giết chết con người. Con người trong xã hội cũng tồn tại mặt tối: tội phạm có tổ chức (Đội Hỏa Tiễn, Đội Magma/Aqua, Đội Ngân Hà, Đội Plasma, Đội Flare), đường dây săn trộm xuyên lục địa, đấu trường ngầm tàn bạo, buôn lậu khoáng thạch năng lượng, và sự quan liêu/thao túng của giới quý tộc trong Liên Minh.
-
-Lục Trần không có hệ thống, không có bảng chỉ số, không bàn tay vàng. Anh xuất thân từ bình dân trắng tay, vũ khí duy nhất là sự hiểu biết sâu sắc về thế giới Pokémon kết hợp với tư duy sinh tồn lạnh lùng, bản lĩnh thích nghi và sự tôn trọng tuyệt đối dành cho sinh mệnh.
+Tuy nhiên, **đây là thế giới hiện thực chứ không phải thế giới bị "hắc hóa" (grimdark)**:
+- Pokémon hoang dã có tập tính săn mồi tự nhiên và phòng thủ lãnh thổ, nhưng chúng cũng là những sinh linh giàu cảm xúc, có linh tính, biết thấu hiểu và gắn kết kỳ diệu với con người.
+- Xã hội loài người tồn tại mặt tối (các tổ chức tội phạm như Đội Hỏa Tiễn, Đội Magma/Aqua, Đội Ngân Hà; thị trường săn trộm chợ đen; đấu trường phi pháp), nhưng **Liên Minh và nền văn minh vẫn duy trì được trật tự, công lý và sự ấm áp**: Y tá Joy tận tụy, Sĩ quan Jenny mẫn cán, các Gym Leader mang tinh thần trách nhiệm và lòng tự tôn của người gác cổng chân chính, người dân bình dị lương thiện.
+- Lục Trần không có hệ thống, không bàn tay vàng. Anh xuất thân bình dân trắng tay, vũ khí lớn nhất là tình yêu và sự hiểu biết sâu sắc về Pokémon, kết hợp với tư duy sinh tồn thực tế, khả năng thích nghi và sự trân trọng tuyệt đối dành cho sinh mệnh. Gian khổ sinh tồn là đòn bẩy để làm nổi bật lên hơi ấm của tình bạn, sự tin cậy và tinh thần phiêu lưu kỳ diệu.
 
 ---
 
@@ -91,11 +92,13 @@ graph TD
 
 ## Thiết Lập Cơ Bản
 
-* **Độc giả mục tiêu:** Độc giả yêu thích Pokémon nhưng muốn một góc nhìn trưởng thành, gai góc, sinh tồn thực chiến, đấu trí chính trị và khám phá mặt tối thế giới ngầm; cấm tuyệt đối lối viết trẻ con hoặc bàn tay vàng buff lố.
-* **Thời đại / Thế giới quan:** Thế giới Pokémon đương đại song song anime, nhưng cơ chế vật lý, sinh học và xã hội học được mô phỏng theo thế giới thực (thương tật, tử vong, chuỗi thức ăn, tham nhũng, chợ đen vũ khí).
+* **Độc giả mục tiêu:** Độc giả yêu thích Pokémon muốn tìm kiếm góc nhìn trưởng thành, sinh tồn thực chiến, chiều sâu sinh thái học và xã hội học nhưng vẫn giữ trọn linh hồn ấm áp, phiêu lưu và kỳ diệu của Pokémon nguyên bản; cấm lối viết trẻ con, cấm bàn tay vàng lố bịch và cấm hắc hóa bừa bãi.
+* **Thời đại / Thế giới quan:** Thế giới Pokémon đương đại song song anime, cơ chế vật lý, sinh thái sinh học và quy luật xã hội được mô tả thực tế (thương tật, chuỗi thức ăn, chi phí nuôi dưỡng, luật pháp Liên Minh, các tổ chức ngầm tội phạm).
 * **Hệ thống sức mạnh:** Tuyệt đối không dùng hệ thống, cảnh giới tiên hiệp, linh lực hay số liệu chỉ số game. Sức mạnh đến từ cấu tạo giải phẫu học, thể chất, độ thuần thục chiêu thức, phản xạ thần kinh, cạm bẫy địa hình và sự am hiểu chiến thuật.
-* **Nhân vật chính:** Lục Trần — Người hiện đại xuyên không, lạnh lùng, thực tế, bình dân, kiên nhẫn như loài sói, sở hữu kho tàng tri thức Pokémon sâu rộng nhưng luôn kiểm chứng qua thực tế dã ngoại.
+* **Nhân vật chính:** Lục Trần — Người hiện đại xuyên không, yêu mến Pokémon, bình tĩnh, thực tế, quyết đoán trong tự vệ và sinh tồn dã ngoại; sở hữu kho tàng tri thức sinh thái phong phú; trân trọng sinh mệnh và kiên định giữ vững nhân tính cùng sự gắn kết ấm áp với Pokémon đồng hành.
 * **Điều cấm kỵ (Taboos):**
+  * CẤM đặt tên riêng hoặc biệt danh (nickname) cho Pokémon: Tuyệt đối không đặt biệt danh kiểu nhân hóa (như Bào Tử, Tiểu Hỏa Long...). Pokémon luôn được gọi bằng tên chủng loài chính thức (Paras, Zubat, Pikachu...) hoặc từ ngữ miêu tả sinh học tự nhiên (chú bọ nhỏ, con dơi non...), bảo lưu đúng phong cách và sự tôn trọng của Anime/Game nguyên bản.
+  * CẤM hắc hóa cực đoan (Grimdark / Edgelord): Tuyệt đối không biến Lục Trần thành sát thủ máu lạnh, kẻ giết người vô cảm hay tống tiền đê tiện; không biến toàn bộ xã hội thành địa ngục tha hóa hay bôi đen nhân cách của các nhân vật chính diện kinh điển (Joy, Jenny, Brock, Misty, Ash, Red... phải giữ được phẩm chất cao đẹp, lòng trắc ẩn và cá tính riêng của họ).
   * CẤM tu tiên hóa Pokémon (huyết mạch thức tỉnh, đan dược, độ kiếp).
-  * CẤM cơ giới hóa giải cứu (Deus Ex Machina) — nhân vật chính phải tự dùng trí tuệ và sự tàn nhẫn sinh tồn để thoát hiểm.
+  * CẤM cơ giới hóa giải cứu (Deus Ex Machina) — nhân vật chính tự dựa vào trí tuệ, kiến thức sinh thái và sự gắn kết với đồng đội để vượt qua thử thách.
   * CẤM tình tiết hậu cung vô nghĩa, cấm bôi chữ thủ tục hành chính.

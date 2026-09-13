@@ -25,3 +25,8 @@
 * **Kỹ thuật mở màn (Cold Open / Hook):**
   * Ném nhân vật ngay vào khoảnh khắc ngàn cân treo sợi tóc, bỏ qua mọi đoạn giải thích lai lịch rườm rà.
   * Mở đầu bằng một mệnh đề giả định đả kích kỳ vọng thông thường (*“Nếu có kẻ nào từng nói... là một giấc mộng thiên đường...”*), lập tức kéo giật về thực tại bằng liên từ chuyển hướng (*“Bởi vì hiện tại...”*).
+
+* **Cân Bằng Cảm Xúc & Hơi Ấm Đồng Hành (Warmth & Companionship Beats):**
+  * **Quy tắc “Sau bão tuyết là bếp lửa”:** Sau mỗi trường đoạn sinh tồn căng thẳng, luôn phải có khoảng lặng ấm áp (chia sẻ thức ăn, cử chỉ ngây ngô của Pokémon, đốm lửa ấm trong đêm, ánh đèn thị trấn).
+  * **Linh hồn & Cá tính của Pokémon:** Tuyệt đối không biến Pokémon thành cỗ máy công cụ vô cảm. Chúng có tập tính sinh học, sự tò mò, sợ sệt, thích làm nũng và lòng trung thành thuần khiết.
+  * **Giải ảo nhưng không bôi đen:** Vạch trần hiện thực sinh thái và khó khăn xã hội để tăng độ chân thực và gay cấn, nhưng giữ vững ngọn lửa hy vọng, tình bạn chân thành và sự kỳ diệu cốt lõi của thế giới Pokémon.
