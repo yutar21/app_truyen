@@ -2,12 +2,13 @@
 ## TIỂU THUYẾT: 《ĐẤU PHÁ THƯƠNG KHUNG — LỤC TRẦN》
 
 > **Thống kê tổng quan:**  
-> - **Tổng số chương đã hoàn thành:** **253 chương** (Chương 0001 – Chương 0253)  
-> - **Tổng dung lượng văn bản:** **~643.455 chữ** (khoảng 4.450.000 ký tự)  
+> - **Tổng số chương đã hoàn thành:** **269 chương** (Chương 0001 – Chương 0269)  
+> - **Tổng dung lượng văn bản:** **~731.350 chữ** (khoảng 4.960.000 ký tự)  
 > - **Phân bố Quyển hiện tại:**  
 >   * 🔹 **Quyển 1: Hàn Vi Sơ Khởi · Ô Thản Phong Lôi** (Chương 0001 – Chương 0051): 51 chương  
 >   * 🔹 **Quyển 2 (mới): Kiếm Phúc Vân Lam** (Chương 0208 – 0232): 25 chương (Đã hoàn thành)  
->   * 🔹 **Quyển 3 (mới): Hắc Vực Cuồng Lan · Kiếm Trấn Bát Phương** (Chương 0233 – 0263): Đã hoàn thành 21 chương (Ch.233 – 0253)  
+>   * 🔹 **Quyển 3 (mới): Hắc Vực Cuồng Lan · Kiếm Trấn Bát Phương** (Chương 0233 – 0263): 31 chương (Đã hoàn thành)  
+>   * 🔹 **Quyển 4: Trung Châu Phong Vân · Bắc Vực Kiếm Tôn** (Chương 0264 – 0294): Đang tiến hành (Ch.264 – 269)  
 > - **Độ khớp nối thực tế với thư mục chapters/:** **100.0%**
 
 ---
@@ -269,3 +270,19 @@
 | **251** | CHƯƠNG 251 — BINH PHÁT ĐOẠN HỒN · SONG TÔNG ĐỒNG XUẤT | Quyển 3: Hắc Vực Cuồng Lan | 4.455 | Đã hoàn thành | chapters/卷03/251Binh Phát Đoạn Hồn, Song Tông Đồng Xuất.txt |
 | **252** | CHƯƠNG 252 — PHÁ CỬU U TRẬN · TRẢM SÁT HỒN SAI | Quyển 3: Hắc Vực Cuồng Lan | 4.515 | Đã hoàn thành | chapters/卷03/252Phá Cửu U Trận, Trảm Sát Hồn Sai.txt |
 | **253** | CHƯƠNG 253 — HUYẾT CHIẾN VỰC SÂU · ĐẤU TÔNG TÀN HỒN | Quyển 3: Hắc Vực Cuồng Lan | 6.526 | Đã hoàn thành | chapters/卷03/253Huyết Chiến Vực Sâu, Đấu Tông Tàn Hồn.txt |
+| **254** | CHƯƠNG 254 — VẠN KIẾM QUY TÔNG · TRU DIỆT VỤ HỘ PHÁP | Quyển 3: Hắc Vực Cuồng Lan | 6.037 | Đã hoàn thành | chapters/卷03/254Vạn Kiếm Quy Tông, Tru Diệt Vụ Hộ Pháp.txt |
+| **255** | CHƯƠNG 255 — TẨY LUYỆN HỒN LỰC · ĐỘT PHÁ TỨ TINH VƯƠNG | Quyển 3: Hắc Vực Cuồng Lan | 6.052 | Đã hoàn thành | chapters/卷03/255Tẩy Luyện Hồn Lực, Đột Phá Tứ Tinh Vương.txt |
+| **256** | CHƯƠNG 256 — TIÊU MÔN CHẤN ĐỘNG · TIÊU VIÊM XUẤT QUAN | Quyển 3: Hắc Vực Cuồng Lan | 4.412 | Đã hoàn thành | chapters/卷03/256Tiêu Môn Chấn Động, Tiêu Viêm Xuất Quan.txt |
+| **257** | CHƯƠNG 257 — KHAI PHỔ TÀNG KINH · TÔI ĐÚC PHI KIẾM | Quyển 3: Hắc Vực Cuồng Lan | 4.794 | Đã hoàn thành | chapters/卷03/257Khai Phổ Tàng Kinh, Tôi Đúc Phi Kiếm.txt |
+| **258** | CHƯƠNG 258 — ĐẤU VƯƠNG NGŨ TINH · KIẾM KHÍ NGÚT TRỜI | Quyển 3: Hắc Vực Cuồng Lan | 5.204 | Đã hoàn thành | chapters/卷03/258Đấu Vương Ngũ Tinh, Kiếm Khí Ngút Trời.txt |
+| **259** | CHƯƠNG 259 — GIÀ NAM ƯỚC ĐỊNH · PHÂN ĐỊNH BIÊN CƯƠNG | Quyển 3: Hắc Vực Cuồng Lan | 5.786 | Đã hoàn thành | chapters/卷03/259Già Nam Ước Định, Phân Định Biên Cương.txt |
+| **260** | CHƯƠNG 260 — BỐ PHÒNG THỦY CUNG · SÁT KHÍ THIÊN NHAI | Quyển 3: Hắc Vực Cuồng Lan | 5.309 | Đã hoàn thành | chapters/卷03/260Bố Phòng Thủy Cung, Sát Khí Thiên Nhai.txt |
+| **261** | CHƯƠNG 261 — KIẾM ĐỘNG HẮC VỰC · DANH CHẤN BÁT PHƯƠNG | Quyển 3: Hắc Vực Cuồng Lan | 5.671 | Đã hoàn thành | chapters/卷03/261Kiếm Động Hắc Vực, Danh Chấn Bát Phương.txt |
+| **262** | CHƯƠNG 262 — TỪ BIỆT HỒNG NHAN · ĐẠP LÊN CHINH LỘ | Quyển 3: Hắc Vực Cuồng Lan | 5.435 | Đã hoàn thành | chapters/卷03/262Từ Biệt Hồng Nhan, Đạp Lên Chinh Lộ.txt |
+| **263** | CHƯƠNG 263 — VẠN LÝ HƯ KHÔNG · KIẾM CHỈ TRUNG CHÂU | Quyển 3: Hắc Vực Cuồng Lan | 5.458 | Đã hoàn thành | chapters/卷03/263Vạn Lý Hư Không, Kiếm Chỉ Trung Châu.txt |
+| **264** | CHƯƠNG 264 — KIẾM CHỦ GIÁNG LÂM | Quyển 4: Trung Châu Phong Vân | 5.762 | Đã hoàn thành | chapters/卷04/264Kiếm Chủ Giáng Lâm.txt |
+| **265** | CHƯƠNG 265 — THIÊN BẮC PHONG LÔI | Quyển 4: Trung Châu Phong Vân | 5.852 | Đã hoàn thành | chapters/卷04/265Thiên Bắc Phong Lôi.txt |
+| **266** | CHƯƠNG 266 — NHU KÌNH TUYẾT ẢNH | Quyển 4: Trung Châu Phong Vân | 5.379 | Đã hoàn thành | chapters/卷04/266Nhu Kình Tuyết Ảnh.txt |
+| **267** | CHƯƠNG 267 — GIAO KÈO THIÊN BẮC THÀNH | Quyển 4: Trung Châu Phong Vân | 5.398 | Đã hoàn thành | chapters/卷04/267Giao Kèo Thiên Bắc Thành.txt |
+| **268** | CHƯƠNG 268 — ĐẤU GIÁ NGẦM PHONG VÂN | Quyển 4: Trung Châu Phong Vân | 5.867 | Đã hoàn thành | chapters/卷04/268Đấu Giá Ngầm Phong Vân.txt |
+| **269** | CHƯƠNG 269 — KIẾM HẠP KHAI PHONG | Quyển 4: Trung Châu Phong Vân | 5.964 | Đã hoàn thành | chapters/卷04/269Kiếm Hạp Khai Phong.txt |
