@@ -50,4 +50,15 @@
 | 046 | Pháo Đài Xám Tro | Quyển 02 | chapters/卷02/046_Pháo Đài Xám Tro.txt | Đã viết |
 | 047 | Bức Tường Của Brock | Quyển 02 | chapters/卷02/047_Bức Tường Của Brock.txt | Đã viết |
 | 048 | Phương Trình Bào Mòn | Quyển 02 | chapters/卷02/048_Phương Trình Bào Mòn.txt | Đã viết |
-
+| 049 | Thử Lửa Cát Bụi | Quyển 02 | chapters/卷02/049_Thử Lửa Cát Bụi.txt | Đã viết |
+| 050 | Vết Rạn Dưới Lòng Quặng | Quyển 02 | chapters/卷02/050_Vết Rạn Dưới Lòng Quặng.txt | Đã viết |
+| 051 | Tần Số Chấn Động | Quyển 02 | chapters/卷02/051_Tần Số Chấn Động.txt | Đã viết |
+| 052 | Khế Ước Trước Bình Minh | Quyển 02 | chapters/卷02/052_Khế Ước Trước Bình Minh.txt | Đã viết |
+| 053 | Bước Lên Võ Đài Đá | Quyển 02 | chapters/卷02/053_Bước Lên Võ Đài Đá.txt | Đã viết |
+| 054 | Nhu Bùn Khắc Cương Thạch | Quyển 02 | chapters/卷02/054_Nhu Bùn Khắc Cương Thạch.txt | Đã viết |
+| 055 | Axit Ăn Mòn Vỏ Trái Đất | Quyển 02 | chapters/卷02/055_Axit Ăn Mòn Vỏ Trái Đất.txt | Đã viết |
+| 056 | Không Chiến Xé Rách Nham Cương | Quyển 02 | chapters/卷02/056_Không Chiến Xé Rách Nham Cương.txt | Đã viết |
+| 057 | Vết Nứt Trên Đốt Sống Thứ Ba | Quyển 02 | chapters/卷02/057_Vết Nứt Trên Đốt Sống Thứ Ba.txt | Đã viết |
+| 058 | Mầm Sống Dưới Bước Chân Khổng Lồ | Quyển 02 | chapters/卷02/058_Mầm Sống Dưới Bước Chân Khổng Lồ.txt | Đã viết |
+| 059 | Hoa Nấm Trên Lưng Đá | Quyển 02 | chapters/卷02/059_Hoa Nấm Trên Lưng Đá.txt | Đã viết |
+| 060 | Chấn Động Bàn Thạch | Quyển 02 | chapters/卷02/060_Chấn Động Bàn Thạch.txt | Đã viết |
