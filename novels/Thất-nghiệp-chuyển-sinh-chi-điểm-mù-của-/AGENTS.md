@@ -11,24 +11,9 @@
 ## 本书档案
 
 - 书名：《Thất nghiệp chuyển sinh chi điểm mù của thần》
-- 类型/卖点：Thể loại Chủ đạo
-
-Thể loại: Đồng nhân, Xuyên không (Thân xác thật), Phiêu lưu, Sinh tồn, Kiếm thuật thực chiến, Dark Fantasy nhẹ.
-
-Tông giọng (Tone): Thực tế, nghẹt thở trong giao tranh, hài hước ngầm từ sự lắt léo của tư duy hiện đại, sâu lắng trong sự trưởng thành và cô đơn của kẻ tha hương.
-Ý tưởng: "Kẻ Đứng Ngoài Định Mệnh" (Bám sát mạch truyện chính)
-
-Mở đầu: NVCh rơi xuống hoang mạc Đại lục Ma, suýt chết dưới nanh quái vật nhưng sống sót nhờ bản năng và phát hiện ra cách vận dụng Đấu khí bằng tư duy sinh học. NVCh tự rèn luyện Song kiếm (Thủy Phái thủ, Bắc Phái công) để sinh tồn.
-
-Điểm bùng nổ: Rơi đúng vào thời điểm sự kiện Dịch chuyển Asura xảy ra, NVCh chạm mặt nhóm Dead End (Rudeus, Eris, Ruijerd).
-
-Xung đột:
-
-Nhân Thần (Hitogami) không hề nhìn thấy NVCh trong các viễn cảnh tương lai vì NVCh là "vật thể lạ" từ thế giới khác. Hitogami bắt đầu lo sợ và tìm cách điều khiển Rudeus hoặc các thế lực khác để loại bỏ NVCh.
-
-NVCh trở thành chiếc "mỏ neo" thực tế, giúp Rudeus tỉnh táo khỏi những lời phao tin của Nhân Thần và dạy Eris cách chiến đấu thực dụng thay vì chỉ biết lao vào chém giết.
+- 类型/卖点：Đồng nhân Mushoku Tensei, Xuyên không (Thân xác người thường), Sinh tồn thực tế, Thuần Kiếm Sĩ thực chiến, Thăng cấp Đấu Khí, Đấu trí, Hậu cung chất lượng cao (Harem có chiều sâu).
 - 目标总字数：300 vạn chữ
-- 卷数 / 每卷章数：30 卷 / 约 ? 章
+- 卷数 / 每卷章数：30 卷 / 约 35 章
 - 默认批次：每次 3 章，写完自检
 - 单章目标：3000–3600 字；硬下限：文件 > 4KB 且正文 > 3000 字
 
@@ -37,7 +22,7 @@ NVCh trở thành chiếc "mỏ neo" thực tế, giúp Rudeus tỉnh táo khỏ
 
 - 文风定位：**Lạnh lùng hiện thực (Hardboiled)**（Tiết chế, câu ngắn, hành động & chi tiết thúc đẩy, không bi lụy sướt mướt）
 - 怎么写：以短句和中句为主，克制不煽情；靠动作、物件、环境细节推进，少用形容词与抒情旁白；对白冷硬简短、留白多，潜台词靠停顿和动作传递；不解释情绪，让读者从细节里读出来。Câu văn cô đọng, hành động cụ thể, chi tiết chân thực.
-- 本书专属微调：Sử dụng nhịp câu ngắn gọn, đanh thép khi đặc tả đòn thế theo góc nhìn cơ sinh học, đồng thời cài cắm độc thoại nội tâm theo lối hài hước khô khan (deadpan humor) để làm nổi bật tư duy lý tính của một người hiện đại giữa thế giới Dark Fantasy.
+- 本书专属微调：Nhịp câu ngắn gọn, đanh thép khi đặc tả giao tranh và sinh tồn, đan xen độc thoại nội tâm theo lối hài hước khô khan (deadpan humor) của sinh viên thế kỷ 21. Quy chuẩn kiếm đạo thống nhất dùng từ Lưu (Kiếm Thần Lưu, Thủy Thần Lưu, Bắc Thần Lưu) thay cho Phái.
 - 全书保持这一文风的腔调、句式节奏与用词基线；它优先于个人习惯，但仍要满足下面的"反 AI 味"硬标准。
 - 【建议】在「🖋️ 文风范本」里挂一段你认可的文字当范本——比这几行形容词管用得多。
 

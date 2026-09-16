@@ -3,119 +3,158 @@
 ---
 
 ## 1. Điểm Bán Cốt Lõi & Độc Giả Mục Tiêu
-- **Điểm bán một câu**: Một kỹ sư giải phẫu hiện đại rơi vào dị giới Mushoku Tensei bằng thể xác thật, dùng tư duy cơ sinh học giải mã Đấu Khí và sáng tạo Song Kiếm thực chiến, trở thành "điểm mù tuyệt đối" mà Nhân Thần Hitogami không thể nhìn thấu, từng bước cùng nhóm Dead End xé toạc tấm lưới định mệnh.
-- **Thể loại**: Đồng nhân Thất Nghiệp Chuyển Sinh (Mushoku Tensei), Xuyên không (Thân xác thật - Transmigrator), Phiêu lưu, Sinh tồn, Kiếm thuật thực chiến, Dark Fantasy nhẹ.
-- **Tông giọng (Tone)**: Lạnh lùng hiện thực (Hardboiled), nghẹt thở và tàn khốc trong giao tranh, hài hước ngầm (deadpan humor) từ tư duy duy vật hiện đại va đập với dị giới ma pháp, sâu lắng trước nỗi cô đơn tha hương và tình đồng đội sinh tử.
-- **Độc giả mục tiêu**: Độc giả say mê thế giới quan Mushoku Tensei, yêu thích thể loại kiếm thuật thực chiến, tư duy logic duy vật, sinh tồn khắc nghiệt, bài trừ thánh mẫu ngây thơ, mong muốn thấy một góc nhìn sắc bén làm "mỏ neo lý trí" cho Rudeus và lật đổ sự thao túng của Nhân Thần.
+- **Điểm bán một câu**: Một sinh viên đại học bình thường xuyên vào dị giới Mushoku Tensei với toàn bộ cốt truyện trong đầu; không bám đuôi bảo mẫu Rudeus, cậu bắt đầu từ một người phàm yếu ớt chật vật sinh tồn giữa hoang dã Ma lục, cày cuốc thăng hạng mạo hiểm giả từ con số 0; không có nửa điểm ma lực, cậu chọn con đường **Thuần Kiếm Sĩ 100%**, dùng tư duy cơ sinh học hiện đại giải mã Đấu Khí và sáng tạo Song Kiếm thực chiến, trở thành "điểm mù tuyệt đối" chôn vùi dã tâm của Nhân Thần Hitogami.
+- **Thể loại**: Đồng nhân Thất Nghiệp Chuyển Sinh (Mushoku Tensei), Xuyên không (Thân xác người thường), Sinh tồn thực tế, Thuần Kiếm Sĩ thực chiến, Thăng cấp Đấu Khí, Đấu trí, Hậu cung chất lượng cao (Harem có chiều sâu).
+- **Tông giọng (Tone)**:
+  - *Giai đoạn đầu (Sinh tồn)*: Hiện thực trần trụi, nghẹt thở vì va chạm giữa ảo tưởng anime màu sắc với hiện thực dị giới đầy bùn đất, máu tanh và cơm áo gạo tiền; pha lẫn sự hài hước ngầm (deadpan humor) từ góc nhìn duy vật của một sinh viên hiện đại.
+  - *Giai đoạn giữa & sau (Quật khởi)*: Lì lợm, thực dụng, phóng khoáng, tình nghĩa huynh đệ và đồng đội sinh tử; những trận cận chiến đẫm máu được tính toán lạnh lùng; cảm giác sảng khoái khi dùng thông tin biết trước để lật ngược thế cờ và chinh phục dàn mỹ nhân đỉnh cao.
+- **Độc giả mục tiêu**: Độc giả yêu thích thế giới quan Mushoku Tensei, đam mê thể loại thuần kiếm thuật cận chiến thực dụng (bài trừ ma pháp hoa mỹ), thích nhân vật chính độc lập tự cường, có hệ thống cảnh giới phân cấp rõ ràng, không thánh mẫu và xây dựng dàn bóng hồng xuất sắc.
 
 ---
 
 ## 2. Thế Giới Quan & Bối Cảnh Thời Đại
-- **Bối cảnh thế giới**: Thế giới Sáu Mặt (Six-Faced World), cụ thể là Nhân Giới. Nơi ma lực tràn ngập trong không khí, quái vật hoành hành, trật tự xã hội mang màu sắc trung cổ pha trộn ma thuật và sự phân tầng giai cấp gay gắt.
-- **Thời điểm khởi đầu**: Năm K417 (Giáp Long Lịch 417), đúng khoảnh khắc Thảm họa Dịch chuyển Roa (Fittoa Mana Disaster) bùng nổ, cuốn phăng hàng vạn sinh linh vùng Fittoa đi khắp bốn phương trời.
-- **Địa điểm xuất phát**: Hoang mạc hoang tàn đầy rẫy ma thú cấp cao tại Đại lục Ma (Demon Continent) – nơi khắc nghiệt nhất thế giới, cát đỏ rực lửa ban ngày và băng giá ban đêm, thức ăn khan hiếm và nguy hiểm rình rập trong từng tấc đất.
-- **Bản chất dị giới của Lục Trần**:
-  - Khác với Rudeus (linh hồn chuyển sinh vào thể xác hài nhi bản địa, vẫn hòa tan vào hệ thống nhân quả thế giới), Lục Trần là người Trái Đất rơi qua vết rách không gian với **nguyên vẹn thể xác thật**.
-  - Không có "yếu tố Laplace" (không có lượng mana bẩm sinh khổng lồ).
-  - Không thuộc về bất kỳ nhánh nhân quả nào trong lịch sử Thế giới Sáu Mặt.
+- **Thời điểm khởi đầu**: Năm K417 (Giáp Long Lịch 417), đúng khoảnh khắc Thảm họa Dịch chuyển Fittoa bùng nổ cuốn phăng hàng vạn người đi khắp bốn phương trời.
+- **Điểm xuất phát độc lập**: Một góc hoang vu, khắc nghiệt tại rìa phía Đông Bắc Đại lục Ma, hoàn toàn cách xa điểm rơi của nhóm Rudeus.
+- **Nghịch lý "Anime vs Hiện Thực"**:
+  - Khi xem anime trên màn hình máy tính: Những bãi cát đỏ kỳ vĩ, nhạc nền hào hùng, quái vật trông như mô hình 3D bắt mắt.
+  - Khi thật sự xuyên vào bằng thể xác thật: Không có nhạc nền; gió cát hoang mạc xé rách da thịt; mùi máu quái vật tanh tưởi buồn nôn; vết cào nhỏ không có kháng sinh cũng có thể gây sốt và hoại tử; một con thằn lằn cát cấp thấp cũng đủ sức ngoạm đứt đôi người một sinh viên quen ngồi phòng máy lạnh.
+- **Sự chuyển hóa tâm lý của nhân vật chính**:
+  - Từ hoảng loạn, sợ chết, run rẩy nôn mửa khi lần đầu tự tay giết quái vật.
+  - Đến việc ép bản thân chấp nhận hiện thực: học cách lột da thú, nếm thử rễ cây đắng ngắt, tính toán từng giọt nước, mài sắc từng con dao gọt hoa quả, kiếm từng đồng tiền đồng để thuê góc trọ rẻ tiền tại các thị trấn mạo hiểm giả.
+  - Trở thành một kẻ sinh tồn lì lợm, bản lĩnh, dùng tri thức hiện đại và sự hiểu biết tường tận về thế giới này để từng bước vươn lên đỉnh cao kiếm đạo.
 
 ---
 
-## 3. Hệ Thống Năng Lực & Tu Vi
-Tác phẩm xây dựng sức mạnh dựa trên nền tảng nguyên tác nhưng được phân tích dưới lăng kính cơ sinh học và vật lý học hiện đại của Lục Trần:
+## 3. Hệ Thống Cảnh Giới: Con Đường Thuần Kiếm Sĩ 100%
+Tác phẩm chuẩn hóa toàn diện hệ thống sức mạnh nguyên tác thành các nấc thang tiến cấp (Progression Fantasy) rõ ràng. Nhân vật chính **hoàn toàn nói KHÔNG với ma pháp**, chuyên tâm 100% vào Đấu Khí và Kiếm Thuật:
 
-### 3.1. Đấu Khí (Touki) dưới góc nhìn Cơ Sinh Học
-- **Bản chất**: Người bản địa coi Đấu khí là "khoác ma lực lên người" một cách vô thức. Lục Trần giải mã nó là: **Sự siết cơ vi mô đồng bộ + Kích thích xung thần kinh phản xạ nhanh + Tăng tốc lưu chuyển máu và oxy ở áp suất cực hạn**.
-- **Cách thức vận hành của Lục Trần**: Không thể tích trữ mana ngoại sinh vô tận, Lục Trần bù đắp bằng cách tối ưu hóa hiệu suất cơ bắp, phân bổ năng lượng chuẩn xác từng miligiây, nén dòng năng lượng nội tại vào đúng các điểm tựa cơ học (đòn bẩy khớp xương, dây chằng).
-- **Phân cấp thực lực**:
-  - *Sơ cấp*: Cường hóa da thịt chịu được va đập thông thường, tăng tốc độ vung kiếm.
-  - *Trung cấp*: Bao phủ vũ khí bằng lớp chấn động ma lực sắc bén, triệt tiêu phản lực khi va chạm giáp nặng.
-  - *Thượng cấp*: Đấu khí bộc phát tức thời tại các điểm tiếp xúc (xung lực xuyên thấu), tốc độ vượt qua ngưỡng nhận thức mắt thường.
-  - *Thánh cấp / Vương cấp / Đế cấp*: Đạt tới độ chuẩn xác cơ học đỉnh cao, hòa lẫn giữa kỹ thuật né tránh vi mô và đòn đánh hủy diệt cấu trúc vật lý.
+### 3.1. Thang Đo 7 Cảnh Giới Đấu Khí & Kiếm Thuật Của Lục Trần
+1. **Sơ Cấp (Beginner)**:
+   - Đấu khí mỏng manh bọc ngoài da thịt; chịu được va đập thông thường, tăng tốc độ vung kiếm và sức bền; chém đứt da quái vật nhỏ.
+2. **Trung Cấp (Intermediate)**:
+   - Đấu khí bao phủ chắc chắn lên vũ khí; lực chém chẻ đôi đá tảng, triệt tiêu phản lực khi va chạm giáp nặng của ma thú hung hãn; thành thạo chiêu thức cơ bản của Thủy Thần Lưu và Bắc Thần Lưu.
+3. **Thượng Cấp (Advanced)**:
+   - Đạt ngưỡng cao thủ mạo hiểm giả; Đấu khí bộc phát tức thời tại các điểm tiếp xúc (xung lực xuyên thấu giáp); tốc độ vung kiếm vượt qua phản xạ mắt thường nhìn rõ.
+4. **Thánh Cấp (Saint)**:
+   - Bắt đầu chạm vào quy luật biến đổi năng lượng vật lý; chém ra chân không kiếm khí tầm xa; đạt tới cảnh giới **"Phá Ma Kiếm"** – nhát kiếm chém rách dòng tụ lực ma pháp của pháp sư và chém vỡ kết giới phòng ngự.
+5. **Vương Cấp (King)**:
+   - Đấu khí bao phủ toàn thân như một bộ chiến giáp vô hình cực kỳ kiên cố; một người đủ sức xông trận chống lại quân đoàn; phản xạ cơ bắp tiệm cận tốc độ âm thanh, kiếm khí chém nát đại pháo ma pháp tầm xa.
+6. **Đế Cấp (Emperor)**:
+   - Đỉnh cao tuyệt đối của thể xác con người; sức mạnh một kiếm chém đôi thành lũy; tốc độ phản xạ thần kinh vượt qua tia chớp; dung hợp hoàn mỹ công và thủ thành một thể thống nhất.
+7. **Thần Cấp (God)**:
+   - Cảnh giới tối thượng bước vào hàng ngũ Thần Linh kiếm đạo (ngang hàng Kiếm Thần, Long Thần, Đấu Thần).
 
-### 3.2. Hệ Thống Song Kiếm Thực Chiến (Thủy Thủ - Bắc Công)
-Lục Trần từ chối danh dự kiếm sĩ truyền thống để chọn lối đánh sinh tồn tàn nhẫn:
-- **Tay trái (Thủy Thần Phái - Phòng Thủ Hóa Giải)**: Sử dụng đoản kiếm hoặc kiếm bản rộng ngắn. Không cứng đối cứng mà dùng kỹ thuật chệch hướng động lượng (parry), phân tán lực va chạm của quái vật khổng lồ vào mặt đất, vô hiệu hóa quỹ đạo tấn công của đối thủ.
-- **Tay phải (Bắc Thần Phái - Tấn Công Thực Dụng)**: Sử dụng trung kiếm linh hoạt. Đòn đánh không hoa mỹ, tập trung hoàn toàn vào yếu huyệt giải phẫu: cắt đứt gân gót, chọc thủng động mạch cảnh, đâm xuyên khe hở giáp trụ, rạch hốc mắt, kết hợp cước pháp triệt hạ hạ bộ.
-- **Vũ khí phụ & Đồ nghề sinh tồn**: Dây thép, bột ớt, vôi bột, độc dược trích xuất từ nọc quái vật, dao găm giấu trong ủng, túi nước pha muối khoáng sinh học.
+*(Hệ thống Ma pháp trong truyện vẫn tồn tại theo 7 bậc nguyên tác, đóng vai trò là hệ thống sức mạnh của thế giới, của kẻ địch và của các đồng minh như Rudeus/Roxy, tạo nên sự tương phản rõ rệt với con đường Thuần Kiếm Sĩ của Lục Trần).*
+
+### 3.2. Hệ Thống Đánh Giá Mạo Hiểm Giả Song Hành
+- **Hạng F -> E -> D -> C -> B -> A -> S**.
+- Lục Trần bắt đầu từ **Người phàm dưới hạng F (Chưa nhập lưu)** -> tích lũy điểm ủy thác, leo từng bậc lên hạng C (Trung cấp) -> hạng B-A (Thượng cấp) -> hạng S (Thánh cấp trở lên).
+
+### 3.3. Cơ Chế Chiến Đấu & Lối Đánh Của Lục Trần: "Khắc Tinh Của Pháp Sư"
+- **Bản chất Thuần Kiếm Sĩ**: Là người Trái Đất, Lục Trần không có kinh mạch mana dị giới, không thể phóng ra một tia lửa hay giọt nước ma pháp nào. Cậu dồn toàn bộ tâm trí vào **Khai phóng tiềm năng cơ thể**:
+  - *Cơ sinh học*: Tối ưu hóa đòn bẩy khớp xương, siết cơ vi mô đồng bộ, tăng tốc tuần hoàn máu và oxy ở áp suất cao.
+  - *Phản xạ thần kinh*: Rèn luyện cung phản xạ tủy sống để né tránh và xuất chiêu nhanh hơn tốc độ suy nghĩ.
+- **Lối đánh Phá Ma Thực Chiến**: Chuyên dùng để áp chế và hạ sát các pháp sư tự phụ. Tận dụng thời gian đối thủ niệm chú hoặc tích tụ mana, Lục Trần áp sát chớp nhoáng bằng cước pháp Bắc Thần Lưu, dùng kiếm chém đứt dòng chảy mana trước khi thần chú kịp thành hình.
+- **Hệ Thống Song Kiếm (Thủy Thủ - Bắc Công)**:
+  - *Tay trái (Thủy Thần Lưu - Phòng Thủ Hóa Giải)*: Sử dụng đoản kiếm hoặc kiếm bản rộng ngắn. Dùng kỹ thuật chệch hướng động lượng (parry), phân tán lực va chạm của quái vật khổng lồ vào mặt đất, vô hiệu hóa quỹ đạo tấn công của đối thủ.
+  - *Tay phải (Bắc Thần Lưu - Tấn Công Thực Dụng)*: Sử dụng trung kiếm linh hoạt. Đòn đánh không hoa mỹ, tập trung hoàn toàn vào yếu huyệt giải phẫu: cắt đứt gân gót, chọc thủng động mạch cảnh, đâm xuyên khe hở giáp trụ, rạch hốc mắt, kết hợp cước pháp triệt hạ hạ bộ.
+  - *Đồ nghề sinh tồn*: Dây thép, bẫy cơ học, vôi bột, bột ớt, dao găm giấu trong ủng.
 
 ---
 
-## 4. Thiết Lập Nhân Vật
-
-### 4.1. Nhân Vật Chính: Lục Trần
-- **Xuất thân**: Kỹ sư y sinh / chuyên gia giải phẫu học từ Trái Đất (khoảng 24 tuổi), bất ngờ bị cuốn vào dị giới.
-- **Ngoại hình**: Vóc dáng săn chắc cân đối, mái tóc đen cắt ngắn gọn gàng, ánh mắt sắc lẹm, bình tĩnh đến mức lạnh lùng nhưng cơ thể chằng chịt vết sẹo sinh tồn.
+## 4. Thiết Lập Nhân Vật Chính: Lục Trần
+- **Xuất thân**: Sinh viên đại học năm 3 (khoảng 21 tuổi), tính tình hòa đồng, thích xem anime/đọc light novel, am hiểu tường tận toàn bộ cốt truyện và các bí mật ngầm của Mushoku Tensei.
+- **Ngoại hình**: Ban đầu có nét thư sinh hiện đại; sau thời gian sinh tồn hoang dã, cơ thể trở nên săn chắc, gân guốc, cơ bắp cuồn cuộn đường nét rõ ràng, ánh mắt sắc lẹm như chim ưng, dạn dày sương gió nhưng nụ cười vẫn giữ được nét ấm áp, đáng tin cậy.
 - **Tính cách**:
-  - Cẩn trọng, thực dụng, lì lợm, tư duy logic sắt đá.
-  - Không tôn thờ danh dự kiếm sĩ mù quáng, coi chiến thắng và bảo toàn mạng sống là ưu tiên tối thượng. Sẵn sàng đánh lén, dùng cát rải mắt, đặt bẫy nếu đem lại hiệu quả.
-  - Rất trọng nghĩa khí với những người đã kề vai sát cánh; một khi đã nhận định là đồng đội, Lục Trần sẽ dùng toàn bộ sự toan tính và sinh mệnh để bảo vệ họ.
-  - Có khiếu hài hước khô khan (deadpan), thường đưa ra những nhận xét sắc như dao cạo về sự ngớ ngẩn của thế giới phong kiến ma thuật.
-- **Vị thế cốt lõi**: "Điểm mù của Thần" và "Chiếc mỏ neo thực tế".
-
-### 4.2. Tuyến Nhân Vật Phụ Then Chốt (Bám sát mạch truyện chính)
-- **Rudeus Greyrat**:
-  - *Đặc điểm*: Kẻ chuyển sinh mang lượng mana khổng lồ nhưng tâm lý kiếp trước mang đầy thương tổn, mặc cảm tự ti, dễ bị xao động và thường xuyên bị Nhân Thần dụ dỗ qua những giấc mơ.
-  - *Mối quan hệ với Lục Trần*: Xem Lục Trần như một người anh cả nghiêm khắc, thực tế. Lục Trần là người duy nhất nhìn thấu sự bất thường trong hành vi của Rudeus sau mỗi giấc mơ, liên tục vả tỉnh Rudeus khỏi những lời thì thầm mật ngọt độc địa của Hitogami.
-- **Eris Boreas Greyrat**:
-  - *Đặc điểm*: Tiểu thư cuồng bạo của gia tộc Boreas, bản tính hung hăng, bốc đồng, chiến đấu thuần túy dựa vào bản năng hoang dã.
-  - *Mối quan hệ với Lục Trần*: Ban đầu va chạm dữ dội vì khinh thường lối đánh "bẩn thỉu" của Lục Trần. Sau nhiều lần được Lục Trần cứu mạng và chỉ ra các lỗ hổng chết người trong tư thế vung kiếm, Eris dần bái phục, tiếp thu tư duy chiến thuật lạnh lùng và trở thành một cỗ máy chiến đấu kỷ luật tàn bạo.
-- **Ruijerd Superdia**:
-  - *Đặc điểm*: Chiến binh kỳ cựu tộc Superd mang ngọn giáo trân châu, gánh trên vai ác danh ngàn năm và nỗi đau diệt tộc, tôn thờ danh dự bảo vệ phụ nữ và trẻ em.
-  - *Mối quan hệ với Lục Trần*: Ban đầu bất đồng quan điểm vì Lục Trần quá thực dụng, không màng hiệp sĩ đạo. Nhưng chứng kiến Lục Trần luôn là người dọn dẹp hậu trường, phân tích rủi ro và cứu cả nhóm thoát chết mà không cần ai tung hô, Ruijerd coi Lục Trần là chiến hữu chân chính.
-- **Roxy Migurdia**: Ma tộc tộc Migurd, người thầy đầu tiên của Rudeus. Điểm giao thoa trong các biến cố tại Labyrinth Begaritt.
-- **Sylphiette**: Người bạn thanh mai trúc mã của Rudeus, sau này hóa trang thành Fitts tại Học viện Sharia. Lục Trần là người tinh tường nhìn thấu vỏ bọc sớm nhất.
-- **Paul Greyrat**: Người cha mang nhiều khuyết điểm nhưng yêu thương con cái; sự can thiệp của Lục Trần tại Lục địa Begaritt sẽ là chìa khóa then chốt ngăn chặn thảm kịch bi thương nhất nguyên tác.
-- **Long Thần Orsted (Dragon God)**:
-  - Tồn tại mạnh nhất Thế giới Sáu Mặt, mang nguyền rủa bị mọi sinh vật căm ghét và tiêu hao ma lực không thể tự phục hồi.
-  - Nhận ra Lục Trần là kẻ duy nhất hoàn toàn nằm ngoài vòng luân hồi ngàn năm của mình, mở ra hy vọng duy nhất để đánh bại Hitogami vĩnh viễn.
+  - *Thực dụng & Cẩn trọng*: Không có tư tưởng anh hùng cứu thế viển vông; tiêu chí duy nhất trong giao tranh là: *kẻ địch gục xuống, ta còn sống*.
+  - *Biết mình biết người*: Ý thức rõ bản thân là người thường không có ma pháp bảo hộ, luôn tính toán địa hình, cạm bẫy và đường rút lui trước mỗi trận chiến.
+  - *Độc lập tự cường*: Không dựa dẫm vào ai, tự tay kiếm từng đồng bạc mạo hiểm giả, tự mài sắc từng tấc lưỡi kiếm.
+  - *Trọng nghĩa khí*: Sẵn sàng dùng toàn bộ sinh mệnh và kiếm đạo để che chở cho những người phụ nữ và đồng đội đã kề vai sát cánh cùng mình trong hoạn nạn.
 
 ---
 
-## 5. Thế Lực Đối Kháng & "Điểm Mù Của Thần"
+## 5. Tuyến Mỹ Nhân & Hậu Cung Đỉnh Cao (5 Bóng Hồng Trọng Tâm)
+Tác phẩm xây dựng tuyến tình cảm sâu sắc, nồng nàn và có chiều sâu cảm xúc, kiên quyết bài trừ việc "cướp vợ thô thiển". Các bóng hồng đều có câu chuyện riêng, gắn bó với từng bước trưởng thành của Lục Trần:
+
+### 5.1. Sara (Cung Thủ Nhóm Counter Arrow - Tình Cảm Thuở Hàn Vi)
+- **Hình tượng**: Thiếu nữ cung thủ tóc vàng kiên cường, ngoài lạnh trong nóng, mang vết thương lòng sâu sắc do gia đình bị quý tộc ruồng bỏ.
+- **Mối quan hệ với Lục Trần**:
+  - Lục Trần gặp Sara khi cả hai còn là những mạo hiểm giả cấp thấp chật vật kiếm sống ở vùng biên cương phương Bắc.
+  - Là người đàn ông vững chãi che chắn trước làn tên mũi kiếm cho Sara, Lục Trần dùng sự ấm áp, tinh tế và chín chắn của người hiện đại để chữa lành vết thương lòng cho nàng.
+  - Mối tình thuở hàn vi chân thành, ngọt ngào và bền chặt; một kiếm sĩ cận chiến và một nữ cung thủ tầm xa tạo nên cặp bài trùng mạo hiểm giả ăn ý tuyệt đối.
+
+### 5.2. Ghislaine Dedoldia (Hắc Lang Kiếm Vương - Ngự Tỷ Hoang Dã & Lá Chắn Sinh Tử)
+- **Hình tượng**: Nữ Kiếm Vương tộc Thú (Hắc Lang) với thân hình bốc lửa hoang dã, cơ bắp săn chắc quyến rũ, tính cách thẳng thắn, đơn thuần, mù chữ nhưng trung thành tuyệt đối.
+- **Mối quan hệ với Lục Trần**:
+  - Sau thảm họa Roa, Ghislaine bị lưu lạc và trúng độc ma thú, suýt bỏ mạng trong rừng sâu thì được Lục Trần (lúc này đã đạt Thượng cấp kiếm thuật) giải cứu bằng kỹ năng sinh tồn và sơ cứu y học.
+  - Cùng chung con đường thuần kiếm đạo, Lục Trần dạy Ghislaine học chữ, dùng tư duy cơ sinh học phân tích các góc vung kiếm giúp nàng đột phá kiếm thuật, đồng thời đồng hành tìm kiếm tung tích Eris.
+  - Ghislaine xem Lục Trần là chủ nhân duy nhất và phu quân của đời mình, nguyện dùng kiếm thuật Kiếm Vương làm lá chắn sinh tử bảo vệ Lục Trần.
+
+### 5.3. Ariel Anemoi Asura (Đệ Nhị Hoàng Nữ Asura - Nữ Hoàng & Quân Sư Bóng Tối)
+- **Hình tượng**: Mỹ nhân kiêu sa bậc nhất Vương quốc Asura, sở hữu trí tuệ chính trị sắc sảo, dã tâm lớn nhưng phải sống trong cảnh lưu vong, bị kẻ thù ám hại trăm bề.
+- **Mối quan hệ với Lục Trần**:
+  - Khi Lục Trần đã vang danh mạo hiểm giả cấp Thánh, cậu trở thành thủ lĩnh hộ vệ và quân sư chiến lược tối cao cho Ariel.
+  - Với lưỡi kiếm bách chiến bách thắng và sự nhìn thấu tương lai, Lục Trần chém tan mọi thích khách, giúp Ariel đập tan âm mưu đảo chính và bước lên ngai vàng Nữ hoàng Asura.
+  - Mối quan hệ giữa hai người là sự hòa quyện tuyệt mỹ giữa **đỉnh cao quyền lực chính trị và tình cảm nồng thắm kín đáo**; Ariel công khai sắc phong Lục Trần làm Đại Công Tước nắm giữ binh quyền toàn đế quốc.
+
+### 5.4. Linia Dedoldia & Pursena Adoldia (Tiểu Thư Tộc Thú Hoang Dã Tại Học Viện Sharia)
+- **Hình tượng**: Hai nàng công chúa tộc Thú ngỗ nghịch, kiêu ngạo, thích gây sự nhưng bản tính nghĩa khí, tôn sùng kẻ mạnh và... cực kỳ mê đồ ăn ngon.
+- **Mối quan hệ với Lục Trần**:
+  - Tại Học viện Ma pháp Sharia, hai nàng bị Lục Trần dùng thể thuật và kiếm gỗ dạy cho một bài học nhớ đời, sau đó bị tài nấu nướng đỉnh cao của người hiện đại chinh phục hoàn toàn bao tử.
+  - Từ oan gia ngỗ nghịch trở thành những cô bạn gái trung thành, đáng yêu, đem lại sắc màu vui tươi, náo nhiệt trong cuộc sống của Lục Trần.
+
+### 5.5. Eris Boreas Greyrat (Hồng Hồng Kiếm Vương - Nữ Thần Kiếm Cuồng Bạo)
+- **Hình tượng**: Đại tiểu thư tộc Boreas với mái tóc đỏ rực rỡ như ngọn lửa, tính cách cuồng bạo, kiêu hãnh, tôn thờ kiếm đạo và sở hữu bản năng chiến đấu siêu việt.
+- **Lộ trình phát triển & Tôn trọng chuẩn mực đạo đức**:
+  - *Giai đoạn vị thành niên (<18 tuổi)*: Khi Lục Trần hội ngộ Eris, cậu không cưng chiều mù quáng như Rudeus mà đối xử với Eris như một người đồng đội, một đối thủ ngang tài ngang sức; dùng kiếm thuật thực chiến để bẻ gãy tính khí bốc đồng, chỉ ra các lỗ hổng chết người của Eris, giúp cô rèn luyện tư duy kỷ luật thép. Quan hệ hoàn toàn giữ ở mức trong sáng, ngưỡng mộ và trân trọng kiếm sĩ.
+  - *Giai đoạn trưởng thành (>18 tuổi)*: Sau khi Eris hoàn thành khóa tu luyện tàn khốc tại Kiếm Thánh Chi Địa và đạt danh hiệu Kiếm Vương, cô tái ngộ Lục Trần trên chiến trường Thất Đại Liệt Cường. Lúc này, Eris nhận ra Lục Trần là người duy nhất thực sự hiểu được sự cô độc và gánh nặng sau lưỡi kiếm của mình.
+  - Cả hai kết hợp thành cặp đôi song kiếm công thủ vô song của thế giới; tình cảm bùng nổ nồng nàn, bền bỉ và đầy nhiệt huyết.
+
+---
+
+## 6. Tuyến Nhân Vật Phụ & Cặp Đôi Tương Phản Hoàn Hảo (Lục Trần & Rudeus)
+- **Sự Bù Trừ Hoàn Hảo Giữa Lục Trần và Rudeus**:
+  - *Rudeus*: Thuần Pháp Sư tối thượng (Mana vô hạn, cấm chú tầm xa, nhưng cơ thể bẩm sinh **không thể** bao bọc Đấu Khí, yếu ớt khi bị cận chiến).
+  - *Lục Trần*: Thuần Kiếm Sĩ tối thượng (Không có ma lực, nhưng Đấu Khí và kỹ năng cận chiến đạt đỉnh cao, là bức tường thép bảo vệ pháp sư).
+  - Khi hai người bắt tay hợp tác: Lục Trần càn quét tiền tuyến, chém đứt mọi thích khách áp sát; Rudeus an tâm đứng sau lưng dội ma pháp hủy diệt, tạo nên tổ hợp vô địch.
+- **Paul Greyrat**:
+  - Với tri thức cốt truyện, Lục Trần chuẩn bị trang bị chém vảy rồng và bẫy cơ học chuyên dụng tại Mê Cung Begaritt, kịp thời dùng kiếm cản phá nhát cắn chí mạng của Mãng Xà Đa Đầu để **cứu sống trọn vẹn mạng của Paul**, xóa bỏ bi kịch đau đớn nhất nguyên tác.
+- **Long Thần Orsted**:
+  - Chứng kiến một kiếm sĩ thuần túy không có ma lực nhưng dùng kỹ năng thực chiến và tri thức dị giới phá tan các kế hoạch của Hitogami, Orsted công nhận Lục Trần là Quân sư kiếm đạo duy nhất đồng hành tiêu diệt Nhân Thần.
+
+---
+
+## 7. Thế Lực Đối Kháng & "Điểm Mù Của Thần"
 - **Nhân Thần (Hitogami)**:
-  - *Bản chất đối địch*: Kẻ thao túng tối cao trong Không Gian Hư Vô. Hắn nhìn thấu quá khứ, hiện tại và tương lai của mọi sinh linh trong Thế giới Sáu Mặt, giật dây số phận để tiêu diệt bất cứ ai có nguy cơ đe dọa sự tồn tại của hắn.
-  - *Xung đột trung tâm - "Điểm Mù"*:
-    - Hitogami **hoàn toàn mù lòa** trước Lục Trần. Trong tầm nhìn tương lai của Nhân Thần, Lục Trần là một khoảng đen rỗng tuyệt đối.
-    - Nghiêm trọng hơn, mọi hành động Lục Trần làm (cứu ai, giết ai, khuyên Rudeus điều gì) đều làm rẽ nhánh tương lai thành một mớ hỗn loạn không thể dự đoán.
-    - Hitogami bắt đầu hoảng loạn tột độ, sinh ra nỗi sợ hãi nguyên thủy trước "dị vật ngoài hành tinh" này, từ đó điên cuồng sai phái các sứ đồ và tìm cách kích động người khác ám hại Lục Trần.
-- **Các Sứ Đồ của Hitogami**: Những kẻ bị Nhân Thần lừa gạt hoặc ban phát lợi ích để thực hiện các vụ ám sát ngầm khắp các đại lục.
-- **Quái vật và môi trường khắc nghiệt**: Ma thú cấp thảm họa (Behemoth, Red Wyrm, Thằn lằn cát khổng lồ) luôn là thử thách sinh tử trực tiếp.
+  - *Cơ chế Điểm Mù*: Trong tầm nhìn tương lai của Hitogami, Lục Trần là một khoảng tối đen rỗng tuyệt đối.
+  - Hitogami hoảng loạn khi thấy các pháp sư sứ đồ bị một kiếm sĩ vô danh chém gục chớp nhoáng, mọi âm mưu thì thầm đều bị Lục Trần bẻ gãy từ sớm.
+- **Giáo phái Hitogami & Các Sứ Đồ Bí Mật**: Những kẻ nhận chỉ dẫn trong mơ từ Hitogami để ám toán Lục Trần và các đồng minh.
+- **Quái vật cổ đại & Cạm bẫy Mê cung**: Thử thách sinh tử tôi luyện lưỡi kiếm của Lục Trần qua từng giai đoạn.
 
 ---
 
-## 6. Chủ Đề Tác Phẩm & Tinh Thần Cốt Lõi
-- **Lý trí sinh tồn đập tan định mệnh**: Định mệnh không phải là kịch bản thần linh viết sẵn, mà là kết quả của từng lựa chọn cụ thể, sự chuẩn bị kỹ lưỡng và ý chí sinh tồn không bao giờ từ bỏ.
-- **Sự gắn kết của những kẻ tha hương**: Một kẻ xa xứ rơi vào thế giới xa lạ tìm thấy mái ấm và lý do chiến đấu bên cạnh những đứa trẻ mang vết thương lòng.
-- **Thực tế tàn khốc và chủ nghĩa anh hùng chân chính**: Anh hùng không phải là kẻ đứng trên bục cao phát biểu hoa mỹ, mà là người chịu lấm lem bùn đất, nuốt máu vào trong để bảo đảm ngày mai đồng đội của mình còn mở mắt thở.
+## 8. Điều Cấm Kỵ & Lằn Ranh Đỏ (Taboo & Redlines)
+- **Quy chuẩn đạo đức nghiêm ngặt**:
+  - *Nhân vật dưới 18 tuổi*: Tuyệt đối chỉ dừng lại ở tình bạn, tình đồng đội trong sáng, rèn luyện và bảo vệ; không có bất kỳ hành vi thân mật xác thịt hay tình dục nào.
+  - *Nhân vật trưởng thành*: Xây dựng tình cảm nồng thắm theo tiêu chuẩn "sắc bất ba đào" (gợi cảm giác, không tả thân xác/bộ phận cơ thể, dùng nghệ thuật chuyển cảnh, chú trọng sức nặng cảm xúc sau biến cố).
+- **Tuyệt đối cấm buff sức mạnh vô lý**: Không có hệ thống điểm số ảo, không có mana vô tận một đêm thành thần. Mọi sự thăng cấp cảnh giới của Lục Trần đều phải trả giá bằng mồ hôi, máu, vết sẹo và kinh nghiệm thực chiến đẫm máu.
+- **Cấm AI Cliché và văn phong dịch thô**: Bài trừ các cụm từ sáo rỗng (nhếch mép, hít sâu một hơi, đồng tử co rút, phảng phất như). Câu văn cô đọng, giàu hình ảnh thực tế.
 
 ---
 
-## 7. Điều Cấm Kỵ & Lằn Ranh Đỏ (Taboo & Redlines)
-- **Tuyệt đối cấm buff sức mạnh vô lý một bước lên trời**: Không có hệ thống cấp chỉ số ảo, không có mana vô hạn, không có chiêu thức một đòn nổ tung hành tinh. Mọi sự thăng tiến sức mạnh của Lục Trần đều phải trả giá bằng máu, rèn luyện cơ bắp, đau đớn và tư duy chiến thuật.
-- **Cấm biến nhân vật thành thánh mẫu hoặc phản diện thiểu năng**: Kẻ địch phải có động cơ, sự gian ngoan và thủ đoạn tương xứng; nhân vật chính không tha thứ mù quáng cho kẻ có ý định giết mình.
-- **Lằn ranh đỏ tình cảm (Tuân thủ nghiêm ngặt chuẩn mực đạo đức & quy định)**:
-  - *Nhân vật vị thành niên (dưới 18 tuổi)*: Tuyệt đối chỉ dừng lại ở mức rung động thiếu niên trong sáng, sự quan tâm đồng đội, cử chỉ bảo bọc, không có bất kỳ hành vi thân mật xác thịt hay tình dục nào.
-  - *Nhân vật trưởng thành*: Xây dựng tình cảm sâu sắc, nồng thắm theo tiêu chí "sắc bất ba đào" (gợi cảm giác, không tả thân xác/bộ phận cơ thể, dùng chuyển cảnh nghệ thuật, chú trọng sức nặng cảm xúc sau biến cố).
-- **Tuyệt đối cấm AI Cliché và văn phong dịch thuật thô**: Không dùng các cụm từ sáo rỗng (nhếch mép, đồng tử co rút, hít sâu một hơi, phảng phất như, chẳng biết tại sao). Câu văn phải cô đọng, giàu hình ảnh thực tế.
+## 9. Phong Cách Đặt Tên & Giọng Văn
+- **100% Tiếng Việt chuẩn mực**: Mượt mà, đanh thép, không dùng từ Hán thô ráp hay văn phong convert.
+- **Quy chuẩn danh xưng kiếm đạo**: Sử dụng thống nhất từ **"Lưu"** thay cho "Phái" (Tam Đại Kiếm Lưu: **Kiếm Thần Lưu**, **Thủy Thần Lưu**, **Bắc Thần Lưu**) đúng chuẩn mực nguyên tác Mushoku Tensei, tạo cảm giác kiếm đạo thuần túy, sắc bén và uy nghiêm.
+- **Văn phong Hardboiled kết hợp Deadpan Humor**:
+  - Nhịp câu dứt khoát, chắc nịch; miêu tả giao tranh tập trung vào chi tiết chuyển động, góc vung kiếm, va đập kim loại và phản xạ cơ học.
+  - Các đoạn độc thoại nội tâm của Lục Trần mang màu sắc hài hước khô khan của một sinh viên thế kỷ 21 nhìn đời bằng lăng kính duy vật giữa dị giới ma thuật.
 
 ---
 
-## 8. Phong Cách Đặt Tên & Giọng Văn (Hardboiled Style)
-- **Quy chuẩn ngôn ngữ**: 100% Tiếng Việt chuẩn mực, mượt mà, giàu sức gợi tả, tuyệt đối không chêm chữ Hán, không dùng từ Hán Việt quá tối nghĩa hoặc văn phong convert thô ráp.
-- **Tên địa danh & Nhân vật**: Giữ nguyên vẹn danh xưng quy chuẩn của thế giới Mushoku Tensei (Rudeus, Eris, Ruijerd, Roa, Rikarisu, Asura, Milis, Ranoa, Begaritt, Orsted, Hitogami) kết hợp tên thuần Việt/Hán-Việt rõ nghĩa cho nhân vật chính (Lục Trần).
-- **Văn phong Hardboiled**:
-  - Nhịp câu ngắn gọn, chắc nịch, dứt khoát.
-  - Hành động và chi tiết vật lý làm chủ đạo thay cho việc giải thích cảm xúc dông dài.
-  - Miêu tả giao tranh tập trung vào cơ chế chuyển động: góc vung kiếm, độ trượt của đế giày trên cát, điểm chèn ép dây thần kinh, tiếng rạn nứt của xương sườn.
-
----
-
-## 9. Quy Mô Toàn Thư & Nhịp Điệu Cục Diện
-- **Tổng dung lượng mục tiêu**: 300 vạn chữ (~3.000.000 từ).
-- **Quy mô phân quyển**: 30 quyển.
-- **Dung lượng tiêu chuẩn mỗi chương**: 3000 – 3600 từ (đảm bảo mỗi chương đều là một phân cảnh hoàn chỉnh, có xung đột, có biến chuyển và có móc câu nghẹt thở).
-- **Nhịp độ nâng tầm cục diện (Cấm dẫm chân tại chỗ)**:
-  - Mỗi 3–8 chương phải giải quyết dứt điểm một mục tiêu giai đoạn.
-  - Cứ mỗi 5 chương phải có một điểm bùng nổ / thắng lợi thực tế (hạ sát quái vật nguy hiểm, hóa giải một mưu đồ ngầm, thu phục lòng tin, đột phá kỹ năng).
-  - Vị thế, địa bàn hoạt động, quy mô đồng minh và tầm vóc đối thủ của Lục Trần phải tăng tiến rõ rệt qua từng quyển, từ sinh tồn lấm lem cát bụi tiến thẳng lên vũ đài định đoạt vận mệnh thế giới.
+## 10. Quy Mô Toàn Thư & Nhịp Điệu Cục Diện
+- **Quy mô**: 30 quyển (~300 vạn chữ).
+- **Dung lượng tiêu chuẩn mỗi chương**: 3000 – 3600 từ.
+- **Tiết tấu & Nâng tầm cục diện**:
+  - *Mỗi 3–8 chương*: Giải quyết dứt điểm một mục tiêu giai đoạn.
+  - *Mỗi 5 chương*: Có ít nhất một điểm bùng nổ / thắng lợi thực tế (hạ sát quái vật nguy hiểm, thăng hạng mạo hiểm giả, cứu người, thu phục lòng tin, đột phá cảnh giới kiếm thuật).
+  - *Nâng tầm cục diện*: Địa bàn, thực lực kiếm đạo, quy mô đồng minh và danh tiếng của Lục Trần tăng tiến rõ rệt qua từng quyển, từ gã tân binh lấm lem cát bụi trên Ma lục từng bước leo lên đỉnh cao danh vọng và quyền lực khắp Thế giới Sáu Mặt.
