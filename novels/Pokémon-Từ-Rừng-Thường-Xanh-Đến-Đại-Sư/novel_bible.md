@@ -57,6 +57,19 @@ Một sinh viên hiện đại mang tư duy sinh tồn cẩn trọng và Hệ th
   - Tận dụng triệt để vật che chắn, khói độc, sương mù, địa hình đầm lầy, rễ cây để kéo giãn khoảng cách an toàn, triệt tiêu đòn đánh bộc phát của kẻ thù.
 - **Nguyên tắc Huấn luyện viên Sinh tồn**: Huấn luyện viên không phải khán giả đứng hò hét; Trần Phong chú trọng rèn luyện thể lực bản thân, kỹ năng ẩn nấp, phòng ngự cá nhân và đọc tình huống chiến trường để không bao giờ trở thành điểm yếu chí tử bị đối thủ "chém tướng đoạt cờ".
 
+#### D. Kho Tàng Tri Thức Kiếp Trước Của Trần Phong (Lợi Thế Thông Tin Vượt Thời Đại)
+1. **Biết trước vị trí & Dòng thời gian của Pokémon Huyền Thoại (Thần Thú)**:
+   - **Tọa độ cấm địa**: Nắm rõ nơi cư ngụ của các Thần thú (Articuno tại Đảo Seafoam, Zapdos tại Nhà máy điện bỏ hoang, Moltres, Mewtwo tại Hang Động Cerulean, Ho-Oh và Tam Thánh Thú tại Ecruteak, Lugia tại Quần đảo Whirl, Kyogre/Groudon tại Cave of Origin, Dialga/Palkia/Giratina tại Sinnoh, Zygarde tại Kalos, v.v.).
+   - **Quy luật ứng dụng thực tế**: Không mù quáng đi "săn bắt" Thần thú khi còn non yếu (vì Thần thú trong thế giới thực là thiên tai di động cấp độ 90+ có thể xóa sổ một quân đoàn). Tri thức này dùng để:
+     + *Sinh tồn*: Tránh xa các vùng cấm địa nguy hiểm ở giai đoạn đầu, không vô tình bước vào vùng chết.
+     + *Đón đầu biến cố*: Nắm bắt thời điểm các tổ chức tà ác (Team Rocket, Magma/Aqua, Galactic, Plasma, Flare) kích hoạt âm mưu để lên kế hoạch can thiệp, giải cứu và nhận được sự tán thành, chúc phúc từ Thần thú.
+2. **Biết trước các cơ chế tiến hóa ẩn & Cơ chế chiến đấu vượt bậc**:
+   - **Lối tiến hóa ẩn độc quyền (Thời đại Kanto chưa ai biết)**: Biết bí mật Tangela tiến hóa thành Tangrowth khổng lồ khi học được chiêu thức cổ xưa *Ancient Power (Sức Mạnh Cổ Xưa)*. Đây là phát hiện chấn động giới học giả vì toàn bộ liên minh Kanto - Johto thời điểm này đều xem Tangela là Pokémon một hình thái không thể tiến hóa.
+   - **Cơ chế vượt thời đại**: Nắm rõ bản chất của **Mega Evolution** (Đá Mega + Đá Khóa + Liên kết tâm linh) trước khi Kalos công bố; hiểu nguyên lý vùng năng lượng Power Spot của **Dynamax / Gigantamax** tại Galar; hiểu hiện tượng chuyển đổi hệ thuộc tính của **Terastal** tại Paldea.
+3. **Phối phương thức ăn, thuốc bổ & Dược liệu sinh tồn dã chiến**:
+   - **Dược liệu dã chiến tự cung tự cấp**: Xuất phát điểm nghèo khó giữa Rừng Thường Xanh, cậu tận dụng tri thức thực vật học để phối trộn các loại quả mọng (Oran Berry, Pecha Berry, Cheri Berry...) cùng nấm rừng, rễ thảo dược thành thuốc cầm máu, cao dán giảm đau, nước khử độc và bột phục hồi thể lực thay thế Potion/Revive đắt đỏ.
+   - **Dinh dưỡng khoa học tối ưu hóa chỉ số Nỗ lực (EV)**: Nắm vững nguyên lý trao đổi chất để chế tạo thức ăn năng lượng cao phù hợp cho từng thuộc tính (như bổ sung khoáng chất vi lượng và bùn đen giàu vi sinh giúp Tangela tối ưu hóa độ dày của dây leo và thể chất). Đến Celadon (Quyển 06), cậu kết hợp cùng Quán chủ Erika để chuẩn hóa thành các phối phương dược thảo dinh dưỡng độc quyền.
+
 ---
 
 ## Thiết Lập Nhân Vật
@@ -65,7 +78,10 @@ Một sinh viên hiện đại mang tư duy sinh tồn cẩn trọng và Hệ th
 - **Trần Phong (MC)**:
   - **Xuất thân**: Sinh viên hiện đại am hiểu sâu rộng về sinh thái, dữ liệu và chiến thuật thi đấu Pokémon. Trong lúc cứu một đứa trẻ khỏi tai nạn giao thông, cậu qua đời và xuyên không vào thân xác một thiếu niên khoảng 16 tuổi tỉnh dậy giữa lõi Rừng Thường Xanh.
   - **Tính cách**: Trầm tĩnh, lý trí, suy nghĩ chu toàn, giàu lòng trắc ẩn với những sinh mệnh yếu thế nhưng hành động vô cùng quyết đoán, dứt khoát khi đối mặt với hiểm nguy và kẻ thù. Không viển vông, luôn đặt an toàn và sự chuẩn bị lên hàng đầu.
-  - **Vũ khí & Năng lực**: Tri thức chiến thuật phong phú, Hệ thống phân tích chỉ số cá thể (IV/EV), kỹ năng sinh tồn dã ngoại, chế tạo độc dược/dược liệu sơ cứu từ cây cỏ hoang dã.
+  - **Vũ khí & Năng lực**: 
+    + Hệ thống phân tích chỉ số cá thể (quét IV/EV/Đặc tính ẩn/Chiêu thức).
+    + Kho tàng tri thức kiếp trước vượt thời đại: Vị trí Thần thú & timeline biến cố, bí mật tiến hóa ẩn (Tangrowth, Mega, Dynamax, Terastal), phối phương dược liệu dã chiến & thức ăn dinh dưỡng tối ưu hóa EV.
+    + Kỹ năng sinh tồn hoang dã cẩn trọng, tư duy chiến thuật "bào sức & thả diều" kiểm soát trận đấu tuyệt đối.
   - **Mục tiêu**: Sống sót và có được danh phận công dân hợp pháp tại Kanto -> Xây dựng đội hình chiến thuật bền vững -> Từng bước chinh phục đỉnh cao Đại sư và dấn thân thám hiểm những vùng đất hoang sơ chưa ai từng đặt chân tới.
 
 ### 2. Đồng Hành Khởi Đầu (Bắt buộc giữ nguyên vẹn)

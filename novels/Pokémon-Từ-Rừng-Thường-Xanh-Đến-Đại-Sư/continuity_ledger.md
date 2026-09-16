@@ -12,7 +12,7 @@
 - **Trần Phong (MC)**:
   - Linh hồn sinh viên 22 tuổi trong thể xác thiếu niên 16 tuổi vừa thức tỉnh tại vùng lõi hoang dã Rừng Thường Xanh (Kanto).
   - Trạng thái: Cơ thể suy nhược, đói khát, trầy xước nhẹ, mang tâm lý cẩn trọng cao độ.
-  - Năng lực: Tri thức sâu rộng về sinh thái Pokémon và Hệ thống phân tích chỉ số trong tâm thức (quét IV/EV/Đặc tính/Chiêu thức).
+  - Năng lực: Tri thức sâu rộng kiếp trước (vị trí Thần thú, bí mật tiến hóa ẩn Tangrowth/Mega, phối phương dược liệu dinh dưỡng dã chiến) và Hệ thống phân tích chỉ số trong tâm thức (quét IV/EV/Đặc tính/Chiêu thức).
   - Mục tiêu trước mắt: Dựng chỗ ẩn nấp an toàn, tránh đụng độ Beedrill/Arbok hoang dã, tiếp cận và thu phục Tangela có đặc tính ẩn Tái Tạo (Regenerator).
 - **Tangela (Pokémon Khởi Đầu Dự Kiến)**:
   - Pokémon hoang dã hệ Cỏ, tính cách Điềm tĩnh, sở hữu Đặc tính ẩn Tái Tạo (Regenerator), IV Phòng thủ vật lý đạt mức tối đa 31/31.
@@ -60,3 +60,4 @@
 - **Thị trấn Pallet (Pallet Town)**: Thị trấn quê hương của Giáo sư Oak và Ash Ketchum, nằm ở phía nam Rừng Thường Xanh.
 - **Hệ thống Soi Chỉ Số (Analysis UI)**: Giao diện dữ liệu nội tại hiển thị chỉ số tiềm năng IV, nỗ lực EV, đặc tính và chiêu thức.
 - **Đặc tính Tái Tạo (Regenerator)**: Hồi phục 1/3 sinh lực và xoa dịu chấn thương khi thoát ly khỏi trạng thái giao tranh hoặc nghỉ ngơi.
+- **Tri Thức Kiếp Trước**: Kho dữ liệu vượt thời đại của Trần Phong về vị trí Thần thú, bí mật tiến hóa Tangrowth (qua Ancient Power), Mega Evolution và công thức dược liệu dã chiến.
