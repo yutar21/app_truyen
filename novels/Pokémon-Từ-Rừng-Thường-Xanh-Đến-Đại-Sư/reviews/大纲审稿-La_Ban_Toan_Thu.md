@@ -1,3 +1,19 @@
+# Đại Cương Thẩm Định & Tối Ưu（La_Ban_Toan_Thu）
+
+> Thẩm định: Tổng biên tập mô hình agy（Tác giả: agy）
+> Thời gian: 2026-09-16T03:34:06.606Z
+
+# PHẦN 1: BÁO CÁO THẨM ĐỊNH & ĐÁNH GIÁ CHẤT LƯỢNG
+
+- [Lỗi nghiêm trọng] Khung trục Toàn Thư (Quyển 03): Nhầm lẫn huy hiệu Đạo quán Pewter thành "Huy hiệu Tảng Băng" vi phạm kiến thức Pokémon kinh điển (Brock lãnh đạo Đạo quán Đá trao Huy hiệu Tảng Đá / Boulder Badge; Huy hiệu Tảng Băng / Glacier Badge thuộc về Quán chủ Pryce ở Mahogany, Johto) → Khắc phục: Chuẩn hóa thành "Huy hiệu Tảng Đá" (Boulder Badge) để đảm bảo tính nhất quán tuyệt đối của hệ thống Đạo quán Kanto.
+- [Nguy cơ tiềm ẩn] Chương 26 & Chương 27: Mối đe dọa từ bầy thú ăn xác (Golbat, Raticate) bị bỏ lửng sau khi xuất hiện, tạo ra lỗ hổng kịch bản thiếu tính liên kết → Khắc phục: Biến bầy thú ăn xác thành công cụ chiến thuật; Trần Phong dùng cặn mật chúa và máu Beedrill làm mồi nhử dẫn dụ đàn thú ăn xác tràn vào tập kích trạm gác chui của bọn thợ săn, tạo thế "mượn gió bẻ măng" giúp cuộc đột kích bìa rừng diễn ra logic và đậm chất mưu lược Hardboiled.
+- [Nguy cơ tiềm ẩn] Chương 28: Kiểm lâm tập sự Clara trao "Huy hiệu đồng Kiểm lâm danh dự của Liên Minh" vi phạm logic phân cấp hành chính (thực tập sinh không có thẩm quyền cấp phát chứng nhận lưu thông chính quy của Liên Minh) → Khắc phục: Sửa thành "Tín vật Gia huy Kiểm lâm Celadon" kèm biên bản hiện trường cứu hộ; đây là vật phẩm mang tính nhân mạch cá nhân hợp lệ giúp Trần Phong tạm thời thông quan và kết nối chặt chẽ với Quán chủ Erika tại Quyển 06.
+- [Gợi ý] Chương 18 & Chương 23: Làm rõ sự chênh lệch giữa "Mức nguy hiểm Cấp 45" trên bản đồ thợ săn và "Thực lực Tinh anh đỉnh phong Cấp 38" của Beedrill Chúa để tôn vinh sự chính xác vượt trội của Hệ thống Phân tích Chỉ số so với ước lượng cảm tính của con người.
+
+【Đánh giá tổng thể】 Đã được tối ưu hoàn thiện —— Các nút thắt tiến hóa và nhịp điệu Hồi 5 đã được giải quyết triệt để; sau khi chuẩn hóa danh xưng huy hiệu Pewter và tích hợp kế sách "dẫn thú phá chốt" gắn kết bầy thú ăn xác với trận tập kích bìa rừng, toàn bộ kịch bản đạt độ chín muồi hoàn hảo, sẵn sàng đưa vào sáng tác chính văn.
+
+---
+
 # PHẦN 2: BẢN DÀN Ý TỐI ƯU HOÀN THIỆN NHẤT (PROPOSED OPTIMIZED OUTLINE)
 
 ---
@@ -8,7 +24,7 @@
 - **Quyển 01: Vực Thẳm Rừng Thường Xanh**
   - *Chủ đề & Mục tiêu:* Sinh tồn nơi tử địa; từ kẻ xuyên không tay trắng trở thành thợ săn dã chiến kiên cường, thu phục Tangela (đặc tính ẩn Tái Tạo) và Nidoran♂ (tiến hóa Nidorino), rèn giũa bộ khung chiến thuật Cỏ - Độc bào sức sơ cấp.
   - *Tuyến xung đột cốt lõi:* Giành giật sự sống trước quy luật rừng già tàn khốc, bầy Pokémon hoang dã cuồng loạn và đường dây săn trộm của Đội Hỏa Tiễn.
-  - *Mốc biến cố then chốt:* Ký kết khế ước sinh tồn với Tangela; giải cứu Nidoran♂ bên khối quặng Nguyệt Thạch thô; trận tử thủ hẻm đá tiêu diệt Beedrill Chúa đột biến; phá tan trạm chốt chặn chui của bọn săn trộm để đưa kiểm lâm Clara ra ngoài ánh sáng.
+  - *Mốc biến cố then chốt:* Ký kết khế ước sinh tồn với Tangela; giải cứu Nidoran♂ bên khối quặng Nguyệt Thạch thô; trận tử thủ hẻm đá tiêu diệt Beedrill Đột Biến; vận dụng kế "mượn gió bẻ măng" phá tan trạm chốt chặn chui của bọn săn trộm để đưa kiểm lâm Clara ra ngoài ánh sáng.
   - *Cục diện bàn giao:* Đứng trước ngưỡng cửa Thị trấn Pallet với tư thế của một kẻ sống sót nắm giữ tri thức thảo dược hoang dã và mẫu vật sinh thái chấn động giới học thuật.
 - **Quyển 02: Dấu Chân Bìa Rừng Pallet**
   - *Chủ đề & Mục tiêu:* Hợp pháp hóa thân phận; từ kẻ vô danh trở thành Huấn luyện viên tự do được Giáo sư Oak bảo trợ học thuật, kết giao bằng hữu với Ash Ketchum.
@@ -18,7 +34,7 @@
 - **Quyển 03: Khúc Chiến Ca Đá Núi Xám**
   - *Chủ đề & Mục tiêu:* Khắc chế sở đoản; nâng cấp năng lực thâm nhập của rễ cây Tangela trước đối thủ hệ Đất/Đá; kích hoạt năng lượng quặng Nguyệt Thạch găm trong tủy sừng Nidorino để tôi luyện thể chất hộ pháp, chuẩn bị tiến hóa Nidoking.
   - *Tuyến xung đột cốt lõi:* Đương đầu phong cách phòng ngự cứng nhắc của Brock và tổ chức thợ săn lậu đá tiến hóa tại vùng mỏ Pewter.
-  - *Mốc biến cố then chốt:* Khai phá chiêu thức Hạt Ký Sinh phiên bản rễ sâu xuyên giáp đá; đập tan Onix bằng thế trận tiêu hao tuyệt đối; đoạt Huy hiệu Tảng Băng.
+  - *Mốc biến cố then chốt:* Khai phá chiêu thức Hạt Ký Sinh phiên bản rễ sâu xuyên giáp đá; đập tan Onix bằng thế trận tiêu hao tuyệt đối; đoạt Huy hiệu Tảng Đá (Boulder Badge).
   - *Cục diện bàn giao:* Nhận cảnh báo về hoạt động bất thường của Đội Hỏa Tiễn tại Núi Mặt Trăng (Mt. Moon).
 - **Quyển 04: Thủy Triều Biển Xanh Cerulean**
   - *Chủ đề & Mục tiêu:* Kiểm soát đa địa hình; rèn luyện khả năng thủy chiến và hấp thụ năng lượng nước cho hệ Cỏ; xóa bỏ định kiến về sự chậm chạp của Tangela.
@@ -37,7 +53,7 @@
 - **Quyển 06: Màn Sương Dược Thảo Celadon**
   - *Chủ đề & Mục tiêu:* Chuyên gia thảo mộc học; bắt tay cùng Erika chuẩn hóa công thức bồi dưỡng năng lượng độc quyền, giải mã cơ chế rễ cây hấp thu độc tố.
   - *Tuyến xung đột cốt lõi:* Sự chèn ép kinh tế từ các tập đoàn dược phẩm gia tộc và căn cứ ngầm của Đội Hỏa Tiễn dưới sòng bạc Celadon.
-  - *Mốc biến cố then chốt:* Nhờ huy hiệu kiểm lâm của Clara nhận sự bảo trợ từ Erika; đột nhập sòng bạc ngầm giải cứu Pokémon thí nghiệm; đoạt Huy hiệu Cầu Vồng; ký hợp đồng thương mại độc lập.
+  - *Mốc biến cố then chốt:* Nhờ tín vật gia huy kiểm lâm của Clara nhận sự bảo trợ từ Erika; đột nhập sòng bạc ngầm giải cứu Pokémon thí nghiệm; đoạt Huy hiệu Cầu Vồng; ký hợp đồng thương mại độc lập.
   - *Cục diện bàn giao:* Lần theo vết tích nghiên cứu linh hồn u ám hướng về Thị trấn Lavender.
 - **Quyển 07: Bóng Đêm Tháp Cổ Lavender**
   - *Chủ đề & Mục tiêu:* Rèn luyện ý chí và sóng tâm linh; giúp Tangela và đội hình miễn nhiễm ảo ảnh tinh thần của hệ Ma.
@@ -208,7 +224,7 @@
 * **Chương 04: Trận Thực Chiến Đầu Tiên**
   *Sự kiện cốt lõi:* Hai con Rattata hoang dã hung hãn leo vào hốc cây, Trần Phong trực tiếp chỉ huy Tangela trong không gian chật hẹp nghẹt thở.
   *Tiến triển cốt truyện & Sảng điểm:* Triển khai học thuyết "Bào sức & Thả diều": Tangela dùng hai xúc tu còn nguyên vẹn quất đòn Đòn Quất Bằng Dây (Vine Whip) chặn đứng đường lao tới, sau đó kích hoạt Hút Thể Lực (Absorb) bòn rút thể lực đối phương; sự kiên nhẫn sắt đá đánh bại bản năng cuồng bạo, hai con chuột hoang kiệt sức tháo chạy; sảng điểm đến từ việc chiến thắng bằng tính toán khoảng cách chuẩn xác từng centimet.
-  *Móc câu cuối chương:* Trên thân một con Rattata rơi lại hốc cây có một vết kim độc màu tím thẫm bốc khói đen — dấu vết nọc độc không thuộc về sinh vật tự nhiên vùng này.
+  *Móc câu cuối chương:* Trên thân một con Rattata rơi lại hốc cây có một vết kim độc màu tím thẫm bốc khói đen — dấu vết nọc độc nhân tạo không thuộc về sinh vật tự nhiên vùng này.
 
 * **Chương 05: Căn Cứ Lòng Đất & Bẫy Thảo Mộc**
   *Sự kiện cốt lõi:* Cơn bão tan, Trần Phong tìm được một hang đá ngầm khô ráo gần nguồn suối, bắt tay vào xây dựng căn cứ sinh tồn lâu dài.
@@ -286,7 +302,7 @@
 * **Chương 18: Chiến Lợi Phẩm Của Kẻ Sống Sót**
   *Sự kiện cốt lõi:* Trần Phong trói gô tên thợ săn vào gốc cây, thu giữ toàn bộ trang bị sinh tồn và tài nguyên giá trị cao.
   *Tiến triển cốt truyện & Sảng điểm:* Thu hoạch cực lớn (Sảng điểm bùng nổ): Ba quả Pokeball Liên Minh chính quy còn nguyên niêm phong, một túi không gian tiêu chuẩn chứa đầy lương khô nén cao cấp, 5 vạn tiền mặt Liên Minh, một bộ sơ cứu y tế chuyên dụng và một tấm bản đồ địa hình chi tiết phân khu Rừng Thường Xanh; giải quyết xong 100% nỗi lo về trang bị và sinh kế cơ bản.
-  *Móc câu cuối chương:* Mở mặt sau của tấm bản đồ, Trần Phong thấy một vòng tròn đỏ son khoanh tròn vào thung lũng đá tổ ong kèm dòng chữ: "Vua Độc Biến Dị — Nguy hiểm cấp 45".
+  *Móc câu cuối chương:* Mở mặt sau của tấm bản đồ, Trần Phong thấy một vòng tròn đỏ son khoanh tròn vào thung lũng đá tổ ong kèm cảnh báo: "Tổ Ong Biến Dị — Đánh giá mức độ nguy hiểm toàn vùng: Cấp 45".
 
 * **Chương 19: Đột Phá Giới Hạn: Nidorino Thức Tỉnh**
   *Sự kiện cốt lõi:* Tận dụng các ống dinh dưỡng độc tố thu được từ tên thợ săn kết hợp năng lượng bức xạ khoáng ngầm từ quặng Nguyệt Thạch, Trần Phong rèn luyện thể lực khắc nghiệt cho Nidoran♂.
@@ -310,49 +326,49 @@
 * **Chương 22: Sóng Thần Song Thương**
   *Sự kiện cốt lõi:* Đợt tấn công điên cuồng đầu tiên va chạm dữ dội với bức tường dây leo của Tangela.
   *Tiến triển cốt truyện & Sảng điểm:* Tangela gồng mình kích hoạt chiêu Phát Triển (Growth) và Tái Tạo, các sợi dây leo liên tục đứt rồi lại mọc ra với mật độ dày đặc, tạo thành một tấm đệm cao su nuốt trọn toàn bộ lực đâm của đàn ong; Nidorino đứng vững như bàn thạch phía sau, liên tục tung chiêu Bắn Gai Nhọn (Poison Sting) hất văng từng con ong cảm tử; tiêu diệt gọn gàng đợt tiên phong mà không suy chuyển nửa bước chân.
-  *Móc câu cuối chương:* Bầu trời tối sầm lại khi một tiếng rít chói tai xé toạc màng nhĩ vang lên, con Beedrill Chúa khổng lồ mang lớp giáp đen ánh tím sà xuống từ tầng mây.
+  *Móc câu cuối chương:* Bầu trời tối sầm lại khi một tiếng rít chói tai xé toạc màng nhĩ vang lên, con Beedrill Đầu Đàn Đột Biến mang lớp giáp đen ánh tím sà xuống từ tầng mây.
 
-* **Chương 23: Uy Áp Của Beedrill Chúa Đột Biến**
-  *Sự kiện cốt lõi:* Beedrill Chúa xuất hiện với kích thước gấp đôi đồng loại, cấp độ thực chiến đạt mức Tinh anh đỉnh phong (Cấp 38), toàn thân tỏa ra làn sương độc ăn mòn cả vách đá.
-  *Tiến triển cốt truyện & Sảng điểm:* Hệ thống phân tích cảnh báo khẩn cấp: Chỉ số Tốc độ và Tấn công của Beedrill Chúa cực cao do biến dị hóa chất; đôi song thương của nó vung ra chiêu Đâm Thẳng (Twineedle) chém đứt phăng lớp dây leo ngoài cùng, áp sát mặt Trần Phong trong chớp mắt; khoảnh khắc ngàn cân treo sợi tóc thử thách thần kinh thép của nhân vật chính.
+* **Chương 23: Uy Áp Của Beedrill Đột Biến**
+  *Sự kiện cốt lõi:* Beedrill Đầu Đàn xuất hiện với kích thước gấp đôi đồng loại, hệ thống phân tích xác nhận mức năng lượng sinh học đạt cấp Tinh anh đỉnh phong (Cấp 38) nhưng độc tính bị kích thích vượt ngưỡng; toàn thân tỏa ra làn sương độc ăn mòn cả vách đá.
+  *Tiến triển cốt truyện & Sảng điểm:* Hệ thống phân tích cảnh báo khẩn cấp: Đôi song thương của nó vung ra chiêu Đâm Thẳng (Twineedle) chém đứt phăng lớp dây leo ngoài cùng, áp sát mặt Trần Phong trong chớp mắt; khoảnh khắc ngàn cân treo sợi tóc thử thách thần kinh thép của nhân vật chính.
   *Móc câu cuối chương:* Nidorino gầm vang một tiếng xé lòng, lao mình ra chắn ngang đường kiếm, chiếc sừng cứng va chạm tóe lửa với mũi kim độc khổng lồ.
 
 * **Chương 24: Nghệ Thuật Bào Sức Tuyệt Đối**
-  *Sự kiện cốt lõi:* Nidorino bị chấn động lùi lại ba bước, máu độc rỉ ra từ vai, nhưng cú va chạm đã thành công ghìm chặt tốc độ kinh hoàng của Beedrill Chúa trong nửa giây quý giá.
-  *Tiến triển cốt truyện & Sảng điểm:* Chớp lấy thời cơ vàng, Trần Phong gầm lên mệnh lệnh: Tangela tung trọn vẹn Hạt Ký Sinh Rễ Sâu bám chặt vào khớp cánh của Beedrill Chúa, đồng thời xả toàn bộ Bột Tê Liệt (Stun Spore) kết hợp Bột Ru Ngủ vào luồng gió xoáy; Beedrill Chúa càng bay nhanh, năng lượng càng bị hạt giống hút cạn; tốc độ của nó chậm dần theo từng nhịp thở; sảng điểm nghẹt thở của chiến thuật kiểm soát tiêu hao bóp nghẹt sức mạnh bạo lực.
-  *Móc câu cuối chương:* Đôi cánh của Beedrill Chúa tê dại, nó gầm lên một tiếng tuyệt vọng rồi rơi tự do xuống bãi chông đá ngầm phía dưới.
+  *Sự kiện cốt lõi:* Nidorino bị chấn động lùi lại ba bước, máu độc rỉ ra từ vai, nhưng cú va chạm đã thành công ghìm chặt tốc độ kinh hoàng của Beedrill Đột Biến trong nửa giây quý giá.
+  *Tiến triển cốt truyện & Sảng điểm:* Chớp lấy thời cơ vàng, Trần Phong gầm lên mệnh lệnh: Tangela tung trọn vẹn Hạt Ký Sinh Rễ Sâu bám chặt vào khớp cánh của Beedrill Đột Biến, đồng thời xả toàn bộ Bột Tê Liệt (Stun Spore) kết hợp Bột Ru Ngủ vào luồng gió xoáy; Beedrill càng bay nhanh, năng lượng càng bị hạt giống hút cạn; tốc độ của nó chậm dần theo từng nhịp thở; sảng điểm nghẹt thở của chiến thuật kiểm soát tiêu hao bóp nghẹt sức mạnh bạo lực.
+  *Móc câu cuối chương:* Đôi cánh của Beedrill tê dại, nó gầm lên một tiếng tuyệt vọng rồi rơi tự do xuống bãi chông đá ngầm phía dưới.
 
 * **Chương 25: Đòn Kết Liễu Dưới Đáy Vực**
-  *Sự kiện cốt lõi:* Dù rơi xuống đất, Beedrill Chúa vẫn dồn tàn lực tung đòn liều chết Đâm Xuyên Cực Đại nhắm thẳng vào tim Tangela.
-  *Tiến triển cốt truyện & Sảng điểm:* Tangela không hề lùi bước, toàn bộ xúc tu dây leo quấn chặt lấy hai mũi song thương khóa chết cử động của đối thủ; Nidorino từ trên cao lao xuống như một mũi tên bọc thép, dồn toàn bộ trọng lượng cơ thể tung chiêu Đòn Húc Bằng Sừng (Horn Attack) giáng thẳng vào điểm yếu ngực của Beedrill Chúa; rắc! Lớp giáp độc vỡ vụn, Beedrill Chúa gục ngã hoàn toàn, đàn ong mất thủ lĩnh lập tức tan tác bay tán loạn về rừng sâu; khúc chiến ca sinh tồn kết thúc bằng thắng lợi vẻ vang.
-  *Móc câu cuối chương:* Giữa lồng ngực vỡ nát của Beedrill Chúa rơi ra một khối tinh thể màu xanh ngọc bích hòa lẫn chất lỏng hổ phách nguyên chất tỏa hương thơm ngát.
+  *Sự kiện cốt lõi:* Dù rơi xuống đất, Beedrill Đột Biến vẫn dồn tàn lực tung đòn liều chết Đâm Xuyên Cực Đại nhắm thẳng vào tim Tangela.
+  *Tiến triển cốt truyện & Sảng điểm:* Tangela không hề lùi bước, toàn bộ xúc tu dây leo quấn chặt lấy hai mũi song thương khóa chết cử động của đối thủ; Nidorino từ trên cao lao xuống như một mũi tên bọc thép, dồn toàn bộ trọng lượng cơ thể tung chiêu Đòn Húc Bằng Sừng (Horn Attack) giáng thẳng vào điểm yếu ngực của Beedrill; rắc! Lớp giáp độc vỡ vụn, Beedrill gục ngã hoàn toàn, đàn ong mất thủ lĩnh lập tức tan tác bay tán loạn về rừng sâu; khúc chiến ca sinh tồn kết thúc bằng thắng lợi vẻ vang.
+  *Móc câu cuối chương:* Giữa lồng ngực vỡ nát của Beedrill rơi ra một khối tinh thể màu xanh ngọc bích hòa lẫn chất lỏng hổ phách nguyên chất tỏa hương thơm ngát.
 
 ---
 
 ### HỒI 5: ĐỘT PHÁ VÒNG VÂY & HƯỚNG VỀ ÁNH SÁNG PALLET (CHƯƠNG 26 – 30)
 
-* **Chương 26: Tinh Hoa Mật Chúa & Mùi Máu Dẫn Dụ**
-  *Sự kiện cốt lõi:* Trần Phong thu hoạch khối Mật ong Chúa Bách Hoa nguyên chất và túi nọc tinh khiết từ xác Beedrill Chúa, lập tức điều chế thuốc tăng lực dã chiến giúp Tangela và Nidorino hồi phục toàn diện.
+* **Chương 26: Tinh Hoa Mật Chúa & Bẫy Mồi Sinh Thái**
+  *Sự kiện cốt lõi:* Trần Phong thu hoạch khối Mật Chúa Bách Hoa nguyên chất và túi nọc tinh khiết từ xác Beedrill, lập tức điều chế thuốc tăng lực dã chiến giúp Tangela và Nidorino hồi phục toàn diện.
   *Tiến triển cốt truyện & Sảng điểm:* Nidorino hấp thụ nọc tinh khiết kích hoạt khả năng kháng độc vượt trội; Tangela nhờ đặc tính Tái Tạo hấp thu trọn vẹn dược tính, các sợi dây leo mọc thêm lớp biểu bì trơn láng bóng mượt; sảng điểm thu hoạch tài nguyên cấp đại sư; mùi mật ngọt ngào và mùi máu tanh bắt đầu thu hút một bầy thú ăn xác Golbat và Raticate lảng vảng quanh hẻm đá.
   *Móc câu cuối chương:* Tangela cắm rễ rà soát địa hình tìm lối thoát, bất ngờ phát hiện dưới lớp đất sạt lở có một cửa hầm kim loại ngụy trang đang phát ra chuỗi tín hiệu gõ cầu cứu khẩn cấp theo mã Morse.
 
-* **Chương 27: Hốc Đá Trú Ẩn & Đấu Trí Phòng Bị**
-  *Sự kiện cốt lõi:* Trần Phong bẩy cửa hầm khẩn cấp của lực lượng Kiểm lâm Liên Minh, phát hiện nữ kiểm lâm tập sự Clara đang sốt cao kiệt sức bên cạnh chú Oddish bị trúng độc sâu.
-  *Tiến triển cốt truyện & Sảng điểm:* Thể hiện tâm lý Hardboiled sắc bén: Trần Phong dùng danh tính giả là "thợ hái thảo mộc tự do bị lạc", tuyệt đối kín kẽ không để lộ lai lịch xuyên không; cậu dùng thuốc giải chế từ Pecha Berry cứu sống Oddish; Clara ngỡ ngàng thán phục trước kỷ luật thép và vết sẹo chiến trận của Tangela cùng Nidorino; Clara tiết lộ phía bìa rừng phía Nam đang bị một trạm kiểm soát chui của bọn thợ săn phong tỏa để đón lõng hàng lậu.
-  *Móc câu cuối chương:* Clara nắm chặt tay Trần Phong, nghiêm giọng cảnh báo: "Lối mòn duy nhất ra Thị trấn Pallet đã bị hai tên thợ săn có súng điện và Arbok cấp 25 chặn đứng, muốn sống sót chúng ta phải liên thủ đột phá!"
+* **Chương 27: Hốc Đá Trú Ẩn & Kế Sách "Dẫn Trùng Phá Chốt"**
+  *Sự kiện cốt lõi:* Trần Phong bẩy cửa hầm khẩn cấp, phát hiện nữ kiểm lâm tập sự Clara đang sốt cao kiệt sức bên cạnh chú Oddish bị trúng độc sâu.
+  *Tiến triển cốt truyện & Sảng điểm:* Thể hiện tâm lý Hardboiled sắc bén: Trần Phong đóng vai thợ hái thảo mộc tự do bị lạc, tuyệt đối kín kẽ lai lịch; dùng Pecha Berry cứu sống Oddish; Clara cảnh báo lối mòn duy nhất ra Pallet đang bị một trạm kiểm soát chui của hai tên thợ săn có súng điện và Arbok cấp 25 phong tỏa; thay vì đối đầu trực diện, Trần Phong hiến kế: Dùng cặn mật chúa và máu Beedrill tẩm vào cành cây khô làm mồi nhử, thả theo chiều gió để dẫn bầy thú ăn xác Golbat và Raticate tràn về phía trạm gác.
+  *Móc câu cuối chương:* Đêm đen buông xuống, tiếng rít căm hờn của bầy Golbat men theo vệt hương thơm lao vút về phía ánh đèn le lói của trạm chốt chặn bìa rừng.
 
-* **Chương 28: Đột Kích Trạm Gác Bìa Rừng**
-  *Sự kiện cốt lõi:* Trần Phong và Clara bí mật tiếp cận trạm gác chui của bọn săn trộm tại cửa rừng phía Nam, triển khai trận đánh úp chớp nhoáng.
-  *Tiến triển cốt truyện & Sảng điểm:* Phối hợp chiến thuật nhịp nhàng: Oddish dùng Bột Axit phân tán tầm nhìn lính canh; Tangela cắm rễ ngầm hất tung súng điện áp chế; Nidorino lao ra tung cú Húc Bằng Sừng uy lực xé toạc lớp giáp của Arbok đối phương; trong vòng chưa đầy hai phút, hai tên săn trộm bị đánh gục và trói chặt; Clara thu giữ toàn bộ chứng cứ phạm tội và trao cho Trần Phong một huy hiệu đồng Kiểm lâm danh dự mang gia huy Celadon để bảo đảm lưu thông hợp pháp.
+* **Chương 28: Mượn Gió Bẻ Măng Phá Chốt Bìa Rừng**
+  *Sự kiện cốt lõi:* Trần Phong và Clara bám theo bầy thú ăn xác, chứng kiến trạm gác chui của bọn săn trộm rơi vào cảnh hỗn loạn kinh hoàng trước cuộc tập kích bất ngờ của bầy thú hoang đói khát.
+  *Tiến triển cốt truyện & Sảng điểm:* Đỉnh cao mưu lược Hardboiled: Khi hai tên thợ săn và Arbok đang luống cuống chống đỡ bầy thú, Tangela phóng rễ ngầm hất văng hai khẩu súng điện áp chế; Nidorino lao ra từ bóng tối tung cú Húc Bằng Sừng giáng thẳng vào mạn sườn hạ gục Arbok trong một đòn; hai tên thợ săn bị trói gô; Clara cảm phục sự sắc sảo của Trần Phong, trao cho cậu chiếc "Tín vật Gia huy Kiểm lâm Celadon" cùng biên bản cứu hộ để đảm bảo thông quan hợp pháp vào Pallet.
   *Móc câu cuối chương:* Cánh cổng rào chắn bằng gỗ mục của bìa rừng bị húc đổ, mở ra một bình nguyên xanh ngắt trải dài ngút tầm mắt dưới ánh bình minh rực rỡ.
 
 * **Chương 29: Bình Minh Trên Bình Nguyên Thảo Mộc**
   *Sự kiện cốt lõi:* Trần Phong cùng hai Pokémon chính thức bước qua ranh giới Rừng Thường Xanh, hít thở bầu không khí trong lành của thế giới văn minh sau những ngày dài cận kề cái chết dưới vực thẳm.
-  *Tiến triển cốt truyện & Sảng điểm:* Giải tỏa hoàn toàn áp lực sinh tồn căng như dây đàn; sự chuyển biến tâm lý từ một kẻ sống sót hoang dã thành một Huấn luyện viên trầm ổn, tự tin vào thực lực và chiến thuật; Clara dẫn đường đến Trạm gác Liên Minh biên giới để xác nhận thân phận danh dự cho cậu, sau đó chia tay để trở về báo cáo cấp trên; Trần Phong tự do sải bước trên con đường mòn đất đỏ hướng về Pallet.
+  *Tiến triển cốt truyện & Sảng điểm:* Giải tỏa hoàn toàn áp lực sinh tồn căng như dây đàn; sự chuyển biến tâm lý từ một kẻ sống sót hoang dã thành một Huấn luyện viên trầm ổn, tự tin vào thực lực và chiến thuật; Clara dẫn đường đến Trạm kiểm soát biên giới để xác nhận thân phận tạm thời cho cậu thông qua tín vật gia tộc, sau đó chia tay để đưa phạm nhân về đồn; Trần Phong tự do sải bước trên con đường mòn đất đỏ hướng về Pallet.
   *Móc câu cuối chương:* Phía cuối con dốc thoải, mái ngói đỏ tươi cùng chiếc cối xay gió khổng lồ của Viện Nghiên Cứu Giáo Sư Oak hiện ra sừng sững giữa thung lũng ngập tràn hoa dại.
 
 * **Chương 30: Cuộc Chạm Trán Định Mệnh Tại Pallet**
-  *Sự kiện cốt lõi:* Trần Phong mang theo chiếc ba lô đầy ắp mẫu dược liệu vô giá và khối mật ong chúa bách hoa bước tới cổng Viện Nghiên Cứu Oak.
+  *Sự kiện cốt lõi:* Trần Phong mang theo chiếc ba lô đầy ắp mẫu dược liệu vô giá và khối mật chúa bách hoa bước tới cổng Viện Nghiên Cứu Oak.
   *Tiến triển cốt truyện & Sảng điểm:* Cánh cửa viện nghiên cứu bật mở, một thiếu niên đội mũ lưỡi trai đỏ (Ash Ketchum) đang ôm chú chuột điện lông vàng (Pikachu) lao vụt ra ngoài trong tình trạng mất kiểm soát; Pikachu hoảng loạn phóng ra một luồng sấm sét xẹt xẹt đâm thẳng vào ngực Tangela; Tangela điềm tĩnh đứng sừng sững, các sợi dây leo bện chặt triệt tiêu hoàn toàn dòng điện cao thế mà không hề suy chuyển nửa bước; sự tương phản kinh điển giữa hai trường phái: Phân tích lạnh lùng chuẩn bị chu toàn vs Bản năng bùng nổ nhiệt huyết.
   *Móc câu cuối chương:* Ash mắt tròn xoe kinh ngạc, đưa tay gãi đầu nhìn chằm chằm vào Tangela rồi reo lên: "Tuyệt đỉnh thật! Này cậu bạn, cậu huấn luyện thế nào mà Pokémon hệ Cỏ lại không sợ tia điện của Pikachu nhà tớ thế?!"
 
@@ -365,5 +381,5 @@
 | **Đường vân Cổ xưa của Tangela** | **Chương 02** | Dây leo Tangela ẩn hiện những đường vân xoắn ốc cổ xưa phát sáng mờ nhạt khi tiếp xúc khoáng chất ngầm. | Nền tảng sinh học kích hoạt chiêu thức *Ancient Power* (Sức Mạnh Cổ Xưa) dẫn tới tiến hóa ẩn Tangrowth chấn động thế giới. | **Quyển 19 (Chương 18–20)** |
 | **Hóa chất kích động P-2 của Rocket** | **Chương 10** | Cuốn sổ tay dã chiến nhắc đến chất kích thích thần kinh P-2 thử nghiệm trên côn trùng rừng rậm. | Nguồn gốc công nghệ phát sóng vô tuyến cưỡng ép Gyarados đỏ tiến hóa tại Hồ Phẫn Nộ do Đội Hỏa Tiễn chủ mưu. | **Quyển 15 (Chương 01–05)** |
 | **Quặng Nguyệt Thạch tôi luyện tủy sừng** | **Chương 11 & 19** | Dăm quặng Nguyệt Thạch thô găm sâu vào tủy sừng Nidoran♂ phát quang, tôi luyện cấu trúc xương khi tiến hóa Nidorino. | Nguồn năng lượng phóng xạ tiềm tàng giúp Nidorino hấp thu trọn vẹn Đá Mặt Trăng để tiến hóa thành Nidoking mang thể chất hộ pháp vượt bậc. | **Quyển 03 (Chương 25–28)** |
-| **Huy hiệu đồng Kiểm lâm Celadon** | **Chương 28** | Clara trao tặng huy hiệu kiểm lâm có khắc hoa văn gia huy Celadon để ghi nhận công lao cứu viện và phá trạm gác chui. | Chiếc cầu nối nhân mạch giúp Trần Phong nhận được sự tín nhiệm tuyệt đối từ Quán chủ Erika khi đặt chân tới Celadon. | **Quyển 06 (Chương 02–04)** |
+| **Tín vật Gia huy Kiểm lâm Celadon** | **Chương 28** | Clara trao tặng tín vật gia huy có khắc biểu tượng mẫu đơn Celadon để ghi nhận công lao cứu viện và phá trạm gác chui. | Chiếc cầu nối nhân mạch giúp Trần Phong nhận được sự tín nhiệm tuyệt đối từ Quán chủ Erika khi đặt chân tới Celadon. | **Quyển 06 (Chương 02–04)** |
 | **Cuộc tao ngộ định mệnh bìa rừng** | **Chương 30** | Ash Ketchum và chú Pikachu bất kham đâm sầm vào Trần Phong trước cổng viện nghiên cứu Oak. | Mở ra mối quan hệ kỳ phùng địch thủ giữa hai thái cực chiến thuật: Phân tích lạnh lùng vs Bản năng rực cháy xuyên suốt 300 vạn chữ. | **Quyển 02 & Toàn thư** |

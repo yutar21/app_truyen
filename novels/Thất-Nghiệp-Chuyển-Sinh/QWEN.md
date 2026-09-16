@@ -11,15 +11,9 @@
 ## 本书档案
 
 - 书名：《Thất Nghiệp Chuyển Sinh》
-- 类型/卖点：Đồng nhân Mushoku Tensei, Xuyên thân xác, Sinh tồn tàn khốc, Dark Fantasy, Kiếm thuật phi truyền thống, Không hệ thống, Không bàn tay vàng.
-
-Ý tưởng: Nhân vật chính là một thanh niên Trái Đất bất ngờ bị cuốn qua dị giới qua một vết nứt không gian tương tự Thảm họa Dịch chuyển Fittoa. Cậu rơi xuống một vùng rừng rậm hoang dã cằn cỗi trong tình trạng rách rưới, không hiểu ngôn ngữ bản địa, không có chút ma lực bẩm sinh nào, và hoàn toàn không nhận ra đây là thế giới Mushoku Tensei mà mình từng đọc trên tiểu thuyết do thực tế quá bẩn thỉu, tàn bạo và xa lạ. 
-
-Điểm nhấn cốt lõi: Để sống sót và đối đầu với quái vật, cậu phát hiện ra công dụng chết người của Ma Tinh Thạch (Magic Crystal) thu từ xác quái thú. Do cơ thể không có kinh mạch chứa mana, cậu buộc phải nuốt sống Ma Tinh Thạch vào dạ dày để áp lực ma lực thẩm thấu cưỡng bức qua mô ruột, tạo ra luồng Đấu Khí (Touki) tạm thời trong vài phút sinh tử. Nhưng sau mỗi trận chiến, cậu phải tự tay dùng dao rạch bụng, nôn mửa hoặc moi viên đá ra để tránh bị tắc ruột và hoại tử cơ thể do ma lực ăn mòn. 
-
-Cốt truyện đào sâu vào hành trình học tiếng từ con số không, cái giá đẫm máu của sự sinh tồn bằng Bắc Thần Lưu kết hợp thể thuật thực chiến, và khoảnh khắc bàng hoàng nhận ra bản thân đang ở trong dòng thời gian tàn khốc của Mushoku Tensei khi tình cờ nghe được tin tức về sự kiện sụp đổ của Roa.
-- 目标总字数：300 vạn chữ
-- 卷数 / 每卷章数：30 卷 / 约 ? 章
+- 类型/卖点：（导入）
+- 目标总字数：（见 novel_bible.md）
+- 卷数 / 每卷章数：? 卷 / 约 ? 章
 - 默认批次：每次 3 章，写完自检
 - 单章目标：3000–3600 字；硬下限：文件 > 4KB 且正文 > 3000 字
 
@@ -31,19 +25,18 @@ Cốt truyện đào sâu vào hành trình học tiếng từ con số không, 
 - `style_card.md`（若有）是从范本里提炼的手法卡，可当速查；**与范本冲突时以范本原文为准**——描述总是有损的。
 - 【严禁照抄】范本的情节、人物、地名、专有名词、成句，**也不要复制它的句子结构与开场方式**。范本是让你感受"这个人怎么说话"，不是填空模板。
 - 已写章节同样是范本：越往后写，越要向本书自己已有的章节看齐，保证整本一个腔调。
-- （补充，仅供参考，冲突时一律以范本为准）文风定位：**Lạnh lùng hiện thực (Hardboiled)**（Tiết chế, câu ngắn, hành động & chi tiết thúc đẩy, không bi lụy sướt mướt）
 
 
-## 感情线（本书档位：Nồng thắm (Nhân vật trưởng thành)）
+## 感情线（本书档位：Mập mờ lôi cuốn (Khuyên dùng)）
 
-- 怎么写：感情戏是本书主线之一，篇幅和分量要给足。**标准是「色而不淫」——不是回避，是写而不露**：
-  · **仅限成年角色**。角色未成年时一律按「暧昧」档写，成年之后再放开。这条没有例外。
-  · **该发生的要发生**：接吻、拥抱、共处一夜都可以写、可以点明。恋爱写得不亲不碰，人物是假的，读者也不信。
-  · **写感官，不写器官**：呼吸乱了半拍、颈侧的温度、指尖停在纽扣上的那一下犹豫、衣料摩擦的声响、她头发上的皂角味。这些比任何直白描写都更有情欲张力，而且过审。**绝不出现身体部位的名称与动作过程。**
-  · **写克制的瞬间**：想碰没碰、碰了又收回、话说到一半被打断。情欲的张力全在"差一点"上，一旦写全了，反而没了。
-  · **写事后，不写事中**：真到了那一步，用一个转场（雨声、灯灭、翻倒的搪瓷缸）过去，力气花在次日清晨的一个细节上——谁先醒的、谁没敢看谁、一件被叠好的衣服。事后一句顶事中一千字。
-  · **情绪重量优先**：读者该记住的是"他们之间从此不一样了"，不是"发生了什么"。
-  · 底线仍在：不写露骨过程、不写生理细节、不用情色化的比喻（把身体比作食物/器物那类）。越线的代价是整本书下架——写到八分收手，是本事，不是怯懦。Tình cảm sâu sắc, văn minh đúng chuẩn.
+- 怎么写：感情线是本书的主要留存手段之一，要**有张力、有暧昧、有让读者追更的牵挂**，但一律走「留白」路线：
+  · **写距离不写身体**：两人之间从三步到一步、谁先退开、坐后座时手扶哪儿——距离的变化就是关系的变化。
+  · **未完成的动作**：手伸出去又收回、话说一半咽回去、想碰没碰。读者补完的永远比写出来的浓。
+  · **让第三个人点破**：当事人越沉默越有张力，暧昧靠旁人的嘴放大（有人看见了、传开了、起哄了）。
+  · **用物件承载**：一条毛巾、三张纸条、一辆借出去的车——物件在谁手里、放在哪儿，就是关系走到哪儿。
+  · **写觉察不写身材**：他注意到她手腕上那道红印、今天换了白短袖——「注意到」本身就是心动，不许往下描摹身体。
+  · **三角与吃醋**：新异性出场时给旧的一个反应（一个动作、一句反常的话），但不点破。
+每 3–5 章至少一次可感的关系推进或暧昧节拍，**绝不能几十章只有功能性对话**。Tạo sức hút mập mờ, tinh tế.
 
 **感情线红线（任何档位都不放宽，越线整本书会被下架）**：
 - **未成年角色（不满 18 岁）一律只到「少年心动」**：距离、觉察、未完成的动作、物件寄情；不写身体、不写亲密行为。这是法律红线，不是平台尺度。
@@ -187,7 +180,7 @@ reviews/
 - 与上一批连续性完好；人物行为符合既定弧光；无重大线索/证人/物件/关系/伤势矛盾。
 
 **内容质量·七维复核（每批扫一遍，发现问题就地精修那一处、不整章重写；把结论写进 reviews/）**：
-1. **设定与专有名词一致**：世界观/规则/人物档案/原著武器与法宝（如萧炎必须用玄重尺、严防AI造词或错译）有没有对不上？——发现即引用原文举证并就地改。
+1. **设定与专有名词一致**：世界观/规则/人物档案/专属武器与关键道具（严格对照 novel_bible.md，严防AI幻觉造词、错译或串用其他作品设定）有没有对不上？——发现即引用原文举证并就地改。
 2. **人物行为**：性格/动机/弧光是否站得住？有没有为了推进而 OOC？
 3. **节奏格局**：这几章处境有没有可感升级？有没有卡在同一地点/同一桩小事打转？
 4. **叙事连贯**：因果链、时间线、前后呼应有无断裂？

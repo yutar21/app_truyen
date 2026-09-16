@@ -70,6 +70,27 @@ Một sinh viên hiện đại mang tư duy sinh tồn cẩn trọng và Hệ th
    - **Dược liệu dã chiến tự cung tự cấp**: Xuất phát điểm nghèo khó giữa Rừng Thường Xanh, cậu tận dụng tri thức thực vật học để phối trộn các loại quả mọng (Oran Berry, Pecha Berry, Cheri Berry...) cùng nấm rừng, rễ thảo dược thành thuốc cầm máu, cao dán giảm đau, nước khử độc và bột phục hồi thể lực thay thế Potion/Revive đắt đỏ.
    - **Dinh dưỡng khoa học tối ưu hóa chỉ số Nỗ lực (EV)**: Nắm vững nguyên lý trao đổi chất để chế tạo thức ăn năng lượng cao phù hợp cho từng thuộc tính (như bổ sung khoáng chất vi lượng và bùn đen giàu vi sinh giúp Tangela tối ưu hóa độ dày của dây leo và thể chất). Đến Celadon (Quyển 06), cậu kết hợp cùng Quán chủ Erika để chuẩn hóa thành các phối phương dược thảo dinh dưỡng độc quyền.
 
+#### E. Chính Sách Thu Phục Thần Thú/Huyễn Thú & Tham Dự Đại Hội Toàn Cầu (Quy Chuẩn Bất Biến)
+1. **Có thu phục Pokémon Thần Thoại (Legendary) & Huyền Ảo (Mythical)**:
+   - **Khẳng định**: **CÓ**. Nhưng tuân theo nguyên tắc "Tùy duyên - Xứng đáng - Đồng hành minh ước", tuyệt đối không buff bẩn ném bóng bừa bãi.
+   - **Cơ chế phân cấp**:
+     - *Huyễn Thú (Mythical)*: Nhận nuôi dưỡng, cứu chữa sinh thái hoặc đồng hành bằng tình cảm chân thành (Celebi/Shaymin rừng sâu, ấu thể cơ giới cổ đại Meltan -> Melmetal, hoặc phân thân tế bào Zygarde 10% ở Kalos).
+     - *Thần Thú Hạ Vị (Sub-Legendaries)*: Trải qua thử thách sinh tử tại trung - hậu kỳ (Tam Thánh Thú, Latios/Latias, Urshifu...) được chúng công nhận tư cách chiến hữu.
+     - *Thần Thú Tối Cao (Lugia, Ho-Oh, Groudon, Kyogre, Giratina...)*: Thiết lập **Minh Ước Sứ Giả**, tương trợ giải cứu khi thế giới lâm nguy, không giam cầm trong bóng chứa thông thường.
+2. **Thám hiểm trọn vẹn TẤT CẢ các vùng đất & Tham dự 100% các kỳ Đại Hội Liên Minh**:
+   - **Phạm vi thám hiểm**: Đi qua toàn bộ 8 vùng đất chính (Kanto, Johto, Hoenn, Sinnoh, Unova, Kalos, Alola, Galar) + Quần đảo Cam + Vùng cấm địa viễn chinh Đại Lục Cổ Sơ ở Quyển 30.
+   - **Tham dự đầy đủ giải đấu**: Khiêu chiến đủ 8 Đạo quán mỗi vùng đất; tham dự trọn vẹn mọi kỳ Đại hội:
+     + Đại Hội Thạch Anh (Kanto - Q10)
+     + Cúp Quần Đảo Cam (Orange League - Q11)
+     + Đại Hội Bạc (Johto - Q15)
+     + Đại Hội Hoenn (Ever Grande - Q19)
+     + Đại Hội Sinnoh (Lily of the Valley - Q22)
+     + Đại Hội Unova (Vertress - Q24)
+     + Đại Hội Kalos (Lumiose - Q26)
+     + Nghi Thức Đảo & Đại Hội Alola (Manalo - Q27)
+     + Đấu Trường Galar Cup (Q28)
+     + **Đỉnh cao thế giới (Q29)**: **Giải Vô Địch Thế Giới (Masters Eight - World Coronation Series)** tranh ngôi Vô Địch Toàn Cầu cùng Ash Ketchum, Leon, Cynthia, Steven, Lance...
+
 ---
 
 ## Thiết Lập Nhân Vật
