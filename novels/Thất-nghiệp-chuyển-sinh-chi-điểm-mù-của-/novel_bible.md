@@ -3,11 +3,11 @@
 ---
 
 ## 1. Điểm Bán Cốt Lõi & Độc Giả Mục Tiêu
-- **Điểm bán một câu**: Một sinh viên đại học bình thường xuyên vào dị giới Mushoku Tensei với toàn bộ cốt truyện trong đầu; không bám đuôi bảo mẫu Rudeus, cậu bắt đầu từ một người phàm yếu ớt chật vật sinh tồn giữa hoang dã Ma lục, cày cuốc thăng hạng mạo hiểm giả từ con số 0; không có nửa điểm ma lực, cậu chọn con đường **Thuần Kiếm Sĩ 100%**, dùng tư duy cơ sinh học hiện đại giải mã Đấu Khí và sáng tạo Song Kiếm thực chiến, trở thành "điểm mù tuyệt đối" chôn vùi dã tâm của Nhân Thần Hitogami.
+- **Điểm bán một câu**: Một thanh niên 21 tuổi bình thường ở thế giới hiện đại đam mê anime manga và am hiểu tường tận cốt truyện Mushoku Tensei bất ngờ bị cuốn phăng vào Thế giới Sáu Mặt; không bám đuôi bảo mẫu Rudeus, cậu bắt đầu từ một người phàm yếu ớt chật vật sinh tồn giữa hoang dã Ma Lục, cày cuốc thăng hạng mạo hiểm giả từ con số 0; không có nửa điểm ma lực, cậu chọn con đường **Thuần Kiếm Sĩ 100%**, dùng khả năng điều hòa hơi thở, phát lực chuẩn xác và nhãn quan nhìn thấu sơ hở để kích hoạt Đấu Khí và sáng tạo Song Kiếm thực chiến, trở thành "điểm mù tuyệt đối" chôn vùi dã tâm của Nhân Thần Hitogami.
 - **Thể loại**: Đồng nhân Thất Nghiệp Chuyển Sinh (Mushoku Tensei), Xuyên không (Thân xác người thường), Sinh tồn thực tế, Thuần Kiếm Sĩ thực chiến, Thăng cấp Đấu Khí, Đấu trí, Hậu cung chất lượng cao (Harem có chiều sâu).
 - **Tông giọng (Tone)**:
-  - *Giai đoạn đầu (Sinh tồn)*: Hiện thực trần trụi, nghẹt thở vì va chạm giữa ảo tưởng anime màu sắc với hiện thực dị giới đầy bùn đất, máu tanh và cơm áo gạo tiền; pha lẫn sự hài hước ngầm (deadpan humor) từ góc nhìn duy vật của một sinh viên hiện đại.
-  - *Giai đoạn giữa & sau (Quật khởi)*: Lì lợm, thực dụng, phóng khoáng, tình nghĩa huynh đệ và đồng đội sinh tử; những trận cận chiến đẫm máu được tính toán lạnh lùng; cảm giác sảng khoái khi dùng thông tin biết trước để lật ngược thế cờ và chinh phục dàn mỹ nhân đỉnh cao.
+  - *Giai đoạn đầu (Sinh tồn)*: Hiện thực trần trụi, nghẹt thở vì va chạm giữa ảo mộng lãng mạn với hiện thực dị giới đầy bùn đất, máu tanh và hiểm họa rình rập; pha lẫn sự hài hước ngầm (deadpan humor) từ tính cách điềm tĩnh, thực dụng của nhân vật chính.
+  - *Giai đoạn giữa & sau (Quật khởi)*: Lì lợm, thực dụng, phóng khoáng, tình nghĩa huynh đệ và đồng đội sinh tử; những trận cận chiến đẫm máu được tính toán lạnh lùng; cảm giác sảng khoái khi dùng thông tin biết trước để lật ngược thế cờ và kề vai sát cánh cùng dàn mỹ nhân đỉnh cao.
 - **Độc giả mục tiêu**: Độc giả yêu thích thế giới quan Mushoku Tensei, đam mê thể loại thuần kiếm thuật cận chiến thực dụng (bài trừ ma pháp hoa mỹ), thích nhân vật chính độc lập tự cường, có hệ thống cảnh giới phân cấp rõ ràng, không thánh mẫu và xây dựng dàn bóng hồng xuất sắc.
 
 ---
@@ -15,13 +15,13 @@
 ## 2. Thế Giới Quan & Bối Cảnh Thời Đại
 - **Thời điểm khởi đầu**: Năm K417 (Giáp Long Lịch 417), đúng khoảnh khắc Thảm họa Dịch chuyển Fittoa bùng nổ cuốn phăng hàng vạn người đi khắp bốn phương trời.
 - **Điểm xuất phát độc lập**: Một góc hoang vu, khắc nghiệt tại rìa phía Đông Bắc Đại lục Ma, hoàn toàn cách xa điểm rơi của nhóm Rudeus.
-- **Nghịch lý "Anime vs Hiện Thực"**:
-  - Khi xem anime trên màn hình máy tính: Những bãi cát đỏ kỳ vĩ, nhạc nền hào hùng, quái vật trông như mô hình 3D bắt mắt.
-  - Khi thật sự xuyên vào bằng thể xác thật: Không có nhạc nền; gió cát hoang mạc xé rách da thịt; mùi máu quái vật tanh tưởi buồn nôn; vết cào nhỏ không có kháng sinh cũng có thể gây sốt và hoại tử; một con thằn lằn cát cấp thấp cũng đủ sức ngoạm đứt đôi người một sinh viên quen ngồi phòng máy lạnh.
+- **Nghịch lý "Trang Sách vs Hiện Thực"**:
+  - Khi đọc tiểu thuyết: Những bãi cát đỏ kỳ vĩ, những trận chiến anh hùng rực rỡ và những chuyến phiêu lưu kỳ thú.
+  - Khi thật sự rơi vào bằng thể xác thật: Không có hào quang hộ mệnh; gió cát hoang mạc xé rách da thịt; mùi máu quái vật tanh tưởi buồn nôn; một vết thương nhỏ nhiễm độc cũng có thể cướp đi tính mạng; một con thằn lằn cát cấp thấp cũng đủ sức nghiền nát người phàm trong chớp mắt.
 - **Sự chuyển hóa tâm lý của nhân vật chính**:
-  - Từ hoảng loạn, sợ chết, run rẩy nôn mửa khi lần đầu tự tay giết quái vật.
-  - Đến việc ép bản thân chấp nhận hiện thực: học cách lột da thú, nếm thử rễ cây đắng ngắt, tính toán từng giọt nước, mài sắc từng con dao gọt hoa quả, kiếm từng đồng tiền đồng để thuê góc trọ rẻ tiền tại các thị trấn mạo hiểm giả.
-  - Trở thành một kẻ sinh tồn lì lợm, bản lĩnh, dùng tri thức hiện đại và sự hiểu biết tường tận về thế giới này để từng bước vươn lên đỉnh cao kiếm đạo.
+  - Từ kinh hãi, ngột ngạt khi lần đầu tự tay đoạt mạng ma thú hoang dã.
+  - Đến việc thích nghi bằng bản lĩnh thép: học cách lột da xẻ thịt ma thú, nếm thử rễ cây đắng ngắt, tính toán từng giọt nước sinh tồn, mài sắc từng tấc lưỡi dao, kiếm từng đồng tiền đồng để thuê góc trọ rẻ tiền tại các thị trấn mạo hiểm giả.
+  - Trở thành một kẻ sinh tồn lì lợm, bản lĩnh, dùng nhãn quan sắc bén và sự hiểu biết tường tận về thế giới này để từng bước vươn lên đỉnh cao kiếm đạo.
 
 ---
 
@@ -52,19 +52,19 @@ Tác phẩm chuẩn hóa toàn diện hệ thống sức mạnh nguyên tác th�
 
 ### 3.3. Cơ Chế Chiến Đấu & Lối Đánh Của Lục Trần: "Khắc Tinh Của Pháp Sư"
 - **Bản chất Thuần Kiếm Sĩ**: Là người Trái Đất, Lục Trần không có kinh mạch mana dị giới, không thể phóng ra một tia lửa hay giọt nước ma pháp nào. Cậu dồn toàn bộ tâm trí vào **Khai phóng tiềm năng cơ thể**:
-  - *Cơ sinh học*: Tối ưu hóa đòn bẩy khớp xương, siết cơ vi mô đồng bộ, tăng tốc tuần hoàn máu và oxy ở áp suất cao.
-  - *Phản xạ thần kinh*: Rèn luyện cung phản xạ tủy sống để né tránh và xuất chiêu nhanh hơn tốc độ suy nghĩ.
-- **Lối đánh Phá Ma Thực Chiến**: Chuyên dùng để áp chế và hạ sát các pháp sư tự phụ. Tận dụng thời gian đối thủ niệm chú hoặc tích tụ mana, Lục Trần áp sát chớp nhoáng bằng cước pháp Bắc Thần Lưu, dùng kiếm chém đứt dòng chảy mana trước khi thần chú kịp thành hình.
+  - *Thuật phát lực & Điều tức*: Kiểm soát nhịp thở, siết chặt từng thớ cơ đồng bộ, chuyển dời trọng tâm chuẩn xác và giải phóng sức mạnh bộc phát tối đa vào đầu mũi kiếm.
+  - *Bản năng thực chiến*: Rèn luyện phản xạ né tránh và xuất chiêu hiểm hóc bằng kinh nghiệm sinh tử, nhanh hơn cả một nhịp thở.
+- **Lối đánh Phá Ma Thực Chiến**: Chuyên dùng để áp chế và hạ sát các pháp sư tự phụ. Tận dụng thời gian đối thủ niệm chú hoặc tích tụ mana, Lục Trần áp sát chớp nhoáng bằng bộ pháp Bắc Thần Lưu, dùng kiếm chém đứt dòng chảy mana trước khi thần chú kịp thành hình.
 - **Hệ Thống Song Kiếm (Thủy Thủ - Bắc Công)**:
-  - *Tay trái (Thủy Thần Lưu - Phòng Thủ Hóa Giải)*: Sử dụng đoản kiếm hoặc kiếm bản rộng ngắn. Dùng kỹ thuật chệch hướng động lượng (parry), phân tán lực va chạm của quái vật khổng lồ vào mặt đất, vô hiệu hóa quỹ đạo tấn công của đối thủ.
-  - *Tay phải (Bắc Thần Lưu - Tấn Công Thực Dụng)*: Sử dụng trung kiếm linh hoạt. Đòn đánh không hoa mỹ, tập trung hoàn toàn vào yếu huyệt giải phẫu: cắt đứt gân gót, chọc thủng động mạch cảnh, đâm xuyên khe hở giáp trụ, rạch hốc mắt, kết hợp cước pháp triệt hạ hạ bộ.
+  - *Tay trái (Thủy Thần Lưu - Phòng Thủ Hóa Giải)*: Sử dụng đoản kiếm hoặc kiếm bản rộng ngắn. Dùng kỹ thuật mượn lực đả lực, chệch hướng đòn đánh (parry), phân tán xung lực của quái vật khổng lồ vào lòng đất, triệt tiêu hoàn toàn thế công của đối thủ.
+  - *Tay phải (Bắc Thần Lưu - Tấn Công Thực Dụng)*: Sử dụng trung kiếm linh hoạt. Đòn đánh không hoa mỹ, nhắm thẳng vào các điểm hiểm yếu: cắt đứt gân gót, đâm thủng cổ họng, chọc xuyên khe hở giáp trụ, rạch hốc mắt, kết hợp cước pháp triệt hạ hạ bộ.
   - *Đồ nghề sinh tồn*: Dây thép, bẫy cơ học, vôi bột, bột ớt, dao găm giấu trong ủng.
 
 ---
 
 ## 4. Thiết Lập Nhân Vật Chính: Lục Trần
-- **Xuất thân**: Sinh viên đại học năm 3 (khoảng 21 tuổi), tính tình hòa đồng, thích xem anime/đọc light novel, am hiểu tường tận toàn bộ cốt truyện và các bí mật ngầm của Mushoku Tensei.
-- **Ngoại hình**: Ban đầu có nét thư sinh hiện đại; sau thời gian sinh tồn hoang dã, cơ thể trở nên săn chắc, gân guốc, cơ bắp cuồn cuộn đường nét rõ ràng, ánh mắt sắc lẹm như chim ưng, dạn dày sương gió nhưng nụ cười vẫn giữ được nét ấm áp, đáng tin cậy.
+- **Xuất thân**: Một thanh niên 21 tuổi bình thường ở thế giới hiện đại, đam mê sâu sắc với anime, manga và các bộ light novel kỳ ảo; am hiểu tường tận toàn bộ dòng chảy lịch sử, cơ chế sức mạnh và các bí mật ngầm của Mushoku Tensei; tính tình điềm tĩnh, thích quan sát, sống tự lập và có ý chí sinh tồn kiên cường.
+- **Ngoại hình**: Ban đầu là một thanh niên bình thường với nét mặt ưa nhìn; sau thời gian tôi luyện sinh tồn giữa hoang dã, cơ thể trở nên săn chắc, gân guốc, cơ bắp gọn gàng ẩn sau lớp áo thô, ánh mắt sắc lẹm và điềm tĩnh, khuôn mặt dạn dày sương gió của kẻ sinh tồn nhưng nụ cười vẫn giữ được nét ấm áp, đáng tin cậy.
 - **Tính cách**:
   - *Thực dụng & Cẩn trọng*: Không có tư tưởng anh hùng cứu thế viển vông; tiêu chí duy nhất trong giao tranh là: *kẻ địch gục xuống, ta còn sống*.
   - *Biết mình biết người*: Ý thức rõ bản thân là người thường không có ma pháp bảo hộ, luôn tính toán địa hình, cạm bẫy và đường rút lui trước mỗi trận chiến.
@@ -80,14 +80,14 @@ Tác phẩm xây dựng tuyến tình cảm sâu sắc, nồng nàn và có chi�
 - **Hình tượng**: Thiếu nữ cung thủ tóc vàng kiên cường, ngoài lạnh trong nóng, mang vết thương lòng sâu sắc do gia đình bị quý tộc ruồng bỏ.
 - **Mối quan hệ với Lục Trần**:
   - Lục Trần gặp Sara khi cả hai còn là những mạo hiểm giả cấp thấp chật vật kiếm sống ở vùng biên cương phương Bắc.
-  - Là người đàn ông vững chãi che chắn trước làn tên mũi kiếm cho Sara, Lục Trần dùng sự ấm áp, tinh tế và chín chắn của người hiện đại để chữa lành vết thương lòng cho nàng.
+  - Là người đàn ông vững chãi che chắn trước làn tên mũi kiếm cho Sara, Lục Trần dùng sự ấm áp, tinh tế và chín chắn để chữa lành vết thương lòng cho nàng.
   - Mối tình thuở hàn vi chân thành, ngọt ngào và bền chặt; một kiếm sĩ cận chiến và một nữ cung thủ tầm xa tạo nên cặp bài trùng mạo hiểm giả ăn ý tuyệt đối.
 
 ### 5.2. Ghislaine Dedoldia (Hắc Lang Kiếm Vương - Ngự Tỷ Hoang Dã & Lá Chắn Sinh Tử)
 - **Hình tượng**: Nữ Kiếm Vương tộc Thú (Hắc Lang) với thân hình bốc lửa hoang dã, cơ bắp săn chắc quyến rũ, tính cách thẳng thắn, đơn thuần, mù chữ nhưng trung thành tuyệt đối.
 - **Mối quan hệ với Lục Trần**:
-  - Sau thảm họa Roa, Ghislaine bị lưu lạc và trúng độc ma thú, suýt bỏ mạng trong rừng sâu thì được Lục Trần (lúc này đã đạt Thượng cấp kiếm thuật) giải cứu bằng kỹ năng sinh tồn và sơ cứu y học.
-  - Cùng chung con đường thuần kiếm đạo, Lục Trần dạy Ghislaine học chữ, dùng tư duy cơ sinh học phân tích các góc vung kiếm giúp nàng đột phá kiếm thuật, đồng thời đồng hành tìm kiếm tung tích Eris.
+  - Sau thảm họa Roa, Ghislaine bị lưu lạc và trúng độc ma thú, suýt bỏ mạng trong rừng sâu thì được Lục Trần (lúc này đã đạt Thượng cấp kiếm thuật) giải cứu bằng kinh nghiệm sinh tồn hoang dã và sơ cứu giải độc.
+  - Cùng chung con đường thuần kiếm đạo, Lục Trần dạy Ghislaine học chữ, chỉ ra các góc phát lực và sơ hở kiếm chiêu giúp nàng đột phá kiếm thuật, đồng thời đồng hành tìm kiếm tung tích Eris.
   - Ghislaine xem Lục Trần là chủ nhân duy nhất và phu quân của đời mình, nguyện dùng kiếm thuật Kiếm Vương làm lá chắn sinh tử bảo vệ Lục Trần.
 
 ### 5.3. Ariel Anemoi Asura (Đệ Nhị Hoàng Nữ Asura - Nữ Hoàng & Quân Sư Bóng Tối)
@@ -146,8 +146,8 @@ Tác phẩm xây dựng tuyến tình cảm sâu sắc, nồng nàn và có chi�
 - **100% Tiếng Việt chuẩn mực**: Mượt mà, đanh thép, không dùng từ Hán thô ráp hay văn phong convert.
 - **Quy chuẩn danh xưng kiếm đạo**: Sử dụng thống nhất từ **"Lưu"** thay cho "Phái" (Tam Đại Kiếm Lưu: **Kiếm Thần Lưu**, **Thủy Thần Lưu**, **Bắc Thần Lưu**) đúng chuẩn mực nguyên tác Mushoku Tensei, tạo cảm giác kiếm đạo thuần túy, sắc bén và uy nghiêm.
 - **Văn phong Hardboiled kết hợp Deadpan Humor**:
-  - Nhịp câu dứt khoát, chắc nịch; miêu tả giao tranh tập trung vào chi tiết chuyển động, góc vung kiếm, va đập kim loại và phản xạ cơ học.
-  - Các đoạn độc thoại nội tâm của Lục Trần mang màu sắc hài hước khô khan của một sinh viên thế kỷ 21 nhìn đời bằng lăng kính duy vật giữa dị giới ma thuật.
+  - Nhịp câu dứt khoát, chắc nịch; miêu tả giao tranh tập trung vào chi tiết chuyển động, góc vung kiếm, va đập kim loại và nhịp thở thực chiến.
+  - Các đoạn độc thoại nội tâm của Lục Trần mang màu sắc hài hước khô khan (deadpan humor) của một kẻ thực tế, điềm tĩnh trước những tình huống trớ trêu tại dị giới.
 
 ---
 

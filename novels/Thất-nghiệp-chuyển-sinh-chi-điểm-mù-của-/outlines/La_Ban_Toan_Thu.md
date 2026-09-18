@@ -5,10 +5,10 @@
 ## MỤC A: KHUNG TRỤC ĐẠI CƯƠNG PHÂN QUYỂN TOÀN THƯ (7 SAGA - 30 QUYỂN)
 *Quy chuẩn lộ trình địa lý - dòng thời gian chuẩn xác theo Giáp Long Lịch (K417 – K430+), ngôn ngữ kịch bản thuần khiết, nhịp truyện dồn dập đanh thép.*
 
-### SAGA I: HOANG DÃ MA TỘC & CƠ SINH ĐẤU KHÍ (K417 – K418)
+### SAGA I: HOANG DÃ MA TỘC & ĐẤU KHÍ THỰC CHIẾN (K417 – K418)
 * **Quyển 01: Hoang Mạc Tỉnh Giấc**
-  *Chủ đề & Mục tiêu:* Rơi xuống rìa Đông Bắc Ma Lục; người phàm sinh tồn từ con số 0; thức tỉnh Cơ Sinh Đấu Khí từ áp lực tử thần; đăng ký mạo hiểm giả tại biên trấn Noguro.
-  *Xung đột cốt lõi:* Khủng hoảng va chạm giữa thể xác thư sinh yếu ớt và ma thú hoang mạc; sự bài xích chủng tộc gay gắt của Ma tộc bản địa.
+  *Chủ đề & Mục tiêu:* Rơi xuống rìa Đông Bắc Ma Lục; người phàm sinh tồn từ con số 0; thức tỉnh Đấu Khí Thực Chiến từ áp lực tử thần; đăng ký mạo hiểm giả tại biên trấn Noguro.
+  *Xung đột cốt lõi:* Khủng hoảng va chạm giữa thân xác người phàm và ma thú hoang mạc; sự bài xích chủng tộc gay gắt của Ma tộc bản địa.
   *Cục diện bàn giao:* Lục Trần đạt Trung cấp kiếm thuật, dùng bẫy cơ học phối hợp hạ gục Giun Cát cứu biên trấn, thăng mạo hiểm giả Hạng D, gom đủ quân nhu chuẩn bị vượt sa mạc cát đỏ.
 * **Quyển 02: Hắc Cát Thợ Săn**
   *Chủ đề & Mục tiêu:* Vượt bão cát hoang mạc Ma Lục; hoàn thiện Song Kiếm Thực Chiến (Thủy Thủ - Bắc Công); thăng cấp mạo hiểm giả Hạng C.
@@ -16,8 +16,8 @@
   *Cục diện bàn giao:* Tiêu diệt trùm ma thú sa mạc, rèn đúc song kiếm thép cứng, cập bến thành cảng Wenport chuẩn bị vượt biển sang Lục Địa Trung Tâm.
 * **Quyển 03: Vùng Đất Xung Đột**
   *Chủ đề & Mục tiêu:* Cập bến cảng Lục Địa Trung Tâm; thâm nhập Vùng Xung Đột (Strife Zone); giải cứu Hắc Lang Kiếm Vương Ghislaine.
-  *Xung đột cốt lõi:* Ghislaine trúng độc ma thú lưu lạc sau thảm họa Fittoa bị các toán thợ săn nô lệ vây hãm; Lục Trần dùng kiến thức sơ cứu hiện đại và kiếm thuật giải vây.
-  *Cục diện bàn giao:* Khai sáng tư duy cơ sinh học giúp Ghislaine phá vỡ nút thắt kiếm đạo; Ghislaine kết nghĩa đồng hành sinh tử, tổ hợp Kiếm Vương - Thượng Cấp hình thành, tiến về phía Nam đón đầu Dead End.
+  *Xung đột cốt lõi:* Ghislaine trúng độc ma thú lưu lạc sau thảm họa Fittoa bị các toán thợ săn nô lệ vây hãm; Lục Trần dùng kiến thức sơ cứu giải độc và kiếm thuật giải vây.
+  *Cục diện bàn giao:* Chỉ ra các góc phát lực và sơ hở kiếm chiêu giúp Ghislaine phá vỡ nút thắt kiếm đạo; Ghislaine kết nghĩa đồng hành sinh tử, tổ hợp Kiếm Vương - Thượng Cấp hình thành, tiến về phía Nam đón đầu Dead End.
 
 ### SAGA II: ẢI HÀM RỒNG & PHƯƠNG BẮC TUYẾT PHỦ (K419 – K421)
 * **Quyển 04: Hàm Rồng Nghịch Mệnh**
@@ -145,9 +145,9 @@
 *Quy chuẩn 12 chương kịch bản điện ảnh, nhịp đanh thép, chuẩn mực phong cách Hardboiled và Deadpan Humor.*
 
 * **Chương 001: Rơi Xuống Địa Ngục Cát Đỏ**
-  *Sự kiện cốt lõi:* Thảm họa Dịch chuyển Fittoa cuốn phăng Lục Trần xuống góc hoang mạc bazan đá đỏ cằn cỗi rìa Đông Bắc Ma Lục; cơn khát cháy bỏng và hiện thực trần trụi đập tan ảo tưởng màu hồng của một sinh viên hiện đại.
-  *Tiến triển cốt truyện & Sảng điểm:* Cậu sinh viên năm ba nếm trải vị cát sỏi lạo xạo trong miệng cùng ánh nắng thiêu đốt lột từng mảng da; nhận thức rõ không có bảng chỉ số hệ thống hay nhạc nền hào hùng nào xuất hiện; bản năng sinh tồn trỗi dậy, cậu xé áo sơ mi che gáy chống sốc nhiệt, dùng bóng gậy mặt trời xác định phương hướng và gom nhặt những viên đá bazan sắc cạnh.
-  *Móc câu cuối chương:* Tiếng rít ma sát rợn người trồi lên từ lòng cát đỏ; một cái bóng đen kịt dài hơn hai mét với cặp càng răng cưa và chiếc đuôi độc đỏ rực nhô lên, đôi mắt kép lạnh ngắt khóa chặt con mồi hai chân duy nhất trên cồn cát.
+  *Sự kiện cốt lõi:* Thảm họa Dịch chuyển Fittoa cuốn phăng Lục Trần xuống góc hoang mạc đá đỏ cằn cỗi rìa Đông Bắc Ma Lục; cơn khát cháy bỏng và hiện thực trần trụi đập tan ảo tưởng màu hồng.
+  *Tiến triển cốt truyện & Sảng điểm:* Người thanh niên phàm trần nếm trải vị cát sỏi lạo xạo trong miệng cùng ánh nắng thiêu đốt thịt da; nhận thức rõ không có bảng chỉ số hệ thống hay nhạc nền hào hùng nào xuất hiện; bản năng sinh tồn trỗi dậy, cậu điều hòa hơi thở, dùng bóng gậy mặt trời xác định phương hướng và gom nhặt những phiến đá sắc cạnh.
+  *Móc câu cuối chương:* Tiếng rít ma sát rợn người trồi lên từ lòng cát đỏ; một cái bóng đen kịt dài hơn hai mét với hàm răng cưa và đuôi vảy gai nhọn nhô lên, đôi mắt lạnh ngắt khóa chặt con mồi hai chân duy nhất trên cồn cát.
 
 * **Chương 002: Bẫy Đòn Bẩy Và Dao Gọt Hoa Quả**
   *Sự kiện cốt lõi:* Trận tử chiến đầu tiên với Bọ Cạp Đỏ Ma Lục; Lục Trần ép bản thân vượt qua cơn hoảng loạn, vận dụng quy luật đòn bẩy vật lý và địa hình khe nứt bazan để lập bẫy sinh tồn.

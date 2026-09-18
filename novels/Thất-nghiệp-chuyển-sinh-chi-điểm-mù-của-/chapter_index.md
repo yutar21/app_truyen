@@ -30,7 +30,7 @@
 | 026 | Song Kiếm Rèn Bằng Xương Thú | Quyển 01 | chapters/卷01/026Song Kiếm Rèn Bằng Xương Thú.txt | Đã hoàn thành |
 | 027 | Cơn Gió Thổi Về Đại Đô Thị | Quyển 01 | chapters/卷01/027Cơn Gió Thổi Về Đại Đô Thị.txt | Đã hoàn thành |
 | 028 | Thành Phố Dưới Vòm Sọ | Quyển 02 | chapters/卷02/028Thành Phố Dưới Vòm Sọ.txt | Đã hoàn thành |
-| 029 | Nắm Đấm Giải Phẫu Học | Quyển 02 | chapters/卷02/029Nắm Đấm Giải Phẫu Học.txt | Đã hoàn thành |
+| 029 | Nắm Đấm Thực Chiến | Quyển 02 | chapters/卷02/029Nắm Đấm Thực Chiến.txt | Đã hoàn thành |
 | 030 | Thử Thép Sa Mạc | Quyển 02 | chapters/卷02/030Thử Thép Sa Mạc.txt | Đã hoàn thành |
 | 031 | Màng Khí Bọc Thân Kiếm | Quyển 02 | chapters/卷02/031Màng Khí Bọc Thân Kiếm.txt | Đã hoàn thành |
 | 032 | Cái Bẫy Cân Điểm | Quyển 02 | chapters/卷02/032Cái Bẫy Cân Điểm.txt | Đã hoàn thành |
